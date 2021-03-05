@@ -16,7 +16,7 @@ From an Ubuntu 18 bionic server(required)
 ```
 cd ~/
 sudo apt install git p7zip-full sleuthkit
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir ~/dmg && cd ~/dmg
 ```
 Register for a developer account with Apple, then download the Xcode 7.3.1 dmg from:   https://developer.apple.com/devcenter/download.action?path=/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg  

@@ -1,7 +1,7 @@
 Hive Core version *2.0.4.0* is now available!!
 ==============
 
-  <https://github.com/HiveProject/Hivecoin/releases/tag/v2.0.4>
+  <https://github.com/HiveProject2021/Hivecoin/releases/tag/v2.0.4>
 
 
 This is a major release containing bug fixes for 2.0.3.0.  It is highly recommended that users 
@@ -9,7 +9,7 @@ upgrade to this version.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/HiveProject/Hivecoin/issues>
+  <https://github.com/HiveProject2021/Hivecoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
@@ -68,7 +68,7 @@ Notable changes
 2.0.4.0-b175d7350 Change log
 ==============
 
-Changelog available here: <https://github.com/HiveProject/Hivecoin/commits/release_2.0.4>
+Changelog available here: <https://github.com/HiveProject2021/Hivecoin/commits/release_2.0.4>
 
 Credits
 ==============

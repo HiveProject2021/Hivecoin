@@ -36,7 +36,7 @@ sudo make install
 # Build Hivecoin
 ```
 cd ~/build/
-git clone https://github.com/HiveProject/Hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 cd Hivecoin/
 ./autogen.sh
 ./configure --disable-tests --with-gui=no CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib"

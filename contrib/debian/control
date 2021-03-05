@@ -27,8 +27,8 @@ Build-Depends: debhelper,
  libzmq3-dev
 Standards-Version: 3.9.2
 Homepage: https://hivecoin.org/
-Vcs-Git: git://github.com/HiveProject/Hivecoin.git
-Vcs-Browser: https://github.com/HiveProject/Hivecoin
+Vcs-Git: git://github.com/HiveProject2021/Hivecoin.git
+Vcs-Browser: https://github.com/HiveProject2021/Hivecoin
 
 Package: hived
 Architecture: any

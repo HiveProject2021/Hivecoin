@@ -5,7 +5,7 @@ cd ~/
 export PATH_orig=$PATH
 DISTNAME=hive-2.0.1
 sudo apt install -y curl g++-aarch64-linux-gnu g++-7-aarch64-linux-gnu gcc-7-aarch64-linux-gnu binutils-aarch64-linux-gnu g++-arm-linux-gnueabihf g++-7-arm-linux-gnueabihf gcc-7-arm-linux-gnueabihf binutils-arm-linux-gnueabihf g++-7-multilib gcc-7-multilib binutils-gold git pkg-config autoconf libtool automake bsdmainutils ca-certificates python
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir -p release
 cd hivecoin/depends
 make HOST=x86_64-linux-gnu -j4
@@ -59,7 +59,7 @@ cd ~/
 export PATH_orig=$PATH
 DISTNAME=hive-2.0.1
 sudo apt install -y curl g++-aarch64-linux-gnu g++-7-aarch64-linux-gnu gcc-7-aarch64-linux-gnu binutils-aarch64-linux-gnu g++-arm-linux-gnueabihf g++-7-arm-linux-gnueabihf gcc-7-arm-linux-gnueabihf binutils-arm-linux-gnueabihf g++-7-multilib gcc-7-multilib binutils-gold git pkg-config autoconf libtool automake bsdmainutils ca-certificates python
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir -p release
 mkdir -p ~/wrapped
 mkdir -p ~/wrapped/extra_includes
@@ -124,7 +124,7 @@ cd ~/
 export PATH_orig=$PATH
 DISTNAME=hive-2.0.1
 sudo apt install -y curl g++-aarch64-linux-gnu g++-7-aarch64-linux-gnu gcc-7-aarch64-linux-gnu binutils-aarch64-linux-gnu g++-arm-linux-gnueabihf g++-7-arm-linux-gnueabihf gcc-7-arm-linux-gnueabihf binutils-arm-linux-gnueabihf g++-7-multilib gcc-7-multilib binutils-gold git pkg-config autoconf libtool automake bsdmainutils ca-certificates python
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir -p release
 cd hivecoin/depends
 make HOST=arm-linux-gnueabihf -j4
@@ -158,7 +158,7 @@ cd ~/
 export PATH_orig=$PATH
 DISTNAME=hive-2.0.1
 sudo apt install -y curl g++-aarch64-linux-gnu g++-7-aarch64-linux-gnu gcc-7-aarch64-linux-gnu binutils-aarch64-linux-gnu g++-arm-linux-gnueabihf g++-7-arm-linux-gnueabihf gcc-7-arm-linux-gnueabihf binutils-arm-linux-gnueabihf g++-7-multilib gcc-7-multilib binutils-gold git pkg-config autoconf libtool automake bsdmainutils ca-certificates python
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir -p release
 cd hivecoin/depends
 make HOST=aarch64-linux-gnu -j4
@@ -194,7 +194,7 @@ DISTNAME=hive-2.0.1
 sudo apt install -y build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git python nsis rename zip
 sudo apt install -y g++-mingw-w64-x86-64
 sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir -p release
 mkdir -p release/unsigned/
 mkdir -p sign/win64
@@ -276,7 +276,7 @@ DISTNAME=hive-2.0.1
 sudo apt install -y build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git python nsis rename zip
 sudo apt install -y g++-mingw-w64-i686 mingw-w64-i686-dev
 sudo update-alternatives --config i686-w64-mingw32-g++  # Set the default mingw32 g++ compiler option to posix.
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir -p release
 mkdir -p release/unsigned/
 mkdir -p sign/win32
@@ -354,7 +354,7 @@ From an ubuntu 18 bionic server(required)
 ```
 cd ~/
 sudo apt install git p7zip-full sleuthkit
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir ~/dmg && cd ~/dmg
 #Register for a developer account with Apple, then download the Xcode 7.3.1 dmg from: https://developer.apple.com/devcenter/download.action?path=/Developer_Tools/Xcode_9.4.1/Xcode_9.4.1.dmg
 #Transfer Xcode_7.3.1.dmg to the target machine into ~/dmg 
@@ -372,7 +372,7 @@ cd ~/
 export PATH_orig=$PATH
 DISTNAME=hive-2.0.1
 sudo apt install ca-certificates curl g++ git pkg-config autoconf librsvg2-bin libtiff-tools libtool automake bsdmainutils cmake imagemagick libcap-dev libz-dev libbz2-dev python python-dev python-setuptools fonts-tuffy
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 mkdir ~/hivecoin/depends/SDKs
 #transfer MacOSX10.11.sdk.tar.gz to the folder hivecoin/depends/SDKs
 cd hivecoin/depends/SDKs && tar -xf MacOSX10.11.sdk.tar.gz 

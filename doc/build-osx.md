@@ -32,7 +32,7 @@ Build Hive Core
 
 1. Clone the hive source code and cd into `hive`
 
-        git clone https://github.com/HiveProject/Hivecoin
+        git clone https://github.com/HiveProject2021/Hivecoin
         cd Hivecoin
 
 2.  Build hive-core:

@@ -740,7 +740,7 @@ void HiveGUI::createToolBars()
         labelBtcHvn->setStyleSheet(STRING_LABEL_COLOR);
         labelBtcHvn->setFont(currentMarketFont);
 
-        labelVersionUpdate->setText("<a href=\"https://github.com/HiveProject/Hivecoin/releases\">New Wallet Version Available</a>");
+        labelVersionUpdate->setText("<a href=\"https://github.com/HiveProject2021/Hivecoin/releases\">New Wallet Version Available</a>");
         labelVersionUpdate->setTextFormat(Qt::RichText);
         labelVersionUpdate->setTextInteractionFlags(Qt::TextBrowserInteraction);
         labelVersionUpdate->setOpenExternalLinks(true);
@@ -911,7 +911,7 @@ void HiveGUI::createToolBars()
                                            "New Wallet Version Found",
                                            CClientUIInterface::MSG_VERSION | CClientUIInterface::BTN_NO);
                                    if (fRet) {
-                                       QString link = "https://github.com/HiveProject/Hivecoin/releases";
+                                       QString link = "https://github.com/HiveProject2021/Hivecoin/releases";
                                        QDesktopServices::openUrl(QUrl(link));
                                    }
                                }

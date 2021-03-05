@@ -627,7 +627,7 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/HiveProject/Hivecoin>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/HiveProject2021/Hivecoin>";
     const std::string URL_WEBSITE = "<https://hivecoin.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2020, COPYRIGHT_YEAR) + " ") + "\n" +

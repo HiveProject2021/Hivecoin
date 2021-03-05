@@ -29,7 +29,7 @@ cd ~/
 # Removes any existing builds and starts clean WARNING
 rm -rf ~/hivecoin ~/sign ~/release
 
-git clone https://github.com/hiveproject/hivecoin
+git clone https://github.com/HiveProject2021/Hivecoin
 cd ~/hivecoin
 git checkout $BRANCH
 

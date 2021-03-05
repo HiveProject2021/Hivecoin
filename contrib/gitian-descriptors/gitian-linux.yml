@@ -28,7 +28,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/HiveProject/Hivecoin.git"
+- "url": "https://github.com/HiveProject2021/Hivecoin.git"
   "dir": "hive"
 files: []
 script: |

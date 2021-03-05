@@ -10,7 +10,7 @@ and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/HiveProject/Hivecoin/issues>
+  <https://github.com/HiveProject2021/Hivecoin/issues>
 
 To receive security and update notifications, please subscribe to:
 

@@ -5,7 +5,7 @@ Setup
 ---------------------
 Hivecoin Core is the original Hivecoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Hivecoin transactions; depending on the speed of your computer and network connection, the synchronization process is typically complete in under an hour.
 
-To download compiled binaries of the Hivecoin Core and wallet, visit the [GitHub release page](https://github.com/HiveProject/Hivecoin/releases).
+To download compiled binaries of the Hivecoin Core and wallet, visit the [GitHub release page](https://github.com/HiveProject2021/Hivecoin/releases).
 
 Running
 ---------------------
@@ -111,29 +111,29 @@ Building from source
 ---------------------
 The following are developer notes on how to build the Hivecoin core software on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
-- [Dependencies](https://github.com/HiveProject/Hivecoin/tree/master/doc/dependencies.md)
-- [OS X Build Notes](https://github.com/HiveProject/Hivecoin/tree/master/doc/build-osx.md)
-- [Unix Build Notes](https://github.com/HiveProject/Hivecoin/tree/master/doc/build-unix.md)
-- [Windows Build Notes](https://github.com/HiveProject/Hivecoin/tree/master/doc/build-windows.md)
-- [OpenBSD Build Notes](https://github.com/HiveProject/Hivecoin/tree/master/doc/build-openbsd.md)
-- [Gitian Building Guide](https://github.com/HiveProject/Hivecoin/tree/master/doc/gitian-building.md)
+- [Dependencies](https://github.com/HiveProject2021/Hivecoin/tree/master/doc/dependencies.md)
+- [OS X Build Notes](https://github.com/HiveProject2021/Hivecoin/tree/master/doc/build-osx.md)
+- [Unix Build Notes](https://github.com/HiveProject2021/Hivecoin/tree/master/doc/build-unix.md)
+- [Windows Build Notes](https://github.com/HiveProject2021/Hivecoin/tree/master/doc/build-windows.md)
+- [OpenBSD Build Notes](https://github.com/HiveProject2021/Hivecoin/tree/master/doc/build-openbsd.md)
+- [Gitian Building Guide](https://github.com/HiveProject2021/Hivecoin/tree/master/doc/gitian-building.md)
 
 Development
 ---------------------
-Hivecoin repo's [root README](https://github.com/HiveProject/Hivecoin/blob/master/README.md) contains relevant information on the development process and automated testing.
+Hivecoin repo's [root README](https://github.com/HiveProject2021/Hivecoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
-- [Developer Notes](https://github.com/HiveProject/Hivecoin/blob/master/doc/developer-notes.md)
-- [Release Notes](https://github.com/HiveProject/Hivecoin/blob/master/doc/release-notes.md)
-- [Release Process](https://github.com/HiveProject/Hivecoin/blob/master/doc/release-process.md)
+- [Developer Notes](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/developer-notes.md)
+- [Release Notes](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/release-notes.md)
+- [Release Process](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/release-process.md)
 - [Source Code Documentation (External Link)](https://dev.visucore.com/hive/doxygen/) -- 2018-05-11 -- Broken link
-- [Translation Process](https://github.com/HiveProject/Hivecoin/blob/master/doc/translation_process.md)
-- [Translation Strings Policy](https://github.com/HiveProject/Hivecoin/blob/master/doc/translation_strings_policy.md)
-- [Travis CI](https://github.com/HiveProject/Hivecoin/blob/master/doc/travis-ci.md)
-- [Unauthenticated REST Interface](https://github.com/HiveProject/Hivecoin/blob/master/doc/REST-interface.md)
-- [Shared Libraries](https://github.com/HiveProject/Hivecoin/blob/master/doc/shared-libraries.md)
-- [BIPS](https://github.com/HiveProject/Hivecoin/blob/master/doc/bips.md)
-- [Dnsseed Policy](https://github.com/HiveProject/Hivecoin/blob/master/doc/dnsseed-policy.md)
-- [Benchmarking](https://github.com/HiveProject/Hivecoin/blob/master/doc/benchmarking.md)
+- [Translation Process](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/translation_process.md)
+- [Translation Strings Policy](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/translation_strings_policy.md)
+- [Travis CI](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/travis-ci.md)
+- [Unauthenticated REST Interface](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/REST-interface.md)
+- [Shared Libraries](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/shared-libraries.md)
+- [BIPS](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/bips.md)
+- [Dnsseed Policy](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/dnsseed-policy.md)
+- [Benchmarking](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/benchmarking.md)
 
 ### Resources
 - Discuss on the [HivecoinTalk](https://www.hivecointalk.org/) forums, in the [Development & Technical Discussion board](https://www.hivecointalk.org/?forum=661517).
@@ -142,16 +142,16 @@ Hivecoin repo's [root README](https://github.com/HiveProject/Hivecoin/blob/maste
 - Visit the project home [Hivecoin.org](https://hivecoin.org)
 
 ### Miscellaneous
-- [Assets Attribution](https://github.com/HiveProject/Hivecoin/blob/master/doc/assets-attribution.md)
-- [Files](https://github.com/HiveProject/Hivecoin/blob/master/doc/files.md)
-- [Fuzz-testing](https://github.com/HiveProject/Hivecoin/blob/master/doc/fuzzing.md)
-- [Reduce Traffic](https://github.com/HiveProject/Hivecoin/blob/master/doc/reduce-traffic.md)
-- [Tor Support](https://github.com/HiveProject/Hivecoin/blob/master/doc/tor.md)
-- [Init Scripts (systemd/upstart/openrc)](https://github.com/HiveProject/Hivecoin/blob/master/doc/init.md)
-- [ZMQ](https://github.com/HiveProject/Hivecoin/blob/master/doc/zmq.md)
+- [Assets Attribution](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/assets-attribution.md)
+- [Files](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/files.md)
+- [Fuzz-testing](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/fuzzing.md)
+- [Reduce Traffic](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/reduce-traffic.md)
+- [Tor Support](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/tor.md)
+- [Init Scripts (systemd/upstart/openrc)](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/init.md)
+- [ZMQ](https://github.com/HiveProject2021/Hivecoin/blob/master/doc/zmq.md)
 
 License
 ---------------------
-Distributed under the [MIT software license](https://github.com/HiveProject/Hivecoin/blob/master/COPYING).
+Distributed under the [MIT software license](https://github.com/HiveProject2021/Hivecoin/blob/master/COPYING).
 This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](https://www.openssl.org/). This product includes
 cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
