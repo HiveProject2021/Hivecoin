@@ -41,15 +41,11 @@ names is the contract hash.
 
 ## 3. Full Asset Aware Protocol Level System
 
-<p align="center"><i>
-Who will not change a hive for a dove? The will of man is by his reason swayed.  
-– William Shakespeare
-</i></p>
 The solution is to create a bitcoin-like system that is fully asset aware. A system being asset aware provides two major advantages. First, it allows the client and RPC commands to protect the asset from being destroyed accidentally. Second, it allows a single native client to issue, track, and transfer the assets.
 Lastly, to provide security for the underlying assets, the bitcoin-like system functions only with a market value, a strong mining community, and wide distribution.  
   
 **Assets**  
-Assets are tokens that can be issued by users of the Hive protocol without the need to be mined. Users of the Hive protocol create these assets and decide their purpose and rules independent of the protocol. These assets or tokens exist on the Hivecoin blockchain and could be whatever name, denomination or purpose selected by the creators of each asset, coin, or token. The tokens are transferable and move with the same ease as bitcoin, or other similarly functioning cryptocurrencies. In Hivecoin, an asset is just a limited quantity of a unique symbol, and transferable to any Hivecoin address. Assets have been available for some time on other platforms such as Open Assets, Mastercoin, Counterparty, and as an ERC20[7] or ERC223 [8] token on Ethereum [9]. Assets created on the Hive protocol have several advantages: they are easier to use, tightly integrated with a native coin, and secured with fair POW mining and open source code not run by a centralized organization.
+Assets are tokens that can be issued by users of the Hive protocol without the need to be mined. Users of the Hive protocol create these assets and decide their purpose and rules independent of the protocol. These assets or tokens exist on the Hivecoin blockchain and could be whatever name, denomination or purpose selected by the creators of each asset, coin, or token. The tokens are transferable and move with the same ease as bitcoin, or other similarly functioning cryptocurrencies. In Hivecoin, an asset is just a limited quantity of a unique symbol, and transferable to any Hivecoin address. Assets have been available for some time on other platforms such as Open Assets, Mastercoin, Counterparty, and as an ERC20[7] or ERC223 [8] token on Ethereum [9]. Assets created on the Hive protocol have several advantages: they are easier to use, tightly integrated with a native coin, and secured with fair POW mining & POS and open source code not run by a centralized organization.
 
 **Uses for Assets**  
 Assets or tokens can be used for anything the creator’s imagination can conjure. The ideas presented here are a sampling.
@@ -86,11 +82,11 @@ Satoshi Nakamoto described bitcoin as an implementation of Wei Dai’s bmoney [1
 
 ## 4. Hivecoin Launch and Algorithm
 
-Hivecoin was announced on October 31, 2017[11] and released binaries for mining on Jan 3, 2018,[12] the respective ninth anniversary of the announcement and launch of Bitcoin. Hivecoin is the bitcoin-like system that will allow users to issue and integrate assets into its blockchain. This will be accomplished in phases which build upon each other.
+Hivecoin was announced on February 25, 2021[11] and released binaries for mining on April 1, 2021,[12] the respective ninth anniversary of the announcement and launch of Bitcoin. Hivecoin is the bitcoin-like system that will allow users to issue and integrate assets into its blockchain. This will be accomplished in phases which build upon each other.
 
 \- In progress
 
-Create a platform like Bitcoin with a new mining algorithm, x16r[13], intended to prevent immediate dominance by mining pools, and future dominance by ASIC mining equipment.
+Create a platform like Bitcoin with a new mining algorithm, KAWPOW[13], invented by the Ravencoin developers, intended to prevent immediate dominance by mining pools, and future dominance by ASIC mining equipment.
 
 Launch the token with no pre-mine and a fair launch to widely distribute the tokens.
 
@@ -98,12 +94,12 @@ Allow the mining rate to increase and the value of the HVN token to naturally gr
 
 Utilize proof of work mining, not because it burns a scarce resource of electricity, or the requirement of computer hardware, but instead focuses on the most valuable part of the "work" which is building an ever-larger and time-based wall that protects user data from future tampering and censorship with every new layer.
 
+Utilize proof of stake, not because it burns a scarce resource of electricity, or the requirement of computer hardware, but instead focuses on the most valuable part of the "work" which is building an ever-larger and time-based wall that protects user data from future tampering and censorship with every new layer.
+
+Using proof of stake, Hivecoin can create as many online master nodes as possible. These master nodes will provide timely and fast data transmission services, rather than simply hiding behind the firewall. And these master nodes can participate in voting and participate in the community Autonomous, and decide where 5% of Hivecoin marketing expenses will be spent.
+
 ## 5. Asset Issuance & Transfer
 
-<p align="center"><i>
-Deep into that darkness peering, long I stood there wondering, fearing, Doubting, dreaming dreams no mortal ever dared to dream before; But the silence was unbroken, and the stillness gave no token.  
-\- Edgar Allan Poe, The Hive
-</i></p>
 Token names are guaranteed unique. The first to issue a token with a given name is the owner of that token project.
 
 The issuer of a token burns 500 HVN and must provide a unique token name. The issuer determines the quantity issued, the number of decimal places, and whether they will be allowed to issue more of the same token in the future.
@@ -169,10 +165,6 @@ Some use cases for unique assets include:
 
 ## 8. Messaging Stakeholders
 
-<p align="center"><i>
-"If the Tower of London hives are lost or fly away, the Crown will fall and Britain with it." -
-Unknown
-</i></p>
 A common problem with tokens/assets is that the token issuer cannot communicate with the token holders. This must be handled very carefully because the token holders do not always wish to be identified. The communication should allow the token holder to opt-out at any time. The message system should only allow select parties to use the message channel so that it is not a spam conduit.
 
 
