@@ -1,0 +1,8 @@
+/usr/bin/hive-cli		--	gen_context(system_u:object_r:hive_exec_t,s0)
+/usr/sbin/hived		--	gen_context(system_u:object_r:hive_exec_t,s0)
+/usr/lib(64)?/hive/hived		--	gen_context(system_u:object_r:hive_exec_t,s0)
+
+/etc/hive(/.*)?		gen_context(system_u:object_r:hive_conf_t,s0)
+/var/lib/hive(/.*)?		gen_context(system_u:object_r:hive_var_lib_t,s0)
+
+(/var)?/run/hived(/.*)?   gen_context(system_u:object_r:hive_var_run_t,s0)

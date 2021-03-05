@@ -1,0 +1,33 @@
+# /etc/conf.d/hived: config file for /etc/init.d/hived
+
+# Config file location
+#HIVED_CONFIGFILE="/etc/hive/hive.conf"
+
+# What directory to write pidfile to?  (created and owned by $HIVED_USER)
+#HIVED_PIDDIR="/var/run/hived"
+
+# What filename to give the pidfile
+#HIVED_PIDFILE="${HIVED_PIDDIR}/hived.pid"
+
+# Where to write hived data (be mindful that the blockchain is large)
+#HIVED_DATADIR="/var/lib/hived"
+
+# User and group to own hived process
+#HIVED_USER="hive"
+#HIVED_GROUP="hive"
+
+# Path to hived executable
+#HIVED_BIN="/usr/bin/hived"
+
+# Nice value to run hived under
+#HIVED_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#HIVED_OPTS=""
+
+# The timeout in seconds OpenRC will wait for hived to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+HIVED_SIGTERM_TIMEOUT=60

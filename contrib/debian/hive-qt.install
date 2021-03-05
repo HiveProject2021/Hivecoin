@@ -1,0 +1,6 @@
+usr/local/bin/hive-qt usr/bin
+share/pixmaps/hive32.xpm usr/share/pixmaps
+share/pixmaps/hive16.xpm usr/share/pixmaps
+share/pixmaps/hive128.png usr/share/pixmaps
+debian/hive-qt.desktop usr/share/applications
+debian/hive-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hive Core
+Comment=Connect to the Hive P2P Network
+Comment[de]=Verbinde mit dem Hive peer-to-peer Netzwerk
+Comment[fr]=Hive, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Hive, eşten eşe kriptografik sanal para birimi
+Exec=hive-qt %u
+Terminal=false
+Type=Application
+Icon=hive128
+MimeType=x-scheme-handler/hive;
+Categories=Office;Finance;

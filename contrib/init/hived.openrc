@@ -1,0 +1,92 @@
+#!/sbin/runscript
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/hive/.hive" ]; then
+	HIVED_DEFAULT_DATADIR="/var/lib/hive/.hive"
+else
+	HIVED_DEFAULT_DATADIR="/var/lib/hived"
+fi
+
+HIVED_CONFIGFILE=${HIVED_CONFIGFILE:-/etc/hive/hive.conf}
+HIVED_PIDDIR=${HIVED_PIDDIR:-/var/run/hived}
+HIVED_PIDFILE=${HIVED_PIDFILE:-${HIVED_PIDDIR}/hived.pid}
+HIVED_DATADIR=${HIVED_DATADIR:-${HIVED_DEFAULT_DATADIR}}
+HIVED_USER=${HIVED_USER:-${HIVE_USER:-hive}}
+HIVED_GROUP=${HIVED_GROUP:-hive}
+HIVED_BIN=${HIVED_BIN:-/usr/bin/hived}
+HIVED_NICE=${HIVED_NICE:-${NICELEVEL:-0}}
+HIVED_OPTS="${HIVED_OPTS:-${HIVE_OPTS}}"
+
+name="Hive Core Daemon"
+description="Hive cryptocurrency P2P network daemon"
+
+command="/usr/bin/hived"
+command_args="-pid=\"${HIVED_PIDFILE}\" \
+		-conf=\"${HIVED_CONFIGFILE}\" \
+		-datadir=\"${HIVED_DATADIR}\" \
+		-daemon \
+		${HIVED_OPTS}"
+
+required_files="${HIVED_CONFIGFILE}"
+start_stop_daemon_args="-u ${HIVED_USER} \
+			-N ${HIVED_NICE} -w 2000"
+pidfile="${HIVED_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${HIVED_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${HIVED_USER}:${HIVED_GROUP}" \
+	"${HIVED_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${HIVED_USER}:${HIVED_GROUP}" \
+	"${HIVED_PIDDIR}"
+
+	checkpath -f \
+	-o ${HIVED_USER}:${HIVED_GROUP} \
+	-m 0660 \
+	${HIVED_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${HIVED_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run hived."
+		eerror "The setting must appear in ${HIVED_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Hive Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

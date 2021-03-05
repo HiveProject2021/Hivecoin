@@ -1,0 +1,27 @@
+FROM amd64/ubuntu:latest
+
+MAINTAINER cade <cade.call@mediciventures.com>
+
+EXPOSE $RPCPORT
+
+EXPOSE $PORT
+
+RUN apt-get update && apt-get install -y bash net-tools && apt-get clean
+
+RUN useradd -ms /bin/bash hive
+
+RUN mkdir /etc/hive
+
+RUN mkdir /var/lib/hive
+
+RUN chown hive:hive /etc/hive /var/lib/hive
+
+WORKDIR /home/hive
+
+COPY --chown=hive:hive linux64/* /home/hive/
+
+COPY --chown=hive:hive run.sh /home/hive/
+
+USER hive
+
+CMD ["/home/hive/run.sh"]

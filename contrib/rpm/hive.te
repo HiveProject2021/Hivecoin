@@ -1,0 +1,81 @@
+policy_module(hive, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type hive_t;
+type hive_exec_t;
+init_daemon_domain(hive_t, hive_exec_t)
+
+permissive hive_t;
+
+type hive_initrc_exec_t;
+init_script_file(hive_initrc_exec_t)
+
+type hive_conf_t;
+files_type(hive_conf_t)
+
+type hive_var_lib_t;
+files_type(hive_var_lib_t)
+
+type hive_var_run_t;
+files_type(hive_var_run_t)
+
+type hive_port_t;
+corenet_port(hive_port_t)
+
+########################################
+#
+# hive local policy
+#
+allow hive_t self:process { fork };
+
+allow hive_t self:fifo_file rw_fifo_file_perms;
+allow hive_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(hive_t, hive_conf_t, hive_conf_t)
+manage_files_pattern(hive_t, hive_conf_t, hive_conf_t)
+
+manage_dirs_pattern(hive_t, hive_var_lib_t, hive_var_lib_t)
+manage_files_pattern(hive_t, hive_var_lib_t, hive_var_lib_t)
+files_var_lib_filetrans(hive_t, hive_var_lib_t, { dir file })
+
+manage_dirs_pattern(hive_t, hive_var_run_t, hive_var_run_t)
+manage_files_pattern(hive_t, hive_var_run_t, hive_var_run_t)
+
+sysnet_dns_name_resolve(hive_t)
+corenet_all_recvfrom_unlabeled(hive_t)
+
+allow hive_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(hive_t)
+corenet_tcp_sendrecv_generic_node(hive_t)
+corenet_tcp_sendrecv_all_ports(hive_t)
+corenet_tcp_bind_generic_node(hive_t)
+
+gen_require(`
+    type hive_port_t;
+')
+allow hive_t hive_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type hive_port_t;
+')
+allow hive_t hive_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(hive_t)
+
+files_read_etc_files(hive_t)
+
+miscfiles_read_localization(hive_t)
+
+sysnet_dns_name_resolve(hive_t)
+
+allow hive_t hive_exec_t:file execute_no_trans;
+allow hive_t self:process setsched;
+corecmd_exec_ls(hive_t)
+corenet_tcp_connect_http_port(hive_t)
+dev_read_urand(hive_t)
+fs_getattr_xattr_fs(hive_t)
+kernel_read_system_state(hive_t)
