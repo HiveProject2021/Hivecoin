@@ -75,11 +75,11 @@ Using proof of service, Hivecoin builds a second-level network based on the firs
 
 ## 5. Simplified Smart Contract
 
-Hivecoin has established a set of simplified virtual machines, which can implement smart contracts based on Bitcoin encoding and transaction rules. Under normal circumstances, users only need to set a few simple command codes to create contracts. For example, the HVN is mortgaged for interest generation, and the main node votes to decide when to start the budget. 
+Hivecoin has established a set of simplified virtual machines, which can implement smart contracts based on Bitcoin encoding and transaction rules. Under normal circumstances, users only need to set a few simple command codes to create contracts. For example, the HVN is mortgaged for interest generation, and the master node votes to decide when to start the budget. 
 
 The advantages of the simplified version of the smart contract are that users are simple to use, easy to operate, safe, and concise. The disadvantage is that it can only implement some of the system's built-in functions and is not as powerful as the ETH smart contract. 
 
-However, Hivecoin realizes asset creation, mortgage interest, main node voting, community autonomy, and other features, supporting decentralized management and decentralized finance.
+However, Hivecoin realizes asset creation, mortgage interest, master node voting, community autonomy, and other features, supporting decentralized management and decentralized finance.
 
 ## 6. Master node system
 
