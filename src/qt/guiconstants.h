@@ -52,15 +52,15 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Hivecoin light orange */
 #define COLOR_LIGHT_ORANGE QColor("#f79433")
 /* Hivecoin dark blue */
-#define COLOR_DARK_BLUE QColor("#475eaa")
+#define COLOR_DARK_BLUE QColor("#fdb000")
 /* Hivecoin light blue */
-#define COLOR_LIGHT_BLUE QColor("#5874cf")
+#define COLOR_LIGHT_BLUE QColor("#fdb000")
 /* Hivecoin asset text */
 #define COLOR_ASSET_TEXT QColor(255, 255, 255)
 /* Hivecoin shadow color - light mode */
 #define COLOR_SHADOW_LIGHT QColor("#e1e6f3")
 /* Toolbar not selected text color */
-#define COLOR_TOOLBAR_NOT_SELECTED_TEXT QColor("#a5b7f3")
+#define COLOR_TOOLBAR_NOT_SELECTED_TEXT QColor("#FFFFFF")
 /* Toolbar selected text color */
 #define COLOR_TOOLBAR_SELECTED_TEXT COLOR_WHITE
 
@@ -70,9 +70,9 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Hivecoin shadow color - dark mode */
 #define COLOR_SHADOW_DARK QColor("#0c1b3d")
 /* Hivecoin Light blue - dark mode - dark mode */
-#define COLOR_LIGHT_BLUE_DARK QColor("#1e2636")
+#define COLOR_LIGHT_BLUE_DARK QColor("#fdb000")
 /* Hivecoin Dark blue - dark mode - dark mode */
-#define COLOR_DARK_BLUE_DARK QColor("#0b1018")
+#define COLOR_DARK_BLUE_DARK QColor("#fdb000")
 /* Pricing widget background color */
 #define COLOR_PRICING_WIDGET QColor("#161e2d")
 /* Hivecoin dark mode administrator background color */
@@ -82,9 +82,9 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Hivecoin dark mode regular asset background color */
 #define COLOR_REGULAR_CARD_LIGHT_BLUE_DARK_MODE QColor("#0e1b3b")
 /* Toolbar not selected text color */
-#define COLOR_TOOLBAR_NOT_SELECTED_TEXT_DARK_MODE QColor("#6c80c5")
+#define COLOR_TOOLBAR_NOT_SELECTED_TEXT_DARK_MODE QColor("#FFFFFF")
 /* Toolbar selected text color */
-#define COLOR_TOOLBAR_SELECTED_TEXT_DARK_MODE QColor("#c5ccdf")
+#define COLOR_TOOLBAR_SELECTED_TEXT_DARK_MODE QColor("#FFFFFF")
 
 
 /* Hivecoin label color as a string */
