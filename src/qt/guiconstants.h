@@ -42,7 +42,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define COLOR_WALLETFRAME_SHADOW QColor(0,0,0,71)
 
 /* Color of labels */
-#define COLOR_LABELS QColor("#4960ad")
+#define COLOR_LABELS QColor("#eaa405")
 
 /** LIGHT MODE */
 /* Background color, very light gray */
@@ -52,9 +52,9 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Hivecoin light orange */
 #define COLOR_LIGHT_ORANGE QColor("#f79433")
 /* Hivecoin dark blue */
-#define COLOR_DARK_BLUE QColor("#fdb000")
+#define COLOR_DARK_BLUE QColor("#eaa405")
 /* Hivecoin light blue */
-#define COLOR_LIGHT_BLUE QColor("#fdb000")
+#define COLOR_LIGHT_BLUE QColor("#eaa405")
 /* Hivecoin asset text */
 #define COLOR_ASSET_TEXT QColor(255, 255, 255)
 /* Hivecoin shadow color - light mode */
@@ -70,9 +70,9 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Hivecoin shadow color - dark mode */
 #define COLOR_SHADOW_DARK QColor("#0c1b3d")
 /* Hivecoin Light blue - dark mode - dark mode */
-#define COLOR_LIGHT_BLUE_DARK QColor("#fdb000")
+#define COLOR_LIGHT_BLUE_DARK QColor("#eaa405")
 /* Hivecoin Dark blue - dark mode - dark mode */
-#define COLOR_DARK_BLUE_DARK QColor("#fdb000")
+#define COLOR_DARK_BLUE_DARK QColor("#eaa405")
 /* Pricing widget background color */
 #define COLOR_PRICING_WIDGET QColor("#161e2d")
 /* Hivecoin dark mode administrator background color */
@@ -88,7 +88,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 
 
 /* Hivecoin label color as a string */
-#define STRING_LABEL_COLOR "color: #4960ad"
+#define STRING_LABEL_COLOR "color: #eaa405"
 #define STRING_LABEL_COLOR_WARNING "color: #FF8080"
 
 
