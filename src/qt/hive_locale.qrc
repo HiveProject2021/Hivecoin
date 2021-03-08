@@ -83,7 +83,6 @@
         <file alias="vi_VN">locale/hive_vi_VN.qm</file>
         <file alias="zh_CN">locale/hive_zh_CN.qm</file>
         <file alias="zh_HK">locale/hive_zh_HK.qm</file>
-        <file alias="zh">locale/hive_zh.qm</file>
         <file alias="zh_TW">locale/hive_zh_TW.qm</file>
     </qresource>
 </RCC>
