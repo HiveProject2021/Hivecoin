@@ -434,7 +434,7 @@ void HiveGUI::createActions()
     manageAssetAction->setFont(font);
     tabGroup->addAction(manageAssetAction);
 
-    messagingAction = new QAction(platformStyle->SingleColorIcon(":/icons/editcopy"), tr("&Messaging"), this);
+    messagingAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/messageing_selected",":/icons/messageing"), tr("&Messaging"), this);
     messagingAction->setStatusTip(tr("Coming Soon"));
     messagingAction->setToolTip(messagingAction->statusTip());
     messagingAction->setCheckable(true);
@@ -442,7 +442,7 @@ void HiveGUI::createActions()
     messagingAction->setFont(font);
     tabGroup->addAction(messagingAction);
 
-    votingAction = new QAction(platformStyle->SingleColorIcon(":/icons/edit"), tr("&Voting"), this);
+    votingAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/voting_selected",":/icons/voting"), tr("&Voting"), this);
     votingAction->setStatusTip(tr("Coming Soon"));
     votingAction->setToolTip(votingAction->statusTip());
     votingAction->setCheckable(true);
@@ -450,7 +450,7 @@ void HiveGUI::createActions()
     votingAction->setFont(font);
     tabGroup->addAction(votingAction);
 
-    restrictedAssetAction = new QAction(platformStyle->SingleColorIcon(":/icons/edit"), tr("&Restricted Assets"), this);
+    restrictedAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_restricted_selected",":/icons/asset_restricted"), tr("&Restricted Assets"), this);
     restrictedAssetAction->setStatusTip(tr("Manage restricted assets"));
     restrictedAssetAction->setToolTip(restrictedAssetAction->statusTip());
     restrictedAssetAction->setCheckable(true);

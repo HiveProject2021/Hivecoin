@@ -72,6 +72,12 @@
         <file alias="asset_transfer">res/icons/asset_transfer.png</file>
         <file alias="asset_transfer_selected">res/icons/asset_transfer_selected.png</file>
         <file alias="hivecointext">res/icons/hivecointext.png</file>
+        <file alias="asset_restricted">res/icons/asset_restricted.png</file>
+        <file alias="asset_restricted_selected">res/icons/asset_restricted_selected.png</file>
+        <file alias="voting">res/icons/voting.png</file>
+        <file alias="voting_selected">res/icons/voting_selected.png</file>
+        <file alias="messageing">res/icons/messageing.png</file>
+        <file alias="messageing_selected">res/icons/messageing_selected.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="spinner-000">res/movies/spinner-000.png</file>
