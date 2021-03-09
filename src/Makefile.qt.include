@@ -91,7 +91,6 @@ QT_TS = \
   qt/locale/hive_vi_VN.ts \
   qt/locale/hive_zh_CN.ts \
   qt/locale/hive_zh_HK.ts \
-  qt/locale/hive_zh.ts \
   qt/locale/hive_zh_TW.ts
 
 QT_FORMS_UI = \
