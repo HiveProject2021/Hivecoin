@@ -211,6 +211,62 @@ UniValue validateaddress(const JSONRPCRequest& request)
 #else
     LOCK(cs_main);
 #endif
+	
+	
+	//#################################################################
+	//HVN START FOR LOOKING FOR BURN ADDRESS -- BEGIN
+	//Just use to looking suitable prefix address.
+	//1 use command hived, do not use command hived -daemon
+	//2 hive-cli validateaddress HBCbhspMeb1uiVocnRgXRzYxg2tJsytXdf
+	//In step 1 command window will to calculate the suitable prefix address for burn address.
+	const char *base58chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
+	std::string address_char_1,address_char_2,address_char_3,address_char_4,address_char_5,address_char_6;
+	std::string address_dest;
+	
+	//strIssueAssetBurnAddress = "HXissueAssetXXXXXXXXXXXXXXXXXhhZGt";
+	//strReissueAssetBurnAddress = "HXReissueAssetXXXXXXXXXXXXXXVEFAWu";
+	//strIssueSubAssetBurnAddress = "HXissueSubAssetXXXXXXXXXXXXXWcwhwL";
+	//strIssueUniqueAssetBurnAddress = "HXissueUniqueAssetXXXXXXXXXXWEAe58";
+	//strIssueMsgChannelAssetBurnAddress = "HXissueMsgChanneLAssetXXXXXXSjHvAY";
+	//strIssueQualifierAssetBurnAddress = "HXissueQuaLifierXXXXXXXXXXXXUgEDbC";
+	//strIssueSubQualifierAssetBurnAddress = "HXissueSubQuaLifierXXXXXXXXXVTzvv5";
+	//strIssueRestrictedAssetBurnAddress = "HXissueRestrictedXXXXXXXXXXXXzJZ1q";
+	//strAddNullQualifierTagBurnAddress = "HXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya";
+	//strGlobalBurnAddress = "HXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
+								   
+	std::string address_have 	= "HXissueUniqueAssetXXXXXXXXXX";
+	std::string address_success = "";
+	for (int i = 0; i < 58  && address_success==""; ++i)    {
+		address_char_1 = base58chars[i];
+		for (int ii = 0; ii < 58  && address_success==""; ++ii)    {
+			address_char_2 = base58chars[ii];
+			for (int iii = 0; iii < 58  && address_success==""; ++iii)    {
+				address_char_3 = base58chars[iii];
+				for (int iiii = 0; iiii < 58  && address_success==""; ++iiii)    {
+					address_char_4 = base58chars[iiii];
+					for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
+						address_char_5 = base58chars[iiiii];
+						for (int iiiiii = 0; iiiiii < 58  && address_success==""; ++iiiiii)    {
+							address_char_6 = base58chars[iiiiii];
+
+							address_dest = address_have + address_char_1 + address_char_2 + address_char_3 + address_char_4 + address_char_5 + address_char_6;
+							
+							//To calculate the address is correct.
+							CTxDestination destTEST = DecodeDestination(address_dest.c_str());
+							bool isValidTEST = IsValidDestination(destTEST);
+							if (isValidTEST) {
+								std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
+								address_success = address_dest;
+							}
+						}
+						std::cout << i << " " << ii << " " << iii << " " << iiii << " " << iiiii << " \n";
+					}
+				}
+			}
+		}
+	}
+	//HVN START FOR LOOKING FOR BURN ADDRESS -- BEGIN
+	//#################################################################
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     bool isValid = IsValidDestination(dest);
