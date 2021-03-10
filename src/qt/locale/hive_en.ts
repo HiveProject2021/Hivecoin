@@ -1662,6 +1662,16 @@
         <source>Current total balance in watch-only addresses</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+128"/>
+        <source>Asset Balances</source>
+        <translation>Asset Balances</translation>
+    </message>
+    <message>
+        <location line="+128"/>
+        <source>HVN Balances</source>
+        <translation>HVN Balances</translation>
+    </message>
 </context>
 <context>
     <name>PaymentServer</name>
