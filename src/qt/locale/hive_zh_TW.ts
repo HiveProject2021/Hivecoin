@@ -417,11 +417,11 @@
 		</message>
 		<message>
 			<source>&amp;Help</source>
-			<translation>&amp;救命</translation>
+			<translation>&amp;幫助</translation>
 		</message>
 		<message>
 			<source>Tabs toolbar</source>
-			<translation>选项卡工具栏</translation>
+			<translation>選項卡工具欄</translation>
 		</message>
 		<message>
 			<source>Request payments (generates QR codes and hive: URIs)</source>
@@ -980,11 +980,11 @@
 		</message>
 		<message>
 			<source>%n GB of free space available</source>
-			<translation>Array</translation>
+			<translation>%n GB of free space available</translation>
 		</message>
 		<message>
 			<source>(of %n GB needed)</source>
-			<translation>Array</translation>
+			<translation>(of %n GB needed)</translation>
 		</message>
 		<message>
 			<source>A new data directory will be created.</source>
@@ -1645,31 +1645,31 @@
 		</message>
 		<message>
 			<source>%n second(s)</source>
-			<translation>Array</translation>
+			<translation>%n second(s)</translation>
 		</message>
 		<message>
 			<source>%n minute(s)</source>
-			<translation>Array</translation>
+			<translation>%n minute(s)</translation>
 		</message>
 		<message>
 			<source>%n hour(s)</source>
-			<translation>Array</translation>
+			<translation>%n hour(s)</translation>
 		</message>
 		<message>
 			<source>%n day(s)</source>
-			<translation>Array</translation>
+			<translation>%n day(s)</translation>
 		</message>
 		<message>
 			<source>%n week(s)</source>
-			<translation>Array</translation>
+			<translation>%n week(s)</translation>
 		</message>
 		<message>
 			<source>%1 and %2</source>
-			<translation>%1又 %2</translation>
+			<translation>%1 和 %2</translation>
 		</message>
 		<message>
 			<source>%n year(s)</source>
-			<translation>Array</translation>
+			<translation>%n year(s)</translation>
 		</message>
 		<message>
 			<source>%1 didn't yet exit safely...</source>
@@ -2490,7 +2490,7 @@
 		</message>
 		<message>
 			<source>%n block(s)</source>
-			<translation>Array</translation>
+			<translation>%n block(s)</translation>
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
@@ -2799,7 +2799,7 @@
 		<name>TransactionDesc</name>
 		<message>
 			<source>Open for %n more block(s)</source>
-			<translation>Array</translation>
+			<translation>Open for %n more block(s)</translation>
 		</message>
 		<message>
 			<source>Open until %1</source>
@@ -2847,7 +2847,7 @@
 		</message>
 		<message>
 			<source>, broadcast through %n node(s)</source>
-			<translation>Array</translation>
+			<translation>, broadcast through %n node(s)</translation>
 		</message>
 		<message>
 			<source>Date</source>
@@ -2891,7 +2891,7 @@
 		</message>
 		<message>
 			<source>matures in %n more block(s)</source>
-			<translation>Array</translation>
+			<translation>matures in %n more block(s)</translation>
 		</message>
 		<message>
 			<source>not accepted</source>
@@ -3105,7 +3105,7 @@
 		</message>
 		<message>
 			<source>Open for %n more block(s)</source>
-			<translation>Array</translation>
+			<translation>Open for %n more block(s)</translation>
 		</message>
 		<message>
 			<source>Abandoned</source>
