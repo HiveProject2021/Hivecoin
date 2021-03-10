@@ -561,7 +561,7 @@
 		</message>
 		<message>
 			<source>&amp;Manage Assets</source>
-			<translation>&amp;Verwalten von Vermögenswerten</translation>
+			<translation>&amp;Manage Assets</translation>
 		</message>
 		<message>
 			<source>Manage assets you are the administrator of</source>
