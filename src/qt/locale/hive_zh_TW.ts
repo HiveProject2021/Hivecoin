@@ -421,7 +421,7 @@
 		</message>
 		<message>
 			<source>Tabs toolbar</source>
-			<translation>選項卡工具欄</translation>
+			<translation>选项卡工具栏</translation>
 		</message>
 		<message>
 			<source>Request payments (generates QR codes and hive: URIs)</source>
@@ -980,11 +980,11 @@
 		</message>
 		<message>
 			<source>%n GB of free space available</source>
-			<translation>%n GB of free space available</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>(of %n GB needed)</source>
-			<translation>(of %n GB needed)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>A new data directory will be created.</source>
@@ -1645,31 +1645,31 @@
 		</message>
 		<message>
 			<source>%n second(s)</source>
-			<translation>%n second(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>%n minute(s)</source>
-			<translation>%n minute(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>%n hour(s)</source>
-			<translation>%n hour(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>%n day(s)</source>
-			<translation>%n day(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>%n week(s)</source>
-			<translation>%n week(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>%1 and %2</source>
-			<translation>%1 和 %2</translation>
+			<translation>%1和%2</translation>
 		</message>
 		<message>
 			<source>%n year(s)</source>
-			<translation>%n year(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>%1 didn't yet exit safely...</source>
@@ -2490,7 +2490,7 @@
 		</message>
 		<message>
 			<source>%n block(s)</source>
-			<translation>%n block(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
@@ -2799,7 +2799,7 @@
 		<name>TransactionDesc</name>
 		<message>
 			<source>Open for %n more block(s)</source>
-			<translation>Open for %n more block(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>Open until %1</source>
@@ -2847,7 +2847,7 @@
 		</message>
 		<message>
 			<source>, broadcast through %n node(s)</source>
-			<translation>, broadcast through %n node(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>Date</source>
@@ -2891,7 +2891,7 @@
 		</message>
 		<message>
 			<source>matures in %n more block(s)</source>
-			<translation>matures in %n more block(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>not accepted</source>
@@ -3105,7 +3105,7 @@
 		</message>
 		<message>
 			<source>Open for %n more block(s)</source>
-			<translation>Open for %n more block(s)</translation>
+			<translation>Array</translation>
 		</message>
 		<message>
 			<source>Abandoned</source>
