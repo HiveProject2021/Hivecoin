@@ -12,7 +12,7 @@
 			<translation>创建新地址</translation>
 		</message>
 		<message>
-			<source>&amp;amp;New</source>
+			<source>&amp;New</source>
 			<translation>新建(&amp;N)</translation>
 		</message>
 		<message>
@@ -20,11 +20,11 @@
 			<translation>复制当前选中的地址到系统剪贴板</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Copy</source>
+			<source>&amp;Copy</source>
 			<translation>复制(&amp;C)</translation>
 		</message>
 		<message>
-			<source>C&amp;amp;lose</source>
+			<source>C&amp;lose</source>
 			<translation>关闭(&amp;l)</translation>
 		</message>
 		<message>
@@ -36,11 +36,11 @@
 			<translation>导出当前分页里的数据到文件</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Export</source>
+			<source>&amp;Export</source>
 			<translation>导出(&amp;E)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Delete</source>
+			<source>&amp;Delete</source>
 			<translation>删除(&amp;D)</translation>
 		</message>
 		<message>
@@ -52,7 +52,7 @@
 			<translation>选择要收钱进来的地址</translation>
 		</message>
 		<message>
-			<source>C&amp;amp;hoose</source>
+			<source>C&amp;hoose</source>
 			<translation>选择</translation>
 		</message>
 		<message>
@@ -72,15 +72,15 @@
 			<translation>这些是您接收付款的Hive地址.建议为每个事务使用新的接收地址.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Copy Address</source>
+			<source>&amp;Copy Address</source>
 			<translation>复制地址</translation>
 		</message>
 		<message>
-			<source>Copy &amp;amp;Label</source>
+			<source>Copy &amp;Label</source>
 			<translation>复制标签</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Edit</source>
+			<source>&amp;Edit</source>
 			<translation>编辑</translation>
 		</message>
 		<message>
@@ -244,7 +244,7 @@
 	<context>
 		<name>HiveGUI</name>
 		<message>
-			<source>Sign &amp;amp;message...</source>
+			<source>Sign &amp;message...</source>
 			<translation>签名消息(&amp;M)...</translation>
 		</message>
 		<message>
@@ -252,7 +252,7 @@
 			<translation>正在与网络同步...</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Overview</source>
+			<source>&amp;Overview</source>
 			<translation>&amp;概述</translation>
 		</message>
 		<message>
@@ -264,7 +264,7 @@
 			<translation>显示钱包概述</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Transactions</source>
+			<source>&amp;Transactions</source>
 			<translation>&amp;交易记录</translation>
 		</message>
 		<message>
@@ -272,7 +272,7 @@
 			<translation>浏览事务历史记录</translation>
 		</message>
 		<message>
-			<source>E&amp;amp;xit</source>
+			<source>E&amp;xit</source>
 			<translation>退出</translation>
 		</message>
 		<message>
@@ -280,7 +280,7 @@
 			<translation>退出应用程序</translation>
 		</message>
 		<message>
-			<source>&amp;amp;About %1</source>
+			<source>&amp;About %1</source>
 			<translation>&amp;关于%1</translation>
 		</message>
 		<message>
@@ -288,7 +288,7 @@
 			<translation>显示有关%1的信息</translation>
 		</message>
 		<message>
-			<source>About &amp;amp;Qt</source>
+			<source>About &amp;Qt</source>
 			<translation>关于Qt(&amp;Q)</translation>
 		</message>
 		<message>
@@ -296,7 +296,7 @@
 			<translation>显示有关Qt的信息</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Options...</source>
+			<source>&amp;Options...</source>
 			<translation>&amp;选项...</translation>
 		</message>
 		<message>
@@ -304,27 +304,27 @@
 			<translation>修改%1的配置选项</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Encrypt Wallet...</source>
+			<source>&amp;Encrypt Wallet...</source>
 			<translation>&amp;加密钱包...</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Backup Wallet...</source>
+			<source>&amp;Backup Wallet...</source>
 			<translation>&amp;备用钱包...</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Change Passphrase...</source>
+			<source>&amp;Change Passphrase...</source>
 			<translation>&amp;更改密码短语...</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Sending addresses...</source>
+			<source>&amp;Sending addresses...</source>
 			<translation>&amp;正在发送地址...</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Receiving addresses...</source>
+			<source>&amp;Receiving addresses...</source>
 			<translation>&amp;正在接收地址...</translation>
 		</message>
 		<message>
-			<source>Open &amp;amp;URI...</source>
+			<source>Open &amp;URI...</source>
 			<translation>打开URI(&amp;U)...</translation>
 		</message>
 		<message>
@@ -360,7 +360,7 @@
 			<translation>更改用于钱包加密的密码短语</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Debug window</source>
+			<source>&amp;Debug window</source>
 			<translation>调试窗口(&amp;D)</translation>
 		</message>
 		<message>
@@ -368,7 +368,7 @@
 			<translation>打开调试和诊断控制台</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Verify message...</source>
+			<source>&amp;Verify message...</source>
 			<translation>&amp;验证消息...</translation>
 		</message>
 		<message>
@@ -380,15 +380,15 @@
 			<translation>钱包</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Send</source>
+			<source>&amp;Send</source>
 			<translation>&amp;发送</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Receive</source>
+			<source>&amp;Receive</source>
 			<translation>&amp;接收</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Show / Hide</source>
+			<source>&amp;Show / Hide</source>
 			<translation>&amp;显示/隐藏</translation>
 		</message>
 		<message>
@@ -408,15 +408,15 @@
 			<translation>验证消息以确保它们是用指定的配置单元地址签名的</translation>
 		</message>
 		<message>
-			<source>&amp;amp;File</source>
+			<source>&amp;File</source>
 			<translation>&amp;文件</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Settings</source>
+			<source>&amp;Settings</source>
 			<translation>设置(&amp;S)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Help</source>
+			<source>&amp;Help</source>
 			<translation>&amp;帮助</translation>
 		</message>
 		<message>
@@ -440,7 +440,7 @@
 			<translation>打开一个 hive: URI 或支付请求</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Command-line options</source>
+			<source>&amp;Command-line options</source>
 			<translation>&amp;命令行选项</translation>
 		</message>
 		<message>
@@ -544,7 +544,7 @@
 			<translation>发生严重错误.客户端无法安全地继续运行,即将退出.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Transfer Assets</source>
+			<source>&amp;Transfer Assets</source>
 			<translation>&amp;转让资产</translation>
 		</message>
 		<message>
@@ -552,7 +552,7 @@
 			<translation>将资产转移到HVN地址</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Create Assets</source>
+			<source>&amp;Create Assets</source>
 			<translation>&amp;创建资产</translation>
 		</message>
 		<message>
@@ -560,7 +560,7 @@
 			<translation>创建新的主/子/唯一资产</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Manage Assets</source>
+			<source>&amp;Manage Assets</source>
 			<translation>&amp;管理资产</translation>
 		</message>
 		<message>
@@ -568,7 +568,7 @@
 			<translation>管理您是其管理员的资产</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Messaging</source>
+			<source>&amp;Messaging</source>
 			<translation>&amp;信息</translation>
 		</message>
 		<message>
@@ -576,11 +576,11 @@
 			<translation>马上就来</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Voting</source>
+			<source>&amp;Voting</source>
 			<translation>&amp;投票</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Restricted Assets</source>
+			<source>&amp;Restricted Assets</source>
 			<translation>&amp;限制性资产</translation>
 		</message>
 		<message>
@@ -588,11 +588,11 @@
 			<translation>管理受限资产</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Debug Window</source>
+			<source>&amp;Debug Window</source>
 			<translation>&amp;调试窗口</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Wallet Repair</source>
+			<source>&amp;Wallet Repair</source>
 			<translation>&amp;钱包修复</translation>
 		</message>
 		<message>
@@ -604,7 +604,7 @@
 			<translation>打开配置单元:URI或付款请求</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Wallet</source>
+			<source>&amp;Wallet</source>
 			<translation>&amp;钱包</translation>
 		</message>
 		<message>
@@ -814,7 +814,7 @@
 			<translation>编辑地址</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Label</source>
+			<source>&amp;Label</source>
 			<translation>标签(&amp;L)</translation>
 		</message>
 		<message>
@@ -826,7 +826,7 @@
 			<translation>该地址已与地址列表中的条目关联,只能被发送地址修改.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Address</source>
+			<source>&amp;Address</source>
 			<translation>地址(&amp;A)</translation>
 		</message>
 		<message>
@@ -1121,7 +1121,7 @@
 			<translation>选项</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Main</source>
+			<source>&amp;Main</source>
 			<translation>主要(&amp;M)</translation>
 		</message>
 		<message>
@@ -1129,11 +1129,11 @@
 			<translation>在登入系统后自动启动 %1</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Start %1 on system login</source>
+			<source>&amp;Start %1 on system login</source>
 			<translation>系统登入时启动 %1</translation>
 		</message>
 		<message>
-			<source>Size of &amp;amp;database cache</source>
+			<source>Size of &amp;database cache</source>
 			<translation>数据库缓存大小(&amp;D)</translation>
 		</message>
 		<message>
@@ -1141,7 +1141,7 @@
 			<translation>MB</translation>
 		</message>
 		<message>
-			<source>Number of script &amp;amp;verification threads</source>
+			<source>Number of script &amp;verification threads</source>
 			<translation>脚本验证线程数(&amp;V)</translation>
 		</message>
 		<message>
@@ -1149,7 +1149,7 @@
 			<translation>接收外部连接</translation>
 		</message>
 		<message>
-			<source>Allow incomin&amp;amp;g connections</source>
+			<source>Allow incomin&amp;g connections</source>
 			<translation>允许流入连接</translation>
 		</message>
 		<message>
@@ -1165,7 +1165,7 @@
 			<translation>出现在交易的选项卡的上下文菜单项的第三方网址 (例如:区块链接查询) . %s的URL被替换为交易哈希.多个的URL需要竖线 | 分隔.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Third party transaction URLs</source>
+			<source>&amp;Third party transaction URLs</source>
 			<translation>第三方交易网址</translation>
 		</message>
 		<message>
@@ -1177,7 +1177,7 @@
 			<translation>恢复客户端的缺省设置</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Reset Options</source>
+			<source>&amp;Reset Options</source>
 			<translation>恢复缺省设置(&amp;R)</translation>
 		</message>
 		<message>
@@ -1185,7 +1185,7 @@
 			<translation>打开配置文件</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Network</source>
+			<source>&amp;Network</source>
 			<translation>网络(&amp;N)</translation>
 		</message>
 		<message>
@@ -1193,7 +1193,7 @@
 			<translation>(0 = 自动, &lt;0 = 离开很多免费的核心)</translation>
 		</message>
 		<message>
-			<source>W&amp;amp;allet</source>
+			<source>W&amp;allet</source>
 			<translation>钱包(&amp;A)</translation>
 		</message>
 		<message>
@@ -1201,7 +1201,7 @@
 			<translation>专家</translation>
 		</message>
 		<message>
-			<source>Enable coin &amp;amp;control features</source>
+			<source>Enable coin &amp;control features</source>
 			<translation>启动货币控制功能(&amp;C)</translation>
 		</message>
 		<message>
@@ -1209,7 +1209,7 @@
 			<translation>如果禁用未确认的零钱,则零钱至少需要1个确认才能使用.同时账户余额计算会受到影响.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Spend unconfirmed change</source>
+			<source>&amp;Spend unconfirmed change</source>
 			<translation>使用未经确认的零钱(&amp;S)</translation>
 		</message>
 		<message>
@@ -1217,7 +1217,7 @@
 			<translation>自动在路由器中打开Hivecoin端口.只有当您的路由器开启了 UPnP 选项时此功能才有效.</translation>
 		</message>
 		<message>
-			<source>Map port using &amp;amp;UPnP</source>
+			<source>Map port using &amp;UPnP</source>
 			<translation>使用 &amp;UPnP 映射端口</translation>
 		</message>
 		<message>
@@ -1225,15 +1225,15 @@
 			<translation>通过 SOCKS5 代理连接Hivecoin网络.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Connect through SOCKS5 proxy (default proxy):</source>
+			<source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
 			<translation>通过 SO&amp;CKS5 代理连接(默认代理):</translation>
 		</message>
 		<message>
-			<source>Proxy &amp;amp;IP:</source>
+			<source>Proxy &amp;IP:</source>
 			<translation>代理服务器 &amp;IP:</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Port:</source>
+			<source>&amp;Port:</source>
 			<translation>端口(&amp;P):</translation>
 		</message>
 		<message>
@@ -1265,19 +1265,19 @@
 			<translation>在 Tor 匿名网络下通过不同的 SOCKS5 代理连接Hivecoin网络</translation>
 		</message>
 		<message>
-			<source>Use separate SOCKS&amp;amp;5 proxy to reach peers via Tor hidden services:</source>
+			<source>Use separate SOCKS&amp;5 proxy to reach peers via Tor hidden services:</source>
 			<translation>通过Tor隐藏服务连接节点时 使用不同的SOCKS5代理</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Window</source>
+			<source>&amp;Window</source>
 			<translation>窗口(&amp;W)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Hide the icon from the system tray.</source>
+			<source>&amp;Hide the icon from the system tray.</source>
 			<translation>不在通知区显示图标</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Hide tray icon</source>
+			<source>&amp;Hide tray icon</source>
 			<translation>不显示通知区图标</translation>
 		</message>
 		<message>
@@ -1285,19 +1285,19 @@
 			<translation>最小化窗口后仅显示托盘图标</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Minimize to the tray instead of the taskbar</source>
+			<source>&amp;Minimize to the tray instead of the taskbar</source>
 			<translation>最小化到托盘(&amp;M)</translation>
 		</message>
 		<message>
-			<source>M&amp;amp;inimize on close</source>
+			<source>M&amp;inimize on close</source>
 			<translation>单击关闭按钮最小化(&amp;I)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Display</source>
+			<source>&amp;Display</source>
 			<translation>显示(&amp;D)</translation>
 		</message>
 		<message>
-			<source>User Interface &amp;amp;language:</source>
+			<source>User Interface &amp;language:</source>
 			<translation>用户界面语言(&amp;L):</translation>
 		</message>
 		<message>
@@ -1305,7 +1305,7 @@
 			<translation>可以在这里设定用户界面的语言.这个设定在重启 %1 后才会生效.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Unit to show amounts in:</source>
+			<source>&amp;Unit to show amounts in:</source>
 			<translation>Hivecoin金额单位(&amp;U):</translation>
 		</message>
 		<message>
@@ -1317,11 +1317,11 @@
 			<translation>是否需要交易源地址控制功能.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;OK</source>
+			<source>&amp;OK</source>
 			<translation>确定(&amp;O)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Cancel</source>
+			<source>&amp;Cancel</source>
 			<translation>取消(&amp;C)</translation>
 		</message>
 		<message>
@@ -1695,11 +1695,11 @@
 	<context>
 		<name>QRImageWidget</name>
 		<message>
-			<source>&amp;amp;Save Image...</source>
+			<source>&amp;Save Image...</source>
 			<translation>保存图片(&amp;S)...</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Copy Image</source>
+			<source>&amp;Copy Image</source>
 			<translation>复制图片</translation>
 		</message>
 		<message>
@@ -1722,7 +1722,7 @@
 			<translation>客户端版本</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Information</source>
+			<source>&amp;Information</source>
 			<translation>信息</translation>
 		</message>
 		<message>
@@ -1786,7 +1786,7 @@
 			<translation>发送</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Peers</source>
+			<source>&amp;Peers</source>
 			<translation>同伴(&amp;P)</translation>
 		</message>
 		<message>
@@ -1878,19 +1878,19 @@
 			<translation>上一数据块时间</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Open</source>
+			<source>&amp;Open</source>
 			<translation>打开(&amp;O)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Console</source>
+			<source>&amp;Console</source>
 			<translation>控制台(&amp;C)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Network Traffic</source>
+			<source>&amp;Network Traffic</source>
 			<translation>网络流量(&amp;N)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Clear</source>
+			<source>&amp;Clear</source>
 			<translation>清除(&amp;C)</translation>
 		</message>
 		<message>
@@ -1914,23 +1914,23 @@
 			<translation>清空控制台</translation>
 		</message>
 		<message>
-			<source>1 &amp;amp;hour</source>
+			<source>1 &amp;hour</source>
 			<translation>1 小时(&amp;H)</translation>
 		</message>
 		<message>
-			<source>1 &amp;amp;day</source>
+			<source>1 &amp;day</source>
 			<translation>1 天(&amp;D)</translation>
 		</message>
 		<message>
-			<source>1 &amp;amp;week</source>
+			<source>1 &amp;week</source>
 			<translation>1 周(&amp;W)</translation>
 		</message>
 		<message>
-			<source>1 &amp;amp;year</source>
+			<source>1 &amp;year</source>
 			<translation>1 年(&amp;Y)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Disconnect</source>
+			<source>&amp;Disconnect</source>
 			<translation>(&amp;D)断开</translation>
 		</message>
 		<message>
@@ -1938,7 +1938,7 @@
 			<translation>禁止</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Unban</source>
+			<source>&amp;Unban</source>
 			<translation>重新允许</translation>
 		</message>
 		<message>
@@ -2026,7 +2026,7 @@
 			<translation>警告:骗子一直很活跃,告诉用户在这里输入命令,窃取他们的钱包内容.在没有完全理解命令的后果之前,不要使用此控制台.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Wallet Repair</source>
+			<source>&amp;Wallet Repair</source>
 			<translation>钱包修复</translation>
 		</message>
 		<message>
@@ -2077,15 +2077,15 @@
 	<context>
 		<name>ReceiveCoinsDialog</name>
 		<message>
-			<source>&amp;amp;Amount:</source>
+			<source>&amp;Amount:</source>
 			<translation>总额(&amp;A):</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Label:</source>
+			<source>&amp;Label:</source>
 			<translation>标签(&amp;L):</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Message:</source>
+			<source>&amp;Message:</source>
 			<translation>消息(&amp;M):</translation>
 		</message>
 		<message>
@@ -2093,7 +2093,7 @@
 			<translation>重复使用以前用过的接收地址.重用地址有安全和隐私方面的隐患.除非是为重复生成同一项支付请求,否则请不要这样做.</translation>
 		</message>
 		<message>
-			<source>R&amp;amp;euse an existing receiving address (not recommended)</source>
+			<source>R&amp;euse an existing receiving address (not recommended)</source>
 			<translation>重用现有的接收地址(不推荐)</translation>
 		</message>
 		<message>
@@ -2125,7 +2125,7 @@
 			<translation>请求付款的历史</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Request payment</source>
+			<source>&amp;Request payment</source>
 			<translation>请求付款(&amp;R)</translation>
 		</message>
 		<message>
@@ -2168,15 +2168,15 @@
 			<translation>二维码</translation>
 		</message>
 		<message>
-			<source>Copy &amp;amp;URI</source>
+			<source>Copy &amp;URI</source>
 			<translation>复制 URI(&amp;U)</translation>
 		</message>
 		<message>
-			<source>Copy &amp;amp;Address</source>
+			<source>Copy &amp;Address</source>
 			<translation>复制地址(&amp;A)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Save Image...</source>
+			<source>&amp;Save Image...</source>
 			<translation>保存图片(&amp;S)...</translation>
 		</message>
 		<message>
@@ -2216,7 +2216,7 @@
 			<translation>把 URI 编码成二维码时发生错误.</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Copy Image</source>
+			<source>&amp;Copy Image</source>
 			<translation>&amp;复制图像</translation>
 		</message>
 		<message>
@@ -2374,7 +2374,7 @@
 			<translation>一次发送给多个接收者</translation>
 		</message>
 		<message>
-			<source>Add &amp;amp;Recipient</source>
+			<source>Add &amp;Recipient</source>
 			<translation>添加收款人(&amp;R)</translation>
 		</message>
 		<message>
@@ -2386,7 +2386,7 @@
 			<translation>小额:</translation>
 		</message>
 		<message>
-			<source>Clear &amp;amp;All</source>
+			<source>Clear &amp;All</source>
 			<translation>清除所有(&amp;A)</translation>
 		</message>
 		<message>
@@ -2398,7 +2398,7 @@
 			<translation>确认发送货币</translation>
 		</message>
 		<message>
-			<source>S&amp;amp;end</source>
+			<source>S&amp;end</source>
 			<translation>发送(&amp;E)</translation>
 		</message>
 		<message>
@@ -2537,15 +2537,15 @@
 	<context>
 		<name>SendCoinsEntry</name>
 		<message>
-			<source>A&amp;amp;mount:</source>
+			<source>A&amp;mount:</source>
 			<translation>金额(&amp;M)</translation>
 		</message>
 		<message>
-			<source>Pay &amp;amp;To:</source>
+			<source>Pay &amp;To:</source>
 			<translation>付给(&amp;T):</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Label:</source>
+			<source>&amp;Label:</source>
 			<translation>标签(&amp;L):</translation>
 		</message>
 		<message>
@@ -2581,7 +2581,7 @@
 			<translation>交易费将从发送总额中扣除.接收人将收到比您在金额框中输入的更少的Hivecoin.如果选中了多个收件人,交易费平分.</translation>
 		</message>
 		<message>
-			<source>S&amp;amp;ubtract fee from amount</source>
+			<source>S&amp;ubtract fee from amount</source>
 			<translation>从金额中减去交易费(&amp;U)</translation>
 		</message>
 		<message>
@@ -2646,7 +2646,7 @@
 			<translation>签名 - 为消息签名/验证签名消息</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Sign Message</source>
+			<source>&amp;Sign Message</source>
 			<translation>签名消息(&amp;S)</translation>
 		</message>
 		<message>
@@ -2690,7 +2690,7 @@
 			<translation>签名消息,证明这个地址属于您.</translation>
 		</message>
 		<message>
-			<source>Sign &amp;amp;Message</source>
+			<source>Sign &amp;Message</source>
 			<translation>消息签名(&amp;M)</translation>
 		</message>
 		<message>
@@ -2698,11 +2698,11 @@
 			<translation>清空所有签名消息栏</translation>
 		</message>
 		<message>
-			<source>Clear &amp;amp;All</source>
+			<source>Clear &amp;All</source>
 			<translation>清除所有(&amp;A)</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Verify Message</source>
+			<source>&amp;Verify Message</source>
 			<translation>验证消息(&amp;V)</translation>
 		</message>
 		<message>
@@ -2718,7 +2718,7 @@
 			<translation>验证消息,确保消息是由指定的Hivecoin地址签名过的.</translation>
 		</message>
 		<message>
-			<source>Verify &amp;amp;Message</source>
+			<source>Verify &amp;Message</source>
 			<translation>验证消息签名(&amp;M)</translation>
 		</message>
 		<message>
@@ -3366,7 +3366,7 @@
 	<context>
 		<name>WalletView</name>
 		<message>
-			<source>&amp;amp;Export</source>
+			<source>&amp;Export</source>
 			<translation>导出(&amp;E)</translation>
 		</message>
 		<message>
@@ -4785,7 +4785,7 @@
 			<translation>验证程序字符串:</translation>
 		</message>
 		<message>
-			<source>Create a verifier string built from Qualifier names e.g (#KYC &amp;amp; #VALID). Leave blank to default to true</source>
+			<source>Create a verifier string built from Qualifier names e.g (#KYC &amp; #VALID). Leave blank to default to true</source>
 			<translation>创建一个由限定符名(例如(#KYC"amp；#VALID))生成的验证程序字符串.留空默认为true</translation>
 		</message>
 		<message>
@@ -4881,7 +4881,7 @@
 			<translation>推荐:</translation>
 		</message>
 		<message>
-			<source>C&amp;amp;ustom:</source>
+			<source>C&amp;ustom:</source>
 			<translation>自定义("U):</translation>
 		</message>
 		<message>
@@ -5309,7 +5309,7 @@
 			<translation>验证程序字符串:</translation>
 		</message>
 		<message>
-			<source>Create a verifier string built from Qualifier names e.g (#KYC &amp;amp; #VALID). Leave blank not change this</source>
+			<source>Create a verifier string built from Qualifier names e.g (#KYC &amp; #VALID). Leave blank not change this</source>
 			<translation>创建一个由限定符名(例如(#KYC"amp；#VALID))生成的验证程序字符串.留空不更改</translation>
 		</message>
 		<message>
@@ -5405,7 +5405,7 @@
 			<translation>推荐:</translation>
 		</message>
 		<message>
-			<source>Cus&amp;amp;tom:</source>
+			<source>Cus&amp;tom:</source>
 			<translation>自定义:</translation>
 		</message>
 		<message>
@@ -5670,19 +5670,19 @@
 			<translation>全局选项</translation>
 		</message>
 		<message>
-			<source>Free&amp;amp;ze trading on this address</source>
+			<source>Free&amp;ze trading on this address</source>
 			<translation>在此地址上自由交易</translation>
 		</message>
 		<message>
-			<source>Unfreeze tradin&amp;amp;g on this address</source>
+			<source>Unfreeze tradin&amp;g on this address</source>
 			<translation>解冻此地址上的交易</translation>
 		</message>
 		<message>
-			<source>Freeze all &amp;amp;trading for the selected restricted asset</source>
+			<source>Freeze all &amp;trading for the selected restricted asset</source>
 			<translation>冻结所选限制资产的所有交易</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Unfreeze all trading for the selected restricted asset</source>
+			<source>&amp;Unfreeze all trading for the selected restricted asset</source>
 			<translation>解冻所选限制资产的所有交易</translation>
 		</message>
 		<message>
@@ -5777,7 +5777,7 @@
 			<translation>输入此地址的标签以将其添加到已用地址列表中</translation>
 		</message>
 		<message>
-			<source>&amp;amp;Label:</source>
+			<source>&amp;Label:</source>
 			<translation>标签:</translation>
 		</message>
 		<message>
@@ -5813,7 +5813,7 @@
 			<translation>信息:</translation>
 		</message>
 		<message>
-			<source>Pay &amp;amp;To:</source>
+			<source>Pay &amp;To:</source>
 			<translation>付款给:</translation>
 		</message>
 		<message>
@@ -5833,7 +5833,7 @@
 			<translation>付款人:</translation>
 		</message>
 		<message>
-			<source>A&amp;amp;mount:</source>
+			<source>A&amp;mount:</source>
 			<translation>金额:</translation>
 		</message>
 		<message>
