@@ -952,8 +952,7 @@
 		</message>
 		<message>
 			<source>Welcome to %1.</source>
-			<translation>
-歡迎來到 %1</translation>
+			<translation>歡迎來到 %1</translation>
 		</message>
 		<message>
 			<source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
@@ -4238,7 +4237,7 @@
 		</message>
 		<message>
 			<source>Rewinding blocks...</source>
-			<translation>正在倒带块...</translation>
+			<translation>正在重绕区块...</translation>
 		</message>
 		<message>
 			<source>Unable to bind to %s on this computer. %s is probably already running.</source>
