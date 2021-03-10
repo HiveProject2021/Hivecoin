@@ -245,7 +245,7 @@
 		<name>HiveGUI</name>
 		<message>
 			<source>Sign &amp;message...</source>
-			<translation>簽名消息(&amp;quot;M)...</translation>
+			<translation>簽名消息(&amp;M)...</translation>
 		</message>
 		<message>
 			<source>Synchronizing with network...</source>
@@ -253,7 +253,7 @@
 		</message>
 		<message>
 			<source>&amp;Overview</source>
-			<translation>&amp;quot;概述</translation>
+			<translation>&amp;概述</translation>
 		</message>
 		<message>
 			<source>Node</source>
@@ -265,7 +265,7 @@
 		</message>
 		<message>
 			<source>&amp;Transactions</source>
-			<translation>&amp;quot;交易記錄</translation>
+			<translation>&amp;交易記錄</translation>
 		</message>
 		<message>
 			<source>Browse transaction history</source>
@@ -281,7 +281,7 @@
 		</message>
 		<message>
 			<source>&amp;About %1</source>
-			<translation>&amp;quot;關於%1</translation>
+			<translation>&amp;關於%1</translation>
 		</message>
 		<message>
 			<source>Show information about %1</source>
@@ -289,7 +289,7 @@
 		</message>
 		<message>
 			<source>About &amp;Qt</source>
-			<translation>關於Qt(&amp;quot;Q)</translation>
+			<translation>關於Qt(&amp;Q)</translation>
 		</message>
 		<message>
 			<source>Show information about Qt</source>
@@ -297,7 +297,7 @@
 		</message>
 		<message>
 			<source>&amp;Options...</source>
-			<translation>&amp;quot;選項...</translation>
+			<translation>&amp;選項...</translation>
 		</message>
 		<message>
 			<source>Modify configuration options for %1</source>
@@ -305,27 +305,27 @@
 		</message>
 		<message>
 			<source>&amp;Encrypt Wallet...</source>
-			<translation>&amp;quot;加密錢包...</translation>
+			<translation>&amp;加密錢包...</translation>
 		</message>
 		<message>
 			<source>&amp;Backup Wallet...</source>
-			<translation>&amp;quot;備用錢包...</translation>
+			<translation>&amp;備用錢包...</translation>
 		</message>
 		<message>
 			<source>&amp;Change Passphrase...</source>
-			<translation>&amp;quot;更改密碼短語...</translation>
+			<translation>&amp;更改密碼短語...</translation>
 		</message>
 		<message>
 			<source>&amp;Sending addresses...</source>
-			<translation>&amp;quot;正在發送地址...</translation>
+			<translation>&amp;正在發送地址...</translation>
 		</message>
 		<message>
 			<source>&amp;Receiving addresses...</source>
-			<translation>&amp;quot;正在接收地址...</translation>
+			<translation>&amp;正在接收地址...</translation>
 		</message>
 		<message>
 			<source>Open &amp;URI...</source>
-			<translation>打開URI(&amp;quot;U)...</translation>
+			<translation>打開URI(&amp;U)...</translation>
 		</message>
 		<message>
 			<source>Click to disable network activity.</source>
@@ -361,7 +361,7 @@
 		</message>
 		<message>
 			<source>&amp;Debug window</source>
-			<translation>&amp;quot;調試視窗</translation>
+			<translation>&amp;調試視窗</translation>
 		</message>
 		<message>
 			<source>Open debugging and diagnostic console</source>
@@ -369,7 +369,7 @@
 		</message>
 		<message>
 			<source>&amp;Verify message...</source>
-			<translation>&amp;quot;驗證消息...</translation>
+			<translation>&amp;驗證消息...</translation>
 		</message>
 		<message>
 			<source>Hive</source>
@@ -381,15 +381,15 @@
 		</message>
 		<message>
 			<source>&amp;Send</source>
-			<translation>&amp;quot;發送</translation>
+			<translation>&amp;發送</translation>
 		</message>
 		<message>
 			<source>&amp;Receive</source>
-			<translation>&amp;quot;接收</translation>
+			<translation>&amp;接收</translation>
 		</message>
 		<message>
 			<source>&amp;Show / Hide</source>
-			<translation>&amp;quot;顯示/隱藏</translation>
+			<translation>&amp;顯示/隱藏</translation>
 		</message>
 		<message>
 			<source>Show or hide the main Window</source>
@@ -409,15 +409,15 @@
 		</message>
 		<message>
 			<source>&amp;File</source>
-			<translation>&amp;quot;檔案</translation>
+			<translation>&amp;檔案</translation>
 		</message>
 		<message>
 			<source>&amp;Settings</source>
-			<translation>&amp;quot;設定</translation>
+			<translation>&amp;設定</translation>
 		</message>
 		<message>
 			<source>&amp;Help</source>
-			<translation>&amp;quot;救命</translation>
+			<translation>&amp;救命</translation>
 		</message>
 		<message>
 			<source>Tabs toolbar</source>
@@ -441,7 +441,7 @@
 		</message>
 		<message>
 			<source>&amp;Command-line options</source>
-			<translation>&amp;quot;命令列選項</translation>
+			<translation>&amp;命令列選項</translation>
 		</message>
 		<message>
 			<source>%n active connection(s) to Hive network</source>
@@ -545,7 +545,7 @@
 		</message>
 		<message>
 			<source>&amp;Transfer Assets</source>
-			<translation>&amp;quot;轉讓資產</translation>
+			<translation>&amp;轉讓資產</translation>
 		</message>
 		<message>
 			<source>Transfer assets to HVN addresses</source>
@@ -553,7 +553,7 @@
 		</message>
 		<message>
 			<source>&amp;Create Assets</source>
-			<translation>&amp;quot;創建資產</translation>
+			<translation>&amp;創建資產</translation>
 		</message>
 		<message>
 			<source>Create new main/sub/unique assets</source>
@@ -561,7 +561,7 @@
 		</message>
 		<message>
 			<source>&amp;Manage Assets</source>
-			<translation>&amp;quot;管理資產</translation>
+			<translation>&amp;管理資產</translation>
 		</message>
 		<message>
 			<source>Manage assets you are the administrator of</source>
@@ -569,7 +569,7 @@
 		</message>
 		<message>
 			<source>&amp;Messaging</source>
-			<translation>&amp;quot;資訊</translation>
+			<translation>&amp;資訊</translation>
 		</message>
 		<message>
 			<source>Coming Soon</source>
@@ -577,11 +577,11 @@
 		</message>
 		<message>
 			<source>&amp;Voting</source>
-			<translation>&amp;quot;投票</translation>
+			<translation>&amp;投票</translation>
 		</message>
 		<message>
 			<source>&amp;Restricted Assets</source>
-			<translation>&amp;quot;限制性資產</translation>
+			<translation>&amp;限制性資產</translation>
 		</message>
 		<message>
 			<source>Manage restricted assets</source>
@@ -589,11 +589,11 @@
 		</message>
 		<message>
 			<source>&amp;Debug Window</source>
-			<translation>&amp;quot;調試視窗</translation>
+			<translation>&amp;調試視窗</translation>
 		</message>
 		<message>
 			<source>&amp;Wallet Repair</source>
-			<translation>&amp;quot;錢包修理</translation>
+			<translation>&amp;錢包修理</translation>
 		</message>
 		<message>
 			<source>Open wallet repair options</source>
@@ -605,7 +605,7 @@
 		</message>
 		<message>
 			<source>&amp;Wallet</source>
-			<translation>&amp;quot;錢包</translation>
+			<translation>&amp;錢包</translation>
 		</message>
 		<message>
 			<source>Hivecoin Market Price</source>
@@ -1149,7 +1149,7 @@
 		</message>
 		<message>
 			<source>Allow incomin&amp;g connections</source>
-			<translation>允許輸入連接(&amp;quot;g)</translation>
+			<translation>允許輸入連接(&amp;g)</translation>
 		</message>
 		<message>
 			<source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -1165,7 +1165,7 @@
 		</message>
 		<message>
 			<source>&amp;Third party transaction URLs</source>
-			<translation>&amp;quot;協力廠商事務URL</translation>
+			<translation>&amp;協力廠商事務URL</translation>
 		</message>
 		<message>
 			<source>Active command-line options that override above options:</source>
@@ -1277,7 +1277,7 @@
 		</message>
 		<message>
 			<source>&amp;Hide tray icon</source>
-			<translation>&amp;quot;隱藏託盤圖標</translation>
+			<translation>&amp;隱藏託盤圖標</translation>
 		</message>
 		<message>
 			<source>Show only a tray icon after minimizing the window.</source>
@@ -2026,7 +2026,7 @@
 		</message>
 		<message>
 			<source>&amp;Wallet Repair</source>
-			<translation>&amp;quot;錢包修理</translation>
+			<translation>&amp;錢包修理</translation>
 		</message>
 		<message>
 			<source>Wallet Repair Options</source>
@@ -2216,7 +2216,7 @@
 		</message>
 		<message>
 			<source>&amp;Copy Image</source>
-			<translation>&amp;quot;複製影像</translation>
+			<translation>&amp;複製影像</translation>
 		</message>
 		<message>
 			<source>Save QR Code</source>
@@ -4785,7 +4785,7 @@
 		</message>
 		<message>
 			<source>Create a verifier string built from Qualifier names e.g (#KYC &amp; #VALID). Leave blank to default to true</source>
-			<translation>創建一個由限定符名(例如(#KYC&amp;quot;#VALID)構建的驗證器字串.留空默認為true</translation>
+			<translation>創建一個由限定符名(例如(#KYC&amp;#VALID)構建的驗證器字串.留空默認為true</translation>
 		</message>
 		<message>
 			<source>Warning:</source>
@@ -4881,7 +4881,7 @@
 		</message>
 		<message>
 			<source>C&amp;ustom:</source>
-			<translation>自定義(&amp;quot;U)：</translation>
+			<translation>自定義(&amp;U)：</translation>
 		</message>
 		<message>
 			<source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
@@ -5309,7 +5309,7 @@
 		</message>
 		<message>
 			<source>Create a verifier string built from Qualifier names e.g (#KYC &amp; #VALID). Leave blank not change this</source>
-			<translation>創建一個由限定符名(例如(#KYC&amp;quot;#VALID)構建的驗證器字串.留空不更改</translation>
+			<translation>創建一個由限定符名(例如(#KYC&amp;#VALID)構建的驗證器字串.留空不更改</translation>
 		</message>
 		<message>
 			<source>Warning:</source>
@@ -5405,7 +5405,7 @@
 		</message>
 		<message>
 			<source>Cus&amp;tom:</source>
-			<translation>自定義(&amp;quot;T)：</translation>
+			<translation>自定義(&amp;T)：</translation>
 		</message>
 		<message>
 			<source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
@@ -5670,19 +5670,19 @@
 		</message>
 		<message>
 			<source>Free&amp;ze trading on this address</source>
-			<translation>在此地址自由交易(&amp;quot;Z)</translation>
+			<translation>在此地址自由交易(&amp;Z)</translation>
 		</message>
 		<message>
 			<source>Unfreeze tradin&amp;g on this address</source>
-			<translation>解凍此地址上的交易(&amp;quot;g)</translation>
+			<translation>解凍此地址上的交易(&amp;g)</translation>
 		</message>
 		<message>
 			<source>Freeze all &amp;trading for the selected restricted asset</source>
-			<translation>凍結所選限制資產的所有交易(&amp;quot;T)</translation>
+			<translation>凍結所選限制資產的所有交易(&amp;T)</translation>
 		</message>
 		<message>
 			<source>&amp;Unfreeze all trading for the selected restricted asset</source>
-			<translation>&amp;quot;解凍所選限制資產的所有交易</translation>
+			<translation>&amp;解凍所選限制資產的所有交易</translation>
 		</message>
 		<message>
 			<source>Check</source>
@@ -5777,7 +5777,7 @@
 		</message>
 		<message>
 			<source>&amp;Label:</source>
-			<translation>&amp;quot;標籤：</translation>
+			<translation>&amp;標籤：</translation>
 		</message>
 		<message>
 			<source>Asset:</source>
@@ -5813,7 +5813,7 @@
 		</message>
 		<message>
 			<source>Pay &amp;To:</source>
-			<translation>付款方式(&amp;quot;T)：</translation>
+			<translation>付款方式(&amp;T)：</translation>
 		</message>
 		<message>
 			<source>Transfer Administrator Asset</source>
@@ -5833,7 +5833,7 @@
 		</message>
 		<message>
 			<source>A&amp;mount:</source>
-			<translation>裝載(&amp;quot;M)：</translation>
+			<translation>裝載(&amp;M)：</translation>
 		</message>
 		<message>
 			<source>This is an authenticated payment request.</source>
