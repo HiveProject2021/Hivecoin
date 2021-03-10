@@ -2054,7 +2054,7 @@
 		</message>
 		<message>
 			<source>-rescan: Rescan the blockchain files on disk for missing wallet transactions. (Short process)</source>
-			<translation>-重新扫描：重新扫描磁盘上丢失钱包交易的区块链文件.(短流程)</translation>
+			<translation>-rescan：重新扫描磁盘上丢失钱包交易的区块链文件.(短流程)</translation>
 		</message>
 		<message>
 			<source>-zapwallettxes=1: Delete all wallet transactions and recover them with a rescan. (Keeps metadata)</source>
@@ -4534,7 +4534,7 @@
 		<name>AssetTableModel</name>
 		<message>
 			<source>Name</source>
-			<translation>姓名</translation>
+			<translation>名称</translation>
 		</message>
 		<message>
 			<source>Quantity</source>
@@ -4757,7 +4757,7 @@
 		</message>
 		<message>
 			<source>Name:</source>
-			<translation>姓名：</translation>
+			<translation>名称：</translation>
 		</message>
 		<message>
 			<source>A-Z 0-9 and . or _ as the second character</source>
@@ -5109,7 +5109,7 @@
 		</message>
 		<message>
 			<source>Name</source>
-			<translation>姓名</translation>
+			<translation>名称</translation>
 		</message>
 		<message>
 			<source>Total Quantity</source>
