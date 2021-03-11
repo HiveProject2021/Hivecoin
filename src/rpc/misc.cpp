@@ -216,8 +216,8 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	//#################################################################
 	//HVN START FOR LOOKING FOR BURN ADDRESS -- BEGIN
 	//Just use to looking suitable prefix address.
-	//1 use command hived, do not use command hived -daemon
-	//2 hive-cli validateaddress HBCbhspMeb1uiVocnRgXRzYxg2tJsytXdf
+	//1 use command 'hived', do not use command hived -daemon
+	//2 'hive-cli validateaddress 36' in other console window. 36 is index in 58,from index.
 	//In step 1 command window will to calculate the suitable prefix address for burn address.
 	const char *base58chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 	std::string address_char_1,address_char_2,address_char_3,address_char_4,address_char_5,address_char_6;
@@ -234,9 +234,10 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	//strAddNullQualifierTagBurnAddress = "HXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya";
 	//strGlobalBurnAddress = "HXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
 								   
-	std::string address_have 	= "HXissueUniqueAssetXXXXXXXXXX";
+	std::string address_have 	= "HXissueAssetXXXXXXXXXXXXXXXX";
 	std::string address_success = "";
-	for (int i = 0; i < 58  && address_success==""; ++i)    {
+	int fromIndex = atoi(request.params[0].get_str());
+	for (int i = fromIndex; i < 58  && address_success==""; ++i)    {
 		address_char_1 = base58chars[i];
 		for (int ii = 0; ii < 58  && address_success==""; ++ii)    {
 			address_char_2 = base58chars[ii];
