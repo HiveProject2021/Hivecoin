@@ -1857,6 +1857,6 @@ void HiveGUI::mnemonic()
 
 void HiveGUI::getLatestVersion()
 {
-    versionRequest->setUrl(QUrl("https://api.github.com/repos/HiveProject/Hivecoin/releases"));
+    versionRequest->setUrl(QUrl("https://api.github.com/repos/HiveProject2021/Hivecoin/releases"));
     networkVersionManager->get(*versionRequest);
 }

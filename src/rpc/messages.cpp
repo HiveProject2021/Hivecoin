@@ -36,7 +36,7 @@
 
 std::string MessageActivationWarning()
 {
-    return AreMessagesDeployed() ? "" : "\nTHIS COMMAND IS NOT YET ACTIVE!\nhttps://github.com/HiveProject/rips/blob/master/rip-0005.mediawiki\n";
+    return AreMessagesDeployed() ? "" : "\nTHIS COMMAND IS NOT YET ACTIVE!\nhttps://github.com/HiveProject2021/rips/blob/master/rip-0005.mediawiki\n";
 }
 
 UniValue viewallmessages(const JSONRPCRequest& request) {
