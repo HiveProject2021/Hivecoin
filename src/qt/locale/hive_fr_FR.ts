@@ -3968,7 +3968,7 @@
 		</message>
 		<message>
 			<source>There was an error trying to save the address list to %1. Please try again.</source>
-			<translation>Une erreur s'est produite en essayant d'enregistrer la liste d'adresses à% 1.Veuillez réessayer.</translation>
+			<translation>Une erreur s'est produite en essayant d'enregistrer la liste d'adresses à%1.Veuillez réessayer.</translation>
 		</message>
 	</context>
 	<context>
@@ -4129,7 +4129,7 @@
 		</message>
 		<message>
 			<source>(%1 locked)</source>
-			<translation>(% 1 verrouillé)</translation>
+			<translation>(%1 verrouillé)</translation>
 		</message>
 		<message>
 			<source>yes</source>
@@ -4145,7 +4145,7 @@
 		</message>
 		<message>
 			<source>Can vary +/- %1 satoshi(s) per input.</source>
-			<translation>Chaque entrée peut changer + / -% 1 Satoshi.</translation>
+			<translation>Chaque entrée peut changer + / -%1 Satoshi.</translation>
 		</message>
 		<message>
 			<source>(no label)</source>
@@ -4153,7 +4153,7 @@
 		</message>
 		<message>
 			<source>change from %1 (%2)</source>
-			<translation>Changement de% 1 (% 2)</translation>
+			<translation>Changement de%1 (%2)</translation>
 		</message>
 		<message>
 			<source>(change)</source>
@@ -4192,11 +4192,11 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>1 (% 2 blocs)</translation>
+			<translation>1 (%2 blocs)</translation>
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>1 à% 2</translation>
+			<translation>1 à%2</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -4228,7 +4228,7 @@
 		</message>
 		<message>
 			<source>The total exceeds your balance when the %1 transaction fee is included.</source>
-			<translation>Lorsque vous incluez les frais de transaction% 1, le total dépasse votre solde.</translation>
+			<translation>Lorsque vous incluez les frais de transaction%1, le total dépasse votre solde.</translation>
 		</message>
 		<message>
 			<source>Duplicate address found: addresses should only be used once each.</source>
@@ -4240,11 +4240,11 @@
 		</message>
 		<message>
 			<source>The transaction was rejected with the following reason: %1</source>
-			<translation>La transaction a été rejetée pour la raison suivante:% 1</translation>
+			<translation>La transaction a été rejetée pour la raison suivante:%1</translation>
 		</message>
 		<message>
 			<source>A fee higher than %1 is considered an absurdly high fee.</source>
-			<translation>Les dépenses supérieures à% 1 sont considérées comme scandaleuses.</translation>
+			<translation>Les dépenses supérieures à%1 sont considérées comme scandaleuses.</translation>
 		</message>
 		<message>
 			<source>Payment request expired.</source>
@@ -4256,11 +4256,11 @@
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
-			<translation>Payer seulement% 1 requis</translation>
+			<translation>Payer seulement%1 requis</translation>
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>On estime que la validation débutera dans les blocs% n.</translation>
+			<translation>On estime que la validation débutera dans les blocs%n.</translation>
 		</message>
 		<message>
 			<source>Warning: Invalid Hive address</source>
@@ -4357,7 +4357,7 @@
 		</message>
 		<message>
 			<source>(%1 locked)</source>
-			<translation>(% 1 verrouillé)</translation>
+			<translation>(%1 verrouillé)</translation>
 		</message>
 		<message>
 			<source>yes</source>
@@ -4373,7 +4373,7 @@
 		</message>
 		<message>
 			<source>Can vary +/- %1 satoshi(s) per input.</source>
-			<translation>Chaque entrée peut changer + / -% 1 Satoshi.</translation>
+			<translation>Chaque entrée peut changer + / -%1 Satoshi.</translation>
 		</message>
 		<message>
 			<source>(no label)</source>
@@ -4381,7 +4381,7 @@
 		</message>
 		<message>
 			<source>change from %1 (%2)</source>
-			<translation>Changement de% 1 (% 2)</translation>
+			<translation>Changement de%1 (%2)</translation>
 		</message>
 		<message>
 			<source>(change)</source>
@@ -4420,7 +4420,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>1 (% 2 blocs)</translation>
+			<translation>1 (%2 blocs)</translation>
 		</message>
 		<message>
 			<source>Main Asset</source>
@@ -4488,7 +4488,7 @@
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>1 à% 2</translation>
+			<translation>1 à%2</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -4500,7 +4500,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>Total% 1</translation>
+			<translation>Total%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -4528,7 +4528,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>On estime que la validation débutera dans les blocs% n.</translation>
+			<translation>On estime que la validation débutera dans les blocs%n.</translation>
 		</message>
 		<message>
 			<source>Warning: Unknown change address</source>
@@ -4548,7 +4548,7 @@
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
-			<translation>Payer seulement% 1 requis</translation>
+			<translation>Payer seulement%1 requis</translation>
 		</message>
 	</context>
 	<context>
@@ -4586,7 +4586,7 @@
 		<name>guiutil</name>
 		<message>
 			<source>Enter a Hive address (e.g. %1)</source>
-			<translation>Saisissez l'adresse de la ruche (par exemple% 1)</translation>
+			<translation>Saisissez l'adresse de la ruche (par exemple%1)</translation>
 		</message>
 		<message>
 			<source>Warning: transaction while syncing wallet!</source>
@@ -4598,7 +4598,7 @@
 		</message>
 		<message>
 			<source>%1 d</source>
-			<translation>% 1 jour (s)</translation>
+			<translation>%1 jour (s)</translation>
 		</message>
 		<message>
 			<source>%1 h</source>
@@ -4606,7 +4606,7 @@
 		</message>
 		<message>
 			<source>%1 m</source>
-			<translation>% 1 m</translation>
+			<translation>%1 m</translation>
 		</message>
 		<message>
 			<source>%1 s</source>
@@ -4642,19 +4642,19 @@
 		</message>
 		<message>
 			<source>%n week(s)</source>
-			<translation>% n semaines</translation>
+			<translation>%n semaines</translation>
 		</message>
 		<message>
 			<source>%1 and %2</source>
-			<translation>1 et% 2</translation>
+			<translation>1 et%2</translation>
 		</message>
 		<message>
 			<source>%n year(s)</source>
-			<translation>% n</translation>
+			<translation>%n</translation>
 		</message>
 		<message>
 			<source>%1 B</source>
-			<translation>% 1 b</translation>
+			<translation>%1 b</translation>
 		</message>
 		<message>
 			<source>%1 KB</source>
@@ -4681,11 +4681,11 @@
 		</message>
 		<message>
 			<source>Error: Cannot parse configuration file: %1. Only use key=value syntax.</source>
-			<translation>Erreur: impossible d'analyser le profil:% 1.N'utilisez que la syntaxe key = value.</translation>
+			<translation>Erreur: impossible d'analyser le profil:%1.N'utilisez que la syntaxe key = value.</translation>
 		</message>
 		<message>
 			<source>Error: %1</source>
-			<translation>Erreur:% 1</translation>
+			<translation>Erreur:%1</translation>
 		</message>
 		<message>
 			<source>%1 didn't yet exit safely...</source>
@@ -4788,11 +4788,11 @@
 		</message>
 		<message>
 			<source>&amp;About %1</source>
-			<translation>À propos de% 1</translation>
+			<translation>À propos de%1</translation>
 		</message>
 		<message>
 			<source>Show information about %1</source>
-			<translation>Afficher les informations sur% 1</translation>
+			<translation>Afficher les informations sur%1</translation>
 		</message>
 		<message>
 			<source>About &amp;Qt</source>
@@ -4808,7 +4808,7 @@
 		</message>
 		<message>
 			<source>Modify configuration options for %1</source>
-			<translation>Modifier les options de configuration pour% 1</translation>
+			<translation>Modifier les options de configuration pour%1</translation>
 		</message>
 		<message>
 			<source>&amp;Show / Hide</source>
@@ -4904,7 +4904,7 @@
 		</message>
 		<message>
 			<source>Show the %1 help message to get a list with possible Hive command-line options</source>
-			<translation>Afficher le message d'aide% 1 pour obtenir une liste des options possibles de ligne de commande snap - in</translation>
+			<translation>Afficher le message d'aide%1 pour obtenir une liste des options possibles de ligne de commande snap - in</translation>
 		</message>
 		<message>
 			<source>&amp;File</source>
@@ -4948,7 +4948,7 @@
 		</message>
 		<message>
 			<source>Syncing Headers (%1%)...</source>
-			<translation>Synchronisation des en - têtes (% 1%)...</translation>
+			<translation>Synchronisation des en - têtes (%1%)...</translation>
 		</message>
 		<message>
 			<source>Synchronizing with network...</source>
@@ -4988,7 +4988,7 @@
 		</message>
 		<message>
 			<source>Last received block was generated %1 ago.</source>
-			<translation>Le dernier bloc reçu a été généré avant% 1.</translation>
+			<translation>Le dernier bloc reçu a été généré avant%1.</translation>
 		</message>
 		<message>
 			<source>Transactions after this will not yet be visible.</source>
@@ -5012,23 +5012,23 @@
 		</message>
 		<message>
 			<source>Date: %1\n</source>
-			<translation>Date:% 1 \ \ n</translation>
+			<translation>Date:%1 \ \ n</translation>
 		</message>
 		<message>
 			<source>Amount: %1\n</source>
-			<translation>Montant:% 1 \ \ n</translation>
+			<translation>Montant:%1 \ \ n</translation>
 		</message>
 		<message>
 			<source>Type: %1\n</source>
-			<translation>Type:% 1 \ \ n</translation>
+			<translation>Type:%1 \ \ n</translation>
 		</message>
 		<message>
 			<source>Label: %1\n</source>
-			<translation>Étiquette:% 1 \ \ n</translation>
+			<translation>Étiquette:%1 \ \ n</translation>
 		</message>
 		<message>
 			<source>Address: %1\n</source>
-			<translation>Adresse:% 1 \ \ n</translation>
+			<translation>Adresse:%1 \ \ n</translation>
 		</message>
 		<message>
 			<source>Sent transaction</source>
@@ -5086,7 +5086,7 @@
 		</message>
 		<message>
 			<source>Directory already exists. Add %1 if you intend to create a new directory here.</source>
-			<translation>Le répertoire existe déjà.Si vous créez un nouveau répertoire ici, ajoutez% 1.</translation>
+			<translation>Le répertoire existe déjà.Si vous créez un nouveau répertoire ici, ajoutez%1.</translation>
 		</message>
 		<message>
 			<source>Path already exists, and is not a directory.</source>
@@ -5102,11 +5102,11 @@
 		</message>
 		<message>
 			<source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-			<translation>Ce répertoire stockera au moins% 1 go de données et augmentera au fil du temps.</translation>
+			<translation>Ce répertoire stockera au moins%1 go de données et augmentera au fil du temps.</translation>
 		</message>
 		<message>
 			<source>Approximately %1 GB of data will be stored in this directory.</source>
-			<translation>Environ% 1 go de données seront stockés dans ce répertoire.</translation>
+			<translation>Environ%1 go de données seront stockés dans ce répertoire.</translation>
 		</message>
 		<message>
 			<source>%1 will download and store a copy of the Hive block chain.</source>
@@ -5156,7 +5156,7 @@
 		</message>
 		<message>
 			<source>Unknown. Syncing Headers (%1)...</source>
-			<translation>Inconnu.Synchronisation des en - têtes (% 1)...</translation>
+			<translation>Inconnu.Synchronisation des en - têtes (%1)...</translation>
 		</message>
 		<message>
 			<source>Unknown...</source>
@@ -5327,11 +5327,11 @@
 		</message>
 		<message>
 			<source>Payment request fetch URL is invalid: %1</source>
-			<translation>URL d'obtention de la demande de paiement invalide:% 1</translation>
+			<translation>URL d'obtention de la demande de paiement invalide:%1</translation>
 		</message>
 		<message>
 			<source>Invalid payment address %1</source>
-			<translation>L'adresse de paiement% 1 n'est pas valide</translation>
+			<translation>L'adresse de paiement%1 n'est pas valide</translation>
 		</message>
 		<message>
 			<source>URI cannot be parsed! This can be caused by an invalid Hive address or malformed URI parameters.</source>
@@ -5371,19 +5371,19 @@
 		</message>
 		<message>
 			<source>Requested payment amount of %1 is too small (considered dust).</source>
-			<translation>Le montant du paiement demandé pour% 1 est trop faible (considéré comme de la poussière).</translation>
+			<translation>Le montant du paiement demandé pour%1 est trop faible (considéré comme de la poussière).</translation>
 		</message>
 		<message>
 			<source>Refund from %1</source>
-			<translation>Remboursement de% 1</translation>
+			<translation>Remboursement de%1</translation>
 		</message>
 		<message>
 			<source>Payment request %1 is too large (%2 bytes, allowed %3 bytes).</source>
-			<translation>La demande de paiement% 1 est trop grande (% 2 octets, autoriser% 3 octets).</translation>
+			<translation>La demande de paiement%1 est trop grande (%2 octets, autoriser%3 octets).</translation>
 		</message>
 		<message>
 			<source>Error communicating with %1: %2</source>
-			<translation>Erreur de communication avec% 1:% 2</translation>
+			<translation>Erreur de communication avec%1:%2</translation>
 		</message>
 		<message>
 			<source>Payment request cannot be parsed!</source>
@@ -5391,7 +5391,7 @@
 		</message>
 		<message>
 			<source>Bad response from server %1</source>
-			<translation>Réponse d'erreur du serveur% 1</translation>
+			<translation>Réponse d'erreur du serveur%1</translation>
 		</message>
 		<message>
 			<source>Network request error</source>
@@ -5468,7 +5468,7 @@
 		</message>
 		<message>
 			<source>Request payment to %1</source>
-			<translation>Demande de paiement à% 1</translation>
+			<translation>Demande de paiement à%1</translation>
 		</message>
 		<message>
 			<source>Payment information</source>
@@ -5566,7 +5566,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>1 (% 2 blocs)</translation>
+			<translation>1 (%2 blocs)</translation>
 		</message>
 		<message>
 			<source>Cost</source>
@@ -5674,7 +5674,7 @@
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>1 à% 2</translation>
+			<translation>1 à%2</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -5686,7 +5686,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>Total% 1</translation>
+			<translation>Total%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -5710,7 +5710,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>On estime que la validation débutera dans les blocs% n.</translation>
+			<translation>On estime que la validation débutera dans les blocs%n.</translation>
 		</message>
 		<message>
 			<source>Warning: Unknown change address</source>
@@ -5730,7 +5730,7 @@
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
-			<translation>Payer seulement% 1 requis</translation>
+			<translation>Payer seulement%1 requis</translation>
 		</message>
 	</context>
 	<context>
@@ -5745,19 +5745,19 @@
 		</message>
 		<message>
 			<source>Freezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>Freeze FROM address &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt;</translation>
+			<translation>Freeze FROM address &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>Unfreezing trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>RELEASE FROM address &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt;</translation>
+			<translation>RELEASE FROM address &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>Freezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from all addresses&lt;br&gt;</source>
-			<translation>Geler toutes les transactions provenant d'actifs restreints &lt; b &gt;% 1 &lt; / b &gt; de toutes les adresses &lt; br &gt;</translation>
+			<translation>Geler toutes les transactions provenant d'actifs restreints &lt; b &gt;%1 &lt; / b &gt; de toutes les adresses &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>Opening / Unfreezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from all addresses&lt;br&gt;</source>
-			<translation>Ouvrir / dégeler toutes les transactions pour les actifs restreints à partir de toutes les adresses &lt; b &gt;% 1 &lt; / b &gt; &lt; br &gt;</translation>
+			<translation>Ouvrir / dégeler toutes les transactions pour les actifs restreints à partir de toutes les adresses &lt; b &gt;%1 &lt; / b &gt; &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>added as transaction fee</source>
@@ -5765,7 +5765,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>Total% 1</translation>
+			<translation>Total%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -5781,11 +5781,11 @@
 		</message>
 		<message>
 			<source>Adding qualifier &lt;b&gt;%1&lt;/b&gt; to address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>Ajouter le qualificatif &lt; b &gt;% 1 &lt; / b &gt; à l'adresse &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt;</translation>
+			<translation>Ajouter le qualificatif &lt; b &gt;%1 &lt; / b &gt; à l'adresse &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>Removing qualifier &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>À partir de l'adresse &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt;</translation>
+			<translation>À partir de l'adresse &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>Confirm adding qualifier</source>
@@ -5902,11 +5902,11 @@
 		</message>
 		<message>
 			<source>Welcome to the %1 RPC console.</source>
-			<translation>Bienvenue dans la console% 1 RPC.</translation>
+			<translation>Bienvenue dans la console%1 RPC.</translation>
 		</message>
 		<message>
 			<source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
-			<translation>Utilisez les flèches vers le haut et vers le bas pour naviguer dans l'historique et utilisez% 1 pour effacer l'écran.</translation>
+			<translation>Utilisez les flèches vers le haut et vers le bas pour naviguer dans l'historique et utilisez%1 pour effacer l'écran.</translation>
 		</message>
 		<message>
 			<source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
@@ -5930,11 +5930,11 @@
 		</message>
 		<message>
 			<source>(node id: %1)</source>
-			<translation>(ID du noeud:% 1)</translation>
+			<translation>(ID du noeud:%1)</translation>
 		</message>
 		<message>
 			<source>via %1</source>
-			<translation>Via% 1</translation>
+			<translation>Via%1</translation>
 		</message>
 		<message>
 			<source>never</source>
@@ -6044,11 +6044,11 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>1 (% 2 blocs)</translation>
+			<translation>1 (%2 blocs)</translation>
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>1 à% 2</translation>
+			<translation>1 à%2</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -6060,7 +6060,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>Total% 1</translation>
+			<translation>Total%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -6088,7 +6088,7 @@
 		</message>
 		<message>
 			<source>The total exceeds your balance when the %1 transaction fee is included.</source>
-			<translation>Lorsque vous incluez les frais de transaction% 1, le total dépasse votre solde.</translation>
+			<translation>Lorsque vous incluez les frais de transaction%1, le total dépasse votre solde.</translation>
 		</message>
 		<message>
 			<source>Duplicate address found: addresses should only be used once each.</source>
@@ -6100,11 +6100,11 @@
 		</message>
 		<message>
 			<source>The transaction was rejected with the following reason: %1</source>
-			<translation>La transaction a été rejetée pour la raison suivante:% 1</translation>
+			<translation>La transaction a été rejetée pour la raison suivante:%1</translation>
 		</message>
 		<message>
 			<source>A fee higher than %1 is considered an absurdly high fee.</source>
-			<translation>Les dépenses supérieures à% 1 sont considérées comme scandaleuses.</translation>
+			<translation>Les dépenses supérieures à%1 sont considérées comme scandaleuses.</translation>
 		</message>
 		<message>
 			<source>Payment request expired.</source>
@@ -6116,11 +6116,11 @@
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
-			<translation>Payer seulement% 1 requis</translation>
+			<translation>Payer seulement%1 requis</translation>
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>On estime que la validation débutera dans les blocs% n.</translation>
+			<translation>On estime que la validation débutera dans les blocs%n.</translation>
 		</message>
 		<message>
 			<source>Warning: Invalid Hive address</source>
@@ -6224,11 +6224,11 @@
 		</message>
 		<message>
 			<source>Open until %1</source>
-			<translation>Ouvrir à% 1</translation>
+			<translation>Ouvrir à%1</translation>
 		</message>
 		<message>
 			<source>conflicted with a transaction with %1 confirmations</source>
-			<translation>Conflit avec une transaction avec% 1 accusé de réception</translation>
+			<translation>Conflit avec une transaction avec%1 accusé de réception</translation>
 		</message>
 		<message>
 			<source>%1/offline</source>
@@ -6236,7 +6236,7 @@
 		</message>
 		<message>
 			<source>0/unconfirmed, %1</source>
-			<translation>0 / non confirmé,% 1</translation>
+			<translation>0 / non confirmé,%1</translation>
 		</message>
 		<message>
 			<source>in memory pool</source>
@@ -6268,7 +6268,7 @@
 		</message>
 		<message>
 			<source>, broadcast through %n node(s)</source>
-			<translation>, diffusé par% n noeuds</translation>
+			<translation>, diffusé par%n noeuds</translation>
 		</message>
 		<message>
 			<source>Date</source>
@@ -6364,7 +6364,7 @@
 		</message>
 		<message>
 			<source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to \</source>
-			<translation>Les pièces générées doivent expirer% 1 blocs avant d'être utilisées.Lorsque ce bloc est généré, il est diffusé sur le Réseau pour être ajouté à la chaîne de blocs.S'il ne peut pas entrer dans la chaîne, son état change à</translation>
+			<translation>Les pièces générées doivent expirer%1 blocs avant d'être utilisées.Lorsque ce bloc est généré, il est diffusé sur le Réseau pour être ajouté à la chaîne de blocs.S'il ne peut pas entrer dans la chaîne, son état change à</translation>
 		</message>
 		<message>
 			<source>Net HVN amount</source>
@@ -6399,7 +6399,7 @@
 		<name>transactiondescdialog</name>
 		<message>
 			<source>Details for %1</source>
-			<translation>Détails de% 1</translation>
+			<translation>Détails de%1</translation>
 		</message>
 	</context>
 	<context>
@@ -6430,7 +6430,7 @@
 		</message>
 		<message>
 			<source>Open until %1</source>
-			<translation>Ouvrir à% 1</translation>
+			<translation>Ouvrir à%1</translation>
 		</message>
 		<message>
 			<source>Offline</source>
@@ -6446,11 +6446,11 @@
 		</message>
 		<message>
 			<source>Confirming (%1 of %2 recommended confirmations)</source>
-			<translation>Confirmation (sur% 2 confirmation (s) recommandée (s)% 1</translation>
+			<translation>Confirmation (sur%2 confirmation (s) recommandée (s)%1</translation>
 		</message>
 		<message>
 			<source>Confirmed (%1 confirmations)</source>
-			<translation>Confirmé (% 1 confirmé)</translation>
+			<translation>Confirmé (%1 confirmé)</translation>
 		</message>
 		<message>
 			<source>Conflicted</source>
@@ -6458,7 +6458,7 @@
 		</message>
 		<message>
 			<source>Immature (%1 confirmations, will be available after %2)</source>
-			<translation>Immature (% 1 confirmé, sera disponible après% 2)</translation>
+			<translation>Immature (%1 confirmé, sera disponible après%2)</translation>
 		</message>
 		<message>
 			<source>This block was not received by any other nodes and will probably not be accepted!</source>
@@ -6693,7 +6693,7 @@
 		</message>
 		<message>
 			<source>There was an error trying to save the transaction history to %1.</source>
-			<translation>Une erreur s'est produite en essayant d'enregistrer l'historique de la transaction à% 1.</translation>
+			<translation>Une erreur s'est produite en essayant d'enregistrer l'historique de la transaction à%1.</translation>
 		</message>
 		<message>
 			<source>Exporting Successful</source>
@@ -6701,7 +6701,7 @@
 		</message>
 		<message>
 			<source>The transaction history was successfully saved to %1.</source>
-			<translation>L'historique des transactions a été sauvegardé avec succès dans% 1.</translation>
+			<translation>L'historique des transactions a été sauvegardé avec succès dans%1.</translation>
 		</message>
 		<message>
 			<source>Asset Issued</source>
@@ -6740,11 +6740,11 @@
 		</message>
 		<message>
 			<source>(%1-bit)</source>
-			<translation>(% 1 bit)</translation>
+			<translation>(%1 bit)</translation>
 		</message>
 		<message>
 			<source>About %1</source>
-			<translation>À propos de% 1</translation>
+			<translation>À propos de%1</translation>
 		</message>
 		<message>
 			<source>Command-line options</source>
@@ -6764,7 +6764,7 @@
 		</message>
 		<message>
 			<source>Choose data directory on startup (default: %u)</source>
-			<translation>Sélectionnez le Répertoire de données au démarrage (par défaut:% U)</translation>
+			<translation>Sélectionnez le Répertoire de données au démarrage (par défaut:%U)</translation>
 		</message>
 		<message>
 			<source>Set language, for example \</source>
@@ -6780,7 +6780,7 @@
 		</message>
 		<message>
 			<source>Show splash screen on startup (default: %u)</source>
-			<translation>Afficher l'écran de démarrage au démarrage (par défaut:% U)</translation>
+			<translation>Afficher l'écran de démarrage au démarrage (par défaut:%U)</translation>
 		</message>
 		<message>
 			<source>Reset all settings changed in the GUI</source>
@@ -6869,7 +6869,7 @@
 		</message>
 		<message>
 			<source>There was an error trying to save the wallet data to %1.</source>
-			<translation>Une erreur s'est produite en essayant d'enregistrer les données du portefeuille dans% 1.</translation>
+			<translation>Une erreur s'est produite en essayant d'enregistrer les données du portefeuille dans%1.</translation>
 		</message>
 		<message>
 			<source>Backup Successful</source>
@@ -6877,7 +6877,7 @@
 		</message>
 		<message>
 			<source>The wallet data was successfully saved to %1.</source>
-			<translation>Les données du portefeuille ont été sauvegardées avec succès dans% 1.</translation>
+			<translation>Les données du portefeuille ont été sauvegardées avec succès dans%1.</translation>
 		</message>
 	</context>
 	</TS>

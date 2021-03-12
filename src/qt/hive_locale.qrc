@@ -64,7 +64,6 @@
         <file alias="pt_PT">locale/hive_pt_PT.qm</file>
         <file alias="ro_RO">locale/hive_ro_RO.qm</file>
         <file alias="ro">locale/hive_ro.qm</file>
-        <file alias="ru_RU">locale/hive_ru_RU.qm</file>
         <file alias="ru">locale/hive_ru.qm</file>
         <file alias="sk">locale/hive_sk.qm</file>
         <file alias="sl_SI">locale/hive_sl_SI.qm</file>

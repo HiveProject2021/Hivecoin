@@ -223,7 +223,7 @@
 		</message>
 		<message>
 			<source>%1 will close now to finish the encryption process. </source>
-			<translation>% 1は暗号化プロセスを終了するために終了します.</translation>
+			<translation>%1は暗号化プロセスを終了するために終了します.</translation>
 		</message>
 		<message>
 			<source>IMPORTANT: Any previous backups you have made of your wallet file </source>
@@ -445,7 +445,7 @@
 		</message>
 		<message>
 			<source>%n active connection(s) to Hive network</source>
-			<translation>% nアクティブネットワーク接続</translation>
+			<translation>%nアクティブネットワーク接続</translation>
 		</message>
 		<message>
 			<source>Indexing blocks on disk...</source>
@@ -457,7 +457,7 @@
 		</message>
 		<message>
 			<source>Processed %n block(s) of transaction history.</source>
-			<translation>トランザクション履歴の% nブロック( s )</translation>
+			<translation>トランザクション履歴の%nブロック( s )</translation>
 		</message>
 		<message>
 			<source>%1 behind</source>
@@ -505,23 +505,23 @@
 		</message>
 		<message>
 			<source>Date: %1</source>
-			<translation>日付% 1</translation>
+			<translation>日付%1</translation>
 		</message>
 		<message>
 			<source>Amount: %1</source>
-			<translation>数量：% 1</translation>
+			<translation>数量：%1</translation>
 		</message>
 		<message>
 			<source>Type: %1</source>
-			<translation>型: % 1</translation>
+			<translation>型: %1</translation>
 		</message>
 		<message>
 			<source>Label: %1</source>
-			<translation>ラベル% 1</translation>
+			<translation>ラベル%1</translation>
 		</message>
 		<message>
 			<source>Address: %1</source>
-			<translation>アドレス: % 1</translation>
+			<translation>アドレス: %1</translation>
 		</message>
 		<message>
 			<source>Sent transaction</source>
@@ -617,23 +617,23 @@
 		</message>
 		<message>
 			<source>Date: %1\n</source>
-			<translation>日付:% 1 \ n</translation>
+			<translation>日付:%1 \ n</translation>
 		</message>
 		<message>
 			<source>Amount: %1\n</source>
-			<translation>数量: % 1 \ n</translation>
+			<translation>数量: %1 \ n</translation>
 		</message>
 		<message>
 			<source>Type: %1\n</source>
-			<translation>型: % 1 \ n</translation>
+			<translation>型: %1 \ n</translation>
 		</message>
 		<message>
 			<source>Label: %1\n</source>
-			<translation>ラベル: % 1 \ n</translation>
+			<translation>ラベル: %1 \ n</translation>
 		</message>
 		<message>
 			<source>Address: %1\n</source>
-			<translation>アドレス:% 1 \ n</translation>
+			<translation>アドレス:%1 \ n</translation>
 		</message>
 		<message>
 			<source>Assets not yet active</source>
@@ -980,7 +980,7 @@
 		</message>
 		<message>
 			<source>%n GB of free space available</source>
-			<translation>% n GBの空き領域が利用可能</translation>
+			<translation>%n GBの空き領域が利用可能</translation>
 		</message>
 		<message>
 			<source>(of %n GB needed)</source>
@@ -996,7 +996,7 @@
 		</message>
 		<message>
 			<source>Directory already exists. Add %1 if you intend to create a new directory here.</source>
-			<translation>ディレクトリがすでに存在します.ここで新しいディレクトリを作成するつもりなら% 1を追加します.</translation>
+			<translation>ディレクトリがすでに存在します.ここで新しいディレクトリを作成するつもりなら%1を追加します.</translation>
 		</message>
 		<message>
 			<source>Path already exists, and is not a directory.</source>
@@ -1020,7 +1020,7 @@
 		</message>
 		<message>
 			<source>%1 will download and store a copy of the Hive block chain.</source>
-			<translation>% 1はハイブブロックチェーンのコピーをダウンロードして保存します.</translation>
+			<translation>%1はハイブブロックチェーンのコピーをダウンロードして保存します.</translation>
 		</message>
 		<message>
 			<source>The wallet will also be stored in this directory.</source>
@@ -1645,23 +1645,23 @@
 		</message>
 		<message>
 			<source>%n second(s)</source>
-			<translation>% n秒</translation>
+			<translation>%n秒</translation>
 		</message>
 		<message>
 			<source>%n minute(s)</source>
-			<translation>% n分</translation>
+			<translation>%n分</translation>
 		</message>
 		<message>
 			<source>%n hour(s)</source>
-			<translation>% N時間</translation>
+			<translation>%N時間</translation>
 		</message>
 		<message>
 			<source>%n day(s)</source>
-			<translation>% n日</translation>
+			<translation>%n日</translation>
 		</message>
 		<message>
 			<source>%n week(s)</source>
-			<translation>% N週</translation>
+			<translation>%N週</translation>
 		</message>
 		<message>
 			<source>%1 and %2</source>
@@ -1669,7 +1669,7 @@
 		</message>
 		<message>
 			<source>%n year(s)</source>
-			<translation>% n年</translation>
+			<translation>%n年</translation>
 		</message>
 		<message>
 			<source>%1 didn't yet exit safely...</source>
@@ -2018,7 +2018,7 @@
 		</message>
 		<message>
 			<source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
-			<translation>上下の矢印を使用して歴史をナビゲートし、% 1画面をクリアします.</translation>
+			<translation>上下の矢印を使用して歴史をナビゲートし、%1画面をクリアします.</translation>
 		</message>
 		<message>
 			<source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramifications of a command.</source>
@@ -2490,7 +2490,7 @@
 		</message>
 		<message>
 			<source>%n block(s)</source>
-			<translation>% n block ( s )</translation>
+			<translation>%n block ( s )</translation>
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
@@ -2498,7 +2498,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>% nブロック内で確認を開始すると推定した.</translation>
+			<translation>%nブロック内で確認を開始すると推定した.</translation>
 		</message>
 		<message>
 			<source>Warning: Invalid Hive address</source>
@@ -2518,7 +2518,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 ( % 2ブロック)</translation>
+			<translation>%1 ( %2ブロック)</translation>
 		</message>
 		<message>
 			<source>This transaction signals replaceability (optin-RBF).</source>
@@ -2799,7 +2799,7 @@
 		<name>TransactionDesc</name>
 		<message>
 			<source>Open for %n more block(s)</source>
-			<translation>% n以上のブロック( s )</translation>
+			<translation>%n以上のブロック( s )</translation>
 		</message>
 		<message>
 			<source>Open until %1</source>
@@ -2891,7 +2891,7 @@
 		</message>
 		<message>
 			<source>matures in %n more block(s)</source>
-			<translation>% nより多くのブロック( s )</translation>
+			<translation>%nより多くのブロック( s )</translation>
 		</message>
 		<message>
 			<source>not accepted</source>
@@ -2971,7 +2971,7 @@
 		</message>
 		<message>
 			<source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to \</source>
-			<translation>彼らが費やされることができる前に、生成されたコインは成熟した% 1ブロックをしなければなりません.このブロックを生成すると、ブロックチェーンに追加されるようにネットワークにブロードキャストされました.チェインに失敗した場合、その状態は</translation>
+			<translation>彼らが費やされることができる前に、生成されたコインは成熟した%1ブロックをしなければなりません.このブロックを生成すると、ブロックチェーンに追加されるようにネットワークにブロードキャストされました.チェインに失敗した場合、その状態は</translation>
 		</message>
 		<message>
 			<source>Net HVN amount</source>
@@ -3105,7 +3105,7 @@
 		</message>
 		<message>
 			<source>Open for %n more block(s)</source>
-			<translation>% n以上のブロック( s )</translation>
+			<translation>%n以上のブロック( s )</translation>
 		</message>
 		<message>
 			<source>Abandoned</source>
@@ -4377,7 +4377,7 @@
 		</message>
 		<message>
 			<source>(%1 locked)</source>
-			<translation>( % 1ロック)</translation>
+			<translation>( %1ロック)</translation>
 		</message>
 		<message>
 			<source>yes</source>
@@ -4401,7 +4401,7 @@
 		</message>
 		<message>
 			<source>change from %1 (%2)</source>
-			<translation>% 1からの変更</translation>
+			<translation>%1からの変更</translation>
 		</message>
 		<message>
 			<source>(change)</source>
@@ -4440,11 +4440,11 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 ( % 2ブロック)</translation>
+			<translation>%1 ( %2ブロック)</translation>
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>% 1から% 2</translation>
+			<translation>%1から%2</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -4476,7 +4476,7 @@
 		</message>
 		<message>
 			<source>The total exceeds your balance when the %1 transaction fee is included.</source>
-			<translation>% 1トランザクション手数料が含まれているときに合計があなたのバランスを超える.</translation>
+			<translation>%1トランザクション手数料が含まれているときに合計があなたのバランスを超える.</translation>
 		</message>
 		<message>
 			<source>Duplicate address found: addresses should only be used once each.</source>
@@ -4488,7 +4488,7 @@
 		</message>
 		<message>
 			<source>The transaction was rejected with the following reason: %1</source>
-			<translation>トランザクションは以下の理由で拒否されました.% 1</translation>
+			<translation>トランザクションは以下の理由で拒否されました.%1</translation>
 		</message>
 		<message>
 			<source>A fee higher than %1 is considered an absurdly high fee.</source>
@@ -4508,7 +4508,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>% nブロック内で確認を開始すると推定した.</translation>
+			<translation>%nブロック内で確認を開始すると推定した.</translation>
 		</message>
 		<message>
 			<source>Warning: Invalid Hive address</source>
@@ -4574,7 +4574,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 ( % 2ブロック)</translation>
+			<translation>%1 ( %2ブロック)</translation>
 		</message>
 		<message>
 			<source>Main Asset</source>
@@ -4642,7 +4642,7 @@
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>% 1から% 2</translation>
+			<translation>%1から%2</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -4654,7 +4654,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>総量% 1</translation>
+			<translation>総量%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -4682,7 +4682,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>% nブロック内で確認を開始すると推定した.</translation>
+			<translation>%nブロック内で確認を開始すると推定した.</translation>
 		</message>
 		<message>
 			<source>Warning: Unknown change address</source>
@@ -4921,7 +4921,7 @@
 		<name>GUIUtil</name>
 		<message>
 			<source>Enter a Hive address (e.g. %1)</source>
-			<translation>hiveアドレスを入力します(例1 % )</translation>
+			<translation>hiveアドレスを入力します(例1 %)</translation>
 		</message>
 		<message>
 			<source>Warning: transaction while syncing wallet!</source>
@@ -4933,19 +4933,19 @@
 		</message>
 		<message>
 			<source>%1 d</source>
-			<translation>% 1 d</translation>
+			<translation>%1 d</translation>
 		</message>
 		<message>
 			<source>%1 h</source>
-			<translation>% 1 h</translation>
+			<translation>%1 h</translation>
 		</message>
 		<message>
 			<source>%1 m</source>
-			<translation>% 1 m</translation>
+			<translation>%1 m</translation>
 		</message>
 		<message>
 			<source>%1 s</source>
-			<translation>% 1 s</translation>
+			<translation>%1 s</translation>
 		</message>
 		<message>
 			<source>None</source>
@@ -4957,51 +4957,51 @@
 		</message>
 		<message>
 			<source>%1 ms</source>
-			<translation>% 1 ms</translation>
+			<translation>%1 ms</translation>
 		</message>
 		<message>
 			<source>%n second(s)</source>
-			<translation>% n秒</translation>
+			<translation>%n秒</translation>
 		</message>
 		<message>
 			<source>%n minute(s)</source>
-			<translation>% n分</translation>
+			<translation>%n分</translation>
 		</message>
 		<message>
 			<source>%n hour(s)</source>
-			<translation>% N時間</translation>
+			<translation>%N時間</translation>
 		</message>
 		<message>
 			<source>%n day(s)</source>
-			<translation>% n日</translation>
+			<translation>%n日</translation>
 		</message>
 		<message>
 			<source>%n week(s)</source>
-			<translation>% N週</translation>
+			<translation>%N週</translation>
 		</message>
 		<message>
 			<source>%1 and %2</source>
-			<translation>% 1および% 2</translation>
+			<translation>%1および%2</translation>
 		</message>
 		<message>
 			<source>%n year(s)</source>
-			<translation>% n年</translation>
+			<translation>%n年</translation>
 		</message>
 		<message>
 			<source>%1 B</source>
-			<translation>% 1 b</translation>
+			<translation>%1 b</translation>
 		</message>
 		<message>
 			<source>%1 KB</source>
-			<translation>% KB</translation>
+			<translation>%KB</translation>
 		</message>
 		<message>
 			<source>%1 MB</source>
-			<translation>% 1 MB</translation>
+			<translation>%1 MB</translation>
 		</message>
 		<message>
 			<source>%1 GB</source>
-			<translation>% 1 GB</translation>
+			<translation>%1 GB</translation>
 		</message>
 	</context>
 	<context>
@@ -5020,11 +5020,11 @@
 		</message>
 		<message>
 			<source>Error: %1</source>
-			<translation>エラー: % 1</translation>
+			<translation>エラー: %1</translation>
 		</message>
 		<message>
 			<source>%1 didn't yet exit safely...</source>
-			<translation>% 1はまだ安全に終了しませんでした.</translation>
+			<translation>%1はまだ安全に終了しませんでした.</translation>
 		</message>
 	</context>
 	<context>
@@ -5074,7 +5074,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 ( % 2ブロック)</translation>
+			<translation>%1 ( %2ブロック)</translation>
 		</message>
 		<message>
 			<source>Cost</source>
@@ -5182,7 +5182,7 @@
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>% 1から% 2</translation>
+			<translation>%1から%2</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -5194,7 +5194,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>総量% 1</translation>
+			<translation>総量%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -5218,7 +5218,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>% nブロック内で確認を開始すると推定した.</translation>
+			<translation>%nブロック内で確認を開始すると推定した.</translation>
 		</message>
 		<message>
 			<source>Warning: Unknown change address</source>
@@ -5453,11 +5453,11 @@
 		</message>
 		<message>
 			<source>Freezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>アドレス&lt; B &gt; % 2 &lt;/ B &gt; &lt; br &gt;からの制限資産&lt; B &gt; % 1 &lt;/ B &gt;の全取引凍結</translation>
+			<translation>アドレス&lt; B &gt; %2 &lt;/ B &gt; &lt; br &gt;からの制限資産&lt; B &gt; %1 &lt;/ B &gt;の全取引凍結</translation>
 		</message>
 		<message>
 			<source>Unfreezing trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>アドレス&lt; B &gt; % 2 &lt;/ B &gt; &lt; br &gt;からの制限資産&lt; B &gt; % 1 &lt; / B &gt;の非凍結取引</translation>
+			<translation>アドレス&lt; B &gt; %2 &lt;/ B &gt; &lt; br &gt;からの制限資産&lt; B &gt; %1 &lt; / B &gt;の非凍結取引</translation>
 		</message>
 		<message>
 			<source>Freezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from all addresses&lt;br&gt;</source>
@@ -5465,7 +5465,7 @@
 		</message>
 		<message>
 			<source>Opening / Unfreezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from all addresses&lt;br&gt;</source>
-			<translation>すべてのアドレス&lt; br &gt; 1からの制限された資産&lt; B &gt; % 1 &lt;/ B &gt;のすべての取引を開く/非凍結</translation>
+			<translation>すべてのアドレス&lt; br &gt; 1からの制限された資産&lt; B &gt; %1 &lt;/ B &gt;のすべての取引を開く/非凍結</translation>
 		</message>
 		<message>
 			<source>added as transaction fee</source>
@@ -5473,7 +5473,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>総量% 1</translation>
+			<translation>総量%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -5493,7 +5493,7 @@
 		</message>
 		<message>
 			<source>Removing qualifier &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>アドレス&lt; b &gt;% 2 &lt;/ b &gt;&lt; br &gt;からの修飾子&lt; b &gt;% 1 &lt;/ b &gt;の除去</translation>
+			<translation>アドレス&lt; b &gt;%2 &lt;/ b &gt;&lt; br &gt;からの修飾子&lt; b &gt;%1 &lt;/ b &gt;の除去</translation>
 		</message>
 		<message>
 			<source>Confirm adding qualifier</source>
@@ -5849,7 +5849,7 @@
 		</message>
 		<message>
 			<source>(%1-bit)</source>
-			<translation>( % 1ビット)</translation>
+			<translation>( %1ビット)</translation>
 		</message>
 		<message>
 			<source>About %1</source>
@@ -5889,7 +5889,7 @@
 		</message>
 		<message>
 			<source>Show splash screen on startup (default: %u)</source>
-			<translation>起動時にスプラッシュ画面を表示する(デフォルト: % u )</translation>
+			<translation>起動時にスプラッシュ画面を表示する(デフォルト: %u )</translation>
 		</message>
 		<message>
 			<source>Reset all settings changed in the GUI</source>
@@ -5897,7 +5897,7 @@
 		</message>
 		<message>
 			<source>%1 is shutting down...</source>
-			<translation>% 1はシャットダウンしています.</translation>
+			<translation>%1はシャットダウンしています.</translation>
 		</message>
 		<message>
 			<source>Do not shut down the computer until this window disappears.</source>

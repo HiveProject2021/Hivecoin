@@ -183,7 +183,7 @@
 		</message>
 		<message>
 			<source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your hives from being stolen by malware infecting your computer.</source>
-			<translation>% 1 은 (는) 암호 화 과정 을 완료 하기 위해 서 즉시 닫 습 니 다.당신 의 지갑 을 암호 화하 면 당신 의 벌통 이 컴퓨터 의 악성 소프트웨어 에 감염 되 지 않도록 완전히 보호 할 수 없다 는 것 을 기억 하 세 요.</translation>
+			<translation>%1 은 (는) 암호 화 과정 을 완료 하기 위해 서 즉시 닫 습 니 다.당신 의 지갑 을 암호 화하 면 당신 의 벌통 이 컴퓨터 의 악성 소프트웨어 에 감염 되 지 않도록 완전히 보호 할 수 없다 는 것 을 기억 하 세 요.</translation>
 		</message>
 		<message>
 			<source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -223,7 +223,7 @@
 		</message>
 		<message>
 			<source>%1 will close now to finish the encryption process. </source>
-			<translation>% 1 은 (는) 암호 화 과정 을 완료 하기 위해 서 즉시 닫 습 니 다.</translation>
+			<translation>%1 은 (는) 암호 화 과정 을 완료 하기 위해 서 즉시 닫 습 니 다.</translation>
 		</message>
 		<message>
 			<source>IMPORTANT: Any previous backups you have made of your wallet file </source>
@@ -281,11 +281,11 @@
 		</message>
 		<message>
 			<source>&amp;About %1</source>
-			<translation>&amp;% 1 에 대하 여</translation>
+			<translation>&amp;%1 에 대하 여</translation>
 		</message>
 		<message>
 			<source>Show information about %1</source>
-			<translation>% 1 에 대한 정보 보기</translation>
+			<translation>%1 에 대한 정보 보기</translation>
 		</message>
 		<message>
 			<source>About &amp;Qt</source>
@@ -301,7 +301,7 @@
 		</message>
 		<message>
 			<source>Modify configuration options for %1</source>
-			<translation>% 1 설정 변경</translation>
+			<translation>%1 설정 변경</translation>
 		</message>
 		<message>
 			<source>&amp;Encrypt Wallet...</source>
@@ -341,7 +341,7 @@
 		</message>
 		<message>
 			<source>Syncing Headers (%1%)...</source>
-			<translation>레이 블 동기 화 중 (% 1%)...</translation>
+			<translation>레이 블 동기 화 중 (%1%)...</translation>
 		</message>
 		<message>
 			<source>Reindexing blocks on disk...</source>
@@ -445,7 +445,7 @@
 		</message>
 		<message>
 			<source>%n active connection(s) to Hive network</source>
-			<translation>% n 설정 부 네트워크 로 의 활동 연결</translation>
+			<translation>%n 설정 부 네트워크 로 의 활동 연결</translation>
 		</message>
 		<message>
 			<source>Indexing blocks on disk...</source>
@@ -457,15 +457,15 @@
 		</message>
 		<message>
 			<source>Processed %n block(s) of transaction history.</source>
-			<translation>% n 개의 사무 기록 블록 을 처리 하 였 습 니 다.</translation>
+			<translation>%n 개의 사무 기록 블록 을 처리 하 였 습 니 다.</translation>
 		</message>
 		<message>
 			<source>%1 behind</source>
-			<translation>% 1 이 (가) 뒤떨어지다</translation>
+			<translation>%1 이 (가) 뒤떨어지다</translation>
 		</message>
 		<message>
 			<source>Last received block was generated %1 ago.</source>
-			<translation>마지막 으로 받 은 블록 은% 1 전에 생 성 되 었 습 니 다.</translation>
+			<translation>마지막 으로 받 은 블록 은%1 전에 생 성 되 었 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Transactions after this will not yet be visible.</source>
@@ -489,11 +489,11 @@
 		</message>
 		<message>
 			<source>Show the %1 help message to get a list with possible Hive command-line options</source>
-			<translation>가능 한 구성 요소 명령 행 옵션 을 포함 하 는% 1 도움말 메 시 지 를 보 여 줍 니 다.</translation>
+			<translation>가능 한 구성 요소 명령 행 옵션 을 포함 하 는%1 도움말 메 시 지 를 보 여 줍 니 다.</translation>
 		</message>
 		<message>
 			<source>%1 client</source>
-			<translation>% 1 개 고객</translation>
+			<translation>%1 개 고객</translation>
 		</message>
 		<message>
 			<source>Connecting to peers...</source>
@@ -505,23 +505,23 @@
 		</message>
 		<message>
 			<source>Date: %1</source>
-			<translation>날짜:% 1</translation>
+			<translation>날짜:%1</translation>
 		</message>
 		<message>
 			<source>Amount: %1</source>
-			<translation>금액:% 1</translation>
+			<translation>금액:%1</translation>
 		</message>
 		<message>
 			<source>Type: %1</source>
-			<translation>유형:% 1</translation>
+			<translation>유형:%1</translation>
 		</message>
 		<message>
 			<source>Label: %1</source>
-			<translation>태그:% 1</translation>
+			<translation>태그:%1</translation>
 		</message>
 		<message>
 			<source>Address: %1</source>
-			<translation>주소:% 1</translation>
+			<translation>주소:%1</translation>
 		</message>
 		<message>
 			<source>Sent transaction</source>
@@ -617,23 +617,23 @@
 		</message>
 		<message>
 			<source>Date: %1\n</source>
-			<translation>날짜:% 1 \ n</translation>
+			<translation>날짜:%1 \ n</translation>
 		</message>
 		<message>
 			<source>Amount: %1\n</source>
-			<translation>금액:% 1 \ n</translation>
+			<translation>금액:%1 \ n</translation>
 		</message>
 		<message>
 			<source>Type: %1\n</source>
-			<translation>유형:% 1 \ n</translation>
+			<translation>유형:%1 \ n</translation>
 		</message>
 		<message>
 			<source>Label: %1\n</source>
-			<translation>태그:% 1 \ n</translation>
+			<translation>태그:%1 \ n</translation>
 		</message>
 		<message>
 			<source>Address: %1\n</source>
-			<translation>주소:% 1 \ n</translation>
+			<translation>주소:%1 \ n</translation>
 		</message>
 		<message>
 			<source>Assets not yet active</source>
@@ -847,7 +847,7 @@
 		</message>
 		<message>
 			<source>The entered address "%1" is not a valid Hive address.</source>
-			<translation>입력 한 주소 '% 1' 은 (는) 올 바른 구성 단위 주소 가 아 닙 니 다.</translation>
+			<translation>입력 한 주소 '%1' 은 (는) 올 바른 구성 단위 주소 가 아 닙 니 다.</translation>
 		</message>
 		<message>
 			<source>The entered address "%1" is already in the address book.</source>
@@ -960,7 +960,7 @@
 		</message>
 		<message>
 			<source>%1 will download and store a copy of the Hive block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-			<translation>% 1 은 (는) 유닛 블록 체인 의 사본 을 다운로드 하고 저장 합 니 다.최소한% 2GB 의 데 이 터 는 이 디 렉 터 리 에 저장 되 며 시간 이 지 날수 록 늘 어 납 니 다.지갑 도 이 목록 에 저 장 됩 니 다.</translation>
+			<translation>%1 은 (는) 유닛 블록 체인 의 사본 을 다운로드 하고 저장 합 니 다.최소한%2GB 의 데 이 터 는 이 디 렉 터 리 에 저장 되 며 시간 이 지 날수 록 늘 어 납 니 다.지갑 도 이 목록 에 저 장 됩 니 다.</translation>
 		</message>
 		<message>
 			<source>Use the default data directory</source>
@@ -996,7 +996,7 @@
 		</message>
 		<message>
 			<source>Directory already exists. Add %1 if you intend to create a new directory here.</source>
-			<translation>디 렉 터 리 가 이미 존재 합 니 다.여기에 새 디 렉 터 리 를 만 들 려 면% 1 을 (를) 추가 하 십시오.</translation>
+			<translation>디 렉 터 리 가 이미 존재 합 니 다.여기에 새 디 렉 터 리 를 만 들 려 면%1 을 (를) 추가 하 십시오.</translation>
 		</message>
 		<message>
 			<source>Path already exists, and is not a directory.</source>
@@ -1012,15 +1012,15 @@
 		</message>
 		<message>
 			<source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-			<translation>이 디 렉 터 리 는 최소한% 1 의 GB 데 이 터 를 저장 하고 시간 이 지 날수 록 늘 어 납 니 다.</translation>
+			<translation>이 디 렉 터 리 는 최소한%1 의 GB 데 이 터 를 저장 하고 시간 이 지 날수 록 늘 어 납 니 다.</translation>
 		</message>
 		<message>
 			<source>Approximately %1 GB of data will be stored in this directory.</source>
-			<translation>이 디 렉 터 리 는 약% 1 GB 의 데 이 터 를 저장 합 니 다.</translation>
+			<translation>이 디 렉 터 리 는 약%1 GB 의 데 이 터 를 저장 합 니 다.</translation>
 		</message>
 		<message>
 			<source>%1 will download and store a copy of the Hive block chain.</source>
-			<translation>% 1 은 (는) 유닛 블록 체인 의 사본 을 다운로드 하고 저장 합 니 다.</translation>
+			<translation>%1 은 (는) 유닛 블록 체인 의 사본 을 다운로드 하고 저장 합 니 다.</translation>
 		</message>
 		<message>
 			<source>The wallet will also be stored in this directory.</source>
@@ -1613,7 +1613,7 @@
 		</message>
 		<message>
 			<source>Enter a Hive address (e.g. %1)</source>
-			<translation>구성 요소 주소 입력 (예:% 1)</translation>
+			<translation>구성 요소 주소 입력 (예:%1)</translation>
 		</message>
 		<message>
 			<source>%1 d</source>
@@ -2018,7 +2018,7 @@
 		</message>
 		<message>
 			<source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
-			<translation>위아래 화살표 내 비게 이 션 의 역 사 를 사용 하여% 1 화면 을 지 웁 니 다.</translation>
+			<translation>위아래 화살표 내 비게 이 션 의 역 사 를 사용 하여%1 화면 을 지 웁 니 다.</translation>
 		</message>
 		<message>
 			<source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramifications of a command.</source>
@@ -2518,7 +2518,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 (% 2 조각)</translation>
+			<translation>%1 (%2 조각)</translation>
 		</message>
 		<message>
 			<source>This transaction signals replaceability (optin-RBF).</source>
@@ -2971,7 +2971,7 @@
 		</message>
 		<message>
 			<source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to \</source>
-			<translation>생 성 된 코 인 은% 1 블록 에서 만 료 되 어야 만 사용 할 수 있 습 니 다.이 블록 을 생 성 할 때 블록 체인 에 추가 하기 위해 네트워크 로 방송 된다.만약 그것 이 체인 에 들 어 갈 수 없다 면, 그 상 태 는 \ 으로 변 합 니 다.</translation>
+			<translation>생 성 된 코 인 은%1 블록 에서 만 료 되 어야 만 사용 할 수 있 습 니 다.이 블록 을 생 성 할 때 블록 체인 에 추가 하기 위해 네트워크 로 방송 된다.만약 그것 이 체인 에 들 어 갈 수 없다 면, 그 상 태 는 \ 으로 변 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Net HVN amount</source>
@@ -3425,7 +3425,7 @@
 		</message>
 		<message>
 			<source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
-			<translation>커트 설정 이 최소 치% d MiB 보다 적 습 니 다.좀 큰 숫자 로 해 주세요.</translation>
+			<translation>커트 설정 이 최소 치%d MiB 보다 적 습 니 다.좀 큰 숫자 로 해 주세요.</translation>
 		</message>
 		<message>
 			<source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
@@ -3441,7 +3441,7 @@
 		</message>
 		<message>
 			<source>Fee (in %s/kB) to add to transactions you send (default: %s)</source>
-			<translation>보 낸 트 랜 잭 션 에 추가 하 는 비용 (% s / kB 단위) (기본 값:% s)</translation>
+			<translation>보 낸 트 랜 잭 션 에 추가 하 는 비용 (%s / kB 단위) (기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Pruning blockstore...</source>
@@ -3461,15 +3461,15 @@
 		</message>
 		<message>
 			<source>The %s developers</source>
-			<translation>% s 개발 자</translation>
+			<translation>%s 개발 자</translation>
 		</message>
 		<message>
 			<source>A fee rate (in %s/kB) that will be used when fee estimation has insufficient data (default: %s)</source>
-			<translation>비용 추산 데이터 부족 시 사용 하 는 비율 (% s / kB 단위) (기본 값:% s)</translation>
+			<translation>비용 추산 데이터 부족 시 사용 하 는 비율 (%s / kB 단위) (기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Accept relayed transactions received from whitelisted peers even when not relaying transactions (default: %d)</source>
-			<translation>화이트 리스트 피 어 등에 서 받 은 중계 업 무 를 받 습 니 다. 비록 중계 되 지 않 더 라 도 (기본 값:% d)</translation>
+			<translation>화이트 리스트 피 어 등에 서 받 은 중계 업 무 를 받 습 니 다. 비록 중계 되 지 않 더 라 도 (기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -3481,11 +3481,11 @@
 		</message>
 		<message>
 			<source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-			<translation>지갑 거래 변경 시 명령 실행 (% s in cmd is replaced by TxID)</translation>
+			<translation>지갑 거래 변경 시 명령 실행 (%s in cmd is replaced by TxID)</translation>
 		</message>
 		<message>
 			<source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
-			<translation>스 크 립 트 인증 스 레 드 수량 설정 (% u ~% d, 0 = auto, &lt; 0 = leave that many cores free, default:% d)</translation>
+			<translation>스 크 립 트 인증 스 레 드 수량 설정 (%u ~%d, 0 = auto, &lt; 0 = leave that many cores free, default:%d)</translation>
 		</message>
 		<message>
 			<source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
@@ -3497,7 +3497,7 @@
 		</message>
 		<message>
 			<source>-maxmempool must be at least %d MB</source>
-			<translation>- maxmempool 은 최소한% d MB 여야 함</translation>
+			<translation>- maxmempool 은 최소한%d MB 여야 함</translation>
 		</message>
 		<message>
 			<source>&lt;category&gt; can be:</source>
@@ -3513,7 +3513,7 @@
 		</message>
 		<message>
 			<source>Cannot resolve -%s address: '%s'</source>
-			<translation>해석 불가 -% s 주소: "% s"</translation>
+			<translation>해석 불가 -%s 주소: "%s"</translation>
 		</message>
 		<message>
 			<source>Connection options:</source>
@@ -3521,7 +3521,7 @@
 		</message>
 		<message>
 			<source>Copyright (C) %i-%i</source>
-			<translation>저작권 소유 (C)% i -% i</translation>
+			<translation>저작권 소유 (C)%i -%i</translation>
 		</message>
 		<message>
 			<source>Corrupted block database detected</source>
@@ -3557,7 +3557,7 @@
 		</message>
 		<message>
 			<source>Enable transaction replacement in the memory pool (default: %u)</source>
-			<translation>메모리 풀 에 트 랜 잭 션 바 꾸 기 사용 (기본 값:% u)</translation>
+			<translation>메모리 풀 에 트 랜 잭 션 바 꾸 기 사용 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Error initializing block database</source>
@@ -3569,7 +3569,7 @@
 		</message>
 		<message>
 			<source>Error loading %s</source>
-			<translation>% s 불 러 오 는 중 오류 발생</translation>
+			<translation>%s 불 러 오 는 중 오류 발생</translation>
 		</message>
 		<message>
 			<source>Error loading block database</source>
@@ -3597,15 +3597,15 @@
 		</message>
 		<message>
 			<source>Invalid -onion address: '%s'</source>
-			<translation>무효 - 양파 주소: "% s"</translation>
+			<translation>무효 - 양파 주소: "%s"</translation>
 		</message>
 		<message>
 			<source>Invalid amount for -fallbackfee=&lt;amount&gt;: '%s'</source>
-			<translation>- fallback fee = &lt; amount &gt;: '% s' 금액 무효</translation>
+			<translation>- fallback fee = &lt; amount &gt;: '%s' 금액 무효</translation>
 		</message>
 		<message>
 			<source>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</source>
-			<translation>트 랜 잭 션 메모리 탱크 를 &lt; n &gt; 메가바이트 이하 로 유지 합 니 다 (기본 값:% u)</translation>
+			<translation>트 랜 잭 션 메모리 탱크 를 &lt; n &gt; 메가바이트 이하 로 유지 합 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Location of the auth cookie (default: data dir)</source>
@@ -3633,11 +3633,11 @@
 		</message>
 		<message>
 			<source>Set database cache size in megabytes (%d to %d, default: %d)</source>
-			<translation>메가바이트 단위 로 데이터베이스 캐 시 크기 설정 (% d ~% d, 기본 값:% d)</translation>
+			<translation>메가바이트 단위 로 데이터베이스 캐 시 크기 설정 (%d ~%d, 기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>Set maximum block size in bytes (default: %d)</source>
-			<translation>바이트 단위 로 최대 크기 설정 (기본 값:% d)</translation>
+			<translation>바이트 단위 로 최대 크기 설정 (기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>Specify wallet file (within data directory)</source>
@@ -3645,7 +3645,7 @@
 		</message>
 		<message>
 			<source>The source code is available from %s.</source>
-			<translation>소스 코드% s 에서 획득 가능.</translation>
+			<translation>소스 코드%s 에서 획득 가능.</translation>
 		</message>
 		<message>
 			<source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
@@ -3661,7 +3661,7 @@
 		</message>
 		<message>
 			<source>Use UPnP to map the listening port (default: %u)</source>
-			<translation>UP 맵 수신 포트 사용 (기본 값:% u)</translation>
+			<translation>UP 맵 수신 포트 사용 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Use the test chain</source>
@@ -3669,7 +3669,7 @@
 		</message>
 		<message>
 			<source>User Agent comment (%s) contains unsafe characters.</source>
-			<translation>사용자 에이전트 주석 (% s) 에 불안 전한 문 자 를 포함 합 니 다.</translation>
+			<translation>사용자 에이전트 주석 (%s) 에 불안 전한 문 자 를 포함 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Verifying blocks...</source>
@@ -3681,7 +3681,7 @@
 		</message>
 		<message>
 			<source>Wallet %s resides outside data directory %s</source>
-			<translation>지갑% s 는 데이터 디 렉 터 리% s 밖 에 있 습 니 다</translation>
+			<translation>지갑%s 는 데이터 디 렉 터 리%s 밖 에 있 습 니 다</translation>
 		</message>
 		<message>
 			<source>Wallet debugging/testing options:</source>
@@ -3713,35 +3713,35 @@
 		</message>
 		<message>
 			<source>Error: Listening for incoming connections failed (listen returned error %s)</source>
-			<translation>오류: 연결 오류 검출 (오류 반환% s)</translation>
+			<translation>오류: 연결 오류 검출 (오류 반환%s)</translation>
 		</message>
 		<message>
 			<source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
-			<translation>관련 경 보 를 받 았 거나, 우리 가 아주 긴 fork (% s in cmd is replaced by message) 를 보 았 을 때 명령 을 집행 합 니 다.</translation>
+			<translation>관련 경 보 를 받 았 거나, 우리 가 아주 긴 fork (%s in cmd is replaced by message) 를 보 았 을 때 명령 을 집행 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Fees (in %s/kB) smaller than this are considered zero fee for relaying, mining and transaction creation (default: %s)</source>
-			<translation>이 값 보다 적은 비용 (% s / kB 단위) 은 중계, 발굴, 사무 창 출 제로 (기본 값:% s) 로 여 겨 집 니 다.</translation>
+			<translation>이 값 보다 적은 비용 (%s / kB 단위) 은 중계, 발굴, 사무 창 출 제로 (기본 값:%s) 로 여 겨 집 니 다.</translation>
 		</message>
 		<message>
 			<source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
-			<translation>paytxfee 가 설정 되 어 있 지 않 으 면 n 개 블록 내 에서 평균 적 으로 확인 할 수 있 도록 충분 한 비용 을 포함 하 십시오 (기본 값:% u)</translation>
+			<translation>paytxfee 가 설정 되 어 있 지 않 으 면 n 개 블록 내 에서 평균 적 으로 확인 할 수 있 도록 충분 한 비용 을 포함 하 십시오 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
-			<translation>- maxtxfee = 'amount': '% s' 의 금액 은 무효 (최소한% s 의 minRelay 비용 으로 트 랜 잭 션 이 막 히 는 것 을 방지 해 야 함)</translation>
+			<translation>- maxtxfee = 'amount': '%s' 의 금액 은 무효 (최소한%s 의 minRelay 비용 으로 트 랜 잭 션 이 막 히 는 것 을 방지 해 야 함)</translation>
 		</message>
 		<message>
 			<source>Maximum size of data in data carrier transactions we relay and mine (default: %u)</source>
-			<translation>저희 가 중계 하고 발굴 한 데이터 캐리어 의 최대 데이터 크기 (기본 값:% u)</translation>
+			<translation>저희 가 중계 하고 발굴 한 데이터 캐리어 의 최대 데이터 크기 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
-			<translation>모든 대리 연결 에 대한 증빙 서 류 를 기계화 하 다.이것 은 Tor 스 트림 격 리 를 사용 합 니 다 (기본 값:% u)</translation>
+			<translation>모든 대리 연결 에 대한 증빙 서 류 를 기계화 하 다.이것 은 Tor 스 트림 격 리 를 사용 합 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
-			<translation>바이트 단위 로 높 은 우선 순위 / 낮은 비용 의 최대 크기 설정 (기본 값:% d)</translation>
+			<translation>바이트 단위 로 높 은 우선 순위 / 낮은 비용 의 최대 크기 설정 (기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>The transaction amount is too small to send after the fee has been deducted</source>
@@ -3757,15 +3757,15 @@
 		</message>
 		<message>
 			<source>(default: %u)</source>
-			<translation>(기본 값:% u)</translation>
+			<translation>(기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Accept public REST requests (default: %u)</source>
-			<translation>공공 REST 요청 수락 (기본 값:% u)</translation>
+			<translation>공공 REST 요청 수락 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Automatically create Tor hidden service (default: %d)</source>
-			<translation>Tor 숨 김 서비스 자동 생 성 (기본 값:% d)</translation>
+			<translation>Tor 숨 김 서비스 자동 생 성 (기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>Connect through SOCKS5 proxy</source>
@@ -3785,19 +3785,19 @@
 		</message>
 		<message>
 			<source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
-			<translation>- paytxfee = &lt; amount &gt;: '% s' 의 금액 은 무효 (최소한% s 여야 함)</translation>
+			<translation>- paytxfee = &lt; amount &gt;: '%s' 의 금액 은 무효 (최소한%s 여야 함)</translation>
 		</message>
 		<message>
 			<source>Invalid netmask specified in -whitelist: '%s'</source>
-			<translation>- 화이트 리스트 에서 지정 한 네트워크 마스크 무효: "% s"</translation>
+			<translation>- 화이트 리스트 에서 지정 한 네트워크 마스크 무효: "%s"</translation>
 		</message>
 		<message>
 			<source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
-			<translation>메모리 에 최대 &lt; n &gt; 연결 할 수 없 는 사무 저장 (기본 값:% u)</translation>
+			<translation>메모리 에 최대 &lt; n &gt; 연결 할 수 없 는 사무 저장 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Need to specify a port with -whitebind: '%s'</source>
-			<translation>사용 해 야 합 니 다 - whitebind 지정 포트: "% s"</translation>
+			<translation>사용 해 야 합 니 다 - whitebind 지정 포트: "%s"</translation>
 		</message>
 		<message>
 			<source>Node relay options:</source>
@@ -3809,7 +3809,7 @@
 		</message>
 		<message>
 			<source>Reducing -maxconnections from %d to %d, because of system limitations.</source>
-			<translation>시스템 제한 으로 인해 - max conction s 를% d 에서% d 로 줄 이 고 있 습 니 다.</translation>
+			<translation>시스템 제한 으로 인해 - max conction s 를%d 에서%d 로 줄 이 고 있 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Rescan the block chain for missing wallet transactions on startup</source>
@@ -3821,7 +3821,7 @@
 		</message>
 		<message>
 			<source>Send transactions as zero-fee transactions if possible (default: %u)</source>
-			<translation>가능 하 다 면, 비 즈 니스 를 비 즈 니스 로 보 냅 니 다 (기본 값:% u)</translation>
+			<translation>가능 하 다 면, 비 즈 니스 를 비 즈 니스 로 보 냅 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Show all debugging options (usage: --help -help-debug)</source>
@@ -3849,7 +3849,7 @@
 		</message>
 		<message>
 			<source>Tor control port to use if onion listening enabled (default: %s)</source>
-			<translation>도청 할 때 사용 할 Tor 제어 포트 사용 하기 (기본 값:% s)</translation>
+			<translation>도청 할 때 사용 할 Tor 제어 포트 사용 하기 (기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Transaction amount too small</source>
@@ -3865,7 +3865,7 @@
 		</message>
 		<message>
 			<source>Unable to bind to %s on this computer (bind returned error %s)</source>
-			<translation>이 컴퓨터 에 있 는% s 를 연결 할 수 없습니다 (bingd 복귀 오류% s)</translation>
+			<translation>이 컴퓨터 에 있 는%s 를 연결 할 수 없습니다 (bingd 복귀 오류%s)</translation>
 		</message>
 		<message>
 			<source>Upgrade wallet to latest format on startup</source>
@@ -3881,11 +3881,11 @@
 		</message>
 		<message>
 			<source>Warning: unknown new rules activated (versionbit %i)</source>
-			<translation>경고: 알 수 없 는 새 규칙 이 활성화 되 었 습 니 다 (판 본위% i)</translation>
+			<translation>경고: 알 수 없 는 새 규칙 이 활성화 되 었 습 니 다 (판 본위%i)</translation>
 		</message>
 		<message>
 			<source>Whether to operate in a blocks only mode (default: %u)</source>
-			<translation>블록 모드 에서 만 작 동 할 지 여부 (기본 값:% u)</translation>
+			<translation>블록 모드 에서 만 작 동 할 지 여부 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Zapping all transactions from wallet...</source>
@@ -3901,7 +3901,7 @@
 		</message>
 		<message>
 			<source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-			<translation>최 적 블록 변경 시 명령 실행 (% s in cmd is replaced by block hash)</translation>
+			<translation>최 적 블록 변경 시 명령 실행 (%s in cmd is replaced by block hash)</translation>
 		</message>
 		<message>
 			<source>Allow DNS lookups for -addnode, -seednode and -connect</source>
@@ -3921,39 +3921,39 @@
 		</message>
 		<message>
 			<source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>
-			<translation>mempool 에서 업무 유지 시간 이 &lt; n &gt; 시간 을 초과 하지 않도록 합 니 다 (기본 값:% u)</translation>
+			<translation>mempool 에서 업무 유지 시간 이 &lt; n &gt; 시간 을 초과 하지 않도록 합 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Fees (in %s/kB) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-			<translation>이 값 보다 적은 비용 (% s / kB 단위) 은 사무 생 성 제로 비용 (기본 값:% s) 으로 간주 합 니 다.</translation>
+			<translation>이 값 보다 적은 비용 (%s / kB 단위) 은 사무 생 성 제로 비용 (기본 값:%s) 으로 간주 합 니 다.</translation>
 		</message>
 		<message>
 			<source>How thorough the block verification of -checkblocks is (0-4, default: %u)</source>
-			<translation>- checkblock 의 블록 검증 이 얼마나 철저 한 지 (0 - 4, 기본 값:% u)</translation>
+			<translation>- checkblock 의 블록 검증 이 얼마나 철저 한 지 (0 - 4, 기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Maintain a full transaction index, used by the getrawtransaction rpc call (default: %u)</source>
-			<translation>getrawtransaction rpc 호출 에 사용 할 전체 트 랜 잭 션 인덱스 유지 (기본 값:% u)</translation>
+			<translation>getrawtransaction rpc 호출 에 사용 할 전체 트 랜 잭 션 인덱스 유지 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Number of seconds to keep misbehaving peers from reconnecting (default: %u)</source>
-			<translation>정상 적 이지 않 은 피 어 싱 의 재 접속 을 막 는 초 (기본 값:% u)</translation>
+			<translation>정상 적 이지 않 은 피 어 싱 의 재 접속 을 막 는 초 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
-			<translation>디 버 깅 정보 출력 (기본 값:% u, &lt; category &gt; 제공)</translation>
+			<translation>디 버 깅 정보 출력 (기본 값:%u, &lt; category &gt; 제공)</translation>
 		</message>
 		<message>
 			<source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
-			<translation>블 룸 필터 블록 과 트 랜 잭 션 을 사용 할 수 있 습 니 다 (기본 값:% u)</translation>
+			<translation>블 룸 필터 블록 과 트 랜 잭 션 을 사용 할 수 있 습 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
-			<translation>네트워크 버 전 문자열 (% i) 의 전체 길이 가 최대 길이 (% i) 를 초과 합 니 다.댓 글 의 수량 이나 크기 를 줄이다.</translation>
+			<translation>네트워크 버 전 문자열 (%i) 의 전체 길이 가 최대 길이 (%i) 를 초과 합 니 다.댓 글 의 수량 이나 크기 를 줄이다.</translation>
 		</message>
 		<message>
 			<source>Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = no limit (default: %d)</source>
-			<translation>출구 트 래 픽 을 주어진 목표 에서 (24 시간 마다 MiB), 0 = 무제 한 (기본 값:% d) 유지 하려 고 시도 합 니 다.</translation>
+			<translation>출구 트 래 픽 을 주어진 목표 에서 (24 시간 마다 MiB), 0 = 무제 한 (기본 값:%d) 유지 하려 고 시도 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
@@ -3965,7 +3965,7 @@
 		</message>
 		<message>
 			<source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
-			<translation>단독 SOCKS 5 대 리 를 이용 하여 Tor 숨 김 서 비 스 를 통 해 대등한 측 에 도착 (기본 값:% s)</translation>
+			<translation>단독 SOCKS 5 대 리 를 이용 하여 Tor 숨 김 서 비 스 를 통 해 대등한 측 에 도착 (기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
@@ -3973,35 +3973,35 @@
 		</message>
 		<message>
 			<source>(default: %s)</source>
-			<translation>(기본 값:% s)</translation>
+			<translation>(기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Always query for peer addresses via DNS lookup (default: %u)</source>
-			<translation>DNS 를 통 해 피 어 투 피 어 를 찾 습 니 다 (기본 값:% u)</translation>
+			<translation>DNS 를 통 해 피 어 투 피 어 를 찾 습 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>How many blocks to check at startup (default: %u, 0 = all)</source>
-			<translation>시작 할 때 검사 할 블록 수 (기본 값:% u, 0 = all)</translation>
+			<translation>시작 할 때 검사 할 블록 수 (기본 값:%u, 0 = all)</translation>
 		</message>
 		<message>
 			<source>Include IP addresses in debug output (default: %u)</source>
-			<translation>디 버 깅 출력 에 IP 주소 포함 (기본 값:% u)</translation>
+			<translation>디 버 깅 출력 에 IP 주소 포함 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Invalid -proxy address: '%s'</source>
-			<translation>무효 - 대리 주소: "% s"</translation>
+			<translation>무효 - 대리 주소: "%s"</translation>
 		</message>
 		<message>
 			<source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
-			<translation>&lt; port &gt; 에서 JSON - RPC 연결 검색 (기본 값:% u 또는 testnet:% u)</translation>
+			<translation>&lt; port &gt; 에서 JSON - RPC 연결 검색 (기본 값:%u 또는 testnet:%u)</translation>
 		</message>
 		<message>
 			<source>Listen for connections on &lt;port&gt; (default: %u or testnet: %u)</source>
-			<translation>&lt; port &gt; 의 연결 검색 (기본 값:% u 또는 testnet:% u)</translation>
+			<translation>&lt; port &gt; 의 연결 검색 (기본 값:%u 또는 testnet:%u)</translation>
 		</message>
 		<message>
 			<source>Maintain at most &lt;n&gt; connections to peers (default: %u)</source>
-			<translation>최대 피 어 투 피 어 와 의 연결 유지 (기본 값:% u)</translation>
+			<translation>최대 피 어 투 피 어 와 의 연결 유지 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Make the wallet broadcast transactions</source>
@@ -4009,47 +4009,47 @@
 		</message>
 		<message>
 			<source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: %u)</source>
-			<translation>각 연결 수신 버퍼 의 최대 값, &lt; n &gt; * 1000 바이트 (기본 값:% u)</translation>
+			<translation>각 연결 수신 버퍼 의 최대 값, &lt; n &gt; * 1000 바이트 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: %u)</source>
-			<translation>각 연결 버퍼 의 최대 값, &lt; n &gt; * 1000 바이트 (기본 값:% u)</translation>
+			<translation>각 연결 버퍼 의 최대 값, &lt; n &gt; * 1000 바이트 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Prepend debug output with timestamp (default: %u)</source>
-			<translation>디 버 깅 출력 전에 시간 스탬프 를 추가 합 니 다 (기본 값:% u)</translation>
+			<translation>디 버 깅 출력 전에 시간 스탬프 를 추가 합 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Relay and mine data carrier transactions (default: %u)</source>
-			<translation>데이터 캐리어 를 중계 및 발굴 (기본 값:% u)</translation>
+			<translation>데이터 캐리어 를 중계 및 발굴 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Relay non-P2SH multisig (default: %u)</source>
-			<translation>중계 비 P2 SH multisig (기본 값:% u)</translation>
+			<translation>중계 비 P2 SH multisig (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Set key pool size to &lt;n&gt; (default: %u)</source>
-			<translation>키 풀 크기 를 n 으로 설정 (기본 값:% u)</translation>
+			<translation>키 풀 크기 를 n 으로 설정 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Set the number of threads to service RPC calls (default: %d)</source>
-			<translation>RPC 호출 서비스 로 설 정 된 스 레 드 수 (기본 값:% d)</translation>
+			<translation>RPC 호출 서비스 로 설 정 된 스 레 드 수 (기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>Specify configuration file (default: %s)</source>
-			<translation>설정 파일 지정 (기본 값:% s)</translation>
+			<translation>설정 파일 지정 (기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Specify connection timeout in milliseconds (minimum: 1, default: %d)</source>
-			<translation>밀리초 단위 로 연결 시간 초과 지정 (최소 값: 1, 기본 값:% d)</translation>
+			<translation>밀리초 단위 로 연결 시간 초과 지정 (최소 값: 1, 기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>Specify pid file (default: %s)</source>
-			<translation>pid 파일 지정 (기본 값:% s)</translation>
+			<translation>pid 파일 지정 (기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Spend unconfirmed change when sending transactions (default: %u)</source>
-			<translation>트 랜 잭 션 을 보 낼 때 확인 되 지 않 은 변경 사항 을 사용 합 니 다 (기본 값:% u)</translation>
+			<translation>트 랜 잭 션 을 보 낼 때 확인 되 지 않 은 변경 사항 을 사용 합 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Starting network threads...</source>
@@ -4057,11 +4057,11 @@
 		</message>
 		<message>
 			<source>Threshold for disconnecting misbehaving peers (default: %u)</source>
-			<translation>차단 행위 이상 의 대등 기기 한도 값 (기본 값:% u)</translation>
+			<translation>차단 행위 이상 의 대등 기기 한도 값 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Unknown network specified in -onlynet: '%s'</source>
-			<translation>- only net 에서 알 수 없 는 네트워크 지정: "% s"</translation>
+			<translation>- only net 에서 알 수 없 는 네트워크 지정: "%s"</translation>
 		</message>
 		<message>
 			<source>Insufficient funds</source>
@@ -4109,51 +4109,51 @@
 		</message>
 		<message>
 			<source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
-			<translation>MIT 소프트웨어 허가증 에 따라 배포 되 었 으 니 첨부 된 파일% s 또는% s 를 참조 하 시기 바 랍 니 다.</translation>
+			<translation>MIT 소프트웨어 허가증 에 따라 배포 되 었 으 니 첨부 된 파일%s 또는%s 를 참조 하 시기 바 랍 니 다.</translation>
 		</message>
 		<message>
 			<source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>
-			<translation>데이터 디 렉 터 리% s 의 잠 금 을 가 져 올 수 없습니다.% s 가 실행 중 일 것 입 니 다.</translation>
+			<translation>데이터 디 렉 터 리%s 의 잠 금 을 가 져 올 수 없습니다.%s 가 실행 중 일 것 입 니 다.</translation>
 		</message>
 		<message>
 			<source>Error loading %s: You can't enable HD on a already existing non-HD wallet</source>
-			<translation>% s 를 불 러 오 는 중 오류 가 발생 했 습 니 다: 존재 하 는 고 화질 지갑 에 고 화질 을 사용 할 수 없습니다.</translation>
+			<translation>%s 를 불 러 오 는 중 오류 가 발생 했 습 니 다: 존재 하 는 고 화질 지갑 에 고 화질 을 사용 할 수 없습니다.</translation>
 		</message>
 		<message>
 			<source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-			<translation>% s 읽 는 중 오류 발생!모든 키 가 올 바 르 게 읽 히 지만, 트 랜 잭 션 데이터 나 주소록 항목 이 분실 되 거나 올 바 르 지 않 을 수 있 습 니 다.</translation>
+			<translation>%s 읽 는 중 오류 발생!모든 키 가 올 바 르 게 읽 히 지만, 트 랜 잭 션 데이터 나 주소록 항목 이 분실 되 거나 올 바 르 지 않 을 수 있 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Extra transactions to keep in memory for compact block reconstructions (default: %u)</source>
-			<translation>메모리 에 저장 되 어 있 는 압축 블록 을 위 한 추가 작업 (기본 값:% u)</translation>
+			<translation>메모리 에 저장 되 어 있 는 압축 블록 을 위 한 추가 작업 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>If this block is in the chain assume that it and its ancestors are valid and potentially skip their script verification (0 to verify all, default: %s, testnet: %s)</source>
-			<translation>만약 에 이 블록 이 체인 에 있 으 면 조상 과 유효 하 다 고 가정 하고 그들의 스 크 립 트 검증 (0 검증 전부, 기본 값:% s, testnet:% s) 을 건 너 뛸 수 있 습 니 다.</translation>
+			<translation>만약 에 이 블록 이 체인 에 있 으 면 조상 과 유효 하 다 고 가정 하고 그들의 스 크 립 트 검증 (0 검증 전부, 기본 값:%s, testnet:%s) 을 건 너 뛸 수 있 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Maximum allowed median peer time offset adjustment. Local perspective of time may be influenced by peers forward or backward by this amount. (default: %u seconds)</source>
-			<translation>허용 되 는 최대 대등한 시간 오프셋 조정 중 값.시간의 국부 적 인 시각 은 앞으로 또는 뒤로 의 대등한 영향 을 받 을 수 있다.(기본 값:% u 초)</translation>
+			<translation>허용 되 는 최대 대등한 시간 오프셋 조정 중 값.시간의 국부 적 인 시각 은 앞으로 또는 뒤로 의 대등한 영향 을 받 을 수 있다.(기본 값:%u 초)</translation>
 		</message>
 		<message>
 			<source>Maximum total fees (in %s) to use in a single wallet transaction or raw transaction; setting this too low may abort large transactions (default: %s)</source>
-			<translation>단일 지갑 거래 또는 원시 거래 에 사용 되 는 최대 총 비용 (% s 단위); 이 설정 을 너무 낮 게 설정 하면 대형 거래 가 중 단 될 수 있 습 니 다 (기본 값:% s)</translation>
+			<translation>단일 지갑 거래 또는 원시 거래 에 사용 되 는 최대 총 비용 (%s 단위); 이 설정 을 너무 낮 게 설정 하면 대형 거래 가 중 단 될 수 있 습 니 다 (기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
-			<translation>컴퓨터 의 날짜 와 시간 이 정확 한 지 확인 하 세 요!만약 당신 의 시계 가 틀 렸 다 면,% s 는 정상적으로 일 할 수 없 을 것 입 니 다.</translation>
+			<translation>컴퓨터 의 날짜 와 시간 이 정확 한 지 확인 하 세 요!만약 당신 의 시계 가 틀 렸 다 면,%s 는 정상적으로 일 할 수 없 을 것 입 니 다.</translation>
 		</message>
 		<message>
 			<source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-			<translation>% s 가 유용 하 다 고 생각 되 시 면 기 고 를 해 주 십시오.이 소프트웨어 에 대한 자세 한 정 보 는% s 에 방문 하 십시오.</translation>
+			<translation>%s 가 유용 하 다 고 생각 되 시 면 기 고 를 해 주 십시오.이 소프트웨어 에 대한 자세 한 정 보 는%s 에 방문 하 십시오.</translation>
 		</message>
 		<message>
 			<source>Reduce storage requirements by enabling pruning (deleting) of old blocks. This allows the pruneblockchain RPC to be called to delete specific blocks, and enables automatic pruning of old blocks if a target size in MiB is provided. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, &gt;%u = automatically prune block files to stay under the specified target size in MiB)</source>
-			<translation>오래된 조각 을 잘라 내 는 것 을 허용 함으로써 저장 수 요 를 줄인다.이것 은 prunebroccchain RPC 를 호출 하여 특정한 블록 을 삭제 할 수 있 으 며, MiB 에서 목표 크기 를 제공 하면 자동 으로 오래된 조각 을 자 를 수 있 습 니 다.이 모드 는 - txindex 와 - rescan 과 호 환 되 지 않 습 니 다.경고: 이 설정 을 복원 하려 면 전체 블록 체인 을 다시 다운로드 해 야 합 니 다.(기본 값: 0 = 잘라 내기 금지, 1 = RPC 를 통 해 수 동 으로 잘라 내기 허용, &gt;% u = 자동 잘라 내기 파일 을 MiB 에서 지정 한 목표 크기 이하 로 유지 합 니 다)</translation>
+			<translation>오래된 조각 을 잘라 내 는 것 을 허용 함으로써 저장 수 요 를 줄인다.이것 은 prunebroccchain RPC 를 호출 하여 특정한 블록 을 삭제 할 수 있 으 며, MiB 에서 목표 크기 를 제공 하면 자동 으로 오래된 조각 을 자 를 수 있 습 니 다.이 모드 는 - txindex 와 - rescan 과 호 환 되 지 않 습 니 다.경고: 이 설정 을 복원 하려 면 전체 블록 체인 을 다시 다운로드 해 야 합 니 다.(기본 값: 0 = 잘라 내기 금지, 1 = RPC 를 통 해 수 동 으로 잘라 내기 허용, &gt;%u = 자동 잘라 내기 파일 을 MiB 에서 지정 한 목표 크기 이하 로 유지 합 니 다)</translation>
 		</message>
 		<message>
 			<source>Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)</source>
-			<translation>블록 생 성 에 포 함 될 트 랜 잭 션 의 최소 비율 (% s / kB 단위) 을 설정 합 니 다.(기본 값:% s)</translation>
+			<translation>블록 생 성 에 포 함 될 트 랜 잭 션 의 최소 비율 (%s / kB 단위) 을 설정 합 니 다.(기본 값:%s)</translation>
 		</message>
 		<message>
 			<source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
@@ -4169,7 +4169,7 @@
 		</message>
 		<message>
 			<source>Wallet will not create transactions that violate mempool chain limits (default: %u)</source>
-			<translation>Wallet 에서 mempool 체인 제한 을 위반 하 는 사 무 를 만 들 지 않 습 니 다 (기본 값:% u)</translation>
+			<translation>Wallet 에서 mempool 체인 제한 을 위반 하 는 사 무 를 만 들 지 않 습 니 다 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -4185,7 +4185,7 @@
 		</message>
 		<message>
 			<source>%s corrupt, salvage failed</source>
-			<translation>% s 파손, 인양 실패</translation>
+			<translation>%s 파손, 인양 실패</translation>
 		</message>
 		<message>
 			<source>Attempt to recover private keys from a corrupt wallet on startup</source>
@@ -4201,23 +4201,23 @@
 		</message>
 		<message>
 			<source>Error loading %s: Wallet corrupted</source>
-			<translation>% s 불 러 오 는 중 오류: 지갑 이 파손 되 었 습 니 다</translation>
+			<translation>%s 불 러 오 는 중 오류: 지갑 이 파손 되 었 습 니 다</translation>
 		</message>
 		<message>
 			<source>Error loading %s: Wallet requires newer version of %s</source>
-			<translation>% s 를 불 러 오 는 중 오류 가 발생 했 습 니 다: 지갑 은 버 전의% s 를 갱신 해 야 합 니 다</translation>
+			<translation>%s 를 불 러 오 는 중 오류 가 발생 했 습 니 다: 지갑 은 버 전의%s 를 갱신 해 야 합 니 다</translation>
 		</message>
 		<message>
 			<source>Error loading %s: You can't disable HD on a already existing HD wallet</source>
-			<translation>% s 를 불 러 오 는 중 오류 가 발생 했 습 니 다: 기 존 고 화질 지갑 에서 고 화질 을 사용 할 수 없습니다.</translation>
+			<translation>%s 를 불 러 오 는 중 오류 가 발생 했 습 니 다: 기 존 고 화질 지갑 에서 고 화질 을 사용 할 수 없습니다.</translation>
 		</message>
 		<message>
 			<source>Initialization sanity check failed. %s is shutting down.</source>
-			<translation>건전 성 검사 초기 화 실패.% s 님 이 닫 고 있 습 니 다.</translation>
+			<translation>건전 성 검사 초기 화 실패.%s 님 이 닫 고 있 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
-			<translation>% s = &lt; amount &gt;: '% s' 금액 무효</translation>
+			<translation>%s = &lt; amount &gt;: '%s' 금액 무효</translation>
 		</message>
 		<message>
 			<source>Loading banlist...</source>
@@ -4241,11 +4241,11 @@
 		</message>
 		<message>
 			<source>Unable to bind to %s on this computer. %s is probably already running.</source>
-			<translation>이 컴퓨터 의% s 를 연결 할 수 없습니다.% s 님 이 실행 중 일 것 같 습 니 다.</translation>
+			<translation>이 컴퓨터 의%s 를 연결 할 수 없습니다.%s 님 이 실행 중 일 것 같 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Wallet needed to be rewritten: restart %s to complete</source>
-			<translation>지갑 재 작성 필요: 재 시작% s 시 완료</translation>
+			<translation>지갑 재 작성 필요: 재 시작%s 시 완료</translation>
 		</message>
 		<message>
 			<source>Use hierarchical deterministic key generation (HD) after BIP32. Only has effect during wallet creation/first start</source>
@@ -4253,11 +4253,11 @@
 		</message>
 		<message>
 			<source>Equivalent bytes per sigop in transactions for relay and mining (default: %u)</source>
-			<translation>중계 및 발굴 업무 중 매 sigp 의 등가 바이트 수 (기본 값:% u)</translation>
+			<translation>중계 및 발굴 업무 중 매 sigp 의 등가 바이트 수 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Force relay of transactions from whitelisted peers even if they violate local relay policy (default: %d)</source>
-			<translation>로 컬 중계 전략 (기본 값:% d) 을 위반 하 더 라 도 화이트 리스트 에서 대등한 업 무 를 강제로 중계 합 니 다.</translation>
+			<translation>로 컬 중계 전략 (기본 값:%d) 을 위반 하 더 라 도 화이트 리스트 에서 대등한 업 무 를 강제로 중계 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
@@ -4265,7 +4265,7 @@
 		</message>
 		<message>
 			<source>Sets the serialization of raw transaction or block hex returned in non-verbose mode, non-segwit(0) or segwit(1) (default: %d)</source>
-			<translation>상세 하지 않 은 모드, 비 segwit (0) 또는 segwit (1) 로 돌아 오 는 원 격 트 랜 잭 션 또는 블록 16 진수 의 직렬 화 (기본 값:% d) 를 설정 합 니 다.</translation>
+			<translation>상세 하지 않 은 모드, 비 segwit (0) 또는 segwit (1) 로 돌아 오 는 원 격 트 랜 잭 션 또는 블록 16 진수 의 직렬 화 (기본 값:%d) 를 설정 합 니 다.</translation>
 		</message>
 		<message>
 			<source>This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -4273,11 +4273,11 @@
 		</message>
 		<message>
 			<source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-			<translation>이 제품 은 OpenSSL 프로젝트 가 개발 한 OpenSSL 공구 꾸러미% s 의 소프트웨어, Eric Young 이 만 든 암호 화 소프트웨어 와 Thomas Bernard 가 만 든 UP 소프트웨어 를 포함한다.</translation>
+			<translation>이 제품 은 OpenSSL 프로젝트 가 개발 한 OpenSSL 공구 꾸러미%s 의 소프트웨어, Eric Young 이 만 든 암호 화 소프트웨어 와 Thomas Bernard 가 만 든 UP 소프트웨어 를 포함한다.</translation>
 		</message>
 		<message>
 			<source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-			<translation>경고: 지갑 파일 파손, 데이터 인양!원본% s 가% s 에% s 로 저장 되 어 있 습 니 다. 만약 귀하 의 잔액 이나 거래 기록 이 정확 하지 않 으 면 백업 에서 복원 해 야 합 니 다.</translation>
+			<translation>경고: 지갑 파일 파손, 데이터 인양!원본%s 가%s 에%s 로 저장 되 어 있 습 니 다. 만약 귀하 의 잔액 이나 거래 기록 이 정확 하지 않 으 면 백업 에서 복원 해 야 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Whitelist peers connecting from the given IP address (e.g. 1.2.3.4) or CIDR notated network (e.g. 1.2.3.0/24). Can be specified multiple times.</source>
@@ -4285,7 +4285,7 @@
 		</message>
 		<message>
 			<source>%s is set very high!</source>
-			<translation>% s 높 게 설정 하 였 습 니 다!</translation>
+			<translation>%s 높 게 설정 하 였 습 니 다!</translation>
 		</message>
 		<message>
 			<source>Keypool ran out, please call keypoolrefill first</source>
@@ -4293,11 +4293,11 @@
 		</message>
 		<message>
 			<source>Send transactions with full-RBF opt-in enabled (default: %u)</source>
-			<translation>전체 RBF 가입 을 선택 한 상태 에서 트 랜 잭 션 보 내기 (기본 값:% u)</translation>
+			<translation>전체 RBF 가입 을 선택 한 상태 에서 트 랜 잭 션 보 내기 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Set maximum BIP141 block weight (default: %d)</source>
-			<translation>최대 크기 의 가중치 설정 (기본 값:% d)</translation>
+			<translation>최대 크기 의 가중치 설정 (기본 값:%d)</translation>
 		</message>
 		<message>
 			<source>The wallet will avoid paying less than the minimum relay fee.</source>
@@ -4376,7 +4376,7 @@
 		</message>
 		<message>
 			<source>(%1 locked)</source>
-			<translation>(% 1 잠 금 됨)</translation>
+			<translation>(%1 잠 금 됨)</translation>
 		</message>
 		<message>
 			<source>yes</source>
@@ -4392,7 +4392,7 @@
 		</message>
 		<message>
 			<source>Can vary +/- %1 satoshi(s) per input.</source>
-			<translation>입력 마다 + / -% 1 satoshi 를 변경 할 수 있 습 니 다.</translation>
+			<translation>입력 마다 + / -%1 satoshi 를 변경 할 수 있 습 니 다.</translation>
 		</message>
 		<message>
 			<source>(no label)</source>
@@ -4400,7 +4400,7 @@
 		</message>
 		<message>
 			<source>change from %1 (%2)</source>
-			<translation>% 1 (% 2) 에서 변경</translation>
+			<translation>%1 (%2) 에서 변경</translation>
 		</message>
 		<message>
 			<source>(change)</source>
@@ -4439,11 +4439,11 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 (% 2 조각)</translation>
+			<translation>%1 (%2 조각)</translation>
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>% 1 부터% 2 까지</translation>
+			<translation>%1 부터%2 까지</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -4475,7 +4475,7 @@
 		</message>
 		<message>
 			<source>The total exceeds your balance when the %1 transaction fee is included.</source>
-			<translation>거래 비% 1 이 (가) 포 함 될 때 총액 이 귀하 의 잔액 을 초과 합 니 다.</translation>
+			<translation>거래 비%1 이 (가) 포 함 될 때 총액 이 귀하 의 잔액 을 초과 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Duplicate address found: addresses should only be used once each.</source>
@@ -4487,11 +4487,11 @@
 		</message>
 		<message>
 			<source>The transaction was rejected with the following reason: %1</source>
-			<translation>다음 과 같이 업무 가 거부 되 었 습 니 다:% 1</translation>
+			<translation>다음 과 같이 업무 가 거부 되 었 습 니 다:%1</translation>
 		</message>
 		<message>
 			<source>A fee higher than %1 is considered an absurdly high fee.</source>
-			<translation>% 1 이상 의 비용 은 터무니없이 높 은 비용 으로 여 겨 진다.</translation>
+			<translation>%1 이상 의 비용 은 터무니없이 높 은 비용 으로 여 겨 진다.</translation>
 		</message>
 		<message>
 			<source>Payment request expired.</source>
@@ -4503,11 +4503,11 @@
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
-			<translation>필요 한% 1 비용 만 지급</translation>
+			<translation>필요 한%1 비용 만 지급</translation>
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>아마% n 개 내 에서 확인 이 시 작 될 겁 니 다.</translation>
+			<translation>아마%n 개 내 에서 확인 이 시 작 될 겁 니 다.</translation>
 		</message>
 		<message>
 			<source>Warning: Invalid Hive address</source>
@@ -4573,7 +4573,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 (% 2 조각)</translation>
+			<translation>%1 (%2 조각)</translation>
 		</message>
 		<message>
 			<source>Main Asset</source>
@@ -4641,7 +4641,7 @@
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>% 1 부터% 2 까지</translation>
+			<translation>%1 부터%2 까지</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -4653,7 +4653,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>총액% 1</translation>
+			<translation>총액%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -4681,7 +4681,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>아마% n 개 내 에서 확인 이 시 작 될 겁 니 다.</translation>
+			<translation>아마%n 개 내 에서 확인 이 시 작 될 겁 니 다.</translation>
 		</message>
 		<message>
 			<source>Warning: Unknown change address</source>
@@ -4701,7 +4701,7 @@
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
-			<translation>필요 한% 1 비용 만 지급</translation>
+			<translation>필요 한%1 비용 만 지급</translation>
 		</message>
 		<message>
 			<source>Coin Control Features</source>
@@ -4920,7 +4920,7 @@
 		<name>GUIUtil</name>
 		<message>
 			<source>Enter a Hive address (e.g. %1)</source>
-			<translation>구성 요소 주소 입력 (예:% 1)</translation>
+			<translation>구성 요소 주소 입력 (예:%1)</translation>
 		</message>
 		<message>
 			<source>Warning: transaction while syncing wallet!</source>
@@ -4932,19 +4932,19 @@
 		</message>
 		<message>
 			<source>%1 d</source>
-			<translation>% 1 일</translation>
+			<translation>%1 일</translation>
 		</message>
 		<message>
 			<source>%1 h</source>
-			<translation>% 1 시간</translation>
+			<translation>%1 시간</translation>
 		</message>
 		<message>
 			<source>%1 m</source>
-			<translation>% 1 미터</translation>
+			<translation>%1 미터</translation>
 		</message>
 		<message>
 			<source>%1 s</source>
-			<translation>% 1 초</translation>
+			<translation>%1 초</translation>
 		</message>
 		<message>
 			<source>None</source>
@@ -4956,51 +4956,51 @@
 		</message>
 		<message>
 			<source>%1 ms</source>
-			<translation>% 1 밀리초</translation>
+			<translation>%1 밀리초</translation>
 		</message>
 		<message>
 			<source>%n second(s)</source>
-			<translation>% n 초</translation>
+			<translation>%n 초</translation>
 		</message>
 		<message>
 			<source>%n minute(s)</source>
-			<translation>% n 분</translation>
+			<translation>%n 분</translation>
 		</message>
 		<message>
 			<source>%n hour(s)</source>
-			<translation>% n 시간</translation>
+			<translation>%n 시간</translation>
 		</message>
 		<message>
 			<source>%n day(s)</source>
-			<translation>% n 일</translation>
+			<translation>%n 일</translation>
 		</message>
 		<message>
 			<source>%n week(s)</source>
-			<translation>% n 주</translation>
+			<translation>%n 주</translation>
 		</message>
 		<message>
 			<source>%1 and %2</source>
-			<translation>% 1 과% 2</translation>
+			<translation>%1 과%2</translation>
 		</message>
 		<message>
 			<source>%n year(s)</source>
-			<translation>% n 년</translation>
+			<translation>%n 년</translation>
 		</message>
 		<message>
 			<source>%1 B</source>
-			<translation>% 1 개 B</translation>
+			<translation>%1 개 B</translation>
 		</message>
 		<message>
 			<source>%1 KB</source>
-			<translation>% 1 KB</translation>
+			<translation>%1 KB</translation>
 		</message>
 		<message>
 			<source>%1 MB</source>
-			<translation>% 1 메가바이트</translation>
+			<translation>%1 메가바이트</translation>
 		</message>
 		<message>
 			<source>%1 GB</source>
-			<translation>% 1 GB</translation>
+			<translation>%1 GB</translation>
 		</message>
 	</context>
 	<context>
@@ -5015,15 +5015,15 @@
 		</message>
 		<message>
 			<source>Error: Cannot parse configuration file: %1. Only use key=value syntax.</source>
-			<translation>오류: 설정 파일 을 분석 할 수 없습니다:% 1.키 = value 문법 만 사용 합 니 다.</translation>
+			<translation>오류: 설정 파일 을 분석 할 수 없습니다:%1.키 = value 문법 만 사용 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Error: %1</source>
-			<translation>오류:% 1</translation>
+			<translation>오류:%1</translation>
 		</message>
 		<message>
 			<source>%1 didn't yet exit safely...</source>
-			<translation>% 난 아직 안전하게 떠 나 지 않 았 어...</translation>
+			<translation>%난 아직 안전하게 떠 나 지 않 았 어...</translation>
 		</message>
 	</context>
 	<context>
@@ -5073,7 +5073,7 @@
 		</message>
 		<message>
 			<source>%1 (%2 blocks)</source>
-			<translation>% 1 (% 2 조각)</translation>
+			<translation>%1 (%2 조각)</translation>
 		</message>
 		<message>
 			<source>Cost</source>
@@ -5181,7 +5181,7 @@
 		</message>
 		<message>
 			<source>%1 to %2</source>
-			<translation>% 1 부터% 2 까지</translation>
+			<translation>%1 부터%2 까지</translation>
 		</message>
 		<message>
 			<source>Are you sure you want to send?</source>
@@ -5193,7 +5193,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>총액% 1</translation>
+			<translation>총액%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -5217,7 +5217,7 @@
 		</message>
 		<message>
 			<source>Estimated to begin confirmation within %n block(s).</source>
-			<translation>아마% n 개 내 에서 확인 이 시 작 될 겁 니 다.</translation>
+			<translation>아마%n 개 내 에서 확인 이 시 작 될 겁 니 다.</translation>
 		</message>
 		<message>
 			<source>Warning: Unknown change address</source>
@@ -5237,7 +5237,7 @@
 		</message>
 		<message>
 			<source>Pay only the required fee of %1</source>
-			<translation>필요 한% 1 비용 만 지급</translation>
+			<translation>필요 한%1 비용 만 지급</translation>
 		</message>
 		<message>
 			<source>Coin Control Features</source>
@@ -5452,19 +5452,19 @@
 		</message>
 		<message>
 			<source>Freezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>주소 &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt; 동결</translation>
+			<translation>주소 &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt; 동결</translation>
 		</message>
 		<message>
 			<source>Unfreezing trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>주소 &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt; 해제</translation>
+			<translation>주소 &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt; 해제</translation>
 		</message>
 		<message>
 			<source>Freezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from all addresses&lt;br&gt;</source>
-			<translation>모든 주소 로부터 제 한 된 자산 &lt; b &gt;% 1 &lt; / b &gt; 의 모든 거래 를 동결 &lt; br &gt;</translation>
+			<translation>모든 주소 로부터 제 한 된 자산 &lt; b &gt;%1 &lt; / b &gt; 의 모든 거래 를 동결 &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>Opening / Unfreezing all trading of the restricted asset &lt;b&gt;%1&lt;/b&gt; from all addresses&lt;br&gt;</source>
-			<translation>모든 주소 에서 제 한 된 자산 의 모든 거래 를 해제 합 니 다 &lt; b &gt;% 1 &lt; / b &gt; &lt; br &gt;</translation>
+			<translation>모든 주소 에서 제 한 된 자산 의 모든 거래 를 해제 합 니 다 &lt; b &gt;%1 &lt; / b &gt; &lt; br &gt;</translation>
 		</message>
 		<message>
 			<source>added as transaction fee</source>
@@ -5472,7 +5472,7 @@
 		</message>
 		<message>
 			<source>Total Amount %1</source>
-			<translation>총액% 1</translation>
+			<translation>총액%1</translation>
 		</message>
 		<message>
 			<source>or</source>
@@ -5488,11 +5488,11 @@
 		</message>
 		<message>
 			<source>Adding qualifier &lt;b&gt;%1&lt;/b&gt; to address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>한정 부적 &lt; b &gt;% 1 &lt; / b &gt; 를 주소 &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt; 에 추가 합 니 다.</translation>
+			<translation>한정 부적 &lt; b &gt;%1 &lt; / b &gt; 를 주소 &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt; 에 추가 합 니 다.</translation>
 		</message>
 		<message>
 			<source>Removing qualifier &lt;b&gt;%1&lt;/b&gt; from address &lt;b&gt;%2&lt;/b&gt;&lt;br&gt;</source>
-			<translation>주소 &lt; b &gt;% 2 &lt; / b &gt; &lt; br &gt; 에서</translation>
+			<translation>주소 &lt; b &gt;%2 &lt; / b &gt; &lt; br &gt; 에서</translation>
 		</message>
 		<message>
 			<source>Confirm adding qualifier</source>
@@ -5848,11 +5848,11 @@
 		</message>
 		<message>
 			<source>(%1-bit)</source>
-			<translation>(% 1 비트)</translation>
+			<translation>(%1 비트)</translation>
 		</message>
 		<message>
 			<source>About %1</source>
-			<translation>% 1 에 대하 여</translation>
+			<translation>%1 에 대하 여</translation>
 		</message>
 		<message>
 			<source>Command-line options</source>
@@ -5872,7 +5872,7 @@
 		</message>
 		<message>
 			<source>Choose data directory on startup (default: %u)</source>
-			<translation>시작 할 때 데이터 디 렉 터 리 선택 (기본 값:% u)</translation>
+			<translation>시작 할 때 데이터 디 렉 터 리 선택 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Set language, for example \</source>
@@ -5888,7 +5888,7 @@
 		</message>
 		<message>
 			<source>Show splash screen on startup (default: %u)</source>
-			<translation>시작 할 때 시작 화면 보이 기 (기본 값:% u)</translation>
+			<translation>시작 할 때 시작 화면 보이 기 (기본 값:%u)</translation>
 		</message>
 		<message>
 			<source>Reset all settings changed in the GUI</source>
@@ -5896,7 +5896,7 @@
 		</message>
 		<message>
 			<source>%1 is shutting down...</source>
-			<translation>% 1 이 (가) 닫 히 고 있 습 니 다...</translation>
+			<translation>%1 이 (가) 닫 히 고 있 습 니 다...</translation>
 		</message>
 		<message>
 			<source>Do not shut down the computer until this window disappears.</source>
