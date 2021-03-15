@@ -100,6 +100,7 @@ public:
     const CAmount& IssueSubQualifierAssetBurnAmount() const { return nIssueSubQualifierAssetBurnAmount; }
     const CAmount& IssueRestrictedAssetBurnAmount() const { return nIssueRestrictedAssetBurnAmount; }
     const CAmount& AddNullQualifierTagBurnAmount() const { return nAddNullQualifierTagBurnAmount; }
+    const CAmount& CommunityAutonomousAmount() const { return nCommunityAutonomousAmount; }
 
     const std::string& IssueAssetBurnAddress() const { return strIssueAssetBurnAddress; }
     const std::string& ReissueAssetBurnAddress() const { return strReissueAssetBurnAddress; }
@@ -177,6 +178,7 @@ protected:
     CAmount nIssueSubQualifierAssetBurnAmount;
     CAmount nIssueRestrictedAssetBurnAmount;
     CAmount nAddNullQualifierTagBurnAmount;
+    CAmount nCommunityAutonomousAmount;
 
     // Burn Addresses
     std::string strIssueAssetBurnAddress;
