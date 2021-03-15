@@ -248,12 +248,12 @@ bool CScript::IsAssetScript(int& nType, bool& fIsOwner, int& nStartingIndex) con
     if (this->size() > 31) {
         if ((*this)[25] == OP_HVN_ASSET) { // OP_HVN_ASSET is always in the 25 index of the script if it exists
             int index = -1;
-            if ((*this)[27] == HVN_R) { // Check to see if HVN starts at 27 ( this->size() < 105)
+            if ((*this)[27] == HVN_H) { // Check to see if HVN starts at 27 ( this->size() < 105)
                 if ((*this)[28] == HVN_V)
                     if ((*this)[29] == HVN_N)
                         index = 30;
             } else {
-                if ((*this)[28] == HVN_R) // Check to see if HVN starts at 28 ( this->size() >= 105)
+                if ((*this)[28] == HVN_H) // Check to see if HVN starts at 28 ( this->size() >= 105)
                     if ((*this)[29] == HVN_V)
                         if ((*this)[30] == HVN_N)
                             index = 31;
@@ -272,7 +272,7 @@ bool CScript::IsAssetScript(int& nType, bool& fIsOwner, int& nStartingIndex) con
                     nType = TX_NEW_ASSET;
                     fIsOwner = true;
                     return true;
-                } else if ((*this)[index] == HVN_R) {
+                } else if ((*this)[index] == HVN_H) {
                     nType = TX_REISSUE_ASSET;
                     return true;
                 }

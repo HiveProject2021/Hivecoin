@@ -524,7 +524,7 @@ void CNewAsset::ConstructTransaction(CScript& script) const
     ssAsset << *this;
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_R); // r
+    vchMessage.push_back(HVN_H); // r
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
     vchMessage.push_back(HVN_Q); // q
@@ -539,7 +539,7 @@ void CNewAsset::ConstructOwnerTransaction(CScript& script) const
     ssOwner << std::string(this->strName + OWNER_TAG);
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_R); // r
+    vchMessage.push_back(HVN_H); // r
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
     vchMessage.push_back(HVN_O); // o
@@ -1621,7 +1621,7 @@ void CAssetTransfer::ConstructTransaction(CScript& script) const
     ssTransfer << *this;
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_R); // r
+    vchMessage.push_back(HVN_H); // r
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
     vchMessage.push_back(HVN_T); // t
@@ -1647,10 +1647,10 @@ void CReissueAsset::ConstructTransaction(CScript& script) const
     ssReissue << *this;
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_R); // r
+    vchMessage.push_back(HVN_H); // r
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
-    vchMessage.push_back(HVN_R); // r
+    vchMessage.push_back(HVN_H); // r
 
     vchMessage.insert(vchMessage.end(), ssReissue.begin(), ssReissue.end());
     script << OP_HVN_ASSET << ToByteVector(vchMessage) << OP_DROP;

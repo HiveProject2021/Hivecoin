@@ -17,7 +17,7 @@
 #include <unordered_map>
 #include <list>
 
-#define HVN_R 114
+#define HVN_H 114
 #define HVN_V 118
 #define HVN_N 110
 #define HVN_Q 113
