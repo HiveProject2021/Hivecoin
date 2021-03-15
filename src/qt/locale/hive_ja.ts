@@ -5165,7 +5165,7 @@
 			<translation>不明なデータハッシュ型</translation>
 		</message>
 		<message>
-			<source>Only IPFS Hashes allowed until RIP5 is activated</source>
+			<source>Only IPFS Hashes allowed until HIP5 is activated</source>
 			<translation>RIPF 5がアクティブになるまで許可されるIPFSハッシュだけ</translation>
 		</message>
 		<message>
@@ -5721,7 +5721,7 @@
 			<translation>転送する資産を選択する</translation>
 		</message>
 		<message>
-			<source>Memos can only be added once RIP5 is voted in</source>
+			<source>Memos can only be added once HIP5 is voted in</source>
 			<translation>メモは、Rap 5が1で投票されるならば、加えることができるだけです</translation>
 		</message>
 		<message>

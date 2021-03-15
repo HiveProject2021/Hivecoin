@@ -13,6 +13,10 @@ echo '12edc0df75bf9abd7f82f821795bcee50f42cb2e5f76a6a281b85732798364ef  db-4.8.3
 # -> db-4.8.30.NC.tar.gz: OK
 tar -xzvf db-4.8.30.NC.tar.gz
 
+# copy patch to fix error in db4
+chmod a+w ./db-4.8.30.NC/dbinc/atomic.h
+cp ./depends/patches/atomic.h db-4.8.30.NC/dbinc/
+
 # Build the library and install to our prefix
 cd db-4.8.30.NC/build_unix/
 #  Note: Do a static build so that it can be embedded into the executable, instead of having to find a .so at runtime

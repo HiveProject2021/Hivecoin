@@ -1750,7 +1750,7 @@
 		</message>
 		<message>
 			<source>Name</source>
-			<translation>姓名</translation>
+			<translation>名称</translation>
 		</message>
 		<message>
 			<source>Number of connections</source>
@@ -4356,11 +4356,11 @@
 		</message>
 		<message>
 			<source>Copy fee</source>
-			<translation>复印费</translation>
+			<translation>复制费</translation>
 		</message>
 		<message>
 			<source>Copy after fee</source>
-			<translation>收费后复印</translation>
+			<translation>收费后复制</translation>
 		</message>
 		<message>
 			<source>Copy bytes</source>
@@ -4419,11 +4419,11 @@
 		</message>
 		<message>
 			<source>Copy fee</source>
-			<translation>复印费</translation>
+			<translation>复制费</translation>
 		</message>
 		<message>
 			<source>Copy after fee</source>
-			<translation>收费后复印</translation>
+			<translation>收费后复制</translation>
 		</message>
 		<message>
 			<source>Copy bytes</source>
@@ -4534,7 +4534,7 @@
 		<name>AssetTableModel</name>
 		<message>
 			<source>Name</source>
-			<translation>姓名</translation>
+			<translation>名称</translation>
 		</message>
 		<message>
 			<source>Quantity</source>
@@ -4553,11 +4553,11 @@
 		</message>
 		<message>
 			<source>Copy fee</source>
-			<translation>复印费</translation>
+			<translation>复制费</translation>
 		</message>
 		<message>
 			<source>Copy after fee</source>
-			<translation>收费后复印</translation>
+			<translation>收费后复制</translation>
 		</message>
 		<message>
 			<source>Copy bytes</source>
@@ -4757,7 +4757,7 @@
 		</message>
 		<message>
 			<source>Name:</source>
-			<translation>姓名:</translation>
+			<translation>名称:</translation>
 		</message>
 		<message>
 			<source>A-Z 0-9 and . or _ as the second character</source>
@@ -5053,11 +5053,11 @@
 		</message>
 		<message>
 			<source>Copy fee</source>
-			<translation>复印费</translation>
+			<translation>复制费</translation>
 		</message>
 		<message>
 			<source>Copy after fee</source>
-			<translation>收费后复印</translation>
+			<translation>收费后复制</translation>
 		</message>
 		<message>
 			<source>Copy bytes</source>
@@ -5109,7 +5109,7 @@
 		</message>
 		<message>
 			<source>Name</source>
-			<translation>姓名</translation>
+			<translation>名称</translation>
 		</message>
 		<message>
 			<source>Total Quantity</source>
@@ -5164,8 +5164,8 @@
 			<translation>未知的数据哈希类型</translation>
 		</message>
 		<message>
-			<source>Only IPFS Hashes allowed until RIP5 is activated</source>
-			<translation>在RIP5激活之前,只允许IPFS哈希</translation>
+			<source>Only IPFS Hashes allowed until HIP5 is activated</source>
+			<translation>在HIP5激活之前,只允许IPFS哈希</translation>
 		</message>
 		<message>
 			<source>IPFS/Txid Hash must start with 'Qm' and be 46 characters or Txid Hash must have 64 hex characters</source>
@@ -5720,8 +5720,8 @@
 			<translation>选择要转移的资产</translation>
 		</message>
 		<message>
-			<source>Memos can only be added once RIP5 is voted in</source>
-			<translation>备忘录只能在RIP5投票通过后添加</translation>
+			<source>Memos can only be added once HIP5 is voted in</source>
+			<translation>备忘录只能在HIP5投票通过后添加</translation>
 		</message>
 		<message>
 			<source>This restricted asset has been frozen globally. No transfers can be sent on the network.</source>

@@ -5657,7 +5657,7 @@
 			<translation>Type de hachage de données inconnu</translation>
 		</message>
 		<message>
-			<source>Only IPFS Hashes allowed until RIP5 is activated</source>
+			<source>Only IPFS Hashes allowed until HIP5 is activated</source>
 			<translation>Seuls les hachages ipfs sont autorisés jusqu'à ce que rip5 soit activé</translation>
 		</message>
 		<message>
@@ -5976,7 +5976,7 @@
 			<translation>Sélectionner les actifs à transférer</translation>
 		</message>
 		<message>
-			<source>Memos can only be added once RIP5 is voted in</source>
+			<source>Memos can only be added once HIP5 is voted in</source>
 			<translation>La note de service ne peut être ajoutée qu'après le vote sur la rip5.</translation>
 		</message>
 		<message>

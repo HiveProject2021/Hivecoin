@@ -5470,7 +5470,7 @@
 			<translation>Неизвестный тип Хаши данных</translation>
 		</message>
 		<message>
-			<source>Only IPFS Hashes allowed until RIP5 is activated</source>
+			<source>Only IPFS Hashes allowed until HIP5 is activated</source>
 			<translation>перед активацией RIPP5 разрешить только гашиш IPFS</translation>
 		</message>
 		<message>
@@ -6026,8 +6026,8 @@
 			<translation>выбор активов для передачи</translation>
 		</message>
 		<message>
-			<source>Memos can only be added once RIP5 is voted in</source>
-			<translation>Памятная записка может быть добавлена только после голосования RIP5</translation>
+			<source>Memos can only be added once HIP5 is voted in</source>
+			<translation>Памятная записка может быть добавлена только после голосования HIP5</translation>
 		</message>
 		<message>
 			<source>This restricted asset has been frozen globally. No transfers can be sent on the network.</source>

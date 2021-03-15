@@ -5164,7 +5164,7 @@
 			<translation>알 수 없 는 데이터 해시 형식</translation>
 		</message>
 		<message>
-			<source>Only IPFS Hashes allowed until RIP5 is activated</source>
+			<source>Only IPFS Hashes allowed until HIP5 is activated</source>
 			<translation>RIP 5 활성화 전, IPFS 해시 만 허용</translation>
 		</message>
 		<message>
@@ -5720,7 +5720,7 @@
 			<translation>이전 할 자산 을 선택 하 다</translation>
 		</message>
 		<message>
-			<source>Memos can only be added once RIP5 is voted in</source>
+			<source>Memos can only be added once HIP5 is voted in</source>
 			<translation>비망록 은 RIP 5 투표 가 통 과 된 후에 만 추 가 될 수 있다.</translation>
 		</message>
 		<message>

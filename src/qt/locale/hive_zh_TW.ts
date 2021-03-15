@@ -992,7 +992,7 @@
 		</message>
 		<message>
 			<source>name</source>
-			<translation>名称</translation>
+			<translation>名稱</translation>
 		</message>
 		<message>
 			<source>Directory already exists. Add %1 if you intend to create a new directory here.</source>
@@ -1460,7 +1460,7 @@
 		</message>
 		<message>
 			<source>Copy Name</source>
-			<translation>副本名称</translation>
+			<translation>副本名稱</translation>
 		</message>
 		<message>
 			<source>Issue Sub Asset</source>
@@ -3288,7 +3288,7 @@
 		</message>
 		<message>
 			<source>Asset name</source>
-			<translation>资产名称</translation>
+			<translation>资产名稱</translation>
 		</message>
 		<message>
 			<source>Increase transaction fee</source>
@@ -3316,7 +3316,7 @@
 		</message>
 		<message>
 			<source>Copy asset name</source>
-			<translation>复制资产名称</translation>
+			<translation>复制资产名稱</translation>
 		</message>
 	</context>
 	<context>
@@ -4534,7 +4534,7 @@
 		<name>AssetTableModel</name>
 		<message>
 			<source>Name</source>
-			<translation>名称</translation>
+			<translation>名稱</translation>
 		</message>
 		<message>
 			<source>Quantity</source>
@@ -4633,7 +4633,7 @@
 		</message>
 		<message>
 			<source>Invalid: Asset name already in use</source>
-			<translation>无效：资产名称已在使用中</translation>
+			<translation>无效：资产名稱已在使用中</translation>
 		</message>
 		<message>
 			<source>Error: Asset Database not in sync</source>
@@ -4757,7 +4757,7 @@
 		</message>
 		<message>
 			<source>Name:</source>
-			<translation>名称：</translation>
+			<translation>名稱：</translation>
 		</message>
 		<message>
 			<source>A-Z 0-9 and . or _ as the second character</source>
@@ -4765,7 +4765,7 @@
 		</message>
 		<message>
 			<source>The name of the asset you would like to create</source>
-			<translation>要创建的资产的名称</translation>
+			<translation>要创建的资产的名稱</translation>
 		</message>
 		<message>
 			<source>Check Availabilty</source>
@@ -5109,7 +5109,7 @@
 		</message>
 		<message>
 			<source>Name</source>
-			<translation>名称</translation>
+			<translation>名稱</translation>
 		</message>
 		<message>
 			<source>Total Quantity</source>
@@ -5164,8 +5164,8 @@
 			<translation>未知的数据哈希类型</translation>
 		</message>
 		<message>
-			<source>Only IPFS Hashes allowed until RIP5 is activated</source>
-			<translation>在RIP5激活之前,只允许IPFS哈希</translation>
+			<source>Only IPFS Hashes allowed until HIP5 is activated</source>
+			<translation>在HIP5激活之前,只允许IPFS哈希</translation>
 		</message>
 		<message>
 			<source>IPFS/Txid Hash must start with 'Qm' and be 46 characters or Txid Hash must have 64 hex characters</source>
@@ -5532,7 +5532,7 @@
 		</message>
 		<message>
 			<source>Asset Name</source>
-			<translation>资产名称</translation>
+			<translation>资产名稱</translation>
 		</message>
 	</context>
 	<context>
@@ -5720,8 +5720,8 @@
 			<translation>選擇要轉移的資產</translation>
 		</message>
 		<message>
-			<source>Memos can only be added once RIP5 is voted in</source>
-			<translation>备忘录只能在RIP5投票通过后添加</translation>
+			<source>Memos can only be added once HIP5 is voted in</source>
+			<translation>备忘录只能在HIP5投票通过后添加</translation>
 		</message>
 		<message>
 			<source>This restricted asset has been frozen globally. No transfers can be sent on the network.</source>

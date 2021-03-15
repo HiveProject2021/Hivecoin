@@ -5164,8 +5164,8 @@
 			<translation>Unbekannter Datenhash-Typ</translation>
 		</message>
 		<message>
-			<source>Only IPFS Hashes allowed until RIP5 is activated</source>
-			<translation>Nur IPFS-Hashes sind zulässig, bis RIP5 aktiviert ist.</translation>
+			<source>Only IPFS Hashes allowed until HIP5 is activated</source>
+			<translation>Nur IPFS-Hashes sind zulässig, bis HIP5 aktiviert ist.</translation>
 		</message>
 		<message>
 			<source>IPFS/Txid Hash must start with 'Qm' and be 46 characters or Txid Hash must have 64 hex characters</source>
@@ -5720,8 +5720,8 @@
 			<translation>Wählen Sie einen zu übertragenden Vermögenswert</translation>
 		</message>
 		<message>
-			<source>Memos can only be added once RIP5 is voted in</source>
-			<translation>Memos können nur hinzugefügt werden, wenn RIP5 in</translation>
+			<source>Memos can only be added once HIP5 is voted in</source>
+			<translation>Memos können nur hinzugefügt werden, wenn HIP5 in</translation>
 		</message>
 		<message>
 			<source>This restricted asset has been frozen globally. No transfers can be sent on the network.</source>
