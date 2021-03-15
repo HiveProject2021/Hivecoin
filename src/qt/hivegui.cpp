@@ -1506,7 +1506,7 @@ void HiveGUI::incomingTransaction(const QString& date, int unit, const CAmount& 
 
 void HiveGUI::checkAssets()
 {
-    // Check that status of RIP2 and activate the assets icon if it is active
+    // Check that status of HIP2 and activate the assets icon if it is active
     if(AreAssetsDeployed()) {
         transferAssetAction->setDisabled(false);
         transferAssetAction->setToolTip(tr("Transfer assets to HVN addresses"));

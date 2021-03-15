@@ -19,7 +19,7 @@ class CCoinsViewCache;
 class CTxOut;
 
 /** Default for -blockmaxweight, which controls the range of block weights the mining code will create **/
-// Deprecated with RIP2 implementation
+// Deprecated with HIP2 implementation
 //static const unsigned int DEFAULT_BLOCK_MAX_WEIGHT = MAX_BLOCK_WEIGHT - 4000;
 ///** Default for -blockmintxfee, which sets the minimum feerate for a transaction in blocks created by mining code **/
 static const unsigned int DEFAULT_BLOCK_MIN_TX_FEE = 1000;
