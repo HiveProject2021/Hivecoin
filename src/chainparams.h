@@ -111,6 +111,7 @@ public:
     const std::string& IssueRestrictedAssetBurnAddress() const { return strIssueRestrictedAssetBurnAddress; }
     const std::string& AddNullQualifierTagBurnAddress() const { return strAddNullQualifierTagBurnAddress; }
     const std::string& GlobalBurnAddress() const { return strGlobalBurnAddress; }
+    const std::string& CommunityAutonomousAddress() const { return strCommunityAutonomousAddress; }
 
     //  Indicates whether or not the provided address is a burn address
     bool IsBurnAddress(const std::string & p_address) const
@@ -126,6 +127,7 @@ public:
             || p_address == strIssueRestrictedAssetBurnAddress
             || p_address == strAddNullQualifierTagBurnAddress
             || p_address == strGlobalBurnAddress
+            || p_address == strCommunityAutonomousAddress
         ) {
             return true;
         }
