@@ -299,6 +299,9 @@ public:
         nIssueSubQualifierAssetBurnAmount = 100 * COIN;
         nIssueRestrictedAssetBurnAmount = 1500 * COIN;
         nAddNullQualifierTagBurnAmount = .1 * COIN;
+		
+		//10% of 5000 COIN to ASSIGN
+		nCommunityAutonomousAmount = 10;
 
         // Burn Addresses
 		strIssueAssetBurnAddress = "HFC2t4BZG5GDw1fozxj4tkTJqPC77HK7df";
