@@ -191,6 +191,9 @@ protected:
 
     // Global Burn Address
     std::string strGlobalBurnAddress;
+	
+	//Community Autonomous Address   
+    std::string strCommunityAutonomousAddress;
 
     unsigned int nDGWActivationBlock;
     unsigned int nMessagingActivationBlock;
