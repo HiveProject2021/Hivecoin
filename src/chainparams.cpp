@@ -122,9 +122,9 @@ public:
         consensus.nBIP65Enabled = true; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.nBIP66Enabled = true;
         consensus.nSegwitEnabled = true;
-        consensus.nCSVEnabled = true;
-        consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit = uint256S("0000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
+        consensus.nCSVEnabled 	= true;
+        consensus.powLimit 		= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.kawpowLimit 	= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
 		consensus.fPowAllowMinDifficultyBlocks = false;
@@ -276,7 +276,6 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                { 1500, uint256S("0x000000d72a2f46d7f2da5877a7d06f8912235c2061e7b7253bf63635970ba482")}
             }
         };
 
@@ -284,7 +283,7 @@ public:
             // Update as we know more about the contents of the Hive chain
             // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
             1613855355, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
-            1500,    // * total number of transactions between genesis and that timestamp
+            0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1       // * estimated number of transactions per second after that timestamp
         };
@@ -302,29 +301,32 @@ public:
         nAddNullQualifierTagBurnAmount = .1 * COIN;
 
         // Burn Addresses
-        strIssueAssetBurnAddress = "RXissueAssetXXXXXXXXXXXXXXXXXhhZGt";
-        strReissueAssetBurnAddress = "RXReissueAssetXXXXXXXXXXXXXXVEFAWu";
-        strIssueSubAssetBurnAddress = "RXissueSubAssetXXXXXXXXXXXXXWcwhwL";
-        strIssueUniqueAssetBurnAddress = "RXissueUniqueAssetXXXXXXXXXXWEAe58";
-        strIssueMsgChannelAssetBurnAddress = "RXissueMsgChanneLAssetXXXXXXSjHvAY";
-        strIssueQualifierAssetBurnAddress = "RXissueQuaLifierXXXXXXXXXXXXUgEDbC";
-        strIssueSubQualifierAssetBurnAddress = "RXissueSubQuaLifierXXXXXXXXXVTzvv5";
-        strIssueRestrictedAssetBurnAddress = "RXissueRestrictedXXXXXXXXXXXXzJZ1q";
-        strAddNullQualifierTagBurnAddress = "RXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya";
-
-        //Global Burn Address
-        strGlobalBurnAddress = "RXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
+		strIssueAssetBurnAddress = "HFC2t4BZG5GDw1fozxj4tkTJqPC77HK7df";
+        strReissueAssetBurnAddress = "HDSM2T4cuy9b4PWC6X7E8sCoBGSSf928hf";
+        strIssueSubAssetBurnAddress = "H8Q8gdsj8qAMxq7y3YsmiSvGLnDDMLqrtu";
+        strIssueUniqueAssetBurnAddress = "H7MsDagv71N9966fiinKNM4GFWd4StxkKB";
+        strIssueMsgChannelAssetBurnAddress = "HFZ4ekJK2btUVCh41kNKiGxeNjU8f7cSmi";
+        strIssueQualifierAssetBurnAddress = "HL91vECrT7rdxp4DXmxNSt179RfMNdxkcX";
+        strIssueSubQualifierAssetBurnAddress = "HCthnYbEhDfMwyqEokAA28YJ4p8Vae1zg2";
+        strIssueRestrictedAssetBurnAddress = "H9UFrnoKfFbbEZU8orbrjBNXTGSewUqi1h";
+        strAddNullQualifierTagBurnAddress = "HGzSu79hEWYygBPvp3EDVWRbmThLMGvFQa";
+		
+		//Global Burn Address
+        strGlobalBurnAddress = "H8jvNFCc5NgChp3wyVLLpZ5pjrNC49SExe";
+		
+		//CommunityAutonomousAddress     HCommunityAutonomousXXXXXXXXXXXXXX
+        strCommunityAutonomousAddress = "HLwe8tbJ7CXJDjJ3Kqy9AdRgv6GwZoaffw";
 
         // DGW Activation
-        nDGWActivationBlock = 338778;
+        nDGWActivationBlock = 1;
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
         nMinReorganizationAge = 60 * 60 * 12; // 12 hours
 
-        nAssetActivationHeight = 3000; // Asset activated block height
-        nMessagingActivationBlock = 3000; // Messaging activated block height
-        nRestrictedActivationBlock = 3000; // Restricted activated block height
+        nAssetActivationHeight = 1; // Asset activated block height
+        nMessagingActivationBlock = 1; // Messaging activated block height
+        nRestrictedActivationBlock = 1; // Restricted activated block height
 
         nKAAAWWWPOWActivationTime = 1619992818; // 2021-05-03 06:00:18
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
