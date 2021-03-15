@@ -72,7 +72,6 @@ QT_TS = \
   qt/locale/hive_pt_PT.ts \
   qt/locale/hive_ro_RO.ts \
   qt/locale/hive_ro.ts \
-  qt/locale/hive_ru_RU.ts \
   qt/locale/hive_ru.ts \
   qt/locale/hive_sk.ts \
   qt/locale/hive_sl_SI.ts \
