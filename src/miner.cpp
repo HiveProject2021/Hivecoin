@@ -170,19 +170,52 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     nLastBlockTx = nBlockTx;
     nLastBlockWeight = nBlockWeight;
 
+    //HVN START
+	// 45% for miners, 45% for master nodes, and 10% for community autonomy.
     // Create coinbase transaction.
     CMutableTransaction coinbaseTx;
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
-    coinbaseTx.vout.resize(1);
+	//vout
+	CAmount nSubsidy 					= GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+	CAmount nCommunityAutonomousAmount 	= GetParams().CommunityAutonomousAmount();
+	
+    coinbaseTx.vout.resize(2);
+	//Miner Assign 45%. if no master node will be assign 90%
     coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
-    coinbaseTx.vout[0].nValue = nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+	//Note:The division sign can only be written to the end
+    coinbaseTx.vout[0].nValue = nFees + ( (100-nCommunityAutonomousAmount) * nSubsidy / 100 );
+	
+	//CommunityAutonomousAddress Assign 10%
+	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
+	CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
+    if (!IsValidDestination(destCommunityAutonomous)) {
+		LogPrintf("IsValidDestination: Invalid Hive address", GetCommunityAutonomousAddress);
+    }
+	// Parse Hive address
+    CScript scriptPubKeyCommunityAutonomous = GetScriptForDestination(destCommunityAutonomous);
+	
+    coinbaseTx.vout[1].scriptPubKey = scriptPubKeyCommunityAutonomous;
+	//Note:The division sign can only be written to the end
+    coinbaseTx.vout[1].nValue = nSubsidy*nCommunityAutonomousAmount/100;
+	
+	LogPrintf("nSubsidy: ====================================================\n");
+	LogPrintf("Miner: %ld \n", coinbaseTx.vout[0].nValue);
+	LogPrintf("scriptPubKeyIn: %s \n", HexStr(scriptPubKeyIn));
+	
+	LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
+	LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
+	LogPrintf("nCommunityAutonomousAmount: %ld \n", coinbaseTx.vout[1].nValue);
+	
+	//scriptSig
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
+	
     pblock->vtx[0] = MakeTransactionRef(std::move(coinbaseTx));
     pblocktemplate->vchCoinbaseCommitment = GenerateCoinbaseCommitment(*pblock, pindexPrev, chainparams.GetConsensus());
     pblocktemplate->vTxFees[0] = -nFees;
 
     LogPrintf("CreateNewBlock(): block weight: %u txs: %u fees: %ld sigops %d\n", GetBlockWeight(*pblock), nBlockTx, nFees, nBlockSigOpsCost);
+	//HVN END
 
     // Fill in header
     pblock->hashPrevBlock  = pindexPrev->GetBlockHash();
