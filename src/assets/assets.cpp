@@ -524,7 +524,7 @@ void CNewAsset::ConstructTransaction(CScript& script) const
     ssAsset << *this;
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_H); // r
+    vchMessage.push_back(HVN_H); // h
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
     vchMessage.push_back(HVN_Q); // q
@@ -539,7 +539,7 @@ void CNewAsset::ConstructOwnerTransaction(CScript& script) const
     ssOwner << std::string(this->strName + OWNER_TAG);
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_H); // r
+    vchMessage.push_back(HVN_H); // h
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
     vchMessage.push_back(HVN_O); // o
@@ -1621,7 +1621,7 @@ void CAssetTransfer::ConstructTransaction(CScript& script) const
     ssTransfer << *this;
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_H); // r
+    vchMessage.push_back(HVN_H); // h
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
     vchMessage.push_back(HVN_T); // t
@@ -1647,10 +1647,10 @@ void CReissueAsset::ConstructTransaction(CScript& script) const
     ssReissue << *this;
 
     std::vector<unsigned char> vchMessage;
-    vchMessage.push_back(HVN_H); // r
+    vchMessage.push_back(HVN_H); // h
     vchMessage.push_back(HVN_V); // v
     vchMessage.push_back(HVN_N); // n
-    vchMessage.push_back(HVN_H); // r
+    vchMessage.push_back(HVN_H); // h
 
     vchMessage.insert(vchMessage.end(), ssReissue.begin(), ssReissue.end());
     script << OP_HVN_ASSET << ToByteVector(vchMessage) << OP_DROP;
@@ -5449,7 +5449,7 @@ bool ContextualCheckReissueAsset(CAssetsCache* assetCache, const CReissueAsset& 
         return false;
     }
 
-    // run non contextual checks
+    // hun non contextual checks
     if (!CheckReissueAsset(reissue_asset, strError))
         return false;
 
@@ -5532,7 +5532,7 @@ bool ContextualCheckReissueAsset(CAssetsCache* assetCache, const CReissueAsset& 
 
 bool ContextualCheckReissueAsset(CAssetsCache* assetCache, const CReissueAsset& reissue_asset, std::string& strError)
 {
-    // run non contextual checks
+    // hun non contextual checks
     if (!CheckReissueAsset(reissue_asset, strError))
         return false;
 
