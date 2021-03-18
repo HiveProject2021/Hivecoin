@@ -236,7 +236,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 								   //HSFs8aqGLDbYk242PQiv5oguQL5Tqk5dFg
 	//std::string address_have 	= "HXissueAssetXXXXXXXXXXXXXXXX";
 	std::string address_success = "";
-	std::string address_have 	= "HSFs8aqGLDbYk242PQiv5oguQL5Tqk5d";
+	std::string address_have 	= "HSFs8aqGLDbYk242PQiv5oguQL5Tqk";
     int AddressNeedToCalculate 	= 34 - address_have.length();
 	std::cout << "AddressNeedToCalculate: " << AddressNeedToCalculate << " \n";
 	
@@ -257,6 +257,32 @@ UniValue validateaddress(const JSONRPCRequest& request)
 				}
 			}
 			std::cout << iiiii << " \n";
+		}
+	}
+	
+	if(AddressNeedToCalculate == 4)					{
+		for (int iii = 0; iii < 58  && address_success==""; ++iii)    {
+			address_char_3 = base58chars[iii];
+			for (int iiii = 0; iiii < 58  && address_success==""; ++iiii)    {
+				address_char_4 = base58chars[iiii];
+				for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
+					address_char_5 = base58chars[iiiii];
+					for (int iiiiii = 0; iiiiii < 58  && address_success==""; ++iiiiii)    {
+						address_char_6 = base58chars[iiiiii];
+
+						address_dest = address_have + address_char_3 + address_char_4 + address_char_5 + address_char_6;
+						
+						//To calculate the address is correct.
+						CTxDestination destTEST = DecodeDestination(address_dest.c_str());
+						bool isValidTEST = IsValidDestination(destTEST);
+						if (isValidTEST) {
+							std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
+							address_success = address_dest;
+						}
+					}
+					std::cout <<  iii << " " << iiii << " " << iiiii << " \n";
+				}
+			}
 		}
 	}
 	
