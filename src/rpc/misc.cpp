@@ -238,6 +238,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	std::string address_success = "";
 	std::string address_have 	= "HSFs8aqGLDbYk242PQiv5oguQL5Tqk5d";
     int AddressNeedToCalculate 	= 34 - address_have.length();
+	std::cout << "AddressNeedToCalculate: " << AddressNeedToCalculate << " \n";
 	
 	if(AddressNeedToCalculate == 2)					{
 		for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
