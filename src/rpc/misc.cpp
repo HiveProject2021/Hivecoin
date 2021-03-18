@@ -253,7 +253,6 @@ UniValue validateaddress(const JSONRPCRequest& request)
 				if (isValidTEST) {
 					std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
 					address_success = address_dest;
-					return ;
 				}
 			}
 			std::cout << iiiii << " \n";
@@ -284,7 +283,6 @@ UniValue validateaddress(const JSONRPCRequest& request)
 								if (isValidTEST) {
 									std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
 									address_success = address_dest;
-									return ;
 								}
 							}
 							std::cout << i << " " << ii << " " << iii << " " << iiii << " " << iiiii << " \n";
