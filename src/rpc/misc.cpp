@@ -256,7 +256,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 					return ;
 				}
 			}
-			std::cout << i << " " << ii << " " << iii << " " << iiii << " " << iiiii << " \n";
+			std::cout << iiiii << " \n";
 		}
 	}
 	
