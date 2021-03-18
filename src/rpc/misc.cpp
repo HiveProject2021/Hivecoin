@@ -216,8 +216,8 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	//#################################################################
 	//HVN START FOR LOOKING FOR BURN ADDRESS -- BEGIN
 	//Just use to looking suitable prefix address.
-	//1 use command 'hived', do not use command hived -daemon
-	//2 'hive-cli validateaddress 36' in other console window. 36 is index in 58,from index.
+	//1 use command 'hived -daemon=0', do not use command hived -daemon
+	//2 'hive-cli validateaddress HSFs8aqGLDbYk242PQiv5oguQL5Tqk5d' in other console window.
 	//In step 1 command window will to calculate the suitable prefix address for burn address.
 	const char *base58chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 	std::string address_char_1,address_char_2,address_char_3,address_char_4,address_char_5,address_char_6;
@@ -233,7 +233,8 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	//strIssueRestrictedAssetBurnAddress = "HXissueRestrictedXXXXXXXXXXXXzJZ1q";
 	//strAddNullQualifierTagBurnAddress = "HXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya";
 	//strGlobalBurnAddress = "HXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
-								   //HSFs8aqGLDbYk242PQiv5oguQL5Tqk5dFg
+							 //HSFs8aqGLDbYk242PQiv5oguQL5Tqk5dFg
+	//hive-cli validateaddress HXissueAssetk242PQiv5oguQL5TqhhZGt
 	//std::string address_have 	= "HXissueAssetXXXXXXXXXXXXXXXX";
 	std::string address_success = "";		
 	std::string address_have 	= request.params[0].get_str();
