@@ -234,6 +234,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	//strAddNullQualifierTagBurnAddress = "HXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya";
 	//strGlobalBurnAddress = "HXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
 							 //HSFs8aqGLDbYk242PQiv5oguQL5Tqk5dFg
+							 //HXissueAssetAAAAAAAAAAAAAAAAAhhZGt
 	//hive-cli validateaddress HXissueAssetk242PQiv5oguQL5TqhhZGt
 	//std::string address_have 	= "HXissueAssetXXXXXXXXXXXXXXXX";
 	std::string address_success = "";		
