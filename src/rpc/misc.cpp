@@ -235,8 +235,8 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	//strGlobalBurnAddress = "HXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
 								   //HSFs8aqGLDbYk242PQiv5oguQL5Tqk5dFg
 	//std::string address_have 	= "HXissueAssetXXXXXXXXXXXXXXXX";
-	std::string address_success = "";
-	std::string address_have 	= "HSFs8aqGLDbYk242PQiv5oguQL5Tqk";
+	std::string address_success = "";		
+	std::string address_have 	= request.params[0].get_str();
     int AddressNeedToCalculate 	= 34 - address_have.length();
 	std::cout << "AddressNeedToCalculate: " << AddressNeedToCalculate << " \n";
 	
@@ -318,8 +318,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	
 	
 	if(AddressNeedToCalculate == 6)					{
-		int fromIndex = atoi(request.params[0].get_str());
-		for (int i = fromIndex; i < 58  && address_success==""; ++i)    {
+		for (int i = 0; i < 58  && address_success==""; ++i)    {
 			address_char_1 = base58chars[i];
 			for (int ii = 0; ii < 58  && address_success==""; ++ii)    {
 				address_char_2 = base58chars[ii];
