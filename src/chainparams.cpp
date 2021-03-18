@@ -256,6 +256,8 @@ public:
 
 		vSeeds.emplace_back("node1.hivecoin.org", false);
 		vSeeds.emplace_back("node2.hivecoin.org", false);
+		vSeeds.emplace_back("us-east-1.hivecoin.org", false);
+		vSeeds.emplace_back("us-west-1.hivecoin.org", false);
 		//vSeeds.emplace_back("192.168.1.88", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
@@ -483,6 +485,8 @@ public:
 
 		vSeeds.emplace_back("node1.hivecoin.org", false);
 		vSeeds.emplace_back("node2.hivecoin.org", false);
+		vSeeds.emplace_back("us-east-1.hivecoin.org", false);
+		vSeeds.emplace_back("us-west-1.hivecoin.org", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
