@@ -256,7 +256,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 					address_success = address_dest;
 				}
 			}
-			std::cout << iiiii << " \n";
+			std::cout << address_char_5 << " \n";
 		}
 	}
 	
@@ -280,10 +280,40 @@ UniValue validateaddress(const JSONRPCRequest& request)
 							address_success = address_dest;
 						}
 					}
-					std::cout <<  iii << " " << iiii << " " << iiiii << " \n";
+					std::cout <<  address_char_3 << " " << address_char_4 << " " << address_char_5 << " \n";
 				}
 			}
 		}
+	}
+	
+	if(AddressNeedToCalculate == 5)					{
+		for (int ii = 0; ii < 58  && address_success==""; ++ii)    {
+			address_char_2 = base58chars[ii];
+			for (int iii = 0; iii < 58  && address_success==""; ++iii)    {
+				address_char_3 = base58chars[iii];
+				for (int iiii = 0; iiii < 58  && address_success==""; ++iiii)    {
+					address_char_4 = base58chars[iiii];
+					for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
+						address_char_5 = base58chars[iiiii];
+						for (int iiiiii = 0; iiiiii < 58  && address_success==""; ++iiiiii)    {
+							address_char_6 = base58chars[iiiiii];
+
+							address_dest = address_have + address_char_2 + address_char_3 + address_char_4 + address_char_5 + address_char_6;
+							
+							//To calculate the address is correct.
+							CTxDestination destTEST = DecodeDestination(address_dest.c_str());
+							bool isValidTEST = IsValidDestination(destTEST);
+							if (isValidTEST) {
+								std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
+								address_success = address_dest;
+							}
+						}
+						std::cout << address_char_2 << " " << address_char_3 << " " << address_char_4 << " " << address_char_5 << " \n";
+					}
+				}
+			}
+		}
+		
 	}
 	
 	
@@ -312,7 +342,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 									address_success = address_dest;
 								}
 							}
-							std::cout << i << " " << ii << " " << iii << " " << iiii << " " << iiiii << " \n";
+							std::cout << address_char_1 << " " << address_char_2 << " " << address_char_3 << " " << address_char_4 << " " << address_char_5 << " \n";
 						}
 					}
 				}
