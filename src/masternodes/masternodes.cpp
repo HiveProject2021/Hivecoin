@@ -313,26 +313,6 @@ bool MasterNodeNullDataFromScript(const CScript& scriptPubKey, CNullMasterNodeTx
     return true;
 }
 
-bool GlobalMasterNodeNullDataFromScript(const CScript& scriptPubKey, CNullMasterNodeTxData& masternodeData)
-{
-    if (!scriptPubKey.IsNullGlobalRestrictionMasterNodeTxDataScript()) {
-        return false;
-    }
-
-    std::vector<unsigned char> vchMasterNodeData;
-    vchMasterNodeData.insert(vchMasterNodeData.end(), scriptPubKey.begin() + OFFSET_FOUR, scriptPubKey.end());
-    CDataStream ssData(vchMasterNodeData, SER_NETWORK, PROTOCOL_VERSION);
-
-    try {
-        ssData >> masternodeData;
-    } catch(std::exception& e) {
-        error("Failed to get the global restriction masternode tx data from the stream: %s", e.what());
-        return false;
-    }
-
-    return true;
-}
-
 bool MasterNodeNullVerifierDataFromScript(const CScript& scriptPubKey, CNullMasterNodeTxVerifierString& verifierData)
 {
     if (!scriptPubKey.IsNullMasterNodeVerifierTxDataScript()) {
@@ -370,11 +350,6 @@ bool CTransaction::IsNewMasterNode() const
 
     // Check to make sure the owner masternode is created
     if (!CheckOwnerDataTx(vout[vout.size() - 2]))
-        return false;
-
-    // Don't overlap with IsNewUniqueMasterNode()
-    CScript script = vout[vout.size() - 1].scriptPubKey;
-    if (IsScriptNewUniqueMasterNode(script)|| IsScriptNewRestrictedMasterNode(script))
         return false;
 
     return true;
@@ -1091,205 +1066,6 @@ bool CMasterNodesCache::DumpCacheToDatabase()
             }
         }
 
-        // Add new verifier strings for restricted masternodes
-        for (auto newVerifier : setNewRestrictedVerifierToAdd) {
-            auto masternodeName = newVerifier.masternodeName;
-            if (!prestricteddb->WriteVerifier(masternodeName, newVerifier.verifier)) {
-                dirty = true;
-                message = "_Failed Writing restricted verifier to database";
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-
-            pmasternodesVerifierCache->Erase(masternodeName);
-        }
-
-        // Undo verifier string for restricted masternodes
-        for (auto undoVerifiers : setNewRestrictedVerifierToRemove) {
-            auto masternodeName = undoVerifiers.masternodeName;
-
-            // If we are undoing a update, we need to save back the old verifier string to database
-            if (undoVerifiers.fUndoingRessiue) {
-                if (!prestricteddb->WriteVerifier(masternodeName, undoVerifiers.verifier)) {
-                    dirty = true;
-                    message = "_Failed Writing undo restricted verifer to database";
-                }
-            } else {
-                if (!prestricteddb->EraseVerifier(masternodeName)) {
-                    dirty = true;
-                    message = "_Failed Writing undo restricted verifer to database";
-                }
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-
-            pmasternodesVerifierCache->Erase(masternodeName);
-        }
-
-        // Add the new qualifier commands to the database
-        for (auto newQualifierAddress : setNewQualifierAddressToAdd) {
-            if (newQualifierAddress.type == QualifierType::REMOVE_QUALIFIER) {
-                pmasternodesQualifierCache->Erase(newQualifierAddress.GetHash().GetHex());
-                if (!prestricteddb->EraseAddressQualifier(newQualifierAddress.address, newQualifierAddress.masternodeName)) {
-                    dirty = true;
-                    message = "_Failed Erasing address qualifier from database";
-                }
-                if (fMasterNodeIndex && !dirty) {
-                    if (!prestricteddb->EraseQualifierAddress(newQualifierAddress.address,
-                                                              newQualifierAddress.masternodeName)) {
-                        dirty = true;
-                        message = "_Failed Erasing qualifier address from database";
-                    }
-                }
-            } else if (newQualifierAddress.type == QualifierType::ADD_QUALIFIER) {
-                pmasternodesQualifierCache->Put(newQualifierAddress.GetHash().GetHex(), 1);
-                if (!prestricteddb->WriteAddressQualifier(newQualifierAddress.address, newQualifierAddress.masternodeName))
-                {
-                    dirty = true;
-                    message = "_Failed Writing address qualifier to database";
-                }
-                if (fMasterNodeIndex & !dirty) {
-                    if (!prestricteddb->WriteQualifierAddress(newQualifierAddress.address, newQualifierAddress.masternodeName))
-                    {
-                        dirty = true;
-                        message = "_Failed Writing qualifier address to database";
-                    }
-                }
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-        }
-
-        // Undo the qualifier commands
-        for (auto undoQualifierAddress : setNewQualifierAddressToRemove) {
-            if (undoQualifierAddress.type == QualifierType::REMOVE_QUALIFIER) { // If we are undoing a removal, we write the data to database
-                pmasternodesQualifierCache->Put(undoQualifierAddress.GetHash().GetHex(), 1);
-                if (!prestricteddb->WriteAddressQualifier(undoQualifierAddress.address, undoQualifierAddress.masternodeName)) {
-                    dirty = true;
-                    message = "_Failed undoing a removal of a address qualifier  from database";
-                }
-                if (fMasterNodeIndex & !dirty) {
-                    if (!prestricteddb->WriteQualifierAddress(undoQualifierAddress.address, undoQualifierAddress.masternodeName))
-                    {
-                        dirty = true;
-                        message = "_Failed undoing a removal of a qualifier address from database";
-                    }
-                }
-            } else if (undoQualifierAddress.type == QualifierType::ADD_QUALIFIER) { // If we are undoing an addition, we remove the data from the database
-                pmasternodesQualifierCache->Erase(undoQualifierAddress.GetHash().GetHex());
-                if (!prestricteddb->EraseAddressQualifier(undoQualifierAddress.address, undoQualifierAddress.masternodeName))
-                {
-                    dirty = true;
-                    message = "_Failed undoing a addition of a address qualifier to database";
-                }
-                if (fMasterNodeIndex && !dirty) {
-                    if (!prestricteddb->EraseQualifierAddress(undoQualifierAddress.address,
-                                                              undoQualifierAddress.masternodeName)) {
-                        dirty = true;
-                        message = "_Failed undoing a addition of a qualifier address from database";
-                    }
-                }
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-        }
-
-        // Add new restricted address commands
-        for (auto newRestrictedAddress : setNewRestrictedAddressToAdd) {
-            if (newRestrictedAddress.type == RestrictedType::UNFREEZE_ADDRESS) {
-                pmasternodesRestrictionCache->Erase(newRestrictedAddress.GetHash().GetHex());
-                if (!prestricteddb->EraseRestrictedAddress(newRestrictedAddress.address, newRestrictedAddress.masternodeName)) {
-                    dirty = true;
-                    message = "_Failed Erasing restricted address from database";
-                }
-            } else if (newRestrictedAddress.type == RestrictedType::FREEZE_ADDRESS) {
-                pmasternodesRestrictionCache->Put(newRestrictedAddress.GetHash().GetHex(), 1);
-                if (!prestricteddb->WriteRestrictedAddress(newRestrictedAddress.address, newRestrictedAddress.masternodeName))
-                {
-                    dirty = true;
-                    message = "_Failed Writing restricted address to database";
-                }
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-        }
-
-        // Undo the qualifier addresses from database
-        for (auto undoRestrictedAddress : setNewRestrictedAddressToRemove) {
-            if (undoRestrictedAddress.type == RestrictedType::UNFREEZE_ADDRESS) { // If we are undoing an unfreeze, we need to freeze the address
-                pmasternodesRestrictionCache->Put(undoRestrictedAddress.GetHash().GetHex(), 1);
-                if (!prestricteddb->WriteRestrictedAddress(undoRestrictedAddress.address, undoRestrictedAddress.masternodeName)) {
-                    dirty = true;
-                    message = "_Failed undoing a removal of a restricted address from database";
-                }
-            } else if (undoRestrictedAddress.type == RestrictedType::FREEZE_ADDRESS) { // If we are undoing a freeze, we need to unfreeze the address
-                pmasternodesRestrictionCache->Erase(undoRestrictedAddress.GetHash().GetHex());
-                if (!prestricteddb->EraseRestrictedAddress(undoRestrictedAddress.address, undoRestrictedAddress.masternodeName))
-                {
-                    dirty = true;
-                    message = "_Failed undoing a addition of a restricted address to database";
-                }
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-        }
-
-        // Add new global restriction commands
-        for (auto newGlobalRestriction : setNewRestrictedGlobalToAdd) {
-            if (newGlobalRestriction.type == RestrictedType::GLOBAL_UNFREEZE) {
-                pmasternodesGlobalRestrictionCache->Erase(newGlobalRestriction.masternodeName);
-                if (!prestricteddb->EraseGlobalRestriction(newGlobalRestriction.masternodeName)) {
-                    dirty = true;
-                    message = "_Failed Erasing global restriction from database";
-                }
-            } else if (newGlobalRestriction.type == RestrictedType::GLOBAL_FREEZE) {
-                pmasternodesGlobalRestrictionCache->Put(newGlobalRestriction.masternodeName, 1);
-                if (!prestricteddb->WriteGlobalRestriction(newGlobalRestriction.masternodeName))
-                {
-                    dirty = true;
-                    message = "_Failed Writing global restriction to database";
-                }
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-        }
-
-        // Undo the global restriction commands
-        for (auto undoGlobalRestriction : setNewRestrictedGlobalToRemove) {
-            if (undoGlobalRestriction.type == RestrictedType::GLOBAL_UNFREEZE) { // If we are undoing an global unfreeze, we need to write a global freeze
-                pmasternodesGlobalRestrictionCache->Put(undoGlobalRestriction.masternodeName, 1);
-                if (!prestricteddb->WriteGlobalRestriction(undoGlobalRestriction.masternodeName)) {
-                    dirty = true;
-                    message = "_Failed undoing a global unfreeze of a restricted masternode from database";
-                }
-            } else if (undoGlobalRestriction.type == RestrictedType::GLOBAL_FREEZE) { // If we are undoing a global freeze, erase the freeze from the database
-                pmasternodesGlobalRestrictionCache->Erase(undoGlobalRestriction.masternodeName);
-                if (!prestricteddb->EraseGlobalRestriction(undoGlobalRestriction.masternodeName))
-                {
-                    dirty = true;
-                    message = "_Failed undoing a global freeze of a restricted masternode to database";
-                }
-            }
-
-            if (dirty) {
-                return error("%s : %s", __func__, message);
-            }
-        }
-
         if (fMasterNodeIndex) {
             // Undo the masternode spends by updating there balance in the database
             for (auto undoSpend : vUndoMasterNodeAmount) {
@@ -1610,74 +1386,6 @@ bool IsScriptNewMasterNode(const CScript& scriptPubKey, int& nStartingIndex)
     return false;
 }
 
-bool IsScriptNewUniqueMasterNode(const CScript& scriptPubKey)
-{
-    int index = 0;
-    return IsScriptNewUniqueMasterNode(scriptPubKey, index);
-}
-
-bool IsScriptNewUniqueMasterNode(const CScript &scriptPubKey, int &nStartingIndex)
-{
-    int nType = 0;
-    bool fIsOwner = false;
-    if (!scriptPubKey.IsMasterNodeScript(nType, fIsOwner, nStartingIndex))
-        return false;
-
-    CNewMasterNode masternode;
-    std::string address;
-    if (!MasterNodeFromScript(scriptPubKey, masternode, address))
-        return false;
-
-    MasterNodeType masternodeType;
-    if (!IsMasterNodeNameValid(masternode.strName, masternodeType))
-        return false;
-
-    return MasterNodeType::UNIQUE == masternodeType;
-}
-
-bool IsScriptNewMsgChannelMasterNode(const CScript& scriptPubKey)
-{
-    int index = 0;
-    return IsScriptNewMsgChannelMasterNode(scriptPubKey, index);
-}
-
-bool IsScriptNewMsgChannelMasterNode(const CScript &scriptPubKey, int &nStartingIndex)
-{
-    int nType = 0;
-    bool fIsOwner = false;
-    if (!scriptPubKey.IsMasterNodeScript(nType, fIsOwner, nStartingIndex))
-        return false;
-
-    CNewMasterNode masternode;
-    std::string address;
-    if (!MasterNodeFromScript(scriptPubKey, masternode, address))
-        return false;
-
-    MasterNodeType masternodeType;
-    if (!IsMasterNodeNameValid(masternode.strName, masternodeType))
-        return false;
-
-    return MasterNodeType::MSGCHANNEL == masternodeType;
-}
-
-bool IsScriptOwnerMasterNode(const CScript& scriptPubKey)
-{
-
-    int index = 0;
-    return IsScriptOwnerMasterNode(scriptPubKey, index);
-}
-
-bool IsScriptOwnerMasterNode(const CScript& scriptPubKey, int& nStartingIndex)
-{
-    int nType = 0;
-    bool fIsOwner =false;
-    if (scriptPubKey.IsMasterNodeScript(nType, fIsOwner, nStartingIndex)) {
-        return nType == TX_NEW_MASTERNODE && fIsOwner;
-    }
-
-    return false;
-}
-
 bool IsScriptUpdateMasterNode(const CScript& scriptPubKey)
 {
     int index = 0;
@@ -1711,57 +1419,6 @@ bool IsScriptTransferMasterNode(const CScript& scriptPubKey, int& nStartingIndex
 
     return false;
 }
-
-bool IsScriptNewQualifierMasterNode(const CScript& scriptPubKey)
-{
-    int index = 0;
-    return IsScriptNewQualifierMasterNode(scriptPubKey, index);
-}
-
-bool IsScriptNewQualifierMasterNode(const CScript &scriptPubKey, int &nStartingIndex)
-{
-    int nType = 0;
-    bool fIsOwner = false;
-    if (!scriptPubKey.IsMasterNodeScript(nType, fIsOwner, nStartingIndex))
-        return false;
-
-    CNewMasterNode masternode;
-    std::string address;
-    if (!MasterNodeFromScript(scriptPubKey, masternode, address))
-        return false;
-
-    MasterNodeType masternodeType;
-    if (!IsMasterNodeNameValid(masternode.strName, masternodeType))
-        return false;
-
-    return MasterNodeType::QUALIFIER == masternodeType || MasterNodeType::SUB_QUALIFIER == masternodeType;
-}
-
-bool IsScriptNewRestrictedMasterNode(const CScript& scriptPubKey)
-{
-    int index = 0;
-    return IsScriptNewRestrictedMasterNode(scriptPubKey, index);
-}
-
-bool IsScriptNewRestrictedMasterNode(const CScript &scriptPubKey, int &nStartingIndex)
-{
-    int nType = 0;
-    bool fIsOwner = false;
-    if (!scriptPubKey.IsMasterNodeScript(nType, fIsOwner, nStartingIndex))
-        return false;
-
-    CNewMasterNode masternode;
-    std::string address;
-    if (!MasterNodeFromScript(scriptPubKey, masternode, address))
-        return false;
-
-    MasterNodeType masternodeType;
-    if (!IsMasterNodeNameValid(masternode.strName, masternodeType))
-        return false;
-
-    return MasterNodeType::RESTRICTED == masternodeType;
-}
-
 
 //! Returns a boolean on if the masternode exists
 bool CMasterNodesCache::CheckIfMasterNodeExists(const std::string& name, bool fForceDuplicateCheck)
@@ -1956,21 +1613,6 @@ bool GetMasterNodeData(const CScript& script, CMasterNodeOutputEntry& data)
             data.destination = DecodeDestination(address);
             data.masternodeName = masternode.strName;
             return true;
-        } else if (MsgChannelMasterNodeFromScript(script, masternode, address)) {
-            data.type = TX_NEW_MASTERNODE;
-            data.nAmount = masternode.nAmount;
-            data.destination = DecodeDestination(address);
-            data.masternodeName = masternode.strName;
-        } else if (QualifierMasterNodeFromScript(script, masternode, address)) {
-            data.type = TX_NEW_MASTERNODE;
-            data.nAmount = masternode.nAmount;
-            data.destination = DecodeDestination(address);
-            data.masternodeName = masternode.strName;
-        } else if (RestrictedMasterNodeFromScript(script, masternode, address)) {
-            data.type = TX_NEW_MASTERNODE;
-            data.nAmount = masternode.nAmount;
-            data.destination = DecodeDestination(address);
-            data.masternodeName = masternode.strName;
         }
     } else if (type == TX_TRANSFER_MASTERNODE) {
         CMasterNodeTransfer transfer;
@@ -2049,41 +1691,6 @@ CAmount GetUpdateMasterNodeDepositAmount()
     return GetParams().UpdateMasterNodeDepositAmount();
 }
 
-CAmount GetCreateSubMasterNodeDepositAmount()
-{
-    return GetParams().CreateSubMasterNodeDepositAmount();
-}
-
-CAmount GetCreateUniqueMasterNodeDepositAmount()
-{
-    return GetParams().CreateUniqueMasterNodeDepositAmount();
-}
-
-CAmount GetCreateMsgChannelMasterNodeDepositAmount()
-{
-    return GetParams().CreateMsgChannelMasterNodeDepositAmount();
-}
-
-CAmount GetCreateQualifierMasterNodeDepositAmount()
-{
-    return GetParams().CreateQualifierMasterNodeDepositAmount();
-}
-
-CAmount GetCreateSubQualifierMasterNodeDepositAmount()
-{
-    return GetParams().CreateSubQualifierMasterNodeDepositAmount();
-}
-
-CAmount GetCreateRestrictedMasterNodeDepositAmount()
-{
-    return GetParams().CreateRestrictedMasterNodeDepositAmount();
-}
-
-CAmount GetAddNullQualifierTagDepositAmount()
-{
-    return GetParams().AddNullQualifierTagDepositAmount();
-}
-
 CAmount GetDepositAmount(const int nType)
 {
     return GetDepositAmount((MasterNodeType(nType)));
@@ -2094,26 +1701,12 @@ CAmount GetDepositAmount(const MasterNodeType type)
     switch (type) {
         case MasterNodeType::ROOT:
             return GetCreateMasterNodeDepositAmount();
-        case MasterNodeType::SUB:
-            return GetCreateSubMasterNodeDepositAmount();
-        case MasterNodeType::MSGCHANNEL:
-            return GetCreateMsgChannelMasterNodeDepositAmount();
         case MasterNodeType::OWNER:
             return 0;
-        case MasterNodeType::UNIQUE:
-            return GetCreateUniqueMasterNodeDepositAmount();
         case MasterNodeType::VOTE:
             return 0;
         case MasterNodeType::UPDATE:
             return GetUpdateMasterNodeDepositAmount();
-        case MasterNodeType::QUALIFIER:
-            return GetCreateQualifierMasterNodeDepositAmount();
-        case MasterNodeType::SUB_QUALIFIER:
-            return GetCreateSubQualifierMasterNodeDepositAmount();
-        case MasterNodeType::RESTRICTED:
-            return GetCreateRestrictedMasterNodeDepositAmount();
-        case MasterNodeType::NULL_ADD_QUALIFIER:
-            return GetAddNullQualifierTagDepositAmount();
         default:
             return 0;
     }
@@ -2129,26 +1722,12 @@ std::string GetDepositAddress(const MasterNodeType type)
     switch (type) {
         case MasterNodeType::ROOT:
             return GetParams().CreateMasterNodeDepositAddress();
-        case MasterNodeType::SUB:
-            return GetParams().CreateSubMasterNodeDepositAddress();
-        case MasterNodeType::MSGCHANNEL:
-            return GetParams().CreateMsgChannelMasterNodeDepositAddress();
         case MasterNodeType::OWNER:
             return "";
-        case MasterNodeType::UNIQUE:
-            return GetParams().CreateUniqueMasterNodeDepositAddress();
         case MasterNodeType::VOTE:
             return "";
         case MasterNodeType::UPDATE:
             return GetParams().UpdateMasterNodeDepositAddress();
-        case MasterNodeType::QUALIFIER:
-            return GetParams().CreateQualifierMasterNodeDepositAddress();
-        case MasterNodeType::SUB_QUALIFIER:
-            return GetParams().CreateSubQualifierMasterNodeDepositAddress();
-        case MasterNodeType::RESTRICTED:
-            return GetParams().CreateRestrictedMasterNodeDepositAddress();
-        case MasterNodeType::NULL_ADD_QUALIFIER:
-            return GetParams().AddNullQualifierTagDepositAddress();
         default:
             return "";
     }
@@ -2329,10 +1908,6 @@ bool CreateMasterNodeTransaction(CWallet* pwallet, CCoinControl& coinControl, co
             error = std::make_pair(RPC_INVALID_PARAMETER, "MasterNode name not valid");
             return false;
         }
-        if (masternodes.size() > 1 && masternodeType != MasterNodeType::UNIQUE) {
-            error = std::make_pair(RPC_INVALID_PARAMETER, "Only unique masternodes can be created in bulk.");
-            return false;
-        }
         std::string parent = GetParentName(masternode.strName);
         if (parentName.empty())
             parentName = parent;
@@ -2369,81 +1944,6 @@ bool CreateMasterNodeTransaction(CWallet* pwallet, CCoinControl& coinControl, co
 
     CRecipient recipient = {scriptPubKey, burnAmount, fSubtractFeeFromAmount};
     vecSend.push_back(recipient);
-
-    // If the masternode is a submasternode or unique masternode. We need to send the ownertoken change back to ourselfs
-    if (masternodeType == MasterNodeType::SUB || masternodeType == MasterNodeType::UNIQUE || masternodeType == MasterNodeType::MSGCHANNEL) {
-        // Get the script for the destination address for the masternodes
-        CScript scriptTransferOwnerMasterNode = GetScriptForDestination(DecodeDestination(change_address));
-
-        CMasterNodeTransfer masternodeTransfer(parentName + OWNER_TAG, OWNER_MASTERNODE_AMOUNT);
-        masternodeTransfer.ConstructTransaction(scriptTransferOwnerMasterNode);
-        CRecipient rec = {scriptTransferOwnerMasterNode, 0, fSubtractFeeFromAmount};
-        vecSend.push_back(rec);
-    }
-
-    // If the masternode is a sub qualifier. We need to send the token parent change back to ourselfs
-    if (masternodeType == MasterNodeType::SUB_QUALIFIER) {
-        // Get the script for the destination address for the masternodes
-        CScript scriptTransferQualifierMasterNode = GetScriptForDestination(DecodeDestination(change_address));
-
-        CMasterNodeTransfer masternodeTransfer(parentName, OWNER_MASTERNODE_AMOUNT);
-        masternodeTransfer.ConstructTransaction(scriptTransferQualifierMasterNode);
-        CRecipient rec = {scriptTransferQualifierMasterNode, 0, fSubtractFeeFromAmount};
-        vecSend.push_back(rec);
-    }
-
-    // Get the owner outpoints if this is a submasternode or unique masternode
-    if (masternodeType == MasterNodeType::SUB || masternodeType == MasterNodeType::UNIQUE || masternodeType == MasterNodeType::MSGCHANNEL) {
-        // Verify that this wallet is the owner for the masternode, and get the owner masternode outpoint
-        for (auto masternode : masternodes) {
-            if (!VerifyWalletHasMasterNode(parentName + OWNER_TAG, error)) {
-                return false;
-            }
-        }
-    }
-
-    // Get the owner outpoints if this is a sub_qualifier masternode
-    if (masternodeType == MasterNodeType::SUB_QUALIFIER) {
-        // Verify that this wallet is the owner for the masternode, and get the owner masternode outpoint
-        for (auto masternode : masternodes) {
-            if (!VerifyWalletHasMasterNode(parentName, error)) {
-                return false;
-            }
-        }
-    }
-
-    if (masternodeType == MasterNodeType::RESTRICTED) {
-        // Restricted masternodes require the ROOT! token to be sent with the issuance
-        CScript scriptTransferOwnerMasterNode = GetScriptForDestination(DecodeDestination(change_address));
-
-        // Create a transaction that sends the ROOT owner token (e.g. $TOKEN requires TOKEN!)
-        std::string strStripped = parentName.substr(1, parentName.size() - 1);
-
-        // Verify that this wallet is the owner for the masternode, and get the owner masternode outpoint
-        if (!VerifyWalletHasMasterNode(strStripped + OWNER_TAG, error)) {
-            return false;
-        }
-
-        CMasterNodeTransfer masternodeTransfer(strStripped + OWNER_TAG, OWNER_MASTERNODE_AMOUNT);
-        masternodeTransfer.ConstructTransaction(scriptTransferOwnerMasterNode);
-
-        CRecipient ownerRec = {scriptTransferOwnerMasterNode, 0, fSubtractFeeFromAmount};
-        vecSend.push_back(ownerRec);
-
-        // Every restricted masternode issuance must have a verifier string
-        if (!verifier_string) {
-            error = std::make_pair(RPC_INVALID_PARAMETER, "Error: Verifier string not found");
-            return false;
-        }
-
-        // Create the masternode null data transaction that will get added to the create transaction
-        CScript verifierScript;
-        CNullMasterNodeTxVerifierString verifier(*verifier_string);
-        verifier.ConstructTransaction(verifierScript);
-
-        CRecipient rec = {verifierScript, 0, false};
-        vecSend.push_back(rec);
-    }
 
     if (!pwallet->CreateTransactionWithMasterNodes(vecSend, wtxNew, reservekey, nFeeRequired, nChangePosRet, strTxError, coinControl, masternodes, DecodeDestination(address), masternodeType)) {
         if (!fSubtractFeeFromAmount && burnAmount + nFeeRequired > curBalance)
@@ -2533,17 +2033,10 @@ bool CreateUpdateMasterNodeTransaction(CWallet* pwallet, CCoinControl& coinContr
     std::string stripped_masternode_name = masternode_name.substr(1, masternode_name.size() - 1);
 
     // If we are reissuing a restricted masternode, check to see if we have the root owner token $TOKEN check for TOKEN!
-    if (masternode_type == MasterNodeType::RESTRICTED) {
-        // Verify that this wallet is the owner for the masternode, and get the owner masternode outpoint
-        if (!VerifyWalletHasMasterNode(stripped_masternode_name + OWNER_TAG, error)) {
-            return false;
-        }
-    } else {
-        // Verify that this wallet is the owner for the masternode, and get the owner masternode outpoint
-        if (!VerifyWalletHasMasterNode(masternode_name + OWNER_TAG, error)) {
-            return false;
-        }
-    }
+    // Verify that this wallet is the owner for the masternode, and get the owner masternode outpoint
+	if (!VerifyWalletHasMasterNode(masternode_name + OWNER_TAG, error)) {
+		return false;
+	}
 
     // Check the wallet balance
     CAmount curBalance = pwallet->GetBalance();
@@ -2565,60 +2058,8 @@ bool CreateUpdateMasterNodeTransaction(CWallet* pwallet, CCoinControl& coinContr
     // Get the script for the destination address for the masternodes
     CScript scriptTransferOwnerMasterNode = GetScriptForDestination(DecodeDestination(change_address));
 
-    if (masternode_type == MasterNodeType::RESTRICTED) {
-        CMasterNodeTransfer masternodeTransfer(stripped_masternode_name + OWNER_TAG, OWNER_MASTERNODE_AMOUNT);
-        masternodeTransfer.ConstructTransaction(scriptTransferOwnerMasterNode);
-    } else {
-        CMasterNodeTransfer masternodeTransfer(masternode_name + OWNER_TAG, OWNER_MASTERNODE_AMOUNT);
-        masternodeTransfer.ConstructTransaction(scriptTransferOwnerMasterNode);
-    }
-
-    if (masternode_type == MasterNodeType::RESTRICTED) {
-        // If we are changing the verifier string, check to make sure the new address meets the new verifier string rules
-        if (verifier_string) {
-            if (updateMasterNode.nAmount > 0) {
-                std::string strError = "";
-                ErrorReport report;
-                if (!ContextualCheckVerifierString(pmasternodes, *verifier_string, address, strError, &report)) {
-                    error = std::make_pair(RPC_INVALID_PARAMETER, strError);
-                    return false;
-                }
-            } else {
-                // If we aren't adding any masternodes but we are changing the verifier string, Check to make sure the verifier string parses correctly
-                std::string strError = "";
-                if (!ContextualCheckVerifierString(pmasternodes, *verifier_string, "", strError)) {
-                    error = std::make_pair(RPC_INVALID_PARAMETER, strError);
-                    return false;
-                }
-            }
-        } else {
-            // If the user is reissuing more masternodes, and they aren't changing the verifier string, check it against the current verifier string
-            if (updateMasterNode.nAmount > 0) {
-                CNullMasterNodeTxVerifierString verifier;
-                if (!pmasternodes->GetMasterNodeVerifierStringIfExists(updateMasterNode.strName, verifier)) {
-                    error = std::make_pair(RPC_DATABASE_ERROR, "Failed to get the masternodes cache pointer");
-                    return false;
-                }
-
-                std::string strError = "";
-                if (!ContextualCheckVerifierString(pmasternodes, verifier.verifier_string, address, strError)) {
-                    error = std::make_pair(RPC_INVALID_PARAMETER, strError);
-                    return false;
-                }
-            }
-        }
-
-        // Every restricted masternode issuance must have a verifier string
-        if (verifier_string) {
-            // Create the masternode null data transaction that will get added to the create transaction
-            CScript verifierScript;
-            CNullMasterNodeTxVerifierString verifier(*verifier_string);
-            verifier.ConstructTransaction(verifierScript);
-
-            CRecipient rec = {verifierScript, 0, false};
-            vecSend.push_back(rec);
-        }
-    }
+    CMasterNodeTransfer masternodeTransfer(masternode_name + OWNER_TAG, OWNER_MASTERNODE_AMOUNT);
+    masternodeTransfer.ConstructTransaction(scriptTransferOwnerMasterNode);
 
     // Get the script for the burn address
     CScript scriptPubKeyDeposit = GetScriptForDestination(DecodeDestination(GetParams().UpdateMasterNodeDepositAddress()));
@@ -2690,38 +2131,7 @@ bool CreateTransferMasterNodeTransaction(CWallet* pwallet, const CCoinControl& c
                 return false;
             }
         }
-
-        // If the masternode is a restricted masternode, check the verifier script
-        if(IsMasterNodeNameAnRestricted(masternode_name)) {
-            std::string strError = "";
-
-            // Check for global restriction
-            if (pmasternodes->CheckForGlobalRestriction(transfer.first.strName, true)) {
-                error = std::make_pair(RPC_INVALID_PARAMETER, _("Unable to transfer restricted masternode, this restricted masternode has been globally frozen"));
-                return false;
-            }
-
-            if (!transfer.first.ContextualCheckAgainstVerifyString(pmasternodes, address, strError)) {
-                error = std::make_pair(RPC_INVALID_PARAMETER, strError);
-                return false;
-            }
-
-            if (!coinControl.masternodeDestChange.empty()) {
-                std::string change_address = EncodeDestination(coinControl.masternodeDestChange);
-                // If this is a transfer of a restricted masternode, check the destination address against the verifier string
-                CNullMasterNodeTxVerifierString verifier;
-                if (!pmasternodes->GetMasterNodeVerifierStringIfExists(masternode_name, verifier)) {
-                    error = std::make_pair(RPC_DATABASE_ERROR, _("Unable to get restricted masternodes verifier string. Database out of sync. Reindex required"));
-                    return false;
-                }
-
-                if (!ContextualCheckVerifierString(pmasternodes, verifier.verifier_string, change_address, strError)) {
-                    error = std::make_pair(RPC_DATABASE_ERROR, std::string(_("Change address can not be sent to because it doesn't have the correct qualifier tags ") + strError));
-                    return false;
-                }
-            }
-        }
-
+		
         // Get the script for the burn address
         CScript scriptPubKey = GetScriptForDestination(DecodeDestination(address));
 
@@ -2739,20 +2149,6 @@ bool CreateTransferMasterNodeTransaction(CWallet* pwallet, const CCoinControl& c
         int nAddTagCount = 0;
         for (auto pair : *nullMasterNodeTxData) {
 
-            if (IsMasterNodeNameAQualifier(pair.first.masternode_name)) {
-                if (!VerifyQualifierChange(*pmasternodes, pair.first, pair.second, strError)) {
-                    error = std::make_pair(RPC_INVALID_REQUEST, strError);
-                    return false;
-                }
-                if (pair.first.flag == (int)QualifierType::ADD_QUALIFIER)
-                    nAddTagCount++;
-            } else if (IsMasterNodeNameAnRestricted(pair.first.masternode_name)) {
-                if (!VerifyRestrictedAddressChange(*pmasternodes, pair.first, pair.second, strError)) {
-                    error = std::make_pair(RPC_INVALID_REQUEST, strError);
-                    return false;
-                }
-            }
-
             CScript dataScript = GetScriptForNullMasterNodeDataDestination(DecodeDestination(pair.second));
             pair.first.ConstructTransaction(dataScript);
 
@@ -2765,23 +2161,6 @@ bool CreateTransferMasterNodeTransaction(CWallet* pwallet, const CCoinControl& c
             CScript addTagDepositScript = GetScriptForDestination(DecodeDestination(GetDepositAddress(MasterNodeType::NULL_ADD_QUALIFIER)));
             CRecipient addTagDepositRecipient = {addTagDepositScript, GetDepositAmount(MasterNodeType::NULL_ADD_QUALIFIER) * nAddTagCount, false};
             vecSend.push_back(addTagDepositRecipient);
-        }
-    }
-
-    // nullGlobalRestiotionData, the user wants to add OP_HVN_MASTERNODE OP_HVN_MASTERNODE OP_HVN_MASTERNODES data transaction to the transaction
-    if (nullGlobalRestrictionData) {
-        std::string strError = "";
-        for (auto dataObject : *nullGlobalRestrictionData) {
-
-            if (!VerifyGlobalRestrictedChange(*pmasternodes, dataObject, strError)) {
-                error = std::make_pair(RPC_INVALID_REQUEST, strError);
-                return false;
-            }
-
-            CScript dataScript;
-            dataObject.ConstructGlobalRestrictionTransaction(dataScript);
-            CRecipient recipient = {dataScript, 0, false};
-            vecSend.push_back(recipient);
         }
     }
 
@@ -2863,10 +2242,6 @@ void GetTxOutMasterNodeTypes(const std::vector<CTxOut>& vout, int& creates, int&
         if (out.scriptPubKey.IsMasterNodeScript(type, fIsOwner)) {
             if (type == TX_NEW_MASTERNODE && !fIsOwner)
                 creates++;
-            else if (type == TX_NEW_MASTERNODE && fIsOwner)
-                owners++;
-            else if (type == TX_TRANSFER_MASTERNODE)
-                transfers++;
             else if (type == TX_UPDATE_MASTERNODE)
                 updates++;
         }
@@ -2881,24 +2256,16 @@ bool ParseMasterNodeScript(CScript scriptPubKey, uint160 &hashBytes, std::string
     bool isMasterNode = false;
     if (scriptPubKey.IsMasterNodeScript(nType, fIsOwner, _nStartingPoint)) {
         if (nType == TX_NEW_MASTERNODE) {
-            if (fIsOwner) {
-                if (OwnerMasterNodeFromScript(scriptPubKey, masternodeName, _strAddress)) {
-                    masternodeAmount = OWNER_MASTERNODE_AMOUNT;
-                    isMasterNode = true;
-                } else {
-                    LogPrintf("%s : Couldn't get new owner masternode from script: %s", __func__, HexStr(scriptPubKey));
-                }
-            } else {
-                CNewMasterNode masternode;
-                if (MasterNodeFromScript(scriptPubKey, masternode, _strAddress)) {
-                    masternodeName = masternode.strName;
-                    masternodeAmount = masternode.nAmount;
-                    isMasterNode = true;
-                } else {
-                    LogPrintf("%s : Couldn't get new masternode from script: %s", __func__, HexStr(scriptPubKey));
-                }
-            }
-        } else if (nType == TX_UPDATE_MASTERNODE) {
+            CNewMasterNode masternode;
+			if (MasterNodeFromScript(scriptPubKey, masternode, _strAddress)) {
+				masternodeName = masternode.strName;
+				masternodeAmount = masternode.nAmount;
+				isMasterNode = true;
+			} else {
+				LogPrintf("%s : Couldn't get new masternode from script: %s", __func__, HexStr(scriptPubKey));
+			}
+        } 
+		else if (nType == TX_UPDATE_MASTERNODE) {
             CUpdateMasterNode masternode;
             if (UpdateMasterNodeFromScript(scriptPubKey, masternode, _strAddress)) {
                 masternodeName = masternode.strName;
@@ -2907,16 +2274,8 @@ bool ParseMasterNodeScript(CScript scriptPubKey, uint160 &hashBytes, std::string
             } else {
                 LogPrintf("%s : Couldn't get update masternode from script: %s", __func__, HexStr(scriptPubKey));
             }
-        } else if (nType == TX_TRANSFER_MASTERNODE) {
-            CMasterNodeTransfer masternode;
-            if (TransferMasterNodeFromScript(scriptPubKey, masternode, _strAddress)) {
-                masternodeName = masternode.strName;
-                masternodeAmount = masternode.nAmount;
-                isMasterNode = true;
-            } else {
-                LogPrintf("%s : Couldn't get transfer masternode from script: %s", __func__, HexStr(scriptPubKey));
-            }
-        } else {
+        }
+		else {
             LogPrintf("%s : Unsupported masternode type: %s", __func__, nType);
         }
     } else {
@@ -2945,11 +2304,6 @@ bool CNullMasterNodeTxData::IsValid(std::string &strError, CMasterNodesCache &ma
         return false;
     }
 
-    if (type != MasterNodeType::QUALIFIER && type != MasterNodeType::SUB_QUALIFIER && type != MasterNodeType::RESTRICTED) {
-        strError = _("MasterNode must be a qualifier, sub qualifier, or a restricted masternode");
-        return false;
-    }
-
     if (flag != 0 || flag != 1) {
         strError = _("Flag must be 1 or 0");
         return false;
@@ -2973,16 +2327,6 @@ void CNullMasterNodeTxData::ConstructTransaction(CScript &script) const
     std::vector<unsigned char> vchMessage;
     vchMessage.insert(vchMessage.end(), ssMasterNodeTxData.begin(), ssMasterNodeTxData.end());
     script << ToByteVector(vchMessage);
-}
-
-void CNullMasterNodeTxData::ConstructGlobalRestrictionTransaction(CScript &script) const
-{
-    CDataStream ssMasterNodeTxData(SER_NETWORK, PROTOCOL_VERSION);
-    ssMasterNodeTxData << *this;
-
-    std::vector<unsigned char> vchMessage;
-    vchMessage.insert(vchMessage.end(), ssMasterNodeTxData.begin(), ssMasterNodeTxData.end());
-    script << OP_HVN_MASTERNODE << OP_RESERVED << OP_RESERVED << ToByteVector(vchMessage);
 }
 
 CNullMasterNodeTxVerifierString::CNullMasterNodeTxVerifierString(const std::string &verifier)
@@ -3014,41 +2358,6 @@ bool CMasterNodesCache::GetMasterNodeVerifierStringIfExists(const std::string &n
      * without failing validation
     **/
 
-    // Create objects that will be used to check the dirty cache
-    CMasterNodeCacheRestrictedVerifiers tempCacheVerifier {name, ""};
-
-    auto setIterator = setNewRestrictedVerifierToRemove.find(tempCacheVerifier);
-    // Check the dirty caches first and see if it was recently added or removed
-    if (!fSkipTempCache && setIterator != setNewRestrictedVerifierToRemove.end()) {
-        if (setIterator->fUndoingRessiue) {
-            verifierString.verifier_string = setIterator->verifier;
-            return true;
-        }
-        return false;
-    }
-
-    setIterator = pmasternodes->setNewRestrictedVerifierToRemove.find(tempCacheVerifier);
-    // Check the dirty caches first and see if it was recently added or removed
-    if (setIterator != pmasternodes->setNewRestrictedVerifierToRemove.end()) {
-        if (setIterator->fUndoingRessiue) {
-            verifierString.verifier_string = setIterator->verifier;
-            return true;
-        }
-        return false;
-    }
-
-    setIterator = setNewRestrictedVerifierToAdd.find(tempCacheVerifier);
-    if (!fSkipTempCache && setIterator != setNewRestrictedVerifierToAdd.end()) {
-        verifierString.verifier_string = setIterator->verifier;
-        return true;
-    }
-
-    setIterator = pmasternodes->setNewRestrictedVerifierToAdd.find(tempCacheVerifier);
-    if (setIterator != pmasternodes->setNewRestrictedVerifierToAdd.end()) {
-        verifierString.verifier_string = setIterator->verifier;
-        return true;
-    }
-
     // Check the cache, if it doesn't exist in the cache. Try and read it from database
     if (pmasternodesVerifierCache) {
         if (pmasternodesVerifierCache->Exists(name)) {
@@ -3056,212 +2365,7 @@ bool CMasterNodesCache::GetMasterNodeVerifierStringIfExists(const std::string &n
             return true;
         }
     }
-
-    if (prestricteddb) {
-        std::string verifier;
-        if (prestricteddb->ReadVerifier(name, verifier)) {
-            verifierString.verifier_string = verifier;
-            if (pmasternodesVerifierCache)
-                pmasternodesVerifierCache->Put(name, verifierString);
-            return true;
-        }
-    }
-
-    return false;
-}
-
-bool CMasterNodesCache::CheckForAddressQualifier(const std::string &qualifier_name, const std::string& address, bool fSkipTempCache)
-{
-    /** There are circumstances where a blocks transactions could be removing or adding a qualifier to an address,
-     * While at the same time a transaction is added to the same block that is trying to transfer to the same address.
-     * Depending on the ordering of these two transactions. The qualifier database used to verify the validity of the
-     * transactions could be different.
-     * To fix this all restricted masternode transfer validation checks will use only the latest connect block tips caches
-     * and databases to validate it. This allows for masternode transfers and address qualifier transactions to be added in the same block
-     * without failing validation
-    **/
-
-    // Create cache object that will be used to check the dirty caches
-    CMasterNodeCacheQualifierAddress cachedQualifierAddress(qualifier_name, address, QualifierType::ADD_QUALIFIER);
-
-    // Check the dirty caches first and see if it was recently added or removed
-    auto setIterator = setNewQualifierAddressToRemove.find(cachedQualifierAddress);
-    if (!fSkipTempCache &&setIterator != setNewQualifierAddressToRemove.end()) {
-        // Undoing a remove qualifier command, means that we are adding the qualifier to the address
-        return setIterator->type == QualifierType::REMOVE_QUALIFIER;
-    }
-
-
-    setIterator = pmasternodes->setNewQualifierAddressToRemove.find(cachedQualifierAddress);
-    if (setIterator != pmasternodes->setNewQualifierAddressToRemove.end()) {
-        // Undoing a remove qualifier command, means that we are adding the qualifier to the address
-        return setIterator->type == QualifierType::REMOVE_QUALIFIER;
-    }
-
-    setIterator = setNewQualifierAddressToAdd.find(cachedQualifierAddress);
-    if (!fSkipTempCache && setIterator != setNewQualifierAddressToAdd.end()) {
-        // Return true if we are adding the qualifier, and false if we are removing it
-        return setIterator->type == QualifierType::ADD_QUALIFIER;
-    }
-
-
-    setIterator = pmasternodes->setNewQualifierAddressToAdd.find(cachedQualifierAddress);
-    if (setIterator != pmasternodes->setNewQualifierAddressToAdd.end()) {
-        // Return true if we are adding the qualifier, and false if we are removing it
-        return setIterator->type == QualifierType::ADD_QUALIFIER;
-    }
-
-    auto tempCache = CMasterNodeCacheRootQualifierChecker(qualifier_name, address);
-    if (!fSkipTempCache && mapRootQualifierAddressesAdd.count(tempCache)){
-        if (mapRootQualifierAddressesAdd[tempCache].size()) {
-            return true;
-        }
-    }
-
-    if (pmasternodes->mapRootQualifierAddressesAdd.count(tempCache)) {
-        if (pmasternodes->mapRootQualifierAddressesAdd[tempCache].size()) {
-            return true;
-        }
-    }
-
-    // Check the cache, if it doesn't exist in the cache. Try and read it from database
-    if (pmasternodesQualifierCache) {
-        if (pmasternodesQualifierCache->Exists(cachedQualifierAddress.GetHash().GetHex())) {
-            return true;
-        }
-    }
-
-    if (prestricteddb) {
-
-        // Check for exact qualifier, and add to cache if it exists
-        if (prestricteddb->ReadAddressQualifier(address, qualifier_name)) {
-            pmasternodesQualifierCache->Put(cachedQualifierAddress.GetHash().GetHex(), 1);
-            return true;
-        }
-
-        // Look for sub qualifiers
-        if (prestricteddb->CheckForAddressRootQualifier(address, qualifier_name)){
-            return true;
-        }
-    }
-
-    return false;
-}
-
-
-bool CMasterNodesCache::CheckForAddressRestriction(const std::string &restricted_name, const std::string& address, bool fSkipTempCache)
-{
-    /** There are circumstances where a blocks transactions could be removing or adding a restriction to an address,
-     * While at the same time a transaction is added to the same block that is trying to transfer from that address.
-     * Depending on the ordering of these two transactions. The address restriction database used to verify the validity of the
-     * transactions could be different.
-     * To fix this all restricted masternode transfer validation checks will use only the latest connect block tips caches
-     * and databases to validate it. This allows for masternode transfers and address restriction transactions to be added in the same block
-     * without failing validation
-    **/
-
-    // Create cache object that will be used to check the dirty caches (type, doesn't matter in this search)
-    CMasterNodeCacheRestrictedAddress cachedRestrictedAddress(restricted_name, address, RestrictedType::FREEZE_ADDRESS);
-
-    // Check the dirty caches first and see if it was recently added or removed
-    auto setIterator = setNewRestrictedAddressToRemove.find(cachedRestrictedAddress);
-    if (!fSkipTempCache && setIterator != setNewRestrictedAddressToRemove.end()) {
-        // Undoing a unfreeze, means that we are adding back a freeze
-        return setIterator->type == RestrictedType::UNFREEZE_ADDRESS;
-    }
-
-    setIterator = pmasternodes->setNewRestrictedAddressToRemove.find(cachedRestrictedAddress);
-    if (setIterator != pmasternodes->setNewRestrictedAddressToRemove.end()) {
-        // Undoing a unfreeze, means that we are adding back a freeze
-        return setIterator->type == RestrictedType::UNFREEZE_ADDRESS;
-    }
-
-    setIterator = setNewRestrictedAddressToAdd.find(cachedRestrictedAddress);
-    if (!fSkipTempCache && setIterator != setNewRestrictedAddressToAdd.end()) {
-        // Return true if we are freezing the address
-        return setIterator->type == RestrictedType::FREEZE_ADDRESS;
-    }
-
-    setIterator = pmasternodes->setNewRestrictedAddressToAdd.find(cachedRestrictedAddress);
-    if (setIterator != pmasternodes->setNewRestrictedAddressToAdd.end()) {
-        // Return true if we are freezing the address
-        return setIterator->type == RestrictedType::FREEZE_ADDRESS;
-    }
-
-    // Check the cache, if it doesn't exist in the cache. Try and read it from database
-    if (pmasternodesRestrictionCache) {
-        if (pmasternodesRestrictionCache->Exists(cachedRestrictedAddress.GetHash().GetHex())) {
-            return true;
-        }
-    }
-
-    if (prestricteddb) {
-        if (prestricteddb->ReadRestrictedAddress(address, restricted_name)) {
-            if (pmasternodesRestrictionCache) {
-                pmasternodesRestrictionCache->Put(cachedRestrictedAddress.GetHash().GetHex(), 1);
-            }
-            return true;
-        }
-    }
-
-    return false;
-}
-
-bool CMasterNodesCache::CheckForGlobalRestriction(const std::string &restricted_name, bool fSkipTempCache)
-{
-    /** There are circumstances where a blocks transactions could be freezing all masternode transfers. While at
-     * the same time a transaction is added to the same block that is trying to transfer the same masternode that is being
-     * frozen.
-     * Depending on the ordering of these two transactions. The global restriction database used to verify the validity of the
-     * transactions could be different.
-     * To fix this all restricted masternode transfer validation checks will use only the latest connect block tips caches
-     * and databases to validate it. This allows for masternode transfers and global restriction transactions to be added in the same block
-     * without failing validation
-    **/
-
-    // Create cache object that will be used to check the dirty caches (type, doesn't matter in this search)
-    CMasterNodeCacheRestrictedGlobal cachedRestrictedGlobal(restricted_name, RestrictedType::GLOBAL_FREEZE);
-
-    // Check the dirty caches first and see if it was recently added or removed
-    auto setIterator = setNewRestrictedGlobalToRemove.find(cachedRestrictedGlobal);
-    if (!fSkipTempCache && setIterator != setNewRestrictedGlobalToRemove.end()) {
-        // Undoing a removal of a global unfreeze, means that is will become frozen
-        return setIterator->type == RestrictedType::GLOBAL_UNFREEZE;
-    }
-
-    setIterator = pmasternodes->setNewRestrictedGlobalToRemove.find(cachedRestrictedGlobal);
-    if (setIterator != pmasternodes->setNewRestrictedGlobalToRemove.end()) {
-        // Undoing a removal of a global unfreeze, means that is will become frozen
-        return setIterator->type == RestrictedType::GLOBAL_UNFREEZE;
-    }
-
-    setIterator = setNewRestrictedGlobalToAdd.find(cachedRestrictedGlobal);
-    if (!fSkipTempCache && setIterator != setNewRestrictedGlobalToAdd.end()) {
-        // Return true if we are adding a freeze command
-        return setIterator->type == RestrictedType::GLOBAL_FREEZE;
-    }
-
-    setIterator = pmasternodes->setNewRestrictedGlobalToAdd.find(cachedRestrictedGlobal);
-    if (setIterator != pmasternodes->setNewRestrictedGlobalToAdd.end()) {
-        // Return true if we are adding a freeze command
-        return setIterator->type == RestrictedType::GLOBAL_FREEZE;
-    }
-
-    // Check the cache, if it doesn't exist in the cache. Try and read it from database
-    if (pmasternodesGlobalRestrictionCache) {
-        if (pmasternodesGlobalRestrictionCache->Exists(cachedRestrictedGlobal.masternodeName)) {
-            return true;
-        }
-    }
-
-    if (prestricteddb) {
-        if (prestricteddb->ReadGlobalRestriction(restricted_name)) {
-            if (pmasternodesGlobalRestrictionCache)
-                pmasternodesGlobalRestrictionCache->Put(cachedRestrictedGlobal.masternodeName, 1);
-            return true;
-        }
-    }
-
+	
     return false;
 }
 
@@ -3401,62 +2505,6 @@ bool VerifyQualifierChange(CMasterNodesCache& cache, const CNullMasterNodeTxData
     return true;
 }
 
-bool VerifyRestrictedAddressChange(CMasterNodesCache& cache, const CNullMasterNodeTxData& data, const std::string& address, std::string& strError)
-{
-    // Check the flag
-    if (!VerifyNullMasterNodeDataFlag(data.flag, strError))
-        return false;
-
-    // Get the current status of the masternode and the given address
-    bool fIsFrozen = cache.CheckForAddressRestriction(data.masternode_name, address, true);
-
-    // Assign the type based on the data
-    RestrictedType type = data.flag ? RestrictedType::FREEZE_ADDRESS : RestrictedType::UNFREEZE_ADDRESS;
-
-    if (type == RestrictedType::FREEZE_ADDRESS) {
-        if (fIsFrozen) {
-            strError = "bad-txns-null-data-freeze-address-when-already-frozen";
-            return false;
-        }
-    } else if (type == RestrictedType::UNFREEZE_ADDRESS) {
-        if (!fIsFrozen) {
-            strError = "bad-txns-null-data-unfreeze-address-when-not-frozen";
-            return false;
-        }
-    }
-
-    return true;
-}
-
-bool VerifyGlobalRestrictedChange(CMasterNodesCache& cache, const CNullMasterNodeTxData& data, std::string& strError)
-{
-    // Check the flag
-    if (!VerifyNullMasterNodeDataFlag(data.flag, strError))
-        return false;
-
-    // Get the current status of the masternode globally
-    bool fIsGloballyFrozen = cache.CheckForGlobalRestriction(data.masternode_name, true);
-
-    // Assign the type based on the data
-    RestrictedType type = data.flag ? RestrictedType::GLOBAL_FREEZE : RestrictedType::GLOBAL_UNFREEZE;
-
-    if (type == RestrictedType::GLOBAL_FREEZE) {
-        if (fIsGloballyFrozen) {
-            strError = "bad-txns-null-data-global-freeze-when-already-frozen";
-            return false;
-        }
-    } else if (type == RestrictedType::GLOBAL_UNFREEZE) {
-        if (!fIsGloballyFrozen) {
-            strError = "bad-txns-null-data-global-unfreeze-when-not-frozen";
-            return false;
-        }
-    }
-
-    return true;
-}
-
-////////////////
-
 
 bool CheckVerifierMasterNodeTxOut(const CTxOut& txout, std::string& strError)
 {
@@ -3495,22 +2543,6 @@ bool ContextualCheckNullMasterNodeTxOut(const CTxOut& txout, CMasterNodesCache* 
         return false;
     }
 
-    // Validate the tx data against the cache, and database
-    if (masternodeCache) {
-        if (IsMasterNodeNameAQualifier(data.masternode_name)) {
-            if (!VerifyQualifierChange(*masternodeCache, data, address, strError)) {
-                return false;
-            }
-
-        } else if (IsMasterNodeNameAnRestricted(data.masternode_name)) {
-            if (!VerifyRestrictedAddressChange(*masternodeCache, data, address, strError))
-                return false;
-        } else {
-            strError = "bad-txns-null-masternode-data-on-non-restricted-or-qualifier-masternode";
-            return false;
-        }
-    }
-
 #ifdef ENABLE_WALLET
     if (myNullMasterNodeData && vpwallets.size()) {
         if (IsMine(*vpwallets[0], DecodeDestination(address)) & ISMINE_ALL) {
@@ -3521,22 +2553,6 @@ bool ContextualCheckNullMasterNodeTxOut(const CTxOut& txout, CMasterNodesCache* 
     return true;
 }
 
-bool ContextualCheckGlobalMasterNodeTxOut(const CTxOut& txout, CMasterNodesCache* masternodeCache, std::string& strError)
-{
-    // Get the data from the script
-    CNullMasterNodeTxData data;
-    if (!GlobalMasterNodeNullDataFromScript(txout.scriptPubKey, data)) {
-        strError = "bad-txns-null-global-masternode-data-serialization";
-        return false;
-    }
-
-    // Validate the tx data against the cache, and database
-    if (masternodeCache) {
-        if (!VerifyGlobalRestrictedChange(*masternodeCache, data, strError))
-            return false;
-    }
-    return true;
-}
 
 bool ContextualCheckVerifierMasterNodeTxOut(const CTxOut& txout, CMasterNodesCache* masternodeCache, std::string& strError)
 {
@@ -3647,64 +2663,6 @@ bool ContextualCheckTransferMasterNode(CMasterNodesCache* masternodeCache, const
         return false;
     }
 
-    if (AreMessagesDeployed()) {
-        // This is for the current testnet6 only.
-        if (transfer.nAmount <= 0) {
-            strError = "Invalid parameter: masternode amount can't be equal to or less than zero.";
-            return false;
-        }
-
-        if (transfer.message.empty() && transfer.nExpireTime > 0) {
-            strError = "Invalid parameter: masternode transfer expiration time requires a message to be attached to the transfer";
-            return false;
-        }
-
-        if (transfer.nExpireTime < 0) {
-            strError = "Invalid parameter: expiration time must be a positive value";
-            return false;
-        }
-
-        if (transfer.message.size() && !CheckEncoded(transfer.message, strError)) {
-            return false;
-        }
-    }
-
-    // If the transfer is a message channel masternode. Check to make sure that it is UNIQUE_MASTERNODE_AMOUNT
-    if (masternodeType == MasterNodeType::MSGCHANNEL) {
-        if (!AreMessagesDeployed()) {
-            strError = "bad-txns-transfer-msgchannel-before-messaging-is-active";
-            return false;
-        }
-    }
-
-    if (masternodeType == MasterNodeType::RESTRICTED) {
-        if (!AreRestrictedMasterNodesDeployed()) {
-            strError = "bad-txns-transfer-restricted-before-it-is-active";
-            return false;
-        }
-
-        if (masternodeCache) {
-            if (masternodeCache->CheckForGlobalRestriction(transfer.strName, true)) {
-                strError = "bad-txns-transfer-restricted-masternode-that-is-globally-restricted";
-                return false;
-            }
-        }
-
-
-        std::string strError = "";
-        if (!transfer.ContextualCheckAgainstVerifyString(masternodeCache, address, strError)) {
-            error("%s : %s", __func__, strError);
-            return false;
-        }
-    }
-
-    // If the transfer is a qualifier channel masternode.
-    if (masternodeType == MasterNodeType::QUALIFIER || masternodeType == MasterNodeType::SUB_QUALIFIER) {
-        if (!AreRestrictedMasterNodesDeployed()) {
-            strError = "bad-txns-transfer-qualifier-before-it-is-active";
-            return false;
-        }
-    }
     return true;
 }
 
@@ -3717,37 +2675,7 @@ bool CheckNewMasterNode(const CNewMasterNode& masternode, std::string& strError)
         strError = _("Invalid parameter: masternode_name must only consist of valid characters and have a size between 3 and 30 characters. See help for more details.");
         return false;
     }
-
-    if (masternodeType == MasterNodeType::UNIQUE || masternodeType == MasterNodeType::MSGCHANNEL) {
-        if (masternode.units != UNIQUE_MASTERNODE_UNITS) {
-            strError = _("Invalid parameter: units must be ") + std::to_string(UNIQUE_MASTERNODE_UNITS);
-            return false;
-        }
-        if (masternode.nAmount != UNIQUE_MASTERNODE_AMOUNT) {
-            strError = _("Invalid parameter: amount must be ") + std::to_string(UNIQUE_MASTERNODE_AMOUNT);
-            return false;
-        }
-        if (masternode.nReissuable != 0) {
-            strError = _("Invalid parameter: reissuable must be 0");
-            return false;
-        }
-    }
-
-    if (masternodeType == MasterNodeType::QUALIFIER || masternodeType == MasterNodeType::SUB_QUALIFIER) {
-        if (masternode.units != QUALIFIER_MASTERNODE_UNITS) {
-            strError = _("Invalid parameter: units must be ") + std::to_string(QUALIFIER_MASTERNODE_UNITS);
-            return false;
-        }
-        if (masternode.nAmount < QUALIFIER_MASTERNODE_MIN_AMOUNT || masternode.nAmount > QUALIFIER_MASTERNODE_MAX_AMOUNT) {
-            strError = _("Invalid parameter: amount must be between ") + std::to_string(QUALIFIER_MASTERNODE_MIN_AMOUNT) + " - " + std::to_string(QUALIFIER_MASTERNODE_MAX_AMOUNT);
-            return false;
-        }
-        if (masternode.nReissuable != 0) {
-            strError = _("Invalid parameter: reissuable must be 0");
-            return false;
-        }
-    }
-
+	
     if (IsMasterNodeNameAnOwner(std::string(masternode.strName))) {
         strError = _("Invalid parameters: masternode_name can't have a '!' at the end of it. See help for more details.");
         return false;
@@ -3773,7 +2701,7 @@ bool CheckNewMasterNode(const CNewMasterNode& masternode, std::string& strError)
         return false;
     }
 
-    if (masternode.nReissuable != 0 && masternode.nReissuable != 1) {
+    if (masternode.nUpdatable != 0 && masternode.nUpdatable != 1) {
         strError = _("Invalid parameter: reissuable must be 0 or 1");
         return false;
     }
@@ -3849,25 +2777,21 @@ bool CheckUpdateMasterNode(const CUpdateMasterNode& masternode, std::string& str
     // Testnet has a couple blocks that have invalid nUpdate values before constriants were created
     bool fSkip = false;
     if (GetParams().NetworkIDString() == CBaseChainParams::TESTNET) {
-        if (masternode.strName == "GAMINGWEB" && masternode.nReissuable == 109) {
+        if (masternode.strName == "GAMINGWEB" && masternode.nUpdatable == 109) {
             fSkip = true;
-        } else if (masternode.strName == "UINT8" && masternode.nReissuable == -47) {
+        } else if (masternode.strName == "UINT8" && masternode.nUpdatable == -47) {
             fSkip = true;
         }
     }
     /// -------- TESTNET ONLY ---------- ///
 
-    if (!fSkip && masternode.nReissuable != 0 && masternode.nReissuable != 1) {
+    if (!fSkip && masternode.nUpdatable != 0 && masternode.nUpdatable != 1) {
         strError = _("Unable to update masternode: reissuable must be 0 or 1");
         return false;
     }
 
     MasterNodeType type;
     IsMasterNodeNameValid(masternode.strName, type);
-
-    if (type == MasterNodeType::RESTRICTED) {
-        // TODO Add checks for restricted masternode if we can come up with any
-    }
 
     return true;
 }
@@ -3893,7 +2817,7 @@ bool ContextualCheckUpdateMasterNode(CMasterNodesCache* masternodeCache, const C
         return false;
     }
 
-    if (!prev_masternode.nReissuable) {
+    if (!prev_masternode.nUpdatable) {
         // Check to make sure the masternode can be updated
         strError = _("Unable to update masternode: reissuable is set to false");
         return false;
@@ -3926,40 +2850,6 @@ bool ContextualCheckUpdateMasterNode(CMasterNodesCache* masternodeCache, const C
             return false;
     }
 
-    if (IsMasterNodeNameAnRestricted(update_masternode.strName)) {
-        CNullMasterNodeTxVerifierString new_verifier;
-        bool fNotFound = false;
-
-        // Try and get the verifier string if it was changed
-        if (!tx.GetVerifierStringFromTx(new_verifier, strError, fNotFound)) {
-            // If it return false for any other reason besides not being found, fail the transaction check
-            if (!fNotFound) {
-                return false;
-            }
-        }
-
-        if (update_masternode.nAmount > 0) {
-            // If it wasn't found, get the current verifier and validate against it
-            if (fNotFound) {
-                CNullMasterNodeTxVerifierString current_verifier;
-                if (masternodeCache->GetMasterNodeVerifierStringIfExists(update_masternode.strName, current_verifier)) {
-                    if (!ContextualCheckVerifierString(masternodeCache, current_verifier.verifier_string, strAddress, strError))
-                        return false;
-                } else {
-                    // This should happen, but if it does. The wallet needs to shutdown,
-                    // TODO, remove this after restricted masternodes have been tested in testnet for some time, and this hasn't happened yet. It this has happened. Investigation is required by the dev team
-                    error("%s : failed to get verifier string from a restricted masternode, this shouldn't happen, database is out of sync. Reindex required. Please report this is to development team masternode name: %s, txhash : %s",__func__, update_masternode.strName, tx.GetHash().GetHex());
-                    strError = "failed to get verifier string from a restricted masternode, database is out of sync. Reindex required. Please report this is to development team";
-                    return false;
-                }
-            } else {
-                if (!ContextualCheckVerifierString(masternodeCache, new_verifier.verifier_string, strAddress, strError))
-                    return false;
-            }
-        }
-    }
-
-
     return true;
 }
 
@@ -3978,7 +2868,7 @@ bool ContextualCheckUpdateMasterNode(CMasterNodesCache* masternodeCache, const C
             return false;
         }
 
-        if (!prev_masternode.nReissuable) {
+        if (!prev_masternode.nUpdatable) {
             // Check to make sure the masternode can be updated
             strError = _("Unable to update masternode: reissuable is set to false");
             return false;
@@ -4015,34 +2905,6 @@ bool ContextualCheckUpdateMasterNode(CMasterNodesCache* masternodeCache, const C
     return true;
 }
 
-bool ContextualCheckUniqueMasterNodeTx(CMasterNodesCache* masternodeCache, std::string& strError, const CTransaction& tx)
-{
-    for (auto out : tx.vout)
-    {
-        if (IsScriptNewUniqueMasterNode(out.scriptPubKey))
-        {
-            CNewMasterNode masternode;
-            std::string strAddress;
-            if (!MasterNodeFromScript(out.scriptPubKey, masternode, strAddress)) {
-                strError = "bad-txns-create-unique-serialization-failed";
-                return false;
-            }
-
-            if (!ContextualCheckUniqueMasterNode(masternodeCache, masternode, strError))
-                return false;
-        }
-    }
-
-    return true;
-}
-
-bool ContextualCheckUniqueMasterNode(CMasterNodesCache* masternodeCache, const CNewMasterNode& unique_masternode, std::string& strError)
-{
-    if (!ContextualCheckNewMasterNode(masternodeCache, unique_masternode, strError))
-        return false;
-
-    return true;
-}
 
 std::string GetUserErrorString(const ErrorReport& report)
 {

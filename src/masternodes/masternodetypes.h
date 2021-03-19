@@ -89,7 +89,7 @@ public:
     std::string strName; // MAX 31 Bytes
     CAmount nAmount;     // 8 Bytes
     int8_t units;        // 1 Byte
-    int8_t nReissuable;  // 1 Byte
+    int8_t nUpdatable;  // 1 Byte
     int8_t nHasIPFS;     // 1 Byte
     std::string strIPFSHash; // MAX 40 Bytes
 
@@ -98,7 +98,7 @@ public:
         SetNull();
     }
 
-    CNewMasterNode(const std::string& strName, const CAmount& nAmount, const int& units, const int& nReissuable, const int& nHasIPFS, const std::string& strIPFSHash);
+    CNewMasterNode(const std::string& strName, const CAmount& nAmount, const int& units, const int& nUpdatable, const int& nHasIPFS, const std::string& strIPFSHash);
     CNewMasterNode(const std::string& strName, const CAmount& nAmount);
 
     CNewMasterNode(const CNewMasterNode& masternode);
@@ -109,7 +109,7 @@ public:
         strName= "";
         nAmount = 0;
         units = int8_t(MAX_UNIT);
-        nReissuable = int8_t(0);
+        nUpdatable = int8_t(0);
         nHasIPFS = int8_t(0);
         strIPFSHash = "";
     }
@@ -128,7 +128,7 @@ public:
         READWRITE(strName);
         READWRITE(nAmount);
         READWRITE(units);
-        READWRITE(nReissuable);
+        READWRITE(nUpdatable);
         READWRITE(nHasIPFS);
         if (nHasIPFS == 1) {
             ReadWriteMasterNodeHash(s, ser_action, strIPFSHash);
@@ -228,7 +228,7 @@ public:
     std::string strName;
     CAmount nAmount;
     int8_t nUnits;
-    int8_t nReissuable;
+    int8_t nUpdatable;
     std::string strIPFSHash;
 
     CUpdateMasterNode()
@@ -241,7 +241,7 @@ public:
         nAmount = 0;
         strName = "";
         nUnits = 0;
-        nReissuable = 1;
+        nUpdatable = 1;
         strIPFSHash = "";
     }
 
@@ -253,11 +253,11 @@ public:
         READWRITE(strName);
         READWRITE(nAmount);
         READWRITE(nUnits);
-        READWRITE(nReissuable);
+        READWRITE(nUpdatable);
         ReadWriteMasterNodeHash(s, ser_action, strIPFSHash);
     }
 
-    CUpdateMasterNode(const std::string& strMasterNodeName, const CAmount& nAmount, const int& nUnits, const int& nReissuable, const std::string& strIPFSHash);
+    CUpdateMasterNode(const std::string& strMasterNodeName, const CAmount& nAmount, const int& nUnits, const int& nUpdatable, const std::string& strIPFSHash);
     void ConstructTransaction(CScript& script) const;
     bool IsNull() const;
 };
