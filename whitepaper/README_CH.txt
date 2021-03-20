@@ -1,9 +1,14 @@
-Hivecoin: A Peer to Peer Electronic System Integrating Simplified Smart Contracts
+<h1 align="center">
+  Hivecoin: A Peer to Peer Electronic System Integrating Simplified Smart Contracts<br>
+</h1>
 
+
+<p align="center">
 Jiyun Wang<br>
 Zhen Liu<br>
-http://www.Hivecoin.org<br>
+http://www.hivecoin.org<br>
 5 March 2021
+</p>
 
 感谢Bitcoin＆Ravencoin的创始人和开发人员。 Hivecoin项目是在Bitcoin和Ravencoin开发人员的辛勤工作和不懈努力的基础上启动的，Hivecoin继承了前辈们大量的代码和文献，并且永远感谢Bitcoin＆Ravencoin在建立虚拟货币和区块链开发方面所做的努力和贡献。
 
