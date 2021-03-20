@@ -69,7 +69,7 @@ public:
     // Write to database functions
     bool WriteMasterNodeData(const CNewMasterNode& masternode, const int nHeight, const uint256& blockHash);
     bool WriteMasterNodeAddressQuantity(const std::string& masternodeName, const std::string& address, const CAmount& quantity);
-    bool WriteAddressMasterNodeQuantity( const std::string& address, const std::string& masternodeName, const CAmount& quantity);
+    bool WriteAddressMasterNodeQuantity(const std::string& address, const std::string& masternodeName, const CAmount& quantity);
     bool WriteBlockUndoMasterNodeData(const uint256& blockhash, const std::vector<std::pair<std::string, CBlockMasterNodeUndo> >& masternodeUndoData);
     bool WriteUpdatedMempoolState();
 
