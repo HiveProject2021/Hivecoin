@@ -333,7 +333,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1619992818; // 2021-05-03 06:00:18
+        nKAAAWWWPOWActivationTime = 1613692800; // 2021-05-03 06:00:18
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
@@ -555,7 +555,7 @@ public:
         nMessagingActivationBlock = 3000; // Messaging activated block height
         nRestrictedActivationBlock = 3000; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1619992818; // 2021-05-03 06:00:18
+        nKAAAWWWPOWActivationTime = 1613692800; // 2021-05-03 06:00:18
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
