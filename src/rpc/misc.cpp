@@ -219,6 +219,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	//1 use command 'hived -daemon=0', do not use command hived -daemon
 	//2 'hive-cli validateaddress HSFs8aqGLDbYk242PQiv5oguQL5Tqk5d' in other console window.
 	//In step 1 command window will to calculate the suitable prefix address for burn address.
+	/*
 	const char *base58chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 	std::string address_char_1,address_char_2,address_char_3,address_char_4,address_char_5,address_char_6;
 	std::string address_dest;
@@ -350,7 +351,8 @@ UniValue validateaddress(const JSONRPCRequest& request)
 			}
 		}
 	}
-	//HVN START FOR LOOKING FOR BURN ADDRESS -- BEGIN
+	//HVN START FOR LOOKING FOR BURN ADDRESS -- END
+	*/
 	//#################################################################
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
