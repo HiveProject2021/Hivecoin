@@ -177,28 +177,36 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     CMutableTransaction coinbaseTx;
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
-	//vout
-	CAmount nSubsidy 					= GetBlockSubsidy(nHeight, chainparams.GetConsensus());
-	CAmount nCommunityAutonomousAmount 	= GetParams().CommunityAutonomousAmount();
 	
-    coinbaseTx.vout.resize(2);
-	//Miner Assign 45%. if no master node will be assign 90%
-    coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
+	//vout	
+	CAmount nSubsidy 					= GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+    coinbaseTx.vout.resize(1);
+    coinbaseTx.vout[0].scriptPubKey 	= scriptPubKeyIn;
 	//Note:The division sign can only be written to the end
-    coinbaseTx.vout[0].nValue = nFees + ( (100-nCommunityAutonomousAmount) * nSubsidy / 100 );
+    coinbaseTx.vout[0].nValue = nFees + nSubsidy;
+	
+	//vout	
+	//CAmount nSubsidy 					= GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+	//CAmount nCommunityAutonomousAmount 	= GetParams().CommunityAutonomousAmount();
+	
+    //coinbaseTx.vout.resize(2);
+	//Miner Assign 45%. if no master node will be assign 90%
+    //coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
+	//Note:The division sign can only be written to the end
+    //coinbaseTx.vout[0].nValue = nFees + ( (100-nCommunityAutonomousAmount) * nSubsidy / 100 );
 	
 	//CommunityAutonomousAddress Assign 10%
-	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
-	CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
-    if (!IsValidDestination(destCommunityAutonomous)) {
-		LogPrintf("IsValidDestination: Invalid Hive address", GetCommunityAutonomousAddress);
-    }
+	//std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
+	//CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
+    //if (!IsValidDestination(destCommunityAutonomous)) {
+	//	LogPrintf("IsValidDestination: Invalid Hive address", GetCommunityAutonomousAddress);
+    //}
 	// Parse Hive address
-    CScript scriptPubKeyCommunityAutonomous = GetScriptForDestination(destCommunityAutonomous);
+    //CScript scriptPubKeyCommunityAutonomous = GetScriptForDestination(destCommunityAutonomous);
 	
-    coinbaseTx.vout[1].scriptPubKey = scriptPubKeyCommunityAutonomous;
+    //coinbaseTx.vout[1].scriptPubKey = scriptPubKeyCommunityAutonomous;
 	//Note:The division sign can only be written to the end
-    coinbaseTx.vout[1].nValue = nSubsidy*nCommunityAutonomousAmount/100;
+    //coinbaseTx.vout[1].nValue = nSubsidy*nCommunityAutonomousAmount/100;
 	
 	LogPrintf("nSubsidy: ====================================================\n");
 	LogPrintf("Miner: %ld \n", coinbaseTx.vout[0].nValue);
