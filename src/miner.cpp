@@ -204,9 +204,9 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 	LogPrintf("Miner: %ld \n", coinbaseTx.vout[0].nValue);
 	LogPrintf("scriptPubKeyIn: %s \n", HexStr(scriptPubKeyIn));
 	
-	//LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
-	//LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
-	//LogPrintf("nCommunityAutonomousAmount: %ld \n", coinbaseTx.vout[1].nValue);
+	LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
+	LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
+	LogPrintf("nCommunityAutonomousAmount: %ld \n", coinbaseTx.vout[1].nValue);
 	
 	//scriptSig
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
