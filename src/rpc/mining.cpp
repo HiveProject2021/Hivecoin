@@ -690,7 +690,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
     result.push_back(Pair("transactions", transactions));
     result.push_back(Pair("coinbaseaux", aux));
     result.push_back(Pair("coinbasevalue", (int64_t)pblock->vtx[0]->vout[0].nValue));
-    result.push_back(Pair("CommunityAutonomousAddress", GetParams().CommunityAutonomousAddress() ));
+    result.push_back(Pair("CommunityAutonomousAddress", GetParams().CommunityAutonomousAddress()));
     result.push_back(Pair("CommunityAutonomousValue", (int64_t)pblock->vtx[0]->vout[1].nValue) );
     result.push_back(Pair("longpollid", chainActive.Tip()->GetBlockHash().GetHex() + i64tostr(nTransactionsUpdatedLast)));
     result.push_back(Pair("target", hashTarget.GetHex()));
