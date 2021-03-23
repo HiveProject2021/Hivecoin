@@ -4008,7 +4008,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, const Consensus::P
 	// HVN START
 	// check the coinbase tx 
 	if(block.vtx[0]->IsCoinBase())					{
-		CAmount nSubsidy 					= GetBlockSubsidy(block.height, chainparams.GetConsensus());
+		CAmount nSubsidy 					= GetBlockSubsidy(block.nHeight, chainparams.GetConsensus());
 		CAmount nCommunityAutonomousAmount 	= GetParams().CommunityAutonomousAmount();
 		if(block.vtx[0]->vout[1].nValue != (nSubsidy*nCommunityAutonomousAmount/100) )		{
 			return state.DoS(100, false, REJECT_INVALID, "bad-coinbase-ca-amount", false, "nCommunityAutonomousAmount is not 10% of coinbase");
