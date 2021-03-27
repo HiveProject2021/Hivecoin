@@ -1,13 +1,18 @@
-Hivecoin: A Peer to Peer Electronic System Integrating Simplified Smart Contracts
+<h1 align="center">
+  Hivecoin: A Peer to Peer Electronic System Integrating Simplified Smart Contracts<br>
+</h1>
 
+
+<p align="center">
 Jiyun Wang<br>
 Zhen Liu<br>
-http://www.Hivecoin.org<br>
+http://www.hivecoin.org<br>
 5 March 2021
+</p>
 
 致敬Bitcoin和Ravencoin的創始人及歷年在Bitcoin和Ravencoin領域上辛勤工作、不懈努力開發人員，同時誠致感謝Bitcoin和Ravencoin在建立虛擬貨幣和區塊鏈開發方面所做的努力和貢獻。由於前輩們積年累月的大量代碼和研究成果的領航，才造就今日Hivecoin的誕生。
 
-> **摘要**。 Hivecoin是一個集成簡化版智能合約的區塊鏈平台，基於對比特幣協議的UTXO模型廣泛開發和測試，並建立在Ravencoin和比特幣代碼分支的基礎上。Hivecoin創建一個簡化版本的智能合約模塊，利用這個智能合約模塊，實現資產創建、資產交易、資產抵押、社區自治、主結點網路、預算審核及DEFI等功能。 Hivecoin是免費和開放資料源。Hivecoin使用工作量證明（POW）和服務證明（POSE）相結合的方式；使用為抵制ASC礦工而創建的KAWPOW算法，公開透明地開採45％的Hivecoin（HVN），其他45％的HVN分配給所有Hivecoin的主節點（需要抵押1,000,000 HVN），剩餘的10％主要分配給為Hivecoin社區生態環境的貢獻者。 
+> **摘要** Hivecoin是一個集成簡化版智能合約的區塊鏈平台，基於對比特幣協議的UTXO模型廣泛開發和測試，並建立在Ravencoin和比特幣代碼分支的基礎上。Hivecoin創建一個簡化版本的智能合約模塊，利用這個智能合約模塊，實現資產創建、資產交易、資產抵押、社區自治、主結點網路、預算審核及DEFI等功能。 Hivecoin是免費和開放資料源。Hivecoin使用工作量證明（POW）和服務證明（POSE）相結合的方式；使用為抵制ASC礦工而創建的KAWPOW算法，公開透明地開採45％的Hivecoin（HVN），其他45％的HVN分配給所有Hivecoin的主節點（需要抵押1,000,000 HVN），剩餘的10％主要分配給為Hivecoin社區生態環境的貢獻者。 
 
 ## 1 簡介
 
@@ -33,7 +38,7 @@ Hivecoin在第一層礦工網路的基礎上面，構建第二層網路-主結�
 
 資產可以由使用Hive協議的用戶發行，也可以由用戶抵押Hive資產發行。這些資產存在於Hivecoin區塊鏈上，創建者決定資產的名稱、面額及目的。資產是可以自由轉移到任何Hivecoin地址。使用Hive協議創建的資產具有多個優點：(1) 易於使用 (2) 與本機硬幣緊密集成 (3) 受POW和POSE雙重保護 (4) 受廣泛的社區自治組織支援。
 
-資產的發行方將銷毀500HVN，並且必須提供唯一的資產名稱。發行方確認發行數量、小數位數，以及將來是否允許它們發行更多相同的代幣。
+資產的發行方將耗用500HVN，並且必須提供唯一的資產名稱。發行方確認發行數量、小數位數，以及將來是否允許它們發行更多相同的代幣。
 
 資產主要分為：主資產、子資產、唯一性資產，和限制性資產等。
 
@@ -59,7 +64,7 @@ Hivecoin包含二層網路，第一層為礦工構成網路，為用戶提供資
 
 ## 7 Conclusion 結論 
 
-Hivecoin建立在Ravencoin和比特幣代碼的分支基礎上，創建了一個簡化版本的智能合約模塊，實現了資產創建，資產交易，資產抵押，社區自治，主結點網絡，預算審核，DEFI等功能。 Hivecoin使用工作量證明（POW）和服務證明（POSE）相結合的方式；45％的Hivecoin（HVN）分配給礦工，45％分配給所有Hivecoin的主節點，剩餘的10％分配給為Hivecoin社區生態環境做出貢獻的參與者。 Hivecoin秉承開放和開源的精神，鼓勵社會各界人士一起協作,共同促進Hivecoin發展。
+Hivecoin建立在Ravencoin和比特幣代碼的分支基礎上，創建一個簡化版本的智能合約模塊，實現了資產創建、資產交易、資產抵押、社區自治、主結點網路、預算審核、DEFI等功能。 Hivecoin使用工作量證明（POW）和服務證明（POSE）相結合的方式；45％的Hivecoin（HVN）分配給礦工，45％分配給所有Hivecoin的主節點，剩餘的10％分配給為Hivecoin社區生態環境做出貢獻的參與者。Hivecoin秉承開放和開源的精神，鼓勵社會各界人士一起協作，共同促進Hivecoin發展。
 
 再次感謝比特幣和Ravencoin的開發人員！
 

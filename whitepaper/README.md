@@ -9,192 +9,69 @@ Zhen Liu<br>
 http://www.hivecoin.org<br>
 5 March 2021
 </p>
-Thank you to the Bitcoin & Ravencoin founder and developers. The Hivecoin project is launched based on the hard work and continuous effort of Bitcoin & Ravencoin developers, who made over 14,000 commits over the life to date of the Bitcoin and Ravencoin project. We are eternally grateful to you for your efforts and diligence in making a secure network and supporting free and open-source software development.  The Hivecoin experiment is made on the foundation you built.
 
-> **Abstract**. Hivecoin is a blockchain and platform optimized for a simplified smart contract, such as creating assets, trading assets, mortgage assets, community autonomy, etc. Based on the extensive development and testing of the Bitcoin protocol's UTXO model, Hivecoin is built on a fork of the Ravencoin & Bitcoin code. The key change is the addition of a simplified version of the smart contract platform for asset, voting, mortgaging, and decentralized finance. Hivecoin is free and open source. 45% of Hivecoin (HVN) are fairly issued and mined publicly and transparently using Proof of Work (POW) using the KAWPOW algorithm which was created for resistance to ASC miners. The other 45% of Hivecoin (HVN) is allocated to all Hivecoin master nodes, which is required to mortgage 1000,000 HVN to become a master node. The remaining 10% is mainly used to establish a healthy and complete Hivecoin community ecological environment to achieve a certain degree of community autonomy. Hivecoin is intended to prioritize security, user control, privacy, and censorship resistance. It is open to use and development in any jurisdiction while allowing users' simple additional features based on need.
+We tribute to Bitcoin and Ravencoin founders and hard-work developers in these areas over the years. At the same time, we sincerely thank Bitcoin and Ravencoin for their efforts and contributions in establishing virtual currencies and blockchain development. Appreciate the valued code and research results of the predecessors, Hivecoin is created by standing on the shoulders of giants.
 
-## 1. Introduction
 
-A blockchain is a ledger showing the quantity of something controlled by a user. It enables one to transfer control of that digital representation to someone else. Of the many possible uses for blockchain technology, reporting who owns what is one of its core functions. This is likely why the first, and to date, most successful, use case for blockchain technology has been Bitcoin, which Satoshi Nakamoto announced on October 31, 2008[1].
+> **Abstract** Hivecoin is a blockchain platform that integrates simplified smart contracts. According to the Bitcoin protocol's UTXO model to develop and test,  and based on Ravencoin and the Bitcoin code branch to create. Hivecoin creates a simplified version of the smart contract module and uses it to implement asset creation, asset trading, asset mortgage, community autonomy, master node network, budget review, and DEFI. Hivecoin is free and open-source of information. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); uses the KAWPOW algorithm created to resist ASC miners. Openly and on the up and up mines 45% of Hivecoin (HVN) and distributes the other 45% of HVN to all the master node of Hivecoin (Mortgage 1,000,000 HVN requested), and the remaining 10% is mainly distributed to contributors to the Hivecoin community. 
 
+## 1 Introduction
 
-The Ethereum ERC20, ERC223, and ERC721 protocols and other projects show tokenized assets that use another blockchain can be created with a wide variety of purposes and structures. Tokens offer several advantages to traditional shares or other participation mechanisms, e.g. faster transfer speed, increased user control and censorship resistance, and a reduction or elimination of the need for a trusted third party.
+On November 1, 2008, Satoshi Nakamoto published the Bitcoin white paper "Bitcoin: A Peer-to-Peer Electronic Cash System" on the P2P Foundation website, stating his new vision for electronic money--Bitcoin was available. On January 3, 2009, the Bitcoin genesis block was born.
 
-Bitcoin also can act as a token by using projects such as Omnilayer, RSK or Counterparty. However, neither Bitcoin nor Ethereum is specifically designed to promote other assets' ownership, and users and development teams usually prioritize other functions.
+However, the Bitcoin protocol has a lack of scalability. For example, there is only one symbol in the Bitcoin network-Bitcoin, which means users cannot customize symbols. These symbols can represent company stocks or debt certificates, and so on. Some functions are lost. Ethereum can solve the problem of insufficient scalability of the Bitcoin protocol.
 
-Hivecoin has created a simplified version of smart contracts, which makes it easier to write smart contracts. Many additional restrictions have been added because of the simplified smart contracts, which makes smart contracts more secure. For example, assets. Issuance, transaction, mortgage, and how to distribute the generated interest will become very simple. One of the Hive protocol goals is to create a use case-centric blockchain and development work that can create code to provide advantages for specific use cases and contribute to open source code that Bitcoin or other projects can use.
+Ethereum ERC20, ERC223, and ERC721 protocols and other projects show that can use another blockchain to create tokenized assets in various ways and structures. Tokens provide some advantages for traditional stocks or other participation mechanisms, such as faster transmission speeds, enhanced user control and censorship, and reducing or eliminating the requirement for trusted third parties.
 
-If the global economy is affected by participants using various blockchains, today's capital markets may also change. As more assets become more tradable and cross-border trade continues to grow, borders and jurisdictions may become less critical.
 
-## 2. Background Tokens and Other Assets
+Even so, the Bitcoin network still has many supporters. To solve asset creation and transmission issues, the Ravencoin team implemented an asset management function based on the Bitcoin network. To enhance  Ravencoin processes, the Hivecoin team adds master knots, mortgage assets, community autonomy and improves voting and messaging functions.
 
-On January 3, 2009, Bitcoin was launched as a peer-to-peer electronic cash system. Years later, after reaching a significant level of security, people realized that assets can be "created" on top of the "Bitcoin" blockchain or embedded in the Bitcoin blockchain. By creating a secure, signed, immutable Bitcoin transaction, new assets can be added to the Bitcoin blockchain, which also carries information about asset issuance and transfer.
+Hivecoin created a more accessible simplified version of smart contracts for users because of the above reasons. Also, configure additional network security mechanisms, which makes smart contracts more secure. For example, asset issuance, transaction, mortgage, and distributing the interest generated will become convenient.
 
-Several projects have added tokens to the Bitcoin blockchain. First is JR Willett's Mastercoin [2], followed by Counterparty [3] and other projects. A type of protocol developed to facilitate the creation of assets on the Bitcoin blockchain is called colored coins [4], because they mark Bitcoin transactions with special transactions in OP_RETURN [5], just like in the Bitcoin protocol The comment field is the same.
 
-The advantage of embedding assets in the Bitcoin blockchain is a high degree of security. Many people believe that Bitcoin is the most secure blockchain because of the large amount of distributed mining capabilities that can protect each block through "highly difficult hashing" [6]. Since distributed Bitcoin nodes recognize the level of work required to create difficult hashes, it is almost impossible to rewrite or modify the blockchain without the prohibitively high mining investment. To tamper with the Bitcoin blockchain and rewrite or modify its ledger will require a huge effort by investors at a nation-state level.
+## 2 Hivecoin Launch and Algorithm
 
-The disadvantage of adding smart contracts to the Bitcoin blockchain is that the Bitcoin rules are originally written must be followed, and Bitcoin nodes do not know that the smart contract is being embedded. This means that Bitcoin transactions must be used for every smart contract, and It must send enough bitcoins to be considered a valid transaction, even if the main purpose of the transaction is to send assets. This is very inconvenient, but the main disadvantage is that the bitcoins are spent without knowing the operation of the embedded smart contract Bitcoin customers of Bitcoin may destroy the asset. For example, a private key holder of Bitcoin holding assets in a smart contract may accidentally send the Bitcoin to an exchange or wallet and lose these assets. Part of the solution to this problem is to create a special address format for assets in smart contracts, but it does not prevent errors that may destroy assets. It just provides more clues, indicating that assets are embedded in transactions in smart contracts.
+Hivecoin was released on March 5, 2021, and the binary file for mining was on April 1, 2021. Hivecoin is a system similar to Bitcoin that will allow users to manage assets, create smart contracts, and integrate them into its blockchain. Hivecoin uses a new mining algorithm developed by Ravencoin developers, KAWPOW, to create a platform similar to Bitcoin to prevent ASC mining pools from dominating. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE). Using the KAWPOW algorithm, 45% of Hivecoin (HVN) is mined openly and on the up and up.
 
-Other token standards (such as ERC20, ERC721, and ERC223) are built on Ethereum or other blockchains that support smart contracts. There is another problem when using these smart contracts. Since the Ethereum network itself cannot recognize these smart contract tokens, it currently cannot prevent certain common problems. Smart contracts may confuse users because there may be multiple ERC20 tokens with the same name. The only difference between contracts with the same contract is the hash of the contract.
+Hivecoin builds a second-layer network based on the first-layer miner network, the master node network, similar to DASH. The master node (also known as the full node) supports the second layer of the network, which provides exceptional performance support for Hivecoin. The master node does not participate in mining activities. It has instant transaction functions, decentralized management, and budget decision-making so that the master node will receive 45% of the block reward. The remaining 10% for establishing a healthy and complete Hivecoin community; the distribution, according to the master node voting to fund projects that contribute to the entire Hivecoin network.
 
-## 3. Full Asset Aware Protocol Level System
+## 3 Asset Issuance and Trading
 
-The solution is to create a Bitcoin-like system that fully understands the assets. An asset-aware system has two main advantages. First, it allows clients and RPC commands to manage assets and protect assets from accidental destruction. Second, it allows a single native client or mobile wallet to issue, track and transfer assets. Finally, in order to provide asset security, a strong mining community and widely distributed master nodes are needed as a guarantee.
-  
-**Assets**  
-Assets can be issued by users of the Hive protocol or generated by Hive asset mortgages, rather than generated by mining. The Hive protocol users create these assets and determine their purpose and rules independently of the protocol. These assets or tokens exist on the Hivecoin blockchain and can be any name, denomination, or purpose chosen by the creator of each asset, coin, or token. Tokens are transferable and are as easy to move as Bitcoin or other cryptocurrencies with similar functions. In Hivecoin, assets are only a limited number of unique symbols and can be transferred to any Hivecoin address. Assets created using the Hive protocol have multiple advantages: easy to use, tightly integrated with native coins, and protected by fair POW and POS, and open-source codes run by decentralized autonomous organizations.
+On January 3, 2009, Bitcoin was launched as a peer-to-peer electronic cash system. After many years of reaching a high-security level, people realized that it is possible to "create" assets on the "Bitcoin" blockchain or embed assets in the Bitcoin blockchain. By creating a Bitcoin transaction digital signature, asset issuance and transaction information can be added to the Bitcoin blockchain. In this way, assets can obtain natural security on the Bitcoin blockchain, but they must also follow the original Bitcoin UXTO model writing rules. The asset system provides both client and RPC commands to protect assets from accidental or deliberate destruction.
 
-**Uses for Assets**  
-Assets or tokens can be used for anything the creator's imagination can think of. The idea presented here is an example.
+Users who use the Hive protocol or pledge Hive assets can issue assets. These assets exist on the Hivecoin blockchain, and the creator decides the name, denomination, and purpose of the assets. Assets can be freely transferred to any Hivecoin address. Assets created using the Hive protocol have several advantages: (1) Easy to use (2) Closely integrated with native coins (3) Double protection by POW and POSE (4) Supported by a wide range of autonomous community organizations.
 
-**Representing real-world physical or digital assets to tokens**
-* Gold bars
-* Copyright Information
-* Medical information
-* Educational information
-* Logistics information
+The issuer of the asset will burn 500 HVN and must provide a unique asset name. The issuer confirms the quantity to be issued, the number of decimal places, and whether they will be allowed to publish more of the same tokens in the future.
 
+Assets are mainly including main assets, sub-assets, unique assets, and restricted assets.
 
-## 4. Hivecoin Launch and Algorithm
+## 4 Simplified Smart Contract
 
-Hivecoin was announced on March 5, 2021[7] and released binaries for mining on April 1, 2021,[8], the respective ninth anniversary of the announcement and launch of Bitcoin. Hivecoin is a bitcoin-like system that will allow users to issue and integrate assets into its blockchain. This will be accomplished in phases that build upon each other.
+Hivecoin has established a simplified virtual machine that can implement smart contracts based on Bitcoin encoding and transaction rules. Typically, users only need to set some simple command codes to create a contract. For example, use for mortgage HVN to generate interest or the master node votes to decide when to start the budget.
 
-\- In progress
+The advantage of the simplified smart contract is that it is easy to use and operate, safe and concise. The disadvantage is that it can only implement certain built-in functions of the system, and the parts are not as powerful as the ETH smart contract.
 
-Create a platform like Bitcoin with a new mining algorithm, KAWPOW[9], invented by the Ravencoin developers, intended to prevent immediate dominance by mining pools and future authority by ASIC mining equipment.
+Hivecoin implements asset management, interest generation from mortgage assets, master node voting, and community autonomy, thereby supporting community autonomy and decentralized finance.
 
-Launch the token with no pre-mine and a fair launch to widely distribute the tokens.
+## 5 Master node system
+ 
+The master node system is also called Proof of Service (PoSe) because the essence of the master node is to provide critical services for the entire Hivecoin network. The master nodes supervise the whole Hivecoin network and have the right to reject unqualified blocks created by miners. If a miner tries to take possession of all block rewards or run an old version of Hivecoin software, the master node network will quarantine the block and prevent it from being added to the blockchain.
 
-Allow the mining rate to increase and the value of the HVN token to naturally grow and gradually disburse to holders that understand the value of the platform.
+Hivecoin includes a two-layer network. The first layer constitutes a network for miners to provide users with funds sending and receiving services and prevent double-spending. The miner network's block reward is 45%; the second layer constitutes the network as the master node and provides support for the unique performance of Hivecoin. The master node does not participate in mining activities, and the block reward of the master node network is 45%. To become a master node, users must have 1,000,000 HVN as a "margin." The deposit is always fully controlled by the holder, and the holder can freely transfer it. After moving the deposit, the corresponding master node will go offline and stop receiving block rewards.
 
-Utilize proof of work mining, not because it burns a scarce resource of electricity or the requirement of computer hardware, but instead focuses on the most valuable part of the "work", which is building an ever-larger and time-based wall that protects user data from future tampering and censorship with every new layer.
+## 6 Decentralized Budget Management System
 
-Using proof of service, Hivecoin builds a second-level network based on the first-level miner network, which is similar to DASH. The second layer of the network is supported by the master node (also known as the full node), which provides Hivecoin with unique performance support. The master nodes do not participate in mining activities, so they have instant transactions, decentralized management, and budget proposals.  Because the second level is essential, the master node will get part of the block reward. Specifically, the division of block rewards is as follows:45% is allocated to miners.45% is allocated to master node holders.The remaining 10% is allocated to the budget proposal system.
+In the decentralized budget management system, some rewards are managed by the network itself and are developed and expanded in the ecosystem in the name of the operator based on the voting status of the master nodes in different budget proposals. These funds are used to support the development and promotion of Hivecoin. The master node votes on specific budgets and projects that need to determine the direction of Hivecoin. This process is completed with openness and transparency way through the website. The funding can be used for anything that creates value in the ecosystem, including but not limited to core code development and maintenance, website construction, document writing, translation, video production, community promotion, and advertisements.
 
+This system is decentralized, fully controlled by the master node. The budget in the system is directly set and paid by the blockchain. People work for the network through voting by all master nodes and get direct rewards from the network. If the budget is approved for the project, it will be added to the total budget and paid directly from the blockchain to contributors. This mechanism allows Hivecoin to hire all types of employees and make payments. The system usually conducts project voting and fee settlement monthly. If there is a balance, it will directly fund the core developers of Hivecoin.
 
-## 5. Simplified Smart Contract
 
-Hivecoin has established a set of simplified virtual machines, which can implement smart contracts based on Bitcoin encoding and transaction rules. Under normal circumstances, users only need to set a few simple command codes to create contracts. For example, the HVN is mortgaged for interest generation, and the master node votes to decide when to start the budget. 
+## 7 Conclusion
 
-The advantages of the simplified version of the smart contract are that users are simple to use, easy to operate, safe, and concise. The disadvantage is that it can only implement some of the system's built-in functions and is not as powerful as the ETH smart contract. 
+Hivecoin is based on a large amount of Ravencoin and Bitcoin code to create a simplified version of the smart contract module. Implement asset creation, asset transaction, asset mortgage, community autonomy, master node network, budget review, DEFI, and other functions. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); 45% of Hivecoin (HVN) is allocated to miners, 45% is allocated to all Hivecoin master nodes, and the remaining 10% is allocated to the Hivecoin community ecology Participants who contribute to the environment. Hivecoin adheres to the spirit of openness and open-source and encourages people from all walks of life to work together to promote the development of Hivecoin.
 
-However, Hivecoin realizes asset creation, mortgage interest, master node voting, community autonomy, and other features, supporting decentralized management and decentralized finance.
-
-## 6. Master node system
-
-The master node system is also called proof of service (PoSe), because the essence of the master node is to provide key services for the network. The entire Hivecoin network is supervised by master nodes, who have the right to reject unqualified blocks created by miners. If miners try to take possession of all the block rewards or run the old version of the Hivecoin software, the master node network will isolate the block and prevent it from being added to the blockchain.
-
-In short, miners form the first level of the network, providing users with funds sending and receiving services and preventing double-spending payments. The block reward of the miner network is 45%. The master node constitutes the second level of the network and provides support for Hivecoin's outstanding performance. The master node does not participate in mining activities, so the mining equipment cannot act as the master node, and the block reward of the master node network is 45%. To hold the master node, the user must have 1000000HVN as a "margin". This deposit is always in the holder's full control and can be freely controlled by the holder. Once the deposit is transferred or paid, the corresponding master node will go offline and stop receiving blockchain rewards.
-
-## 7. Decentralized budget management
-In a decentralized budget management system, part of the block reward is managed by the network itself, and is implemented in the development and expansion of the ecosystem in the name of the operator according to the voting status of the master nodes in different budget proposals. These funds are directly used to support the development and promotion of Hivecoin. The master node operator votes on specific budgets and projects that need to be funded to determine the direction of Hivecoin. The process is completed in a completely transparent manner through a public portal, where new proposals are proposed, and the master node can vote on them. The budget can be used for anything that creates value in the ecosystem.
-
-This is a decentralized system that is 100% dominated by the master node. The budget in the system is directly set and paid by the blockchain. In this way, the blockchain employs core developers and introduces a new concept of paid blockchain contractors, where people work for the network through decentralized voting by all master nodes and are directly rewarded by the network. One advantage of this model is that it can survive early adopters. If the early master node operators sell their Dash, the new owner can set up a master node and thus obtain voting rights on budgets and projects. This ensures that there is a maintenance working system when people come and go, enabling the network to independently maintain itself without relying on specific actors. For each project, if the budget is approved, it will be added to the total budget and paid directly from the blockchain to the staff. This allows Hivecoin to hire core developers and pay them now after approving the work in a decentralized manner.
-
-## 8. Asset Issuance & Transfer
-
-The token name is unique. Whoever creates it first belongs to whoever owns it.
-
-The issuer of the token will burn 500 HVN and must provide a unique token name. The issuer determines the number of issuances, the number of decimal places and whether they will be allowed to issue more of the same tokens in the future.
-
-It is allowed to issue other tokens using methods similar to Mastercoin, Counterparty or CoinSpark [10].
-
-Tightly integrate assets with GUI wallets to provide intuitive asset management. Easily issue new assets, display current balances and transfer to other users.
-
-The combination of open source and cryptocurrency enables benefits to be carried out in ways that cannot be achieved by traditional centralized structures.
-
-Fair and open source cryptocurrency projects can replace bosses, rulers, employees, and company structures with consistent interests and the economic choices of participants.
-
-Therefore, in some cases, whether it is selfless dedication or selfish motivation, for many new and interesting types of projects, open source is a better model than other structures. Hivecoin will allow projects to issue tokens to represent cooperatives, companies or partnerships.
-
-In addition, since the issuer can make the token a unique, restricted or fungible token, the token project manager will be able to have the category of token holders, such as "Class A Shareholders", "Lifetime Social Club Members" ", or "beneficiary".
-
-Tokens make it easier to issue small public offerings.
-
-## 9. Rewards
-
-Allows to pay rewards with native tokens. With a single command, the rewards denominated in HVN will be automatically evenly distributed and sent to the asset holders in proportion.
-
-example:
-For example, a company raises some funds from society and distributes the same amount of SHAREHOLDER tokens to investors. When these funds finally generate income and need to pay dividends to shareholders, it can pass an order to reduce the profits (with HVN may have Any value of) is sent to SHAREHOLDER token holders. The ease of use of the built-in GUI wallet should allow anyone anywhere in the world to operate on a mobile phone or computer running Windows, Mac, or Linux.
-
-## 10. Unique Tokens
-
-Unique tokens allow token holders to create unique assets. Like the ERC721 token, the unique token is guaranteed to be unique, and there will only be one. The unique token can change ownership by sending the unique token to another user's address.
-
-Some examples of unique tokens:
-
-*Software developers can use the name of their software ICAMPUS to issue assets, and then assign a unique ID or license key to each ICAMPUS token. Game tokens can be transferred as a license transfer. Each token IAMPUS: 202131 and IAMPUS: 202132 is a unique token.
-
-*Unique assets based on HVN can be tied to real-world assets. Create an asset named ASSET_NAME. Each gold coin or gold bar in the vault can be serialized and reviewed. You can create associated unique assets ASSET_NAME: 444322 and ASSET_NAME: 555994 to represent specific assets in the physical vault.
-
-The public nature of the chain allows for complete transparency.
-
-Some use cases for unique assets include:
-
-*Software License
-*Car information registration
-*Student graduation certificate registration
-*Token that allows communication on the channel (see messaging)
-
-## 11. Messaging Stakeholders
-
-A common problem with tokens/assets is that the token issuer cannot communicate with the token holder. This must be handled very carefully, because token holders do not always want to be identified. This communication should allow token holders to withdraw at any time. The mail system should only allow selected parties to use the mail channel so that it does not become a spam channel.
-
-
-The messaging system uses unique tokens to allow communication on the main token channel. For example, the COMPANY token will have a ~COMPANY:Alert token, which allows alerts to be sent to all holders of COMPANY.
-
-Communications, game developers, non-profit organizations, rights organizations, companies, and other entities will be able to issue tokens for specific users and then send messages to those users, but unlike email or other messaging services, messaging itself will only be The token holder activates so that the token can be transferred.
-
-Messages sent by authorized senders to token holders will be layered based on unique assets. The only asset will act as a "talking stick", allowing the channel owner to send messages. The KAAAWWW agreement will be published separately, which contains more detailed information.
-
-## 12. Voting
-
-By using a messaging system, token holders can be notified of voting tokens, and by automatically issuing VOTE tokens to each holder of the token, it can be done automatically from the client or through the web or mobile interface using the protocol vote.
-
-Create a token to represent voting. Hivecoin will create an accurate number of VOTE tokens and distribute them to token holders in a 1:1 ratio. These tickets can be sent by agreement to the address that counts the tickets. Since voting tokens flow in the same way as assets, voting can be delegated-sometimes referred to as representative democracy or liquid democracy [11].
-
-## 13. Privacy
-
-<p align="center"><i>
-It's a community where the threat of violence is impotent because violence is impossible, and violence is impossible because its participants cannot be linked to their true names or physical locations. (Wei Dai)
-</i></p>  
-Privacy is the key to investment and tokens because the financial system functions better when assets are interchangeable and can be traded frictionlessly. As future technology improves, the project should seek to enhance privacy in any way possible.
-
-With the addition of functions such as messages, assets, and rewards, privacy will be protected in the same way that UTXO-based cryptocurrencies separate identities from public addresses.
-
-"Because we desire privacy, we must ensure that each party to a transaction only knows the knowledge directly necessary for the transaction. Since any information can be spoken, we must ensure that as little information as possible is disclosed. In most cases, personal identity is not prominent.
-
-When the basic mechanism of the transaction reveals my identity, I don't have any right to privacy. I cannot show myself selectively here. I must always show myself.
-
-"Therefore, privacy in an open society requires an anonymous transaction system. So far, cash has been such a major system. An anonymous transaction system is not a secret transaction system. Anonymity systems enable individuals to disclose their identities when and only when needed. ; This is the essence of privacy.” (E. Hughes) [12].
-
-## 14. Conclusion
-
-Hivecoin is a platform coin built based on Bitcoin's UTXO [13] model. It is impractical to modify the Bitcoin code to add these features, but Hivecoin is a platform based on code branches and releasing newly mined HVN. Hivecoin will add a simplified version of smart contracts, assets, rewards, unique assets, messaging, voting, and master nodes. The functions of the Hive protocol will be rolled out in phases, and a hard fork upgrade will be carried out as planned. The codebase is designed to allow users and developers to maintain a secure, decentralized, and tamper-proof network.
-
-The Hivecoin project can also be used as a basis and starting point for projects, second-tier solutions, experiments, and business ideas, which may benefit from a Bitcoin-based codebase (with adjustments) or native additional features added to the Hivecoin blockchain.
-
-In open-source, the power of the crowd can do more work than any one person or organization. People from all walks of life are welcome to contribute.
-
-Thank you to the Ravencoin developers again! [14].
+Thanks again to the developers of Bitcoin and Ravencoin!
 
 ---
 
 References
-
-[1] S. Nakamoto, “Bitcoin: A Peer-to-Peer Electronic Cash System https://bitcoin.org/bitcoin.pdf  
-[2] https://bhiveewcoin.com/assets/Whitepapers/2ndBitcoinWhitepaper.pdf  
-[3] https://counterparty.io/  
-[4] https://en.bitcoin.it/wiki/Colored_Coins  
-[5] https://en.bitcoin.it/wiki/OP_RETURN  
-[6] https://bitcoinwisdom.com/bitcoin/difficulty  
-[7] J. Wang, “Hivecoin: A Peer to Peer Electronic System Integrating Simplified Smart Contracts” https://hivecoin.medium.com/hivecoin-a-peer-to-peer-electronic-system-integrating-simplified-smart-contracts-a0ef597afd0f
-[8] https://github.com/HiveProject2021/Hivecoin  
-[9] https://github.com/RavenCommunity/kawpowminer 
-[10] [http://coinspark.org/developers/assets-introduction/](http://coinspark.org/developers/assets-introduction/)  
-[11] https://en.wikipedia.org/wiki/Delegative_democracy  
-[12] E. Hughes https://www.activism.net/cypherpunk/manifesto.html  
-[13] https://bitcoin.org/en/glossary/unspent-transaction-output 
-[14] Ravencoin developers https://ravencoin.org/whitepaper/ 
