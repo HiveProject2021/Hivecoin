@@ -2753,6 +2753,10 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	// Parse Hive address
     CScript scriptPubKeyCommunityAutonomous 	= GetScriptForDestination(destCommunityAutonomous);
 	
+	CAmount nCommunityAutonomousAmount 			= GetParams().CommunityAutonomousAmount();
+	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+	
+	
 	LogPrintf("block.vtx[0]->vout[1].nValue: %ld \n", block.vtx[0]->vout[1].nValue);
 	LogPrintf("nCommunityAutonomousAmount: %ld \n", (nSubsidy*nCommunityAutonomousAmount/100));
 	LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
