@@ -2768,7 +2768,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	LogPrintf("==>nCommunityAutonomousAmountValue: %ld \n", nCommunityAutonomousAmountValue);
 	//LogPrintf("==>block.vtx[0]->vout[1].scriptPubKey: %s \n", block.vtx[0]->vout[1].scriptPubKey[3]);
 	LogPrintf("==>GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
-	LogPrintf("==>scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
+	LogPrintf("==>scriptPubKeyCommunityAutonomous Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
 	/** HVN END */
 	
     if (!control.Wait())
