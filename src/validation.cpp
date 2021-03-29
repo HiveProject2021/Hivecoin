@@ -2757,16 +2757,16 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
 	CAmount nCommunityAutonomousAmountValue		= nSubsidy*nCommunityAutonomousAmount/100;
 	
-	LogPrintf("==>block.vtx[0]->vout[1].nValue: %ld \n", block.vtx[0]->vout[1].nValue);
+	LogPrintf("==>block.vtx[0]->vout[1].nValue:    %ld \n", block.vtx[0]->vout[1].nValue);
 	LogPrintf("==>nCommunityAutonomousAmountValue: %ld \n", nCommunityAutonomousAmountValue);
 	//LogPrintf("==>block.vtx[0]->vout[1].scriptPubKey: %s \n", block.vtx[0]->vout[1].scriptPubKey[3]);
-	LogPrintf("==>GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
-	LogPrintf("==>scriptPubKeyCommunityAutonomous Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
+	LogPrintf("==>GetCommunityAutonomousAddress:   %s \n", GetCommunityAutonomousAddress);
+	LogPrintf("==>scriptPubKeyCommunityAutonomous    Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
 	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
 	//Check 10% Amount
 	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
 		return state.DoS(100,
-                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Not Equal 10% of the Subsidy."),
+                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Invalid. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
                          REJECT_INVALID, "bad-cb-community-autonomous-amount");
 	}
 	//Check 10% Address
