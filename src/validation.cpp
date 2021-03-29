@@ -2743,7 +2743,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",block.vtx[0]->GetValueOut(AreEnforcedValuesDeployed()), blockReward),
                          REJECT_INVALID, "bad-cb-amount");
 	
-    /** HVN START */
+    /** HVN START 
 	//CommunityAutonomousAddress Assign 10%
 	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
 	CTxDestination destCommunityAutonomous 		= DecodeDestination(GetCommunityAutonomousAddress);
@@ -2763,9 +2763,10 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 							),
                          REJECT_INVALID, "bad-cb-amount");
 	}	
+	
 	LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
 	LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
-	/** HVN END */
+	 HVN END */
 	
     if (!control.Wait())
         return state.DoS(100, error("%s: CheckQueue failed", __func__), REJECT_INVALID, "block-validation-failed");
