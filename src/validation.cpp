@@ -2750,6 +2750,12 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
     if (!IsValidDestination(destCommunityAutonomous)) {
 		LogPrintf("IsValidDestination: Invalid Hive address %s \n", GetCommunityAutonomousAddress);
     }
+	// Parse Hive address
+    CScript scriptPubKeyCommunityAutonomous 	= GetScriptForDestination(destCommunityAutonomous);
+	
+	CAmount nCommunityAutonomousAmount 			= GetParams().CommunityAutonomousAmount();
+	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+	//CAmount nCommunityAutonomousAmountValue		= nSubsidy*nCommunityAutonomousAmount/100;
 	
     if (!control.Wait())
         return state.DoS(100, error("%s: CheckQueue failed", __func__), REJECT_INVALID, "block-validation-failed");
