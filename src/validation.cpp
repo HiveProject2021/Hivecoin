@@ -2757,20 +2757,26 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
 	CAmount nCommunityAutonomousAmountValue		= nSubsidy*nCommunityAutonomousAmount/100;
 	
-	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
-		LogPrintf("==>XXXXXXXXXXXXXXXXXXXXXXXXXXX  NOT EQUAL %ld \n", block.vtx[0]->vout[1].nValue);
-		return state.DoS(100,
-                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Not Equal 10% of the Subsidy. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
-                         REJECT_INVALID, "bad-cb-amount");
-	}
-	
 	LogPrintf("==>block.vtx[0]->vout[1].nValue: %ld \n", block.vtx[0]->vout[1].nValue);
 	LogPrintf("==>nCommunityAutonomousAmountValue: %ld \n", nCommunityAutonomousAmountValue);
 	//LogPrintf("==>block.vtx[0]->vout[1].scriptPubKey: %s \n", block.vtx[0]->vout[1].scriptPubKey[3]);
 	LogPrintf("==>GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
 	LogPrintf("==>scriptPubKeyCommunityAutonomous Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
 	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
-	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(GetCommunityAutonomousAddress));
+	//Check 10% Amount
+	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
+		LogPrintf("==>XXXXXXXXXXXXXXXXXXXXXXXXXXX  NOT EQUAL %ld \n", block.vtx[0]->vout[1].nValue);
+		return state.DoS(100,
+                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Not Equal 10% of the Subsidy. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
+                         REJECT_INVALID, "bad-cb-amount");
+	}
+	//Check 10% Address
+	if( HexStr(block.vtx[0]->vout[1].scriptPubKey) != HexStr(scriptPubKeyCommunityAutonomous) )		{
+		LogPrintf("==>XXXXXXXXXXXXXXXXXXXXXXXXXXX  10% Address Actual: %s Should Be: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey) , HexStr(scriptPubKeyCommunityAutonomous) );
+		return state.DoS(100,
+                         error("ConnectBlock(): coinbase Community Autonomous Address Is Invalid. Actual: %s Should Be: %s \n",HexStr(block.vtx[0]->vout[1].scriptPubKey), HexStr(scriptPubKeyCommunityAutonomous)),
+                         REJECT_INVALID, "bad-cb-amount");
+	}
 	/** HVN END */
 	
     if (!control.Wait())
