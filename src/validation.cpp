@@ -2743,7 +2743,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",block.vtx[0]->GetValueOut(AreEnforcedValuesDeployed()), blockReward),
                          REJECT_INVALID, "bad-cb-amount");
 	
-    /** HVN START 
+    /** HVN START */
 	//CommunityAutonomousAddress Assign 10%
 	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
 	CTxDestination destCommunityAutonomous 		= DecodeDestination(GetCommunityAutonomousAddress);
@@ -2753,20 +2753,11 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	// Parse Hive address
     CScript scriptPubKeyCommunityAutonomous 	= GetScriptForDestination(destCommunityAutonomous);
 	
-	CAmount nCommunityAutonomousAmount 			= GetParams().CommunityAutonomousAmount();
-	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
-	if(block.vtx[0]->vout[1].nValue != (nSubsidy*nCommunityAutonomousAmount/100) )		{
-		return state.DoS(100,
-                         error("ConnectBlock(): CommunityAutonomousAmount is not equal 10% of the Subsidy (actual=%d vs shoulebe=%d)", 
-							block.vtx[0]->vout[1].nValue, 
-							nSubsidy*nCommunityAutonomousAmount/100
-							),
-                         REJECT_INVALID, "bad-cb-amount");
-	}	
-	
+	LogPrintf("block.vtx[0]->vout[1].nValue: %ld \n", block.vtx[0]->vout[1].nValue);
+	LogPrintf("nCommunityAutonomousAmount: %ld \n", (nSubsidy*nCommunityAutonomousAmount/100));
 	LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
 	LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
-	 HVN END */
+	/** HVN END */
 	
     if (!control.Wait())
         return state.DoS(100, error("%s: CheckQueue failed", __func__), REJECT_INVALID, "block-validation-failed");
