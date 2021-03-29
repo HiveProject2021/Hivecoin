@@ -2757,9 +2757,18 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
 	CAmount nCommunityAutonomousAmountValue		= nSubsidy*nCommunityAutonomousAmount/100;
 	
+	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
+		return state.DoS(100,
+                         error("ConnectBlock(): CommunityAutonomousAmount is not equal 10% of the Subsidy (actual=%ld vs shoulebe=%ld)", 
+							block.vtx[0]->vout[1].nValue, 
+							nCommunityAutonomousAmountValue
+							),
+                         REJECT_INVALID, "bad-cb-amount");
+	}
+	
 	LogPrintf("==>block.vtx[0]->vout[1].nValue: %ld \n", block.vtx[0]->vout[1].nValue);
 	LogPrintf("==>nCommunityAutonomousAmountValue: %ld \n", nCommunityAutonomousAmountValue);
-	//LogPrintf("==>block.vtx[0]->vout[1].scriptPubKey: %s \n", block.vtx[0]->vout[1].scriptPubKey);
+	LogPrintf("==>block.vtx[0]->vout[1].scriptPubKey: %s \n", block.vtx[0]->vout[1].scriptPubKey);
 	LogPrintf("==>GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
 	LogPrintf("==>scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
 	/** HVN END */
