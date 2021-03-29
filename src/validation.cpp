@@ -2743,7 +2743,17 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",
                                block.vtx[0]->GetValueOut(AreEnforcedValuesDeployed()), blockReward),
                                REJECT_INVALID, "bad-cb-amount");
-
+	
+    /** HVN START */
+	CAmount nSubsidy 					= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+	CAmount nCommunityAutonomousAmount 	= GetParams().CommunityAutonomousAmount();
+	if(block.vtx[0]->vout[1].nValue != (nSubsidy*nCommunityAutonomousAmount/100) )		{
+		return state.DoS(100,
+                         error("ConnectBlock(): CommunityAutonomousAmount is not equal 10% of the Subsidy (actual=%d vs shoulebe=%d)",
+                               block.vtx[0]->vout[1].nValue,
+                               (nSubsidy*nCommunityAutonomousAmount/100), "bad-cb-amount");
+	}
+	/** HVN END */
     if (!control.Wait())
         return state.DoS(100, error("%s: CheckQueue failed", __func__), REJECT_INVALID, "block-validation-failed");
     int64_t nTime4 = GetTimeMicros(); nTimeVerify += nTime4 - nTime2;
