@@ -191,7 +191,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
 	CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
     if (!IsValidDestination(destCommunityAutonomous)) {
-		LogPrintf("IsValidDestination: Invalid Hive address", GetCommunityAutonomousAddress);
+		LogPrintf("IsValidDestination: Invalid Hive address %s \n", GetCommunityAutonomousAddress);
     }
 	// Parse Hive address
     CScript scriptPubKeyCommunityAutonomous = GetScriptForDestination(destCommunityAutonomous);
