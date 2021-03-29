@@ -2766,7 +2766,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	//Check 10% Amount
 	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
 		return state.DoS(100,
-                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Not Equal 10% of the Subsidy. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
+                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Not Equal 10% of the Subsidy."),
                          REJECT_INVALID, "bad-cb-community-autonomous-amount");
 	}
 	//Check 10% Address
