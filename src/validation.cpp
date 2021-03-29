@@ -2759,6 +2759,9 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	
 	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
 		LogPrintf("==>XXXXXXXXXXXXXXXXXXXXXXXXXXX  NOT EQUAL %ld \n", block.vtx[0]->vout[1].nValue);
+		return state.DoS(100,
+                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Not Equal 10% of the Subsidy. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
+                         REJECT_INVALID, "bad-cb-amount");
 	}
 	
 	LogPrintf("==>block.vtx[0]->vout[1].nValue: %ld \n", block.vtx[0]->vout[1].nValue);
