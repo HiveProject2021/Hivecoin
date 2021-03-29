@@ -2765,14 +2765,12 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
 	//Check 10% Amount
 	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
-		LogPrintf("==>XXXXXXXXXXXXXXXXXXXXXXXXXXX  NOT EQUAL %ld \n", block.vtx[0]->vout[1].nValue);
 		return state.DoS(100,
                          error("ConnectBlock(): coinbase Community Autonomous Amount Is Not Equal 10% of the Subsidy. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
                          REJECT_INVALID, "bad-cb-community-autonomous-amount");
 	}
 	//Check 10% Address
 	if( HexStr(block.vtx[0]->vout[1].scriptPubKey) != HexStr(scriptPubKeyCommunityAutonomous) )		{
-		LogPrintf("==>XXXXXXXXXXXXXXXXXXXXXXXXXXX  10% Address Actual: %s Should Be: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey) , HexStr(scriptPubKeyCommunityAutonomous) );
 		return state.DoS(100,
                          error("ConnectBlock(): coinbase Community Autonomous Address Is Invalid. Actual: %s Should Be: %s \n",HexStr(block.vtx[0]->vout[1].scriptPubKey), HexStr(scriptPubKeyCommunityAutonomous)),
                          REJECT_INVALID, "bad-cb-community-autonomous-address");
