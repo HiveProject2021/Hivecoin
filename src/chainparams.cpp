@@ -124,7 +124,7 @@ public:
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled 	= true;
         consensus.powLimit 		= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit 	= uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
+        consensus.kawpowLimit 	= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
 		consensus.fPowAllowMinDifficultyBlocks = false;
@@ -189,14 +189,14 @@ public:
         arith_uint256 test;
         bool fNegative;
         bool fOverflow;
-        test.SetCompact(0x1e00ffff, &fNegative, &fOverflow);
+        test.SetCompact(0x207fffff, &fNegative, &fOverflow);
         std::cout << "Test threshold: " << test.GetHex() << "\n\n";
 
         int genesisNonce = 0;
         uint256 TempHashHolding = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
         uint256 BestBlockHash = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         for (int i=0;i<40000000;i++) {
-            genesis = CreateGenesisBlock(nGenesisTime, i, 0x1e00ffff, 4, 5000 * COIN);
+            genesis = CreateGenesisBlock(nGenesisTime, i, 0x207fffff, 4, 5000 * COIN);
             genesis.hashPrevBlock = TempHashHolding;
 			// Depending on when the timestamp is on the genesis block. You will need to use GetX16RHash or GetX16RV2Hash. Replace GetHash() with these below
             consensus.hashGenesisBlock = genesis.GetX16RHash();
@@ -246,7 +246,7 @@ public:
 		*/
 		/////////////////////////////////////////////////////////////////
 
-		genesis = CreateGenesisBlock(nGenesisTime, 4332476, 0x1e00ffff, 4, 5000 * COIN);
+		genesis = CreateGenesisBlock(nGenesisTime, 4332476, 0x207fffff, 4, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();	
 		//std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
 		//std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;		
