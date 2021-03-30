@@ -246,11 +246,11 @@ public:
 		*/
 		/////////////////////////////////////////////////////////////////
 
-		genesis = CreateGenesisBlock(nGenesisTime, 4332476, 0x1e00ffff, 4, 5000 * COIN);
+		genesis = CreateGenesisBlock(nGenesisTime, 11666344, 0x1e00ffff, 4, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();	
 		//std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
 		//std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;		
-		assert(consensus.hashGenesisBlock == uint256S("0000000d6a7d8ca88f12ced2cae71b4ccc1e11086d402ced33eff366fc24e7d0"));
+		assert(consensus.hashGenesisBlock == uint256S("0000003eb80e757fbcd06e5bf89d57e6d6965a39eb35123507d7f01e6e99f857"));
         assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 
 
