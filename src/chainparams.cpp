@@ -181,7 +181,7 @@ public:
         nDefaultPort = 9767;
         nPruneAfterHeight = 100000;
 		
-		uint32_t nGenesisTime = 1617069060;		//2021-03-30 09:51:00
+		uint32_t nGenesisTime = 1617022800;		//2021-03-29 21:00:00
 
         // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
 		/////////////////////////////////////////////////////////////////
@@ -284,7 +284,7 @@ public:
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Hive chain
             // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
-            1617069060, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
+            1617022800, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
             0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1       // * estimated number of transactions per second after that timestamp
@@ -333,7 +333,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = nGenesisTime+7200; // 2021-03-30 09:51:00
+        nKAAAWWWPOWActivationTime = nGenesisTime+3600; // 2021-03-29 21:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
