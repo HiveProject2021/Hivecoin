@@ -54,7 +54,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "The Times 03/Jan/2018 Bitcoin is name of the game for new generation of firms";
+    const char* pszTimestamp = "The Times 03/30/2021 Bitcoin is name of the game for new generation of firms";
     const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -123,8 +123,8 @@ public:
         consensus.nBIP66Enabled = true;
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled 	= true;
-        consensus.powLimit 		= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit 	= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
+        consensus.powLimit 		= uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.kawpowLimit 	= uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
 		consensus.fPowAllowMinDifficultyBlocks = false;
@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00"); // Block 1186833
+        consensus.nMinimumChainWork = uint256S("0x000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Block 1186833
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00"); // Block 1186833
+        consensus.defaultAssumeValid = uint256S("0x000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Block 1186833
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -181,11 +181,11 @@ public:
         nDefaultPort = 9767;
         nPruneAfterHeight = 100000;
 		
-		uint32_t nGenesisTime = 1613692800;		//1613692800;  // 2021-02-19 08:00:00
+		uint32_t nGenesisTime = 1617069060;		//2021-03-30 09:51:00
 
         // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
 		/////////////////////////////////////////////////////////////////
-		/* 
+		/*
         arith_uint256 test;
         bool fNegative;
         bool fOverflow;
@@ -246,12 +246,12 @@ public:
 		*/
 		/////////////////////////////////////////////////////////////////
 
-		genesis = CreateGenesisBlock(1613692800, 18024582, 0x1e00ffff, 4, 5000 * COIN);
+		genesis = CreateGenesisBlock(nGenesisTime, 4332476, 0x1e00ffff, 4, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();	
 		//std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
 		//std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;		
-		assert(consensus.hashGenesisBlock == uint256S("0000002440490baa58d1c179bf1f3060d1140b2cf3224d8a4f2b00fdda9767e7"));
-        assert(genesis.hashMerkleRoot == uint256S("28ff00a867739a352523808d301f504bc4547699398d70faf2266a8bae5f3516"));
+		assert(consensus.hashGenesisBlock == uint256S("0000000d6a7d8ca88f12ced2cae71b4ccc1e11086d402ced33eff366fc24e7d0"));
+        assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 
 
 		vSeeds.emplace_back("node1.hivecoin.org", false);
@@ -284,7 +284,7 @@ public:
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Hive chain
             // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
-            1613855355, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
+            1617069060, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
             0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1       // * estimated number of transactions per second after that timestamp
@@ -304,23 +304,23 @@ public:
 		
 		//10% of 5000 COIN to ASSIGN
 		nCommunityAutonomousAmount = 10;
+		//Master Node Force Execute Time 1632980000 2021-09-30 13:33:20
 
         // Burn Addresses
-		strIssueAssetBurnAddress = "HFC2t4BZG5GDw1fozxj4tkTJqPC77HK7df";
-        strReissueAssetBurnAddress = "HDSM2T4cuy9b4PWC6X7E8sCoBGSSf928hf";
-        strIssueSubAssetBurnAddress = "H8Q8gdsj8qAMxq7y3YsmiSvGLnDDMLqrtu";
-        strIssueUniqueAssetBurnAddress = "H7MsDagv71N9966fiinKNM4GFWd4StxkKB";
-        strIssueMsgChannelAssetBurnAddress = "HFZ4ekJK2btUVCh41kNKiGxeNjU8f7cSmi";
-        strIssueQualifierAssetBurnAddress = "HL91vECrT7rdxp4DXmxNSt179RfMNdxkcX";
-        strIssueSubQualifierAssetBurnAddress = "HCthnYbEhDfMwyqEokAA28YJ4p8Vae1zg2";
-        strIssueRestrictedAssetBurnAddress = "H9UFrnoKfFbbEZU8orbrjBNXTGSewUqi1h";
-        strAddNullQualifierTagBurnAddress = "HGzSu79hEWYygBPvp3EDVWRbmThLMGvFQa";
-		
+		strIssueAssetBurnAddress = "HABmUwjKZURs2ip6ygxSKUoUaDZUws4d9F";
+        strReissueAssetBurnAddress = "HRABYiKTBqTsb3q1EogedBcr4TfwSknbkt";
+        strIssueSubAssetBurnAddress = "HSA5hDMFF3GVTQTspBG4V26X1q7GxKANFP";
+        strIssueUniqueAssetBurnAddress = "HUA1Gcw7JGhDPUUp9SBdQ6KVivRbRxFt1X";
+        strIssueMsgChannelAssetBurnAddress = "HMAczU4WrXadbEwvQMfWU7X69YH2bY7RTT";
+        strIssueQualifierAssetBurnAddress = "HQA5wW7okLw5rbJqcjF2m1fXcurxKr8BfY";
+        strIssueSubQualifierAssetBurnAddress = "HSQ9WKiuUzo7VCLufAUNQ8cWtDt2FkfAMR";
+        strIssueRestrictedAssetBurnAddress = "HRA9BvF2PhjYJoTb2QWNs5PCHPEytQgV48";
+        strAddNullQualifierTagBurnAddress = "HAQm4icqt9vBi3LG6mgQAJfxQczW7tAfCs";		
 		//Global Burn Address
-        strGlobalBurnAddress = "H8jvNFCc5NgChp3wyVLLpZ5pjrNC49SExe";
+        strGlobalBurnAddress = "HGB9SBEayhhyC978vXh2Pgdjg8md2MKf7x";
 		
-		//CommunityAutonomousAddress     HCommunityAutonomousXXXXXXXXXXXXXX
-        strCommunityAutonomousAddress = "HLwe8tbJ7CXJDjJ3Kqy9AdRgv6GwZoaffw";
+		//CommunityAutonomousAddress
+        strCommunityAutonomousAddress = "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph";
 
         // DGW Activation
         nDGWActivationBlock = 1;
@@ -333,7 +333,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1615363642; // 2021-03-10 16:07:22
+        nKAAAWWWPOWActivationTime = nGenesisTime; // 2021-03-30 09:51:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
