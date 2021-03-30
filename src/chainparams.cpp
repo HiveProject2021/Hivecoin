@@ -181,7 +181,7 @@ public:
         nDefaultPort = 9767;
         nPruneAfterHeight = 100000;
 		
-		uint32_t nGenesisTime = 1617022800;		//2021-03-29 21:00:00
+		uint32_t nGenesisTime = 1617079000;		//2021-03-30 12:36:40
 
         // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
 		/////////////////////////////////////////////////////////////////
@@ -323,15 +323,15 @@ public:
         strCommunityAutonomousAddress = "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph";
 
         // DGW Activation
-        nDGWActivationBlock = 1;
+        nDGWActivationBlock = 100;
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
         nMinReorganizationAge = 60 * 60 * 12; // 12 hours
 
-        nAssetActivationHeight = 1; // Asset activated block height
-        nMessagingActivationBlock = 1; // Messaging activated block height
-        nRestrictedActivationBlock = 1; // Restricted activated block height
+        nAssetActivationHeight = 100; // Asset activated block height
+        nMessagingActivationBlock = 100; // Messaging activated block height
+        nRestrictedActivationBlock = 100; // Restricted activated block height
 
         nKAAAWWWPOWActivationTime = nGenesisTime+4800; // 2021-03-29 21:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
