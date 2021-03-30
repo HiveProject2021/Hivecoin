@@ -323,15 +323,15 @@ public:
         strCommunityAutonomousAddress = "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph";
 
         // DGW Activation
-        nDGWActivationBlock = 0;
+        nDGWActivationBlock = 1;
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
         nMinReorganizationAge = 60 * 60 * 12; // 12 hours
 
-        nAssetActivationHeight = 0; // Asset activated block height
-        nMessagingActivationBlock = 0; // Messaging activated block height
-        nRestrictedActivationBlock = 0; // Restricted activated block height
+        nAssetActivationHeight = 1; // Asset activated block height
+        nMessagingActivationBlock = 1; // Messaging activated block height
+        nRestrictedActivationBlock = 1; // Restricted activated block height
 
         nKAAAWWWPOWActivationTime = 1617022800; // 2021-03-29 21:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
