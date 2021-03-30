@@ -333,7 +333,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = nGenesisTime; // 2021-03-30 09:51:00
+        nKAAAWWWPOWActivationTime = nGenesisTime+7200; // 2021-03-30 09:51:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
