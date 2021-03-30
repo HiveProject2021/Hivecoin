@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Block 1186833
+        consensus.nMinimumChainWork = uint256S("0x00"); // Block 1186833
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Block 1186833
+        consensus.defaultAssumeValid = uint256S("0x00"); // Block 1186833
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -323,17 +323,17 @@ public:
         strCommunityAutonomousAddress = "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph";
 
         // DGW Activation
-        nDGWActivationBlock = 100;
+        nDGWActivationBlock = 0;
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
         nMinReorganizationAge = 60 * 60 * 12; // 12 hours
 
-        nAssetActivationHeight = 100; // Asset activated block height
-        nMessagingActivationBlock = 100; // Messaging activated block height
-        nRestrictedActivationBlock = 100; // Restricted activated block height
+        nAssetActivationHeight = 0; // Asset activated block height
+        nMessagingActivationBlock = 0; // Messaging activated block height
+        nRestrictedActivationBlock = 0; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1617079000; // 2021-03-29 21:00:00
+        nKAAAWWWPOWActivationTime = 1617022800; // 2021-03-29 21:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
