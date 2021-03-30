@@ -181,7 +181,7 @@ public:
         nDefaultPort = 9767;
         nPruneAfterHeight = 100000;
 		
-		uint32_t nGenesisTime = 1617079000;		//2021-03-30 12:36:40
+		uint32_t nGenesisTime = 1617022800;		//2021-03-29 21:00:00
 
         // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
 		/////////////////////////////////////////////////////////////////
@@ -333,7 +333,7 @@ public:
         nMessagingActivationBlock = 100; // Messaging activated block height
         nRestrictedActivationBlock = 100; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = nGenesisTime+4800; // 2021-03-29 21:00:00
+        nKAAAWWWPOWActivationTime = 1617079000; // 2021-03-29 21:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
