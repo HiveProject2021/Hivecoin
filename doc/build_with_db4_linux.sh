@@ -27,6 +27,7 @@ make install
 # Configure Hive Core to use our own-built instance of BDB
 cd $HIVE_ROOT
 ./autogen.sh
-./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" # (other args...)
+#./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" # (other args...)
+./configure  --enable-debug LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" # (other args...) 
 make -j4
 make deploy
