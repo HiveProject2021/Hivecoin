@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00"); // Block 1186833
+        consensus.nMinimumChainWork = uint256S("0x00000000855bb37bbdd3e4d4cd9e11132faebb663e939390e660da6a71495890"); // Block 1410
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00"); // Block 1186833
+        consensus.defaultAssumeValid = uint256S("0x00000000855bb37bbdd3e4d4cd9e11132faebb663e939390e660da6a71495890"); // Block 1410
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -276,8 +276,10 @@ public:
         fMineBlocksOnDemand = false;
         fMiningRequiresPeers = true;
 
-        checkpointData = (CCheckpointData) {
+		checkpointData = (CCheckpointData) {
             {
+                { 1337, uint256S("000000000011da81d69f8247e0ce2f5cb68f989d4ca3258859a67aed3066430a")},
+                { 1410, uint256S("00000000855bb37bbdd3e4d4cd9e11132faebb663e939390e660da6a71495890")}
             }
         };
 
@@ -352,8 +354,8 @@ public:
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled = true;
 
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit = uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.kawpowLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
@@ -405,7 +407,7 @@ public:
         nDefaultPort = 19770;
         nPruneAfterHeight = 1000;
 		
-        uint32_t nGenesisTime = 1613693000;  // 2021-02-19 08:03:20
+        uint32_t nGenesisTime = 1617121000;  // 2021-03-31 00:16:40
 
         // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
 		/////////////////////////////////////////////////////////////////
@@ -470,22 +472,19 @@ public:
 		*/
 		/////////////////////////////////////////////////////////////////
 
-        genesis = CreateGenesisBlock(nGenesisTime, 3065180, 0x1e00ffff, 4, 5000 * COIN);
+        genesis = CreateGenesisBlock(nGenesisTime, 16256619, 0x1e00ffff, 4, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();
 
         //Test MerkleRoot and GenesisBlock
-        assert(consensus.hashGenesisBlock == uint256S("0000001eefea0a6b3703d8c66ea07e7e0af36f6d70c51e83101fb5ae44e24d2d"));
-        assert(genesis.hashMerkleRoot == uint256S("28ff00a867739a352523808d301f504bc4547699398d70faf2266a8bae5f3516"));
+        assert(consensus.hashGenesisBlock == uint256S("000000a941db75ee4e4e15b5aa9703c3e448a174b6a3cd3518a114d39ee9748b"));
+        assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 		//std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
 		//std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;		
 		
         vFixedSeeds.clear();
         vSeeds.clear();
 
-		vSeeds.emplace_back("node1.hivecoin.org", false);
-		vSeeds.emplace_back("node2.hivecoin.org", false);
-		vSeeds.emplace_back("us-east-1.hivecoin.org", false);
-		vSeeds.emplace_back("us-west-1.hivecoin.org", false);
+		//vSeeds.emplace_back("testnet.hivecoin.org", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
@@ -511,7 +510,7 @@ public:
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Hive chain
             // Stats as of 00000023b66f46d74890287a7b1157dd780c7c5fdda2b561eb96684d2b39d62e window size 43200
-            1613693000, // * UNIX timestamp of last known number of transactions
+            1617121000, // * UNIX timestamp of last known number of transactions
             0,     // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.02        // * estimated number of transactions per second after that timestamp
@@ -550,11 +549,11 @@ public:
         nMinReorganizationPeers = 4;
         nMinReorganizationAge = 60 * 60 * 12; // 12 hours
 
-        nAssetActivationHeight = 3000; // Asset activated block height
-        nMessagingActivationBlock = 3000; // Messaging activated block height
-        nRestrictedActivationBlock = 3000; // Restricted activated block height
+        nAssetActivationHeight = 1; // Asset activated block height
+        nMessagingActivationBlock = 1; // Messaging activated block height
+        nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1619992818; // 2021-05-03 06:00:18
+        nKAAAWWWPOWActivationTime = 1617122000; // 2021-05-03 06:00:18
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
