@@ -123,8 +123,8 @@ public:
         consensus.nBIP66Enabled = true;
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled 	= true;
-        consensus.powLimit 		= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit 	= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
+        consensus.powLimit 		= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.kawpowLimit 	= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
 		consensus.fPowAllowMinDifficultyBlocks = false;
@@ -181,7 +181,7 @@ public:
         nDefaultPort = 9767;
         nPruneAfterHeight = 100000;
 		
-		uint32_t nGenesisTime = 1617022800;		//2021-03-29 21:00:00
+		uint32_t nGenesisTime = 1617069060;		//2021-03-30 09:51:00
 
         // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
 		/////////////////////////////////////////////////////////////////
@@ -246,11 +246,11 @@ public:
 		*/
 		/////////////////////////////////////////////////////////////////
 
-		genesis = CreateGenesisBlock(nGenesisTime, 11666344, 0x1e00ffff, 4, 5000 * COIN);
+		genesis = CreateGenesisBlock(nGenesisTime, 4332476, 0x1e00ffff, 4, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();	
 		//std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
 		//std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;		
-		assert(consensus.hashGenesisBlock == uint256S("0000003eb80e757fbcd06e5bf89d57e6d6965a39eb35123507d7f01e6e99f857"));
+		assert(consensus.hashGenesisBlock == uint256S("0000000d6a7d8ca88f12ced2cae71b4ccc1e11086d402ced33eff366fc24e7d0"));
         assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 
 
@@ -284,7 +284,7 @@ public:
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Hive chain
             // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
-            1617022800, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
+            1617069060, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
             0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1       // * estimated number of transactions per second after that timestamp
@@ -323,7 +323,7 @@ public:
         strCommunityAutonomousAddress = "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph";
 
         // DGW Activation
-        nDGWActivationBlock = 1;
+        nDGWActivationBlock = 100;
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
@@ -333,7 +333,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = nGenesisTime+4800; // 2021-03-29 21:00:00
+        nKAAAWWWPOWActivationTime = 1617120000; // 2021-03-29 21:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
