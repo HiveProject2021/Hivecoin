@@ -123,8 +123,8 @@ public:
         consensus.nBIP66Enabled = true;
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled 	= true;
-        consensus.powLimit 		= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit 	= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
+        consensus.powLimit 		= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.kawpowLimit 	= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
 		consensus.fPowAllowMinDifficultyBlocks = false;
@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x0000"); // Block 1186833
+        consensus.nMinimumChainWork = uint256S("0x00"); // Block 1186833
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x0000"); // Block 1186833
+        consensus.defaultAssumeValid = uint256S("0x00"); // Block 1186833
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -254,12 +254,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 
 
-		//vSeeds.emplace_back("node1.hivecoin.org", false);
-		//vSeeds.emplace_back("node2.hivecoin.org", false);
-		//vSeeds.emplace_back("us-east-1.hivecoin.org", false);
-		//vSeeds.emplace_back("us-west-1.hivecoin.org", false);
-		vSeeds.emplace_back("192.168.1.88", false);
-		vSeeds.emplace_back("192.168.1.86", false);
+		vSeeds.emplace_back("node1.hivecoin.org", false);
+		vSeeds.emplace_back("node2.hivecoin.org", false);
+		vSeeds.emplace_back("us-east-1.hivecoin.org", false);
+		vSeeds.emplace_back("us-west-1.hivecoin.org", false);
+		//vSeeds.emplace_back("192.168.1.88", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
