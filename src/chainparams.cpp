@@ -123,8 +123,8 @@ public:
         consensus.nBIP66Enabled = true;
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled 	= true;
-        consensus.powLimit 		= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit 	= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
+        consensus.powLimit 		= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.kawpowLimit 	= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
 		consensus.fPowAllowMinDifficultyBlocks = false;
@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Block 1186833
+        consensus.nMinimumChainWork = uint256S("0x00"); // Block 1186833
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Block 1186833
+        consensus.defaultAssumeValid = uint256S("0x00"); // Block 1186833
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -181,7 +181,7 @@ public:
         nDefaultPort = 9767;
         nPruneAfterHeight = 100000;
 		
-		uint32_t nGenesisTime = 1617069060;		//2021-03-30 09:51:00
+		uint32_t nGenesisTime = 1617069060;		//1613692800;  // 2021-02-19 08:00:00
 
         // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
 		/////////////////////////////////////////////////////////////////
@@ -254,10 +254,10 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 
 
-		//vSeeds.emplace_back("node1.hivecoin.org", false);
-		//vSeeds.emplace_back("node2.hivecoin.org", false);
-		//vSeeds.emplace_back("us-east-1.hivecoin.org", false);
-		//vSeeds.emplace_back("us-west-1.hivecoin.org", false);
+		vSeeds.emplace_back("node1.hivecoin.org", false);
+		vSeeds.emplace_back("node2.hivecoin.org", false);
+		vSeeds.emplace_back("us-east-1.hivecoin.org", false);
+		vSeeds.emplace_back("us-west-1.hivecoin.org", false);
 		//vSeeds.emplace_back("192.168.1.88", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
@@ -284,7 +284,7 @@ public:
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Hive chain
             // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
-            1617069060, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
+            1613855355, // * UNIX timestamp of last known number of transactions 2021-02-21 05:09:15
             0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1       // * estimated number of transactions per second after that timestamp
@@ -304,7 +304,6 @@ public:
 		
 		//10% of 5000 COIN to ASSIGN
 		nCommunityAutonomousAmount = 10;
-		//Master Node Force Execute Time 1632980000 2021-09-30 13:33:20
 
         // Burn Addresses
 		strIssueAssetBurnAddress = "HABmUwjKZURs2ip6ygxSKUoUaDZUws4d9F";
@@ -323,7 +322,7 @@ public:
         strCommunityAutonomousAddress = "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph";
 
         // DGW Activation
-        nDGWActivationBlock = 100;
+        nDGWActivationBlock = 1;
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
@@ -333,7 +332,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1617120000; // 2021-03-29 21:00:00
+        nKAAAWWWPOWActivationTime = 1617120000; // 2021-05-03 06:00:18
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
@@ -555,7 +554,7 @@ public:
         nMessagingActivationBlock = 3000; // Messaging activated block height
         nRestrictedActivationBlock = 3000; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1615363642; // 2021-03-10 16:07:22
+        nKAAAWWWPOWActivationTime = 1619992818; // 2021-05-03 06:00:18
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** HVN End **/
     }
