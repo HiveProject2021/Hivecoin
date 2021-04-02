@@ -320,7 +320,7 @@ public:
         strGlobalBurnAddress = "HGB9SBEayhhyC978vXh2Pgdjg8md2MKf7x";
 		
 		//CommunityAutonomousAddress
-        strCommunityAutonomousAddress = "HCAo9dVTEo8EE1UASQ9cSW1DuU5aDo39Ph";
+        strCommunityAutonomousAddress = "HCAuphc12WJ2HNuGoV5oVNKae7Yj6bxvhG";
 
         // DGW Activation
         nDGWActivationBlock = 1;
