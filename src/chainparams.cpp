@@ -123,8 +123,8 @@ public:
         consensus.nBIP66Enabled = true;
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled 	= true;
-        consensus.powLimit 		= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.kawpowLimit 	= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
+        consensus.powLimit 		= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.kawpowLimit 	= uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
 		consensus.fPowAllowMinDifficultyBlocks = false;
@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00000"); // Block 1410
+        consensus.nMinimumChainWork = uint256S("0x0000"); // Block 1410
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00000"); // Block 1410
+        consensus.defaultAssumeValid = uint256S("0x0000"); // Block 1410
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -277,8 +277,6 @@ public:
 
 		checkpointData = (CCheckpointData) {
             {
-                { 1337, uint256S("000000000011da81d69f8247e0ce2f5cb68f989d4ca3258859a67aed3066430a")},
-                { 1410, uint256S("00000000855bb37bbdd3e4d4cd9e11132faebb663e939390e660da6a71495890")}
             }
         };
 
