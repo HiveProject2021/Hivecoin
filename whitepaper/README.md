@@ -10,28 +10,28 @@ http://www.hivecoin.org<br>
 5 March 2021
 </p>
 
-We tribute to Bitcoin and Ravencoin founders and hard-work developers in these areas over the years. At the same time, we sincerely thank Bitcoin and Ravencoin for their efforts and contributions in establishing virtual currencies and blockchain development. Appreciate the valued code and research results of the predecessors, Hivecoin is created by standing on the shoulders of giants.
+We tribute to Bitcoin and Ravencoin founders and hard-work developers in these areas over the years. At the same time, we sincerely thank Bitcoin and Ravencoin for their efforts and contributions in establishing digital currencies and blockchain development. Appreciate the valued code and research results of the predecessors, Hivecoin is created by standing on the shoulders of giants.
 
 
-> **Abstract** Hivecoin is a blockchain platform that integrates simplified smart contracts. According to the Bitcoin protocol's UTXO model to develop and test,  and based on Ravencoin and the Bitcoin code branch to create. Hivecoin creates a simplified version of the smart contract module and uses it to implement asset creation, asset trading, asset mortgage, community autonomy, master node network, budget review, and DEFI. Hivecoin is free and open-source of information. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); uses the KAWPOW algorithm created to resist ASC miners. Openly and on the up and up mines 45% of Hivecoin (HVN) and distributes the other 45% of HVN to all the master node of Hivecoin (Mortgage 1,000,000 HVN requested), and the remaining 10% is mainly distributed to contributors to the Hivecoin community. 
+> **Abstract** Hivecoin is a blockchain platform that integrates simplified smart contracts. According to the Bitcoin protocol's UTXO model to develop and test,  and based on Ravencoin and the Bitcoin code branch to create. Hivecoin creates a simplified version of the smart contract module and uses it to implement asset issuance, asset transaction, asset mortgage, community autonomy, master node network, budget review, and DEFI. Hivecoin is free and open-source of information. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); uses the KAWPOW algorithm created to resist ASC miners. Open mines 45% of Hivecoin (HVN) and distributes the other 45% of HVN to all master nodes of Hivecoin (Mortgage 1,000,000 HVN requested), and the remaining 10% is distributed to contributors in Hivecoin community. 
 
 ## 1 Introduction
 
 On November 1, 2008, Satoshi Nakamoto published the Bitcoin white paper "Bitcoin: A Peer-to-Peer Electronic Cash System" on the P2P Foundation website, stating his new vision for electronic money--Bitcoin was available. On January 3, 2009, the Bitcoin genesis block was born.
 
-However, the Bitcoin protocol has a lack of scalability. For example, there is only one symbol in the Bitcoin network-Bitcoin, which means users cannot customize symbols. These symbols can represent company stocks or debt certificates, and so on. Some functions are lost. Ethereum can solve the problem of insufficient scalability of the Bitcoin protocol.
+However, the Bitcoin protocol has a lack of scalability. For example, there is only one symbol in the Bitcoin network-Bitcoin, which means users cannot customize symbols. These symbols can represent company stocks or debt certificates, and so on. Ethereum can solve the problem of insufficient scalability of the Bitcoin protocol.
 
 Ethereum ERC20, ERC223, and ERC721 protocols and other projects show that can use another blockchain to create tokenized assets in various ways and structures. Tokens provide some advantages for traditional stocks or other participation mechanisms, such as faster transmission speeds, enhanced user control and censorship, and reducing or eliminating the requirement for trusted third parties.
 
 
-Even so, the Bitcoin network still has many supporters. To solve asset creation and transmission issues, the Ravencoin team implemented an asset management function based on the Bitcoin network. To enhance  Ravencoin processes, the Hivecoin team adds master knots, mortgage assets, community autonomy and improves voting and messaging functions.
+Even so, the Bitcoin network still has many supporters. To solve asset creation and transmission issues, the Ravencoin team implemented an asset management function based on the Bitcoin network. To enhance  Ravencoin processes, the Hivecoin team adds master nodes, mortgage assets, community autonomy and improves voting and messaging functions.
 
 Hivecoin created a more accessible simplified version of smart contracts for users because of the above reasons. Also, configure additional network security mechanisms, which makes smart contracts more secure. For example, asset issuance, transaction, mortgage, and distributing the interest generated will become convenient.
 
 
 ## 2 Hivecoin Launch and Algorithm
 
-Hivecoin was released on March 5, 2021, and the binary file for mining was on April 1, 2021. Hivecoin is a system similar to Bitcoin that will allow users to manage assets, create smart contracts, and integrate them into its blockchain. Hivecoin uses a new mining algorithm developed by Ravencoin developers, KAWPOW, to create a platform similar to Bitcoin to prevent ASC mining pools from dominating. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE). Using the KAWPOW algorithm, 45% of Hivecoin (HVN) is mined openly and on the up and up.
+Hivecoin was released on March 5, 2021, and the binary file for mining was on March 30, 2021. Hivecoin is a system similar to Bitcoin that will allow users to manage assets, create smart contracts, and integrate them into its blockchain. Hivecoin uses a new mining algorithm developed by Ravencoin developers, KAWPOW, to create a platform similar to Bitcoin to prevent ASC mining pools from dominating. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE). Using the KAWPOW algorithm, 45% of Hivecoin (HVN) is mined openly and on the up and up.
 
 Hivecoin builds a second-layer network based on the first-layer miner network, the master node network, similar to DASH. The master node (also known as the full node) supports the second layer of the network, which provides exceptional performance support for Hivecoin. The master node does not participate in mining activities. It has instant transaction functions, decentralized management, and budget decision-making so that the master node will receive 45% of the block reward. The remaining 10% for establishing a healthy and complete Hivecoin community; the distribution, according to the master node voting to fund projects that contribute to the entire Hivecoin network.
 
@@ -68,7 +68,7 @@ This system is decentralized, fully controlled by the master node. The budget in
 
 ## 7 Conclusion
 
-Hivecoin is based on a large amount of Ravencoin and Bitcoin code to create a simplified version of the smart contract module. Implement asset creation, asset transaction, asset mortgage, community autonomy, master node network, budget review, DEFI, and other functions. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); 45% of Hivecoin (HVN) is allocated to miners, 45% is allocated to all Hivecoin master nodes, and the remaining 10% is allocated to the Hivecoin community ecology Participants who contribute to the environment. Hivecoin adheres to the spirit of openness and open-source and encourages people from all walks of life to work together to promote the development of Hivecoin.
+Hivecoin is based on a large amount of Ravencoin and Bitcoin code to create a simplified version of the smart contract module. Implement asset issuance, asset transaction, asset mortgage, community autonomy, master node network, budget review, DEFI, and other functions. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); 45% of Hivecoin (HVN) is allocated to miners, 45% is allocated to all Hivecoin master nodes, and the remaining 10% is allocated to the Hivecoin community ecology participants who contribute to the environment. Hivecoin adheres to the spirit of openness and open-source and encourages people from all walks of life to work together to promote the development of Hivecoin.
 
 Thanks again to the developers of Bitcoin and Ravencoin!
 
