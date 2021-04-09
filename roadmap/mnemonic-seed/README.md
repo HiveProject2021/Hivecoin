@@ -13,7 +13,7 @@ The core wallet, by default, will generate a 12-word seed and calculated master 
 
 A command-line option (-noseed) can be passed when starting hived and/or hive-qt for the first time to create a wallet using the original key system that existed in Bitcoin and Hivecoin on Jan 3, 2019.
 
-When using the 12-word seed which will be the new default, the address derivation will change to be compatible with the BIP32/BIP39/BIP44 standards.  Since this is already implemented in the Hivecoin mobile wallet, the 12-words will be cross-compatible.  The derivation path is m/44'/175'/0'/0 for the first non-change address.
+When using the 12-word seed which will be the new default, the address derivation will change to be compatible with the BIP32/BIP39/BIP44 standards.  Since this is already implemented in the Hivecoin mobile wallet, the 12-words will be cross-compatible.  The derivation path is m/44'/1668'/0'/0 for the first non-change address.
 
 The advantage to this method of key generation is that a 12-word seed can be written down, or stamped into stainless steel and safely stored offline without the risk of a thumb-drive or hard drive backup failure.
 
@@ -30,13 +30,13 @@ When creating the wallet.dat for the first time, the default should be generatin
 
 The path derivation should be dependent on the way the master key is generated: 
 * Original Master Key:  BIP32 m/0'/0' (external) or m/0'/1' (internal)
-* Seed-based master key (BIP39): BIP32/BIP44  m/44'/175'/0'/0
+* Seed-based master key (BIP39): BIP32/BIP44  m/44'/1668'/0'/0
 
 This change does not require a hard fork (upgrade), but it does require maintaining 100% compatibility with the old derivation path when the original master key is in the wallet.dat or it will appear to users that funds are lost.  Only new users, or those that start with a new wallet.dat will be switched over to the 12-word seed.
 
 Optional: In order to back up the master key and chaincode, it requires 48 words.
 
 ### Compatibility
-Other wallets like Jaxx and Coinomi use a 12-word seed.  For wallets that use BIP39/BIP32/BIP44 and the correct coinid of 175 for Hivecoin, the 12-words should be compatible with external wallets.
+Other wallets like Jaxx and Coinomi use a 12-word seed.  For wallets that use BIP39/BIP32/BIP44 and the correct coinid of 1668 for Hivecoin, the 12-words should be compatible with external wallets.
 
 Because the amount of HVN in the asset UTXO is 0, and because the Hivecoin transaction will be invalid if the asset outputs don't match the asset inputs, this prevents external wallets from being able to lose assets even though the external wallets are completely unaware of assets.

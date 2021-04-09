@@ -2,38 +2,24 @@
 
 ### Phase 1 - (Complete)
 
-Hivecoin (HVN) is a Proof of Work coin built on the Bitcoin UTXO model. As with other Bitcoin derivatives, HVN coins are distributed to persons augmenting the Hive network by mining Hive.
+Hivecoin (HVN) is a Proof of Work & Proof of Service coin built on the Bitcoin UTXO model. As with other Bitcoin derivatives, HVN coins are distributed to persons augmenting the Hive network by mining Hive and Master node.
 *  x1000 coin distribution (21 Billion Total)
 *  10x faster blocks (1 per minute)
 *  In app CPU verification, with GPU specific PoW decentralised mining
 *  Dark Gravity Wave difficulty adjustment (180 block average)
-*  Addresses start with R... for regular addresses, or r... for multisig
-*  Network Port: 8767
-*  RPC Port: 8766
+*  Addresses start with H... for regular addresses
+*  Network Port: 9767
+*  RPC Port: 9766
 
 ### Phase 2 - Assets (Complete)
 
 #### ASIC Resistance
 
-ASIC Resistance - A published commitment to continual attempts at ASIC resistance. If ASICs are created for x16r, then we will, at a specific block number, modify one of the algorithms to add some varients of Equihash or similar efforts to increase the resistance to ASIC miners for Hive. ASIC's have been developed for X16R (and X16RV2) and the community has forked to KAWPOW (a variant of ethash and progpow) to maximise the ASIC resistance by reducing the potential efficiency increase of ASICs by requiring the feature set and capabilities within over the counter consumer graphics cards. We are not anticipating future forks to change the algorithm as the current algorithm allows a fair distribution of HVN via PoW to the community.
+ASIC Resistance - A published commitment to continual attempts at ASIC resistance. The community has forked to KAWPOW (a variant of ethash and progpow) to maximise the ASIC resistance by reducing the potential efficiency increase of ASICs by requiring the feature set and capabilities within over the counter consumer graphics cards. We are not anticipating future forks to change the algorithm as the current algorithm allows a fair distribution of HVN via PoW to the community.
 
 #### Asset Support
 
-Hivecoin will be a hard fork that extends Hive to include the ability to issue and transfer assets. The expected release of asset capabilities will be approximately seven months after the release of HVN. Hive will be extended to allow issuing, reissuing, and transfer of assets. Assets can be reissuable or limited to a set supply at the point of issuance. The cost to create assets will be 500 HVN to create any qty of an asset. Each asset name must be unique. Asset names will be limited to A-Z and 0-9, '_' and '.' and must be at least three characters long. The '.' and the '_' cannot be the first, or the last character, or be consecutive.  
-
-Examples of valid assets:  
-THE_GAME  
-A.TOKEN  
-123  
-
-Examples of invalid assets:  
-_TOKEN  
-THEEND.  
-A..B (consecutive punctuation)  
-AB  
-12  
-.FIRST
-apple
+Hivecoin will be a hard fork that extends Hive to include the ability to issue and transfer assets. Hive will be extended to allow issuing, reissuing, and transfer of assets. Assets can be reissuable or limited to a set supply at the point of issuance. The cost to create assets will be 500 HVN to create any qty of an asset. Each asset name must be unique. Asset names will be limited to A-Z and 0-9, '_' and '.' and must be at least three characters long. The '.' and the '_' cannot be the first, or the last character, or be consecutive.  
 
 The HVN used to issue assets will be sent to a burn address, which will reduce the amount of HVN available. 
 
@@ -46,8 +32,6 @@ Metadata about the token can be stored in IPFS.
 #### Rewards
 
 Reward capabilities will be added to allow payment (in HVN) to all holders of an asset. Payments of HVN would be distributed to all asset holders pro rata. This is useful for paying dividends, dividing payments, or rewarding a group of token holders.
-
-Example: A small software company issues an asset GAMECO that represents a share of the project. GAMECO tokens can be traded with others. Once the software company profits, those profits can be distributed to all holders of GAMECO by sending the profits (via HVN) to all holders of GAMECO.
 
 #### Block Size
 
@@ -64,15 +48,9 @@ Rewards allow payment in HVN to asset holders.
 Once created, assets can be made unique for a cost of 5 HVN. Only non-divisible assets can be made unique. This moves an asset to a UTXO and associates a unique identifier with the txid. From this point the asset can be moved from one address to another and can be traced back to its origin. Only the issuer of the original asset can make an asset unique.  
 The costs to make unique assets will be sent to a burn address.  
 
-Some examples of unique assets:  
-*  Imagine that an art dealer issues the asset named ART. The dealer can then make unique ART assets by attaching a name or a serialized number to each piece of art. These unique tokens can be transferred to the new owner along with the artwork as a proof of authenticity. The tokens ART#MonaLisa and ART#VenusDeMilo are not fungible and represent distinct pieces of art.
-*  A software developer can issue the asset with the name of their software ABCGAME, and then assign each ABCGAME token a unique id or license key. The game tokens could be transferred as the license transfers. Each token ABCGAME#398222 and ABCGAME#398223 are unique tokens.
-*  In game assets. A game ZYX_GAME could create unique limited edition in-game assets that are owned and used by the game player. Example: ZYX_GAME#Sword005 and ZYX_GAME#Purse
-*  HVN based unique assets can be tied to real world assets. Create an asset named GOLDVAULT. Each gold coin or gold bar in a vault can be serialized and audited. Associated unique assets GOLDVAULT#444322 and GOLDVAULT#555994 can be created to represent the specific assets in the physical gold vault. The public nature of the chain allows for full transparency.
-
 ### Phase 5 - Messaging
 
-Messaging to token holders by authorized senders will be layered on top of the Phase 4 unique assets. See [KAAAWWW Protocol](https://medium.com/@tronblack/hivecoin-kaaawww-2f72077aece) for additional information.
+Messaging to token holders by authorized senders will be layered on top of the Phase 4 unique assets.
 
 [More on messaging...](./messaging/README.md)  
 [More on preventing message spam...](./messaging-antispam/README.md)  
@@ -97,6 +75,19 @@ Speeds adoption into the larger crypto ecosystem.
 Switches to a default of generating a 128 bit seed from which the master key is generated.  This allows easy backup for anyone that doesn't import private keys.  Warnings added to back up wallet.dat when importing private keys.
 
 [More on Mnemonic Seed...](./mnemonic-seed/README.md)
+
+
+### Phase 9 - Master node system
+
+The expected release of master node system will be approximately seven months after the release of HVN. The master node does not participate in mining activities, and the block reward of the master node network is 45%. To become a master node, users must have 1,000,000 HVN as a "margin." The deposit is always fully controlled by the holder, and the holder can freely transfer it. After moving the deposit, the corresponding master node will go offline and stop receiving block rewards.
+
+### Phase 10 - Decentralized Budget Management System
+
+The expected release of decentralized Budget Management System will be approximately 12 months after the release of HVN.
+
+### Phase 11 - Simplified Smart Contract
+
+The expected release of simplified Smart Contract will be approximately 24 months after the release of HVN.
 
 ### Appendix A - RPC commands for assets
 
