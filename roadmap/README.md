@@ -62,60 +62,14 @@ Voting will be accomplished by creating and distributing parallel tokens to toke
 
 [More on voting...](./voting/README.md)
 
-### Phase 7 - Compatibility Mode
-
-Allows newly created assets to appear exactly like HVN, LTC, or Bitcoin for easy integration into exchanges, wallets, explorers, etc.
-Speeds adoption into the larger crypto ecosystem.
-
-[More on compatibility mode...](./compatibility-mode/README.md)
-
-
-### Phase 8 - Mobile Wallet compatible Mnemonic Seed (Complete)
-
-Switches to a default of generating a 128 bit seed from which the master key is generated.  This allows easy backup for anyone that doesn't import private keys.  Warnings added to back up wallet.dat when importing private keys.
-
-[More on Mnemonic Seed...](./mnemonic-seed/README.md)
-
-
-### Phase 9 - Master node system
+### Phase 7 - Master node system(Developing)
 
 The expected release of master node system will be approximately seven months after the release of HVN. The master node does not participate in mining activities, and the block reward of the master node network is 45%. To become a master node, users must have 1,000,000 HVN as a "margin." The deposit is always fully controlled by the holder, and the holder can freely transfer it. After moving the deposit, the corresponding master node will go offline and stop receiving block rewards.
 
-### Phase 10 - Decentralized Budget Management System
+### Phase 8 - Decentralized Budget Management System(Developing)
 
-The expected release of decentralized Budget Management System will be approximately 12 months after the release of HVN.
+The expected release of decentralized Budget Management System will be approximately 12 months after the release of HVN.10% of the HVN has been separated from the mining block. Before the completion of this module, this part of the HVN directly funded the Hive core development team, after the completion of this module, the master node will vote to determine the use of 10% HVN.
 
-### Phase 11 - Simplified Smart Contract
+### Phase 9 - Simplified Smart Contract
 
 The expected release of simplified Smart Contract will be approximately 24 months after the release of HVN.
-
-### Appendix A - RPC commands for assets
-
-`issue (asset_name, qty, to_address, change_address, units, reissuable, has_ipfs, ipfs_hash)`  
-Issue an asset with unique name. Unit as 1 for whole units, or 0.00000001 for satoshi-like units. Qty should be whole number. Reissuable is true/false for whether additional units can be issued by the
-original issuer.  
-
-`issueunique (root_name, asset_tags, ipfs_hash, to_address, change_address) `  
-Creates a unique asset from a pool of assets with a specific name. Example: If the asset name is SOFTLICENSE, then this could make unique assets like SOFTLICENSE#38293 and SOFTLICENSE#48382 This would be called once per unique asset needed.  
-
-`reissue (reissue asset_name, qty, to_address, change_address, reissuable, new_unit, new_ipfs )`
-Issue more of a specific asset. This is only allowed by the original issuer of the asset and if the reissuable flag was set to true at the time of original issuance.
-
-`transfer (asset_name, qty, to_address)`  
-This sends assets from one asset holder to another.
-
-`listassets (assets, verbose, count, start)`  
-This lists assets that have already been created. 
-  
-`listmyassets ( asset_name, verbose, count, start )`
-Lists your assets.
-
-`listassetbalancesbyaddress (address)`
-Lists asset balance by address.
-
-`listaddressesbyasset (asset_name)` 
-Lists addresses by asset.
-
-`getassetdata (asset_name)`
-Lists asset data of an asset.
-
