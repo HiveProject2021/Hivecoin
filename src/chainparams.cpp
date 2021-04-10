@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00000"); // Block 1410
+        consensus.nMinimumChainWork = uint256S("0000000040e0136b41e6cc44d14593e943d0c243abb46fcdf97dbcc95613b6df"); // Block 14880
 
-        // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00000"); // Block 1410
+        // By default assume that the signatures in ancestors of this block are valid. Block# 14880
+        consensus.defaultAssumeValid = uint256S("0000000040e0136b41e6cc44d14593e943d0c243abb46fcdf97dbcc95613b6df"); // Block 14880
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -277,8 +277,10 @@ public:
 
 		checkpointData = (CCheckpointData) {
             {
-                { 1337, uint256S("000000000011da81d69f8247e0ce2f5cb68f989d4ca3258859a67aed3066430a")},
-                { 1410, uint256S("00000000855bb37bbdd3e4d4cd9e11132faebb663e939390e660da6a71495890")}
+                { 1337, 	uint256S("000000000011da81d69f8247e0ce2f5cb68f989d4ca3258859a67aed3066430a")},
+                { 5000, 	uint256S("00000001792cf4cb5ff5767c88f02b83c18a79272d4f94710e313eb92dcf8357")},
+                { 10000, 	uint256S("000000001838815b433eecb3503cb68040f25a6e868afbc74e0d2bd5f0d7d3ba")},
+                { 14000, 	uint256S("0000000036b9a82f7c582acc041e911e05f1171bf47138e91eff2a382576356a")}
             }
         };
 
