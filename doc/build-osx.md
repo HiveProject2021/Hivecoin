@@ -35,7 +35,7 @@ you can use [this](/contrib/install_db4.sh) script to install it
 like so:
 
 ```shell
-./contrib/install_db4.sh .
+CFLAGS="-Wno-error=implicit-function-declaration"  ./contrib/install_db4.sh .
 ```
 
 from the root of the repository.
