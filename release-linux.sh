@@ -1,4 +1,4 @@
-VERSION=4.3.2.5
+VERSION=4.4.2.1
 rm -rf ./release-linux
 mkdir release-linux
 

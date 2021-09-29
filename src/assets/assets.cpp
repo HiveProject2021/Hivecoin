@@ -77,7 +77,7 @@ static const std::regex QUALIFIER_INDICATOR("^[#][A-Z0-9._]{3,}$"); // Starts wi
 static const std::regex SUB_QUALIFIER_INDICATOR("^#[A-Z0-9._]+\\/#[A-Z0-9._]+$"); // Starts with #
 static const std::regex RESTRICTED_INDICATOR("^[\\$][A-Z0-9._]{3,}$"); // Starts with $
 
-static const std::regex HIVE_NAMES("^RVN$|^RAVEN$|^RAVENCOIN$|^#RVN$|^#RAVEN$|^#RAVENCOIN$|^HVN$|^HIVE$|^HIVECOIN$|^#HVN$|^#HIVE$|^#HIVECOIN$");
+static const std::regex HIVE_NAMES("^RVN$|^RAVEN$|^RAVENCOIN$|^#RVN$|^#RAVEN$|^#RAVENCOIN$|^HVQ$|^HVN$|^HIVE$|^HIVECOIN$|^#HVN$|^#HIVE$|^#HIVECOIN$");
 
 bool IsRootNameValid(const std::string& name)
 {

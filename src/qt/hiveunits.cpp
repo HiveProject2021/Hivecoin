@@ -42,9 +42,9 @@ QString HiveUnits::name(int unit)
 {
     switch(unit)
     {
-    case HVN: return QString("HVN");
-    case mHVN: return QString("mHVN");
-    case uHVN: return QString::fromUtf8("μHVN");
+    case HVN: return QString("HVQ");
+    case mHVN: return QString("mHVQ");
+    case uHVN: return QString::fromUtf8("μHVQ");
     default: return QString("???");
     }
 }

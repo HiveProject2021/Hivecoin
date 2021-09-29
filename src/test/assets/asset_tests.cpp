@@ -53,6 +53,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         BOOST_CHECK(!IsAssetNameValid("RAVEN", type));
         BOOST_CHECK(!IsAssetNameValid("RAVENCOIN", type));
         BOOST_CHECK(!IsAssetNameValid("HVN", type));
+        BOOST_CHECK(!IsAssetNameValid("HVQ", type));
         BOOST_CHECK(!IsAssetNameValid("HIVE", type));
         BOOST_CHECK(!IsAssetNameValid("HIVECOIN", type));
 
