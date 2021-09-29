@@ -548,8 +548,8 @@
 			<translation>&amp; 양도 자산</translation>
 		</message>
 		<message>
-			<source>Transfer assets to HVN addresses</source>
-			<translation>자산 을 HVN 주소 로 옮기다.</translation>
+			<source>Transfer assets to HVQ addresses</source>
+			<translation>자산 을 HVQ 주소 로 옮기다.</translation>
 		</message>
 		<message>
 			<source>&amp;Create Assets</source>
@@ -1483,8 +1483,8 @@
 			<translation>자산 잔고</translation>
 		</message>
 		<message>
-			<source>HVN Balances</source>
-			<translation>HVN 잔액</translation>
+			<source>HVQ Balances</source>
+			<translation>HVQ 잔액</translation>
 		</message>
 	</context>
 	<context>
@@ -2974,8 +2974,8 @@
 			<translation>생 성 된 코 인 은%1 블록 에서 만 료 되 어야 만 사용 할 수 있 습 니 다.이 블록 을 생 성 할 때 블록 체인 에 추가 하기 위해 네트워크 로 방송 된다.만약 그것 이 체인 에 들 어 갈 수 없다 면, 그 상 태 는 \ 으로 변 합 니 다.</translation>
 		</message>
 		<message>
-			<source>Net HVN amount</source>
-			<translation>HVN 순 액</translation>
+			<source>Net HVQ amount</source>
+			<translation>HVQ 순 액</translation>
 		</message>
 	</context>
 	<context>
@@ -3128,8 +3128,8 @@
 			<translation>보 낸 자산</translation>
 		</message>
 		<message>
-			<source>The asset (or HVN) removed or added to balance.</source>
-			<translation>자산 (또는 HVN) 이 잔액 에 삭제 되 거나 첨가 된다.</translation>
+			<source>The asset (or HVQ) removed or added to balance.</source>
+			<translation>자산 (또는 HVQ) 이 잔액 에 삭제 되 거나 첨가 된다.</translation>
 		</message>
 	</context>
 	<context>
@@ -4776,8 +4776,8 @@
 			<translation>주소:</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>이 자산 을 보유 한 HVN 주소 (이 주소 가 있어 야 합 니 다).새 주 소 를 만 들 수 있 습 니 다.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>이 자산 을 보유 한 HVQ 주소 (이 주소 가 있어 야 합 니 다).새 주 소 를 만 들 수 있 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -4912,7 +4912,7 @@
 			<translation>잔액:</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
+			<source>123.456 HVQ</source>
 			<translation>123456 파운드</translation>
 		</message>
 	</context>
@@ -5300,8 +5300,8 @@
 			<translation>주소:</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>이 자산 을 보유 한 HVN 주소 (이 주소 가 있어 야 합 니 다).새 주 소 를 만 들 수 있 습 니 다.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>이 자산 을 보유 한 HVQ 주소 (이 주소 가 있어 야 합 니 다).새 주 소 를 만 들 수 있 습 니 다.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -5436,7 +5436,7 @@
 			<translation>잔액:</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
+			<source>123.456 HVQ</source>
 			<translation>123456 파운드</translation>
 		</message>
 	</context>

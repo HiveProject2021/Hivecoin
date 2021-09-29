@@ -548,8 +548,8 @@
 			<translation>&amp; Передать активы</translation>
 		</message>
 		<message>
-			<source>Transfer assets to HVN addresses</source>
-			<translation>переместить активы в HVN - адрес</translation>
+			<source>Transfer assets to HVQ addresses</source>
+			<translation>переместить активы в HVQ - адрес</translation>
 		</message>
 		<message>
 			<source>&amp;Create Assets</source>
@@ -1483,8 +1483,8 @@
 			<translation>сальдо активов</translation>
 		</message>
 		<message>
-			<source>HVN Balances</source>
-			<translation>остаток HVN</translation>
+			<source>HVQ Balances</source>
+			<translation>остаток HVQ</translation>
 		</message>
 	</context>
 	<context>
@@ -2974,8 +2974,8 @@
 			<translation>для использования монет, образующихся после истечения срока действия%1 квартала.при создании этого блока он будет передаваться в сеть, чтобы добавить его в блочную цепочку.если она не может войти в цепочку, ее состояние изменится</translation>
 		</message>
 		<message>
-			<source>Net HVN amount</source>
-			<translation>чистый HVN</translation>
+			<source>Net HVQ amount</source>
+			<translation>чистый HVQ</translation>
 		</message>
 	</context>
 	<context>
@@ -3128,8 +3128,8 @@
 			<translation>Отправленные активы</translation>
 		</message>
 		<message>
-			<source>The asset (or HVN) removed or added to balance.</source>
-			<translation>активы (или HVN) удаляются или добавляются в остаток.</translation>
+			<source>The asset (or HVQ) removed or added to balance.</source>
+			<translation>активы (или HVQ) удаляются или добавляются в остаток.</translation>
 		</message>
 	</context>
 	<context>
@@ -5082,8 +5082,8 @@
 			<translation>адрес:</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>Укажите адрес HVN, на котором будет храниться данное имущество (вы должны иметь этот адрес).оставить пустым, чтобы создать новый адрес.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>Укажите адрес HVQ, на котором будет храниться данное имущество (вы должны иметь этот адрес).оставить пустым, чтобы создать новый адрес.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -5218,7 +5218,7 @@
 			<translation>сальдо</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
+			<source>123.456 HVQ</source>
 			<translation>фунт стерлингов</translation>
 		</message>
 	</context>
@@ -5606,8 +5606,8 @@
 			<translation>адрес:</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>Укажите адрес HVN, на котором будет храниться данное имущество (вы должны иметь этот адрес).оставить пустым, чтобы создать новый адрес.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>Укажите адрес HVQ, на котором будет храниться данное имущество (вы должны иметь этот адрес).оставить пустым, чтобы создать новый адрес.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -5742,7 +5742,7 @@
 			<translation>сальдо</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
+			<source>123.456 HVQ</source>
 			<translation>фунт стерлингов</translation>
 		</message>
 	</context>

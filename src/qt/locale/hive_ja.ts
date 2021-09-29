@@ -548,8 +548,8 @@
 			<translation>資産の移転</translation>
 		</message>
 		<message>
-			<source>Transfer assets to HVN addresses</source>
-			<translation>HVNアドレスへの資産の転送</translation>
+			<source>Transfer assets to HVQ addresses</source>
+			<translation>HVQアドレスへの資産の転送</translation>
 		</message>
 		<message>
 			<source>&amp;Create Assets</source>
@@ -1483,8 +1483,8 @@
 			<translation>資産収支</translation>
 		</message>
 		<message>
-			<source>HVN Balances</source>
-			<translation>HVNバランス</translation>
+			<source>HVQ Balances</source>
+			<translation>HVQバランス</translation>
 		</message>
 	</context>
 	<context>
@@ -2974,8 +2974,8 @@
 			<translation>彼らが費やされることができる前に、生成されたコインは成熟した%1ブロックをしなければなりません.このブロックを生成すると、ブロックチェーンに追加されるようにネットワークにブロードキャストされました.チェインに失敗した場合、その状態は</translation>
 		</message>
 		<message>
-			<source>Net HVN amount</source>
-			<translation>ネットHVN量</translation>
+			<source>Net HVQ amount</source>
+			<translation>ネットHVQ量</translation>
 		</message>
 	</context>
 	<context>
@@ -3128,8 +3128,8 @@
 			<translation>資産</translation>
 		</message>
 		<message>
-			<source>The asset (or HVN) removed or added to balance.</source>
-			<translation>資産(またはHVN)を削除したり、バランスに追加しました.</translation>
+			<source>The asset (or HVQ) removed or added to balance.</source>
+			<translation>資産(またはHVQ)を削除したり、バランスに追加しました.</translation>
 		</message>
 	</context>
 	<context>
@@ -4777,8 +4777,8 @@
 			<translation>アドレス</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>この資産を保持するHVNアドレス(このアドレスを所有しなければなりません).空白のままに新しいアドレスを作成します.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>この資産を保持するHVQアドレス(このアドレスを所有しなければなりません).空白のままに新しいアドレスを作成します.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -4913,8 +4913,8 @@
 			<translation>バランス</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
-			<translation>123.456 HVN</translation>
+			<source>123.456 HVQ</source>
+			<translation>123.456 HVQ</translation>
 		</message>
 	</context>
 	<context>
@@ -5301,8 +5301,8 @@
 			<translation>アドレス</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>この資産を保持するHVNアドレス(このアドレスを所有しなければなりません).空白のままに新しいアドレスを作成します.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>この資産を保持するHVQアドレス(このアドレスを所有しなければなりません).空白のままに新しいアドレスを作成します.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -5437,8 +5437,8 @@
 			<translation>バランス</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
-			<translation>123.456 HVN</translation>
+			<source>123.456 HVQ</source>
+			<translation>123.456 HVQ</translation>
 		</message>
 	</context>
 	<context>

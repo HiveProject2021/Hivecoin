@@ -4739,7 +4739,7 @@
 			<translation>Actifs transférés</translation>
 		</message>
 		<message>
-			<source>Transfer assets to HVN addresses</source>
+			<source>Transfer assets to HVQ addresses</source>
 			<translation>Transfert d'actifs à l'adresse hvn</translation>
 		</message>
 		<message>
@@ -5222,7 +5222,7 @@
 			<translation>Intention / but de la transaction définie par l'utilisateur.</translation>
 		</message>
 		<message>
-			<source>The asset (or HVN) removed or added to balance.</source>
+			<source>The asset (or HVQ) removed or added to balance.</source>
 			<translation>Les actifs (ou hvn) sont retirés ou ajoutés au solde.</translation>
 		</message>
 	</context>
@@ -6367,7 +6367,7 @@
 			<translation>Les pièces générées doivent expirer%1 blocs avant d'être utilisées.Lorsque ce bloc est généré, il est diffusé sur le Réseau pour être ajouté à la chaîne de blocs.S'il ne peut pas entrer dans la chaîne, son état change à</translation>
 		</message>
 		<message>
-			<source>Net HVN amount</source>
+			<source>Net HVQ amount</source>
 			<translation>Hvn net</translation>
 		</message>
 		<message>
@@ -6541,7 +6541,7 @@
 			<translation>Montant retiré du solde ou ajouté au solde.</translation>
 		</message>
 		<message>
-			<source>The asset (or HVN) removed or added to balance.</source>
+			<source>The asset (or HVQ) removed or added to balance.</source>
 			<translation>Les actifs (ou hvn) sont retirés ou ajoutés au solde.</translation>
 		</message>
 	</context>
