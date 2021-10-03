@@ -335,7 +335,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 HVN</string>
+                    <string notr="true">0.00 HVQ</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -415,7 +415,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 HVN</string>
+                    <string notr="true">0.00 HVQ</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -466,7 +466,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 HVN</string>
+                    <string notr="true">0.00 HVQ</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -495,7 +495,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 HVN</string>
+                    <string notr="true">0.00 HVQ</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -688,7 +688,7 @@
                <string/>
               </property>
               <property name="placeholderText">
-               <string>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</string>
+               <string>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</string>
               </property>
              </widget>
             </item>
@@ -1420,7 +1420,7 @@
             <enum>Qt::RightToLeft</enum>
            </property>
            <property name="text">
-            <string>123.456 HVN</string>
+            <string>123.456 HVQ</string>
            </property>
           </widget>
          </item>
