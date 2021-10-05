@@ -4740,7 +4740,7 @@
 		</message>
 		<message>
 			<source>Transfer assets to HVQ addresses</source>
-			<translation>Transfert d'actifs à l'adresse hvn</translation>
+			<translation>Transfert d'actifs à l'adresse HVQ</translation>
 		</message>
 		<message>
 			<source>&amp;Create Assets</source>
@@ -5223,7 +5223,7 @@
 		</message>
 		<message>
 			<source>The asset (or HVQ) removed or added to balance.</source>
-			<translation>Les actifs (ou hvn) sont retirés ou ajoutés au solde.</translation>
+			<translation>Les actifs (ou HVQ) sont retirés ou ajoutés au solde.</translation>
 		</message>
 	</context>
 	<context>
@@ -6368,7 +6368,7 @@
 		</message>
 		<message>
 			<source>Net HVQ amount</source>
-			<translation>Hvn net</translation>
+			<translation>HVQ net</translation>
 		</message>
 		<message>
 			<source>Debug information</source>
@@ -6542,7 +6542,7 @@
 		</message>
 		<message>
 			<source>The asset (or HVQ) removed or added to balance.</source>
-			<translation>Les actifs (ou hvn) sont retirés ou ajoutés au solde.</translation>
+			<translation>Les actifs (ou HVQ) sont retirés ou ajoutés au solde.</translation>
 		</message>
 	</context>
 	<context>

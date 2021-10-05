@@ -1026,7 +1026,7 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
         }
 
         std::string assetNameOut = "HVQ";
-        if (assetName != "HVN" || assetName != "HVQ") {
+        if (assetName != "HVN" && assetName != "HVQ") {
             CAmount _amount;
             if (!GetAssetInfoFromScript(it->second.script, assetNameOut, _amount)) {
                 throw JSONRPCError(RPC_INTERNAL_ERROR, "Couldn't decode asset script");

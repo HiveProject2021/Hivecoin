@@ -53,7 +53,7 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
 {
     QString strHTML;
 
-    if (rec->assetName != "HVN" || rec->assetName != "HVQ") {
+    if (rec->assetName != "HVN" && rec->assetName != "HVQ") {
         return toAssetHTML(wallet, wtx, rec, unit);
     }
 
