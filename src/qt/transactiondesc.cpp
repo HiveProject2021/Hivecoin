@@ -53,7 +53,7 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
 {
     QString strHTML;
 
-    if (rec->assetName != "HVN") {
+    if (rec->assetName != "HVN" && rec->assetName != "HVQ") {
         return toAssetHTML(wallet, wtx, rec, unit);
     }
 
@@ -384,7 +384,7 @@ QString TransactionDesc::toAssetHTML(CWallet *wallet, CWalletTx &wtx, Transactio
         strHTML += "<b>" + tr("Debit") + ":</b> " + HiveUnits::formatWithCustomName(QString::fromStdString(rec->assetName), nAssetsRec, rec->units, true) + "<br>";
     }
 
-    strHTML += "<b>" + tr("Net HVN amount") + ":</b> " + HiveUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
+    strHTML += "<b>" + tr("Net HVQ amount") + ":</b> " + HiveUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
 
     //
     // Message

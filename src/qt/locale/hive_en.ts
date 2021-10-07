@@ -1669,8 +1669,8 @@
     </message>
     <message>
         <location line="+128"/>
-        <source>HVN Balances</source>
-        <translation>HVN Balances</translation>
+        <source>HVQ Balances</source>
+        <translation>HVQ Balances</translation>
     </message>
 </context>
 <context>

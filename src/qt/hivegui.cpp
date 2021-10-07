@@ -411,7 +411,7 @@ void HiveGUI::createActions()
 
     /** HVN START */
     transferAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_transfer_selected", ":/icons/asset_transfer"), tr("&Transfer Assets"), this);
-    transferAssetAction->setStatusTip(tr("Transfer assets to HVN addresses"));
+    transferAssetAction->setStatusTip(tr("Transfer assets to HVQ addresses"));
     transferAssetAction->setToolTip(transferAssetAction->statusTip());
     transferAssetAction->setCheckable(true);
     transferAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
@@ -733,7 +733,7 @@ void HiveGUI::createToolBars()
         labelCurrentPrice->setFont(currentMarketFont);
 
         QLabel* labelBtcHvn = new QLabel();
-        labelBtcHvn->setText("BTC / HVN");
+        labelBtcHvn->setText("BTC / HVQ");
         labelBtcHvn->setContentsMargins(15,0,0,0);
         labelBtcHvn->setFixedHeight(75);
         labelBtcHvn->setAlignment(Qt::AlignVCenter);
@@ -1489,7 +1489,7 @@ void HiveGUI::incomingTransaction(const QString& date, int unit, const CAmount& 
 {
     // On new transaction, make an info balloon
     QString msg = tr("Date: %1\n").arg(date);
-    if (assetName == "HVN")
+    if (assetName == "HVN" || assetName == "HVQ")
         msg += tr("Amount: %1\n").arg(HiveUnits::formatWithUnit(unit, amount, true));
     else
         msg += tr("Amount: %1\n").arg(HiveUnits::formatWithCustomName(assetName, amount, MAX_ASSET_UNITS, true));
@@ -1509,7 +1509,7 @@ void HiveGUI::checkAssets()
     // Check that status of HIP2 and activate the assets icon if it is active
     if(AreAssetsDeployed()) {
         transferAssetAction->setDisabled(false);
-        transferAssetAction->setToolTip(tr("Transfer assets to HVN addresses"));
+        transferAssetAction->setToolTip(tr("Transfer assets to HVQ addresses"));
         createAssetAction->setDisabled(false);
         createAssetAction->setToolTip(tr("Create new main/sub/unique assets"));
         manageAssetAction->setDisabled(false);
@@ -1843,7 +1843,7 @@ void UnitDisplayStatusBarControl::onMenuSelection(QAction* action)
 
 void HiveGUI::getPriceInfo()
 {
-    request->setUrl(QUrl("https://api.binance.com/api/v1/ticker/price?symbol=HVNBTC"));
+    request->setUrl(QUrl("https://api.binance.com/api/v1/ticker/price?symbol=HVQBTC"));
     networkManager->get(*request);
 }
 

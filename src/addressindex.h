@@ -10,7 +10,7 @@
 #include "amount.h"
 #include "script/script.h"
 
-static const std::string HVN = "HVN";
+static const std::string HVN = "HVQ";
 
 struct CAddressUnspentKey {
     unsigned int type;

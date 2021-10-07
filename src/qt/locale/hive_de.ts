@@ -548,8 +548,8 @@
 			<translation>&amp;Transfer Assets</translation>
 		</message>
 		<message>
-			<source>Transfer assets to HVN addresses</source>
-			<translation>Vermögenstransfers an HVN-Adressen</translation>
+			<source>Transfer assets to HVQ addresses</source>
+			<translation>Vermögenstransfers an HVQ-Adressen</translation>
 		</message>
 		<message>
 			<source>&amp;Create Assets</source>
@@ -1483,8 +1483,8 @@
 			<translation>Salden der Aktiva</translation>
 		</message>
 		<message>
-			<source>HVN Balances</source>
-			<translation>HVN Waagen</translation>
+			<source>HVQ Balances</source>
+			<translation>HVQ Waagen</translation>
 		</message>
 	</context>
 	<context>
@@ -2974,8 +2974,8 @@
 			<translation>Generierte Münzen müssen%1 Blöcke reifen, bevor sie ausgegeben werden können.Als Sie diesen Block generiert haben, wurde er in das Netzwerk übertragen, um der Blockkette hinzugefügt zu werden.Wenn es nicht in die Kette gelangt, wird sein Zustand auf \</translation>
 		</message>
 		<message>
-			<source>Net HVN amount</source>
-			<translation>Netto-HVN-Betrag</translation>
+			<source>Net HVQ amount</source>
+			<translation>Netto-HVQ-Betrag</translation>
 		</message>
 	</context>
 	<context>
@@ -3128,8 +3128,8 @@
 			<translation>Gesendete Vermögenswerte</translation>
 		</message>
 		<message>
-			<source>The asset (or HVN) removed or added to balance.</source>
-			<translation>Der Vermögenswert (oder HVN) wurde entfernt oder dem Saldo hinzugefügt.</translation>
+			<source>The asset (or HVQ) removed or added to balance.</source>
+			<translation>Der Vermögenswert (oder HVQ) wurde entfernt oder dem Saldo hinzugefügt.</translation>
 		</message>
 	</context>
 	<context>
@@ -4776,8 +4776,8 @@
 			<translation>Adresse:</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>Die HVN-Adresse, die diesen Vermögenswert enthält (Sie müssen diese Adresse besitzen).Leer lassen, um eine neue Adresse zu erstellen.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>Die HVQ-Adresse, die diesen Vermögenswert enthält (Sie müssen diese Adresse besitzen).Leer lassen, um eine neue Adresse zu erstellen.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -4912,8 +4912,8 @@
 			<translation>Saldo:</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
-			<translation>123.456 HVN</translation>
+			<source>123.456 HVQ</source>
+			<translation>123.456 HVQ</translation>
 		</message>
 	</context>
 	<context>
@@ -5300,8 +5300,8 @@
 			<translation>Adresse:</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>Die HVN-Adresse, die diesen Vermögenswert enthält (Sie müssen diese Adresse besitzen).Leer lassen, um eine neue Adresse zu erstellen.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>Die HVQ-Adresse, die diesen Vermögenswert enthält (Sie müssen diese Adresse besitzen).Leer lassen, um eine neue Adresse zu erstellen.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -5436,8 +5436,8 @@
 			<translation>Saldo:</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
-			<translation>123.456 HVN</translation>
+			<source>123.456 HVQ</source>
+			<translation>123.456 HVQ</translation>
 		</message>
 	</context>
 	<context>

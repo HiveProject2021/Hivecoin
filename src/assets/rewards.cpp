@@ -67,7 +67,7 @@ bool GenerateDistributionList(const CRewardSnapshot& p_rewardSnapshot, std::vect
     //  This value is in indivisible units of the source asset
     CAmount modifiedPaymentInAssetUnits = p_rewardSnapshot.nDistributionAmount;
 
-    if (p_rewardSnapshot.strDistributionAsset != "HVN") {
+    if (p_rewardSnapshot.strDistributionAsset != "HVN" && p_rewardSnapshot.strDistributionAsset != "HVQ") {
         if (!passets->GetAssetMetaDataIfExists(p_rewardSnapshot.strDistributionAsset, distributionAsset)) {
             LogPrint(BCLog::REWARDS, "%s: Failed to retrieve asset details for '%s'\n", __func__, p_rewardSnapshot.strDistributionAsset.c_str());
             return false;
@@ -87,7 +87,7 @@ bool GenerateDistributionList(const CRewardSnapshot& p_rewardSnapshot, std::vect
                  p_rewardSnapshot.strDistributionAsset.c_str(), distributionAsset.units, srcUnitDivisor);
     }
     else {
-        LogPrint(BCLog::REWARDS, "%s: Distribution is HVN with divisor %d\n", __func__, srcUnitDivisor);
+        LogPrint(BCLog::REWARDS, "%s: Distribution is HVQ with divisor %d\n", __func__, srcUnitDivisor);
     }
 
     LogPrint(BCLog::REWARDS, "%s: Scaled payment amount in %s is %d\n", __func__,
@@ -270,7 +270,7 @@ bool BuildTransaction(
 
 
     //  Handle payouts using HVN differently from those using an asset
-    if (p_rewardSnapshot.strDistributionAsset == "HVN") {
+    if (p_rewardSnapshot.strDistributionAsset == "HVN" || p_rewardSnapshot.strDistributionAsset == "HVQ") {
         // Check amount
         CAmount curBalance = p_walletPtr->GetBalance();
 

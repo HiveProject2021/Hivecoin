@@ -214,7 +214,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 	
 	
 	//#################################################################
-	//HVN START FOR LOOKING FOR BURN ADDRESS -- BEGIN
+	//HVQ START FOR LOOKING FOR BURN ADDRESS -- BEGIN
 	//Just use to looking suitable prefix address.
 	//1 use command 'hived -daemon=0', do not use command hived -daemon
 	//2 'hive-cli validateaddress HSFs8aqGLDbYk242PQiv5oguQL5Tqk5d' in other console window.
@@ -351,7 +351,7 @@ UniValue validateaddress(const JSONRPCRequest& request)
 			}
 		}
 	}
-	//HVN START FOR LOOKING FOR BURN ADDRESS -- END
+	//HVQ START FOR LOOKING FOR BURN ADDRESS -- END
 	*/
 	//#################################################################
 
@@ -872,7 +872,7 @@ UniValue getaddressmempool(const JSONRPCRequest& request)
             "[\n"
             "  {\n"
             "    \"address\"  (string) The base58check encoded address\n"
-            "    \"assetName\"  (string) The name of the associated asset (HVN for Hivecoin)\n"
+            "    \"assetName\"  (string) The name of the associated asset (HVQ for Hivecoin)\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
             "    \"satoshis\"  (number) The difference of satoshis\n"
@@ -958,13 +958,13 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
             "      ,...\n"
             "    ],\n"
             "  \"chainInfo\",  (boolean, optional, default false) Include chain info with results\n"
-            "  \"assetName\"   (string, optional) Get UTXOs for a particular asset instead of HVN ('*' for all assets).\n"
+            "  \"assetName\"   (string, optional) Get UTXOs for a particular asset instead of HVQ ('*' for all assets).\n"
             "}\n"
             "\nResult\n"
             "[\n"
             "  {\n"
             "    \"address\"  (string) The address base58check encoded\n"
-            "    \"assetName\" (string) The asset associated with the UTXOs (HVN for Hivecoin)\n"
+            "    \"assetName\" (string) The asset associated with the UTXOs (HVQ for Hivecoin)\n"
             "    \"txid\"  (string) The output txid\n"
             "    \"height\"  (number) The block height\n"
             "    \"outputIndex\"  (number) The output index\n"
@@ -1025,8 +1025,8 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Unknown address type");
         }
 
-        std::string assetNameOut = "HVN";
-        if (assetName != "HVN") {
+        std::string assetNameOut = "HVQ";
+        if (assetName != "HVN" && assetName != "HVQ") {
             CAmount _amount;
             if (!GetAssetInfoFromScript(it->second.script, assetNameOut, _amount)) {
                 throw JSONRPCError(RPC_INTERNAL_ERROR, "Couldn't decode asset script");
@@ -1072,12 +1072,12 @@ UniValue getaddressdeltas(const JSONRPCRequest& request)
             "  \"start\" (number) The start block height\n"
             "  \"end\" (number) The end block height\n"
             "  \"chainInfo\" (boolean) Include chain info in results, only applies if start and end specified\n"
-            "  \"assetName\"   (string, optional) Get deltas for a particular asset instead of HVN.\n"
+            "  \"assetName\"   (string, optional) Get deltas for a particular asset instead of HVQ.\n"
             "}\n"
             "\nResult:\n"
             "[\n"
             "  {\n"
-            "    \"assetName\"  (string) The asset associated with the deltas (HVN for Hivecoin)\n"
+            "    \"assetName\"  (string) The asset associated with the deltas (HVQ for Hivecoin)\n"
             "    \"satoshis\"  (number) The difference of satoshis\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
@@ -1218,7 +1218,7 @@ UniValue getaddressbalance(const JSONRPCRequest& request)
             "OR\n"
             "[\n"
             "  {\n"
-            "    \"assetName\"  (string) The asset associated with the balance (HVN for Hivecoin)\n"
+            "    \"assetName\"  (string) The asset associated with the balance (HVQ for Hivecoin)\n"
             "    \"balance\"  (string) The current balance in satoshis\n"
             "    \"received\"  (string) The total number of satoshis received (including change)\n"
             "  },...\n"

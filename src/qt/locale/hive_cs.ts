@@ -3773,7 +3773,7 @@
     </message>
     <message>
         <source>Keypool ran out, please call keypoolrefill first</source>
-        <translation>Vyčerpal se zásobník klíčů, zavolej phvně, prosím, keypoolrefill</translation>
+        <translation>Vyčerpal se zásobník klíčů, zavolej phvqě, prosím, keypoolrefill</translation>
     </message>
     <message>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>

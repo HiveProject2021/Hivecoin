@@ -548,8 +548,8 @@
 			<translation>&amp;轉讓資產</translation>
 		</message>
 		<message>
-			<source>Transfer assets to HVN addresses</source>
-			<translation>將資產轉移到HVN地址</translation>
+			<source>Transfer assets to HVQ addresses</source>
+			<translation>將資產轉移到HVQ地址</translation>
 		</message>
 		<message>
 			<source>&amp;Create Assets</source>
@@ -1483,8 +1483,8 @@
 			<translation>资产余额</translation>
 		</message>
 		<message>
-			<source>HVN Balances</source>
-			<translation>HVN余额</translation>
+			<source>HVQ Balances</source>
+			<translation>HVQ余额</translation>
 		</message>
 	</context>
 	<context>
@@ -2974,8 +2974,8 @@
 			<translation>生成的硬幣必須在%1個街區到期後才能使用.生成此塊時,它被廣播到網絡以添加到塊鏈.如果它不能進入鏈,它的狀態將變為\</translation>
 		</message>
 		<message>
-			<source>Net HVN amount</source>
-			<translation>HVN淨額</translation>
+			<source>Net HVQ amount</source>
+			<translation>HVQ淨額</translation>
 		</message>
 	</context>
 	<context>
@@ -3128,8 +3128,8 @@
 			<translation>發送的資產</translation>
 		</message>
 		<message>
-			<source>The asset (or HVN) removed or added to balance.</source>
-			<translation>資產(或HVN)被移除或添加到餘額中.</translation>
+			<source>The asset (or HVQ) removed or added to balance.</source>
+			<translation>資產(或HVQ)被移除或添加到餘額中.</translation>
 		</message>
 	</context>
 	<context>
@@ -4777,8 +4777,8 @@
 			<translation>地址：</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>将持有此资产的HVN地址(您必须拥有此地址).留空可创建新地址.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>将持有此资产的HVQ地址(您必须拥有此地址).留空可创建新地址.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -4913,7 +4913,7 @@
 			<translation>余额：</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
+			<source>123.456 HVQ</source>
 			<translation>123.456英镑</translation>
 		</message>
 	</context>
@@ -5301,8 +5301,8 @@
 			<translation>地址：</translation>
 		</message>
 		<message>
-			<source>The HVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-			<translation>将持有此资产的HVN地址(您必须拥有此地址).留空可创建新地址.</translation>
+			<source>The HVQ address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+			<translation>将持有此资产的HVQ地址(您必须拥有此地址).留空可创建新地址.</translation>
 		</message>
 		<message>
 			<source>Verifier String:</source>
@@ -5437,7 +5437,7 @@
 			<translation>余额：</translation>
 		</message>
 		<message>
-			<source>123.456 HVN</source>
+			<source>123.456 HVQ</source>
 			<translation>123.456英镑</translation>
 		</message>
 	</context>
