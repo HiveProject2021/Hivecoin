@@ -13,7 +13,7 @@ http://www.hivecoin.org<br>
 We tribute to Bitcoin and Ravencoin founders and hard-work developers in these areas over the years. At the same time, we sincerely thank Bitcoin and Ravencoin for their efforts and contributions in establishing digital currencies and blockchain development. Appreciate the valued code and research results of the predecessors, Hivecoin is created by standing on the shoulders of giants.
 
 
-> **Abstract** Hivecoin is a blockchain platform that integrates simplified smart contracts. According to the Bitcoin protocol's UTXO model to develop and test,  and based on Ravencoin and the Bitcoin code branch to create. Hivecoin creates a simplified version of the smart contract module and uses it to implement asset issuance, asset transaction, asset mortgage, community autonomy, master node network, budget review, and DEFI. Hivecoin is free and open-source of information. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); uses the KAWPOW algorithm created to resist ASC miners. Open mines 45% of Hivecoin (HVN) and distributes the other 45% of HVN to all master nodes of Hivecoin (Mortgage 1,000,000 HVN requested), and the remaining 10% is distributed to contributors in Hivecoin community. 
+> **Abstract** Hivecoin is a blockchain platform that integrates simplified smart contracts. According to the Bitcoin protocol's UTXO model to develop and test,  and based on Ravencoin and the Bitcoin code branch to create. Hivecoin creates a simplified version of the smart contract module and uses it to implement asset issuance, asset transaction, asset mortgage, community autonomy, master node network, budget review, and DEFI. Hivecoin is free and open-source of information. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); uses the KAWPOW algorithm created to resist ASC miners. Open mines 45% of Hivecoin (HVQ) and distributes the other 45% of HVQ to all master nodes of Hivecoin (Mortgage 1,000,000 HVQ requested), and the remaining 10% is distributed to contributors in Hivecoin community. 
 
 ## 1 Introduction
 
@@ -31,7 +31,7 @@ Hivecoin created a more accessible simplified version of smart contracts for use
 
 ## 2 Hivecoin Launch and Algorithm
 
-Hivecoin was released on March 5, 2021, and the binary file for mining was on March 30, 2021. Hivecoin is a system similar to Bitcoin that will allow users to manage assets, create smart contracts, and integrate them into its blockchain. Hivecoin uses a new mining algorithm developed by Ravencoin developers, KAWPOW, to create a platform similar to Bitcoin to prevent ASC mining pools from dominating. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE). Using the KAWPOW algorithm, 45% of Hivecoin (HVN) is mined openly and on the up and up.
+Hivecoin was released on March 5, 2021, and the binary file for mining was on March 30, 2021. Hivecoin is a system similar to Bitcoin that will allow users to manage assets, create smart contracts, and integrate them into its blockchain. Hivecoin uses a new mining algorithm developed by Ravencoin developers, KAWPOW, to create a platform similar to Bitcoin to prevent ASC mining pools from dominating. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE). Using the KAWPOW algorithm, 45% of Hivecoin (HVQ) is mined openly and on the up and up.
 
 Hivecoin builds a second-layer network based on the first-layer miner network, the master node network, similar to DASH. The master node (also known as the full node) supports the second layer of the network, which provides exceptional performance support for Hivecoin. The master node does not participate in mining activities. It has instant transaction functions, decentralized management, and budget decision-making so that the master node will receive 45% of the block reward. The remaining 10% for establishing a healthy and complete Hivecoin community; the distribution, according to the master node voting to fund projects that contribute to the entire Hivecoin network.
 
@@ -41,13 +41,13 @@ On January 3, 2009, Bitcoin was launched as a peer-to-peer electronic cash syste
 
 Users who use the Hive protocol or pledge Hive assets can issue assets. These assets exist on the Hivecoin blockchain, and the creator decides the name, denomination, and purpose of the assets. Assets can be freely transferred to any Hivecoin address. Assets created using the Hive protocol have several advantages: (1) Easy to use (2) Closely integrated with native coins (3) Double protection by POW and POSE (4) Supported by a wide range of autonomous community organizations.
 
-The issuer of the asset will burn 500 HVN and must provide a unique asset name. The issuer confirms the quantity to be issued, the number of decimal places, and whether they will be allowed to publish more of the same tokens in the future.
+The issuer of the asset will burn 500 HVQ and must provide a unique asset name. The issuer confirms the quantity to be issued, the number of decimal places, and whether they will be allowed to publish more of the same tokens in the future.
 
 Assets are mainly including main assets, sub-assets, unique assets, and restricted assets.
 
 ## 4 Simplified Smart Contract
 
-Hivecoin has established a simplified virtual machine that can implement smart contracts based on Bitcoin encoding and transaction rules. Typically, users only need to set some simple command codes to create a contract. For example, use for mortgage HVN to generate interest or the master node votes to decide when to start the budget.
+Hivecoin has established a simplified virtual machine that can implement smart contracts based on Bitcoin encoding and transaction rules. Typically, users only need to set some simple command codes to create a contract. For example, use for mortgage HVQ to generate interest or the master node votes to decide when to start the budget.
 
 The advantage of the simplified smart contract is that it is easy to use and operate, safe and concise. The disadvantage is that it can only implement certain built-in functions of the system, and the parts are not as powerful as the ETH smart contract.
 
@@ -57,7 +57,7 @@ Hivecoin implements asset management, interest generation from mortgage assets, 
  
 The master node system is also called Proof of Service (PoSe) because the essence of the master node is to provide critical services for the entire Hivecoin network. The master nodes supervise the whole Hivecoin network and have the right to reject unqualified blocks created by miners. If a miner tries to take possession of all block rewards or run an old version of Hivecoin software, the master node network will quarantine the block and prevent it from being added to the blockchain.
 
-Hivecoin includes a two-layer network. The first layer constitutes a network for miners to provide users with funds sending and receiving services and prevent double-spending. The miner network's block reward is 45%; the second layer constitutes the network as the master node and provides support for the unique performance of Hivecoin. The master node does not participate in mining activities, and the block reward of the master node network is 45%. To become a master node, users must have 1,000,000 HVN as a "margin." The deposit is always fully controlled by the holder, and the holder can freely transfer it. After moving the deposit, the corresponding master node will go offline and stop receiving block rewards.
+Hivecoin includes a two-layer network. The first layer constitutes a network for miners to provide users with funds sending and receiving services and prevent double-spending. The miner network's block reward is 45%; the second layer constitutes the network as the master node and provides support for the unique performance of Hivecoin. The master node does not participate in mining activities, and the block reward of the master node network is 45%. To become a master node, users must have 1,000,000 HVQ as a "margin." The deposit is always fully controlled by the holder, and the holder can freely transfer it. After moving the deposit, the corresponding master node will go offline and stop receiving block rewards.
 
 ## 6 Decentralized Budget Management System
 
@@ -68,7 +68,7 @@ This system is decentralized, fully controlled by the master node. The budget in
 
 ## 7 Conclusion
 
-Hivecoin is based on a large amount of Ravencoin and Bitcoin code to create a simplified version of the smart contract module. Implement asset issuance, asset transaction, asset mortgage, community autonomy, master node network, budget review, DEFI, and other functions. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); 45% of Hivecoin (HVN) is allocated to miners, 45% is allocated to all Hivecoin master nodes, and the remaining 10% is allocated to the Hivecoin community ecology participants who contribute to the environment. Hivecoin adheres to the spirit of openness and open-source and encourages people from all walks of life to work together to promote the development of Hivecoin.
+Hivecoin is based on a large amount of Ravencoin and Bitcoin code to create a simplified version of the smart contract module. Implement asset issuance, asset transaction, asset mortgage, community autonomy, master node network, budget review, DEFI, and other functions. Hivecoin uses a combination of Proof of Work (POW) and Proof of Service (POSE); 45% of Hivecoin (HVQ) is allocated to miners, 45% is allocated to all Hivecoin master nodes, and the remaining 10% is allocated to the Hivecoin community ecology participants who contribute to the environment. Hivecoin adheres to the spirit of openness and open-source and encourages people from all walks of life to work together to promote the development of Hivecoin.
 
 Thanks again to the developers of Bitcoin and Ravencoin!
 
