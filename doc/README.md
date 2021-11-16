@@ -79,11 +79,9 @@ The GUI wallet requires the QR Code encoding library and Google's data interchan
 
 3) Drag Hive Core icon to the Applications Folder
 
-![alt tag](https://i.imgur.com/GLhBFUV.png)
 
 4) Open the Applications folder and Launch Hive Core. The client will begin synchronizing with the network.
 
-![alt tag](https://i.imgur.com/v3962qo.png)
 
 Note: You may get the follow error on first launch:
 ```
