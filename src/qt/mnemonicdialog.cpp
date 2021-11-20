@@ -17,7 +17,7 @@ MnemonicDialog::MnemonicDialog(QWidget *parent) :
     setWindowFlags(Qt::Window | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
     ui->setupUi(this);
 
-    QObject::connect(ui->btnCancel, &QPushButton::clicked, this, &MnemonicDialog::on_btnCancel_clicked);
+    // QObject::connect(ui->btnClose, &QPushButton::clicked, this, &MnemonicDialog::on_btnClose_clicked);
     QObject::connect(ui->btnGenerate, &QPushButton::clicked, this, &MnemonicDialog::on_btnGenerate_clicked);
 
     ui->tbxMnemonic->installEventFilter(this);
@@ -42,16 +42,6 @@ bool MnemonicDialog::eventFilter(QObject *obj, QEvent *ev)
 MnemonicDialog::~MnemonicDialog()
 {
     delete ui;
-};
-
-void MnemonicDialog::on_btnCancel_clicked()
-{
-    auto btnRetVal = QMessageBox::question(this, windowTitle(),
-                         tr("If you cancel, the word list will be generated for you. Are you sure you want to continue?"),
-                         QMessageBox::No, QMessageBox::Yes);
-
-    if(btnRetVal == QMessageBox::Yes)
-        close();
 };
 
 void MnemonicDialog::on_btnImport_clicked()

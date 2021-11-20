@@ -954,6 +954,51 @@
     </message>
 </context>
 <context>
+    <name>EncryptDialog</name>
+    <message>
+        <location filename="../forms/encryptdialog.ui" line="+11"/>
+        <source>Encrypt Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Please enter a passphrase to encrypt your wallet. This is required.
+(It is strongly advised to use a passphrase length of 10 characters or more and use uppercase letters, 
+lowercase letters, numbers, symbols) </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>New passphrase</source>
+        <translation type="unfinished">New passphrase</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Repeat new passphrase</source>
+        <translation type="unfinished">Repeat new passphrase</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Confirm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Return</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Esc</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FreespaceChecker</name>
     <message>
         <location filename="../intro.cpp" line="+76"/>

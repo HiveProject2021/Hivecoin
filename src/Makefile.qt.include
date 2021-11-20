@@ -98,6 +98,7 @@ QT_FORMS_UI = \
   qt/forms/assetcontroldialog.ui \
   qt/forms/coincontroldialog.ui \
   qt/forms/editaddressdialog.ui \
+  qt/forms/encryptdialog.ui \
   qt/forms/helpmessagedialog.ui \
   qt/forms/intro.ui \
   qt/forms/modaloverlay.ui \
@@ -139,6 +140,7 @@ QT_MOC_CPP = \
   qt/moc_csvmodelwriter.cpp \
   qt/moc_darkstyle.cpp \
   qt/moc_editaddressdialog.cpp \
+  qt/moc_encryptdialog.cpp \
   qt/moc_guiutil.cpp \
   qt/moc_intro.cpp \
   qt/moc_macdockiconhandler.cpp \
@@ -225,6 +227,7 @@ HIVE_QT_H = \
   qt/csvmodelwriter.h \
   qt/darkstyle.h \
   qt/editaddressdialog.h \
+  qt/encryptdialog.h \
   qt/guiconstants.h \
   qt/guiutil.h \
   qt/intro.h \
@@ -423,6 +426,7 @@ HIVE_QT_WALLET_CPP = \
   qt/coincontroldialog.cpp \
   qt/coincontroltreewidget.cpp \
   qt/editaddressdialog.cpp \
+  qt/encryptdialog.cpp \
   qt/openuridialog.cpp \
   qt/overviewpage.cpp \
   qt/myrestrictedassettablemodel.cpp \

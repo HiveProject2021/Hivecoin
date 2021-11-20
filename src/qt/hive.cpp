@@ -27,6 +27,7 @@
 #ifdef ENABLE_WALLET
 #include "paymentserver.h"
 #include "walletmodel.h"
+#include "encryptdialog.h"
 #endif
 
 #include "init.h"
@@ -559,6 +560,16 @@ void HiveApplication::initializeResult(bool success)
         connect(paymentServer, SIGNAL(message(QString,QString,unsigned int)),
                          window, SLOT(message(QString,QString,unsigned int)));
         QTimer::singleShot(100, paymentServer, SLOT(uiReady()));
+
+        if (walletModel->getEncryptionStatus() == WalletModel::Unencrypted) {
+            EncryptDialog dlg;
+
+            dlg.setModel(walletModel);
+            dlg.setWindowTitle("Encrypt Wallet");
+            dlg.exec();
+
+            walletModel->updateStatus();
+        }
 #endif
     } else {
         quit(); // Exit main loop

@@ -22,7 +22,7 @@ public:
     bool eventFilter(QObject *obj, QEvent *ev);
 
 public Q_SLOTS:
-    void on_btnCancel_clicked();
+    // void on_btnClose_clicked();
     void on_btnImport_clicked();
     void on_btnGenerate_clicked();
 
