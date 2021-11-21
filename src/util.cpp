@@ -631,7 +631,7 @@ void ArgsManager::ReadConfigFile(const std::string &confPath)
 {
     fs::ifstream streamConfig(GetConfigFile(confPath));
     if (!streamConfig.good()){
-        // Create empty raptoreum.conf if it does not excist
+        // Create empty hive.conf if it does not exist
         FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
         if (configFile != nullptr)
             fclose(configFile);
