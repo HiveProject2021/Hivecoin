@@ -154,13 +154,6 @@ void WalletFrame::gotoVerifyMessageTab(QString addr)
         walletView->gotoVerifyMessageTab(addr);
 }
 
-void WalletFrame::encryptWallet(bool status)
-{
-    WalletView *walletView = currentWalletView();
-    if (walletView)
-        walletView->encryptWallet(status);
-}
-
 void WalletFrame::backupWallet()
 {
     WalletView *walletView = currentWalletView();

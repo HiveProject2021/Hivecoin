@@ -113,7 +113,6 @@ private:
     QAction *receiveCoinsMenuAction;
     QAction *optionsAction;
     QAction *toggleHideAction;
-    QAction *encryptWalletAction;
     QAction *backupWalletAction;
     QAction *changePassphraseAction;
     QAction *lockWalletAction;
@@ -123,6 +122,9 @@ private:
     QAction *openWalletRepairAction;
     QAction *openAction;
     QAction *showHelpMessageAction;
+    QAction *openInformationAction;
+    QAction *openNetworkAction;
+    QAction *openPeerAction;
 
     /** HVN START */
     QAction *transferAssetAction;
@@ -267,6 +269,10 @@ private Q_SLOTS:
     void aboutClicked();
     /** Show debug window */
     void showDebugWindow();
+    void showDebugWindowPeerList();
+    void showDebugWindowNetworkTraffic();
+
+    void showDebugWindowActivateInformation();
     /** Show debug window and set focus to the console */
     void showDebugWindowActivateConsole();
     /** Show debug window and set focus to the wallet repair tab */

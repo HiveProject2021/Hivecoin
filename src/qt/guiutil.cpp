@@ -503,18 +503,11 @@ void openDebugLogfile()
 
 bool openHiveConf()
 {
-    boost::filesystem::path pathConfig = GetConfigFile(HIVE_CONF_FILENAME);
+    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", HIVE_CONF_FILENAME));
 
-    /* Create the file */
-    boost::filesystem::ofstream configFile(pathConfig, std::ios_base::app);
-    
-    if (!configFile.good())
-        return false;
-    
-    configFile.close();
-    
     /* Open hive.conf with the associated application */
-    return QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
+    if (fs::exists(pathConfig))
+        return QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
 
 void SubstituteFonts(const QString& language)

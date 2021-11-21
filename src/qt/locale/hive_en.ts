@@ -962,9 +962,7 @@
     </message>
     <message>
         <location line="+22"/>
-        <source>Please enter a passphrase to encrypt your wallet. This is required.
-(It is strongly advised to use a passphrase length of 10 characters or more and use uppercase letters, 
-lowercase letters, numbers, symbols) </source>
+        <source>Please enter a passphrase to encrypt your wallet. This is required. Please use a passphrase of ten or more random characters, or eight or more words.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

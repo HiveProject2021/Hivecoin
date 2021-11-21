@@ -630,8 +630,13 @@ fs::path GetConfigFile(const std::string &confPath)
 void ArgsManager::ReadConfigFile(const std::string &confPath)
 {
     fs::ifstream streamConfig(GetConfigFile(confPath));
-    if (!streamConfig.good())
-        return; // No hive.conf file is OK
+    if (!streamConfig.good()){
+        // Create empty raptoreum.conf if it does not excist
+        FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
+        if (configFile != nullptr)
+            fclose(configFile);
+        return; // Nothing to read, so just return
+    }
 
     {
         LOCK(cs_args);

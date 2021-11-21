@@ -30,9 +30,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Please enter a passphrase to encrypt your wallet. This is required.
-(It is strongly advised to use a passphrase length of 10 characters or more and use uppercase letters, 
-lowercase letters, numbers, symbols) </string>
+        <string>Please enter a passphrase to encrypt your wallet. This is required. Please use a passphrase of ten or more random characters, or eight or more words.</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>

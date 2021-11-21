@@ -132,13 +132,15 @@ HiveGUI::HiveGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networ
     receiveCoinsMenuAction(0),
     optionsAction(0),
     toggleHideAction(0),
-    encryptWalletAction(0),
     backupWalletAction(0),
     changePassphraseAction(0),
     lockWalletAction(0),
     unlockWalletAction(0),
     aboutQtAction(0),
     openRPCConsoleAction(0),
+    openInformationAction(0),
+    openNetworkAction(0),
+    openPeerAction(0),
     openWalletRepairAction(0),
     openAction(0),
     showHelpMessageAction(0),
@@ -507,10 +509,6 @@ void HiveGUI::createActions()
     toggleHideAction = new QAction(platformStyle->TextColorIcon(":/icons/about"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
-    encryptWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
-    encryptWalletAction->setStatusTip(tr("Encrypt the private keys that belong to your wallet"));
-    encryptWalletAction->setCheckable(true);
-
     backupWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/filesave"), tr("&Backup Wallet..."), this);
     backupWalletAction->setStatusTip(tr("Backup wallet to another location"));
 
@@ -528,10 +526,17 @@ void HiveGUI::createActions()
     verifyMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/verify"), tr("&Verify message..."), this);
     verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Hive addresses"));
 
+    openInformationAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Information"), this);
+    openInformationAction->setStatusTip(tr("Show diagnostic information"));
+
+    openNetworkAction = new QAction(platformStyle->TextColorIcon(":/icons/connect_4"), tr("&Network"), this);
+    openNetworkAction->setStatusTip(tr("Show network information"));
+
+    openPeerAction = new QAction(platformStyle->TextColorIcon(":/icons/connect_4"), tr("&Peers"), this);
+    openPeerAction->setStatusTip(tr("Show peers information"));
+
     openRPCConsoleAction = new QAction(platformStyle->TextColorIcon(":/icons/debugwindow"), tr("&Debug Window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
-    // initially disable the debug window menu item
-    openRPCConsoleAction->setEnabled(false);
 
     openWalletRepairAction = new QAction(platformStyle->TextColorIcon(":/icons/debugwindow"), tr("&Wallet Repair"), this);
     openWalletRepairAction->setStatusTip(tr("Open wallet repair options"));
@@ -554,7 +559,10 @@ void HiveGUI::createActions()
     connect(optionsAction, SIGNAL(triggered()), this, SLOT(optionsClicked()));
     connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
     connect(showHelpMessageAction, SIGNAL(triggered()), this, SLOT(showHelpMessageClicked()));
-    connect(openRPCConsoleAction, SIGNAL(triggered()), this, SLOT(showDebugWindow()));
+    connect(openInformationAction, SIGNAL(triggered()), this, SLOT(showDebugWindowActivateInformation()));
+    connect(openPeerAction, SIGNAL(triggered()), this, SLOT(showDebugWindowPeerList()));
+    connect(openNetworkAction, SIGNAL(triggered()), this, SLOT(showDebugWindowNetworkTraffic()));
+    connect(openRPCConsoleAction, SIGNAL(triggered()), this, SLOT(showDebugWindowActivateConsole()));
     connect(openWalletRepairAction, SIGNAL(triggered()), this, SLOT(showWalletRepair()));
     // Get restart command-line parameters and handle restart
     connect(rpcConsole, SIGNAL(handleRestart(QStringList)), this, SLOT(handleRestart(QStringList)));
@@ -564,7 +572,6 @@ void HiveGUI::createActions()
 #ifdef ENABLE_WALLET
     if(walletFrame)
     {
-        connect(encryptWalletAction, SIGNAL(triggered(bool)), walletFrame, SLOT(encryptWallet(bool)));
         connect(backupWalletAction, SIGNAL(triggered()), walletFrame, SLOT(backupWallet()));
         connect(changePassphraseAction, SIGNAL(triggered()), walletFrame, SLOT(changePassphrase()));
         connect(lockWalletAction, SIGNAL(triggered()), walletFrame, SLOT(lockWallet()));
@@ -608,7 +615,6 @@ void HiveGUI::createMenuBar()
     QMenu *settings = appMenuBar->addMenu(tr("&Wallet"));
     if(walletFrame)
     {
-        settings->addAction(encryptWalletAction);
         settings->addAction(backupWalletAction);
         settings->addAction(changePassphraseAction);
         settings->addAction(lockWalletAction);
@@ -617,12 +623,21 @@ void HiveGUI::createMenuBar()
     }
     settings->addAction(optionsAction);
 
-    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+    QMenu *tools = appMenuBar->addMenu(tr("&Tools"));
+
+    tools->addAction(openInformationAction);
+    tools->addAction(openRPCConsoleAction);
+    tools->addAction(openNetworkAction);
+    tools->addAction(openPeerAction);
+
     if(walletFrame)
     {
-        help->addAction(openRPCConsoleAction);
-        help->addAction(openWalletRepairAction);
+        tools->addSeparator();
+        tools->addAction(openWalletRepairAction);
     }
+
+    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+
     help->addAction(showHelpMessageAction);
     help->addSeparator();
     help->addAction(aboutAction);
@@ -1037,7 +1052,6 @@ void HiveGUI::setWalletActionsEnabled(bool enabled)
     receiveCoinsAction->setEnabled(enabled);
     receiveCoinsMenuAction->setEnabled(enabled);
     historyAction->setEnabled(enabled);
-    encryptWalletAction->setEnabled(enabled);
     backupWalletAction->setEnabled(enabled);
     changePassphraseAction->setEnabled(enabled);
     lockWalletAction->setEnabled(enabled);
@@ -1145,9 +1159,27 @@ void HiveGUI::showDebugWindow()
     rpcConsole->activateWindow();
 }
 
+void HiveGUI::showDebugWindowActivateInformation()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_INFO);
+    showDebugWindow();
+}
+
 void HiveGUI::showDebugWindowActivateConsole()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_CONSOLE);
+    showDebugWindow();
+}
+
+void HiveGUI::showDebugWindowPeerList()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_PEERS);
+    showDebugWindow();
+}
+
+void HiveGUI::showDebugWindowNetworkTraffic()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_GRAPH);
     showDebugWindow();
 }
 
@@ -1618,33 +1650,27 @@ void HiveGUI::setEncryptionStatus(int status)
     {
     case WalletModel::Unencrypted:
         labelWalletEncryptionIcon->hide();
-        encryptWalletAction->setChecked(false);
         changePassphraseAction->setEnabled(false);
-        encryptWalletAction->setEnabled(true);
         break;
     case WalletModel::Unlocked:
         labelWalletEncryptionIcon->show();
         labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         labelWalletEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
-        encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
         lockWalletAction->setEnabled(true);
         lockWalletAction->setVisible(true);
         unlockWalletAction->setEnabled(false);
         unlockWalletAction->setVisible(false);
-        encryptWalletAction->setEnabled(false);
         break;
     case WalletModel::Locked:
         labelWalletEncryptionIcon->show();
         labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_closed").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         labelWalletEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
-        encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
         lockWalletAction->setEnabled(false);
         lockWalletAction->setVisible(false);
         unlockWalletAction->setEnabled(true);
         unlockWalletAction->setVisible(true);
-        encryptWalletAction->setEnabled(false);
         break;
     }
 }
