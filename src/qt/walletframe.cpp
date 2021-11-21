@@ -182,6 +182,13 @@ void WalletFrame::lockWallet()
         walletView->lockWallet();
 }
 
+void WalletFrame::getMnemonic()
+{
+    WalletView *walletView = currentWalletView();
+    if (walletView)
+        walletView->getMnemonic();
+}
+
 void WalletFrame::usedSendingAddresses()
 {
     WalletView *walletView = currentWalletView();

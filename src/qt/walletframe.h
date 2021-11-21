@@ -86,6 +86,8 @@ public Q_SLOTS:
     void unlockWallet();
     /** Lock the wallet */
     void lockWallet();
+    /** Get the mnemonic phrase */
+    void getMnemonic();
 
     /** Show used sending addresses */
     void usedSendingAddresses();

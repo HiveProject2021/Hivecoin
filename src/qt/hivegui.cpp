@@ -136,6 +136,7 @@ HiveGUI::HiveGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networ
     changePassphraseAction(0),
     lockWalletAction(0),
     unlockWalletAction(0),
+    getMnemonicAction(0),
     aboutQtAction(0),
     openRPCConsoleAction(0),
     openInformationAction(0),
@@ -521,6 +522,9 @@ void HiveGUI::createActions()
     unlockWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_open"), tr("&Unlock Wallet..."), this);
     unlockWalletAction->setStatusTip(tr("Unlock the encrypted wallet to allow spending and asset issue"));
 
+    getMnemonicAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_open"), tr("&View Mnemonic..."), this);
+    getMnemonicAction->setStatusTip(tr("View the mnemonic phrase of the wallet"));
+
     signMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/edit"), tr("Sign &message..."), this);
     signMessageAction->setStatusTip(tr("Sign messages with your Hive addresses to prove you own them"));
     verifyMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/verify"), tr("&Verify message..."), this);
@@ -576,6 +580,7 @@ void HiveGUI::createActions()
         connect(changePassphraseAction, SIGNAL(triggered()), walletFrame, SLOT(changePassphrase()));
         connect(lockWalletAction, SIGNAL(triggered()), walletFrame, SLOT(lockWallet()));
         connect(unlockWalletAction, SIGNAL(triggered(bool)), walletFrame, SLOT(unlockWallet()));
+        connect(getMnemonicAction, SIGNAL(triggered()), walletFrame, SLOT(getMnemonic()));
         connect(signMessageAction, SIGNAL(triggered()), this, SLOT(gotoSignMessageTab()));
         connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
         connect(usedSendingAddressesAction, SIGNAL(triggered()), walletFrame, SLOT(usedSendingAddresses()));
@@ -619,6 +624,7 @@ void HiveGUI::createMenuBar()
         settings->addAction(changePassphraseAction);
         settings->addAction(lockWalletAction);
         settings->addAction(unlockWalletAction);
+        settings->addAction(getMnemonicAction);
         settings->addSeparator();
     }
     settings->addAction(optionsAction);
@@ -1056,6 +1062,7 @@ void HiveGUI::setWalletActionsEnabled(bool enabled)
     changePassphraseAction->setEnabled(enabled);
     lockWalletAction->setEnabled(enabled);
     unlockWalletAction->setEnabled(enabled);
+    getMnemonicAction->setEnabled(enabled);
     signMessageAction->setEnabled(enabled);
     verifyMessageAction->setEnabled(enabled);
     usedSendingAddressesAction->setEnabled(enabled);
