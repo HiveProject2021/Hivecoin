@@ -164,10 +164,10 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00000000"); // Block 
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000001f5f4e77ed78d4f"); // Block 336450
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 
-        consensus.defaultAssumeValid = uint256S("0x00000000"); // Block 
+        consensus.defaultAssumeValid = uint256S("0x00000000004e6b1247e31e12f405af4764632f59a6ea40a174eb17fab0e33bdd"); // Block 336450
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -253,11 +253,11 @@ public:
 		assert(consensus.hashGenesisBlock == uint256S("0000000d6a7d8ca88f12ced2cae71b4ccc1e11086d402ced33eff366fc24e7d0"));
         assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 
-
-		vSeeds.emplace_back("node1.hivecoin.org", false);
-		vSeeds.emplace_back("node2.hivecoin.org", false);
-		vSeeds.emplace_back("us-east-1.hivecoin.org", false);
-		vSeeds.emplace_back("us-west-1.hivecoin.org", false);
+        vSeeds.emplace_back("mainnet.hiveseeds.xyz", false);
+		// vSeeds.emplace_back("node1.hivecoin.org", false);
+		// vSeeds.emplace_back("node2.hivecoin.org", false);
+		// vSeeds.emplace_back("us-east-1.hivecoin.org", false);
+		// vSeeds.emplace_back("us-west-1.hivecoin.org", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
@@ -280,7 +280,8 @@ public:
                 { 1337, 	uint256S("0x000000000011da81d69f8247e0ce2f5cb68f989d4ca3258859a67aed3066430a")},
                 { 5000, 	uint256S("0x00000001792cf4cb5ff5767c88f02b83c18a79272d4f94710e313eb92dcf8357")},
                 { 10000, 	uint256S("0x000000001838815b433eecb3503cb68040f25a6e868afbc74e0d2bd5f0d7d3ba")},
-                { 14000, 	uint256S("0x0000000036b9a82f7c582acc041e911e05f1171bf47138e91eff2a382576356a")}
+                { 14000, 	uint256S("0x0000000036b9a82f7c582acc041e911e05f1171bf47138e91eff2a382576356a")},
+                { 336450,   uint256S("0x00000000004e6b1247e31e12f405af4764632f59a6ea40a174eb17fab0e33bdd")}
             }
         };
 
