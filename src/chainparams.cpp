@@ -253,11 +253,13 @@ public:
 		assert(consensus.hashGenesisBlock == uint256S("0000000d6a7d8ca88f12ced2cae71b4ccc1e11086d402ced33eff366fc24e7d0"));
         assert(genesis.hashMerkleRoot == uint256S("7c1d71731b98c560a80cee3b88993c8c863342b9661894304fd843bf7e75a41f"));
 
-        vSeeds.emplace_back("mainnet.hiveseeds.xyz", false);
-		// vSeeds.emplace_back("node1.hivecoin.org", false);
-		// vSeeds.emplace_back("node2.hivecoin.org", false);
-		// vSeeds.emplace_back("us-east-1.hivecoin.org", false);
-		// vSeeds.emplace_back("us-west-1.hivecoin.org", false);
+        //vSeeds.emplace_back("mainnet.hiveseeds.xyz", false);
+        // TODO: Will set up official seeds service.
+	vSeeds.emplace_back("seeds.hivecoin.org", false);
+	vSeeds.emplace_back("node1.hivecoin.org", false);
+	vSeeds.emplace_back("node2.hivecoin.org", false);
+	vSeeds.emplace_back("us-east-1.hivecoin.org", false);
+	vSeeds.emplace_back("us-west-1.hivecoin.org", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,40);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
