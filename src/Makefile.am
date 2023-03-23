@@ -510,6 +510,7 @@ hived_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBHIVE_UTIL) \
   $(LIBHIVE_WALLET) \
+  $(LIBHIVE_MASTERNODE) \
   $(LIBHIVE_ZMQ) \
   $(LIBHIVE_CONSENSUS) \
   $(LIBHIVE_CRYPTO) \
@@ -589,6 +590,7 @@ CLEANFILES += *.gcda *.gcno
 CLEANFILES += compat/*.gcda compat/*.gcno
 CLEANFILES += consensus/*.gcda consensus/*.gcno
 CLEANFILES += crypto/*.gcda crypto/*.gcno
+CLEANFILES += masternodes/*.gcda masternodes/*.gcno
 CLEANFILES += policy/*.gcda policy/*.gcno
 CLEANFILES += primitives/*.gcda primitives/*.gcno
 CLEANFILES += script/*.gcda script/*.gcno
