@@ -42,6 +42,9 @@ endif
 if ENABLE_WALLET
 LIBHIVE_WALLET=libhive_wallet.a
 endif
+if ENABLE_MASTERNODE
+LIBHIVE_MASTERNODE=libhive_masternode.a
+endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
 	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C $(@D) $(@F)
@@ -167,6 +170,10 @@ HIVE_CORE_H = \
   keystore.h \
   dbwrapper.h \
   limitedmap.h \
+  masternodes/masternodes.h \
+  masternodes/masternodedb.h \
+  masternodes/masternodetypes.h \
+  masternodes/mymasternodedb.h \
   memusage.h \
   merkleblock.h \
   miner.h \
@@ -325,6 +332,18 @@ libhive_wallet_a_SOURCES = \
   wallet/walletdb.cpp \
   wallet/bip39.cpp \
   $(HIVE_CORE_H)
+
+if ENABLE_MASTERNODE
+lib_LTLIBRARIES += libhive_masternode.a
+libhive_masternode_a_LIBADD = $(LIBS)
+libhive_masternode_a_CPPFLAGS = $(AM_CPPFLAGS) $(HIVE_INCLUDES)
+libhive_masternode_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libhive_masternode_a_SOURCES = \
+  masternodes/masternodes.cpp \
+  masternodes/masternodedb.cpp \
+  masternodes/mymasternodedb.cpp \
+  masternodes/masternodetypes.cpp
+endif
 
 # crypto primitives library
 crypto_libhive_crypto_a_CPPFLAGS = $(AM_CPPFLAGS)
